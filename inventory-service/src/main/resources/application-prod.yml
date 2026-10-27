@@ -4,6 +4,9 @@ app:
   jwt:
     secret: "${JWT_SECRET:change-this-secret-to-a-long-random-string}"
     issuer: org-access
+catalog:
+  service:
+    url: ${CATALOG_SERVICE_URL:http://localhost:8089}
 spring:
   application:
     name: inventory-service
