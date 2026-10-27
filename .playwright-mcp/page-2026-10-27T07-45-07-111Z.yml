@@ -1,0 +1,132 @@
+- generic [ref=f37e1]:
+  - generic [ref=f37e8]:
+    - navigation [ref=f37e9]:
+      - generic [ref=f37e10]:
+        - generic [ref=f37e12]:
+          - heading [level=6] [ref=f37e262]: Global Admin Portal
+          - text: All locations
+        - button [ref=f37e263] [cursor=pointer]
+      - generic [ref=f37e17]:
+        - generic [ref=f37e18]:
+          - paragraph [ref=f37e19]: Main
+          - button [ref=f37e264] [cursor=pointer]:
+            - generic [ref=f37e24]: Dashboard
+        - generic [ref=f37e25]:
+          - paragraph [ref=f37e26]: Management
+          - button [ref=f37e265] [cursor=pointer]:
+            - generic [ref=f37e31]: Stores
+          - button [ref=f37e266] [cursor=pointer]:
+            - generic [ref=f37e37]: Products
+          - button [ref=f37e267] [cursor=pointer]:
+            - generic [ref=f37e42]: Categories
+          - button [ref=f37e268] [cursor=pointer]:
+            - generic [ref=f37e47]: Banners
+          - button [ref=f37e269] [cursor=pointer]:
+            - generic [ref=f37e53]: Inventory
+        - generic [ref=f37e54]:
+          - paragraph [ref=f37e55]: Orders & Payments
+          - button [ref=f37e270] [cursor=pointer]:
+            - generic [ref=f37e60]: Orders
+          - button [ref=f37e271] [cursor=pointer]:
+            - generic [ref=f37e66]: Payments
+          - button [ref=f37e272] [cursor=pointer]:
+            - generic [ref=f37e71]: Delivery
+        - generic [ref=f37e72]:
+          - paragraph [ref=f37e73]: Customer
+          - button [ref=f37e273] [cursor=pointer]:
+            - generic [ref=f37e78]: Customers
+          - button [ref=f37e274] [cursor=pointer]:
+            - generic [ref=f37e83]: Reviews
+          - button [ref=f37e275] [cursor=pointer]:
+            - generic [ref=f37e89]: Coupons
+          - button [ref=f37e276] [cursor=pointer]:
+            - generic [ref=f37e94]: Notifications
+        - generic [ref=f37e95]:
+          - paragraph [ref=f37e96]: Analytics
+          - button [ref=f37e277] [cursor=pointer]:
+            - generic [ref=f37e101]: Reports
+        - generic [ref=f37e102]:
+          - paragraph [ref=f37e103]: System
+          - button [ref=f37e278] [cursor=pointer]:
+            - generic [ref=f37e108]: Audit Logs
+      - button [ref=f37e279] [cursor=pointer]: View Customer App
+    - main [ref=f37e110]:
+      - generic [ref=f37e111]:
+        - generic [ref=f37e112]:
+          - button [ref=f37e113] [cursor=pointer]
+          - generic [ref=f37e116]:
+            - text: Global Admin /
+            - strong [ref=f37e117]: Categories
+        - generic [ref=f37e118]:
+          - textbox [ref=f37e280]:
+            - /placeholder: Search portal
+          - button [ref=f37e281] [cursor=pointer]
+          - button [ref=f37e282] [cursor=pointer]:
+            - generic [ref=f37e128]: G
+            - generic [ref=f37e129]: Global Administrator
+      - generic [ref=f37e130]:
+        - generic [ref=f37e131]:
+          - heading [level=4] [ref=f37e283]: Categories
+          - paragraph [ref=f37e133]: Manage categories within your assigned scope.
+        - button [ref=f37e284] [cursor=pointer]: View Customer App
+      - generic [ref=f37e135]:
+        - generic [ref=f37e136]:
+          - generic [ref=f37e137]:
+            - generic: Search
+            - generic [ref=f37e138]:
+              - textbox [ref=f37e285]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f37e140]:
+            - combobox [ref=f37e141] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f37e142]:
+            - combobox [ref=f37e143] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f37e286] [cursor=pointer]: Create
+          - button [ref=f37e287] [cursor=pointer]: Export
+        - generic [ref=f37e252]:
+          - generic [ref=f37e253]:
+            - paragraph [ref=f37e254]: Traditional Pickles
+            - paragraph [ref=f37e255]: Active
+          - generic [ref=f37e256]:
+            - button [ref=f37e288] [cursor=pointer]: View
+            - button [ref=f37e289] [cursor=pointer]: Edit
+            - button [ref=f37e290] [cursor=pointer]: Deactivate
+            - button [ref=f37e291] [cursor=pointer]: Delete
+        - generic [ref=f37e147]:
+          - button [disabled]: Previous
+          - paragraph [ref=f37e148]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [active] [ref=f37e294]:
+    - heading "Create Categories" [level=2] [ref=f37e295]
+    - generic [ref=f37e296]:
+      - generic [ref=f37e298]:
+        - generic:
+          - text: Category name
+          - generic [aria-hidden]: "*"
+        - generic [ref=f37e299]:
+          - textbox "Category name" [ref=f37e300]
+          - group [aria-hidden]:
+            - generic: Category name *
+      - generic [ref=f37e302]:
+        - generic: Description
+        - generic [ref=f37e303]:
+          - textbox "Description" [ref=f37e304]
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=f37e306]:
+        - generic: Thumbnail URL
+        - generic [ref=f37e307]:
+          - textbox "Thumbnail URL" [ref=f37e308]
+          - group [aria-hidden]:
+            - generic: Thumbnail URL
+      - generic [ref=f37e310]:
+        - combobox [ref=f37e311] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+    - generic [ref=f37e313]:
+      - button "Cancel" [ref=f37e314] [cursor=pointer]
+      - button "Save" [ref=f37e315] [cursor=pointer]

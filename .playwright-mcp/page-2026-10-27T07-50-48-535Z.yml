@@ -1,0 +1,96 @@
+- generic [ref=f38e8]:
+  - navigation [ref=f38e9]:
+    - generic [ref=f38e10]:
+      - img "Spices and Pickles" [ref=f38e646]
+      - generic [ref=f38e12]:
+        - heading "Global Admin Portal" [level=6] [ref=f38e647]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f38e648] [cursor=pointer]
+    - generic [ref=f38e17]:
+      - generic [ref=f38e18]:
+        - paragraph [ref=f38e19]: Main
+        - button "Dashboard" [ref=f38e649] [cursor=pointer]
+      - generic [ref=f38e25]:
+        - paragraph [ref=f38e26]: Management
+        - button "Stores" [ref=f38e650] [cursor=pointer]
+        - button "Products" [ref=f38e651] [cursor=pointer]
+        - button "Categories" [ref=f38e652] [cursor=pointer]
+        - button "Banners" [ref=f38e653] [cursor=pointer]
+        - button "Inventory" [ref=f38e654] [cursor=pointer]
+      - generic [ref=f38e54]:
+        - paragraph [ref=f38e55]: Orders & Payments
+        - button "Orders" [ref=f38e655] [cursor=pointer]
+        - button "Payments" [ref=f38e656] [cursor=pointer]
+        - button "Delivery" [ref=f38e657] [cursor=pointer]
+      - generic [ref=f38e72]:
+        - paragraph [ref=f38e73]: Customer
+        - button "Customers" [ref=f38e658] [cursor=pointer]
+        - button "Reviews" [ref=f38e659] [cursor=pointer]
+        - button "Coupons" [ref=f38e660] [cursor=pointer]
+        - button "Notifications" [ref=f38e661] [cursor=pointer]
+      - generic [ref=f38e95]:
+        - paragraph [ref=f38e96]: Analytics
+        - button "Reports" [ref=f38e662] [cursor=pointer]
+      - generic [ref=f38e102]:
+        - paragraph [ref=f38e103]: System
+        - button "Audit Logs" [ref=f38e663] [cursor=pointer]
+    - button "View Customer App" [ref=f38e664] [cursor=pointer]
+  - main [ref=f38e110]:
+    - generic [ref=f38e111]:
+      - generic [ref=f38e112]:
+        - button [ref=f38e113] [cursor=pointer]
+        - generic [ref=f38e116]:
+          - text: Global Admin /
+          - strong [ref=f38e117]: Banners
+      - generic [ref=f38e118]:
+        - textbox "Search portal" [ref=f38e665]
+        - button "Notifications" [ref=f38e666] [cursor=pointer]
+        - button "G Global Administrator" [ref=f38e667] [cursor=pointer]:
+          - generic [ref=f38e128]: G
+          - generic [ref=f38e129]: Global Administrator
+    - generic [ref=f38e130]:
+      - generic [ref=f38e131]:
+        - heading "Banners" [level=4] [ref=f38e668]
+        - paragraph [ref=f38e133]: Manage banners within your assigned scope.
+      - button "View Customer App" [ref=f38e669] [cursor=pointer]
+    - generic [ref=f38e135]:
+      - generic [ref=f38e136]:
+        - generic [ref=f38e137]:
+          - generic: Search
+          - generic [ref=f38e138]:
+            - textbox "Search" [ref=f38e670]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f38e140]:
+          - combobox [ref=f38e141] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f38e142]:
+          - combobox [ref=f38e143] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=f38e671] [cursor=pointer]
+        - button "Export" [ref=f38e672] [cursor=pointer]
+      - status [ref=f38e673]: Saved successfully.
+      - generic [ref=f38e674]:
+        - generic [ref=f38e675]:
+          - paragraph [ref=f38e676]: Premium Nuts and Dry Fruits
+          - paragraph [ref=f38e677]: Active
+        - generic [ref=f38e678]:
+          - button "View" [ref=f38e679] [cursor=pointer]
+          - button "Edit" [ref=f38e680] [cursor=pointer]
+          - button "Deactivate" [ref=f38e681] [cursor=pointer]
+          - button "Delete" [ref=f38e682] [cursor=pointer]
+      - generic [ref=f38e522]:
+        - generic [ref=f38e523]:
+          - paragraph [ref=f38e524]: Authentic Andhra Pickles
+          - paragraph [ref=f38e525]: Active
+        - generic [ref=f38e526]:
+          - button "View" [ref=f38e683] [cursor=pointer]
+          - button "Edit" [ref=f38e684] [cursor=pointer]
+          - button "Deactivate" [ref=f38e685] [cursor=pointer]
+          - button "Delete" [ref=f38e686] [cursor=pointer]
+      - generic [ref=f38e148]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f38e149]: Page 1 of 1
+        - button "Next" [disabled]

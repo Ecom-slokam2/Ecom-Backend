@@ -1,0 +1,63 @@
+- generic [ref=f1e476]:
+  - navigation [ref=f1e477]:
+    - generic [ref=f1e478]:
+      - img "Spices and Pickles" [ref=f1e479]
+      - generic [ref=f1e480]:
+        - heading "Location Admin Portal" [level=6] [ref=f1e481]
+        - text: hyderabad
+      - button "Collapse sidebar" [ref=f1e482] [cursor=pointer]
+    - generic [ref=f1e485]:
+      - generic [ref=f1e486]:
+        - paragraph [ref=f1e487]: Main
+        - button "Dashboard" [ref=f1e488] [cursor=pointer]
+      - generic [ref=f1e493]:
+        - paragraph [ref=f1e494]: Management
+        - button "Stores" [ref=f1e495] [cursor=pointer]
+        - button "Products" [ref=f1e500] [cursor=pointer]
+        - button "Banners" [ref=f1e506] [cursor=pointer]
+        - button "Inventory" [ref=f1e511] [cursor=pointer]
+      - generic [ref=f1e517]:
+        - paragraph [ref=f1e518]: Orders & Payments
+        - button "Orders" [ref=f1e519] [cursor=pointer]
+        - button "Payments" [ref=f1e524] [cursor=pointer]
+        - button "Delivery" [active] [ref=f1e530] [cursor=pointer]
+      - generic [ref=f1e535]:
+        - paragraph [ref=f1e536]: Customer
+        - button "Coupons" [ref=f1e537] [cursor=pointer]
+      - generic [ref=f1e543]:
+        - paragraph [ref=f1e544]: Analytics
+        - button "Reports" [ref=f1e545] [cursor=pointer]
+    - button "View Customer App" [ref=f1e550] [cursor=pointer]
+  - main [ref=f1e551]:
+    - generic [ref=f1e552]:
+      - generic [ref=f1e553]:
+        - button [ref=f1e554] [cursor=pointer]
+        - generic [ref=f1e557]:
+          - text: Location Admin /
+          - strong [ref=f1e558]: Delivery
+      - generic [ref=f1e559]:
+        - textbox "Search portal" [ref=f1e564]
+        - button "Notifications" [ref=f1e565] [cursor=pointer]
+        - button "H Hyderabad Location Administrator" [ref=f1e568] [cursor=pointer]:
+          - generic [ref=f1e569]: H
+          - generic [ref=f1e570]: Hyderabad Location Administrator
+    - generic [ref=f1e571]:
+      - generic [ref=f1e572]:
+        - heading "Delivery" [level=4] [ref=f1e694]
+        - paragraph [ref=f1e574]: Manage delivery within your assigned scope.
+      - button "View Customer App" [ref=f1e575] [cursor=pointer]
+    - generic [ref=f1e695]:
+      - generic [ref=f1e696]:
+        - paragraph [ref=f1e697]: Partner accounts are assigned to a store. Demo contact details should be replaced with verified staff details before launch.
+        - generic [ref=f1e698]:
+          - button "Add delivery partner" [disabled]
+          - button "Refresh partners" [ref=f1e699] [cursor=pointer]
+      - alert [ref=f1e700]:
+        - generic [ref=f1e704]: No active local delivery stores are available. Enable delivery and set a radius on a store first.
+      - generic [ref=f1e705]:
+        - generic: Search partners
+        - generic [ref=f1e706]:
+          - textbox "Search partners" [ref=f1e707]
+          - group [aria-hidden]:
+            - generic: Search partners
+      - paragraph [ref=f1e708]: No delivery partners in your authorized scope.

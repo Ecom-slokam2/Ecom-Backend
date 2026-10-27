@@ -1,0 +1,98 @@
+- generic [ref=f45e574]:
+  - navigation [ref=f45e575]:
+    - generic [ref=f45e576]:
+      - img "Spices and Pickles" [ref=f45e577]
+      - generic [ref=f45e578]:
+        - heading "Super Admin Portal" [level=6] [ref=f45e579]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f45e580] [cursor=pointer]
+    - generic [ref=f45e583]:
+      - generic [ref=f45e584]:
+        - paragraph [ref=f45e585]: Main
+        - button "Dashboard" [ref=f45e586] [cursor=pointer]
+      - generic [ref=f45e591]:
+        - paragraph [ref=f45e592]: Management
+        - button "Locations" [ref=f45e593] [cursor=pointer]
+        - button "Users" [active] [ref=f45e599] [cursor=pointer]
+        - button "Stores" [ref=f45e604] [cursor=pointer]
+        - button "Products" [ref=f45e609] [cursor=pointer]
+        - button "Categories" [ref=f45e615] [cursor=pointer]
+        - button "Banners" [ref=f45e620] [cursor=pointer]
+        - button "Inventory" [ref=f45e625] [cursor=pointer]
+      - generic [ref=f45e631]:
+        - paragraph [ref=f45e632]: Orders & Payments
+        - button "Orders" [ref=f45e633] [cursor=pointer]
+        - button "Payments" [ref=f45e638] [cursor=pointer]
+        - button "Delivery" [ref=f45e644] [cursor=pointer]
+      - generic [ref=f45e649]:
+        - paragraph [ref=f45e650]: Customer
+        - button "Customers" [ref=f45e651] [cursor=pointer]
+        - button "Reviews" [ref=f45e656] [cursor=pointer]
+        - button "Coupons" [ref=f45e661] [cursor=pointer]
+        - button "Notifications" [ref=f45e667] [cursor=pointer]
+      - generic [ref=f45e672]:
+        - paragraph [ref=f45e673]: Analytics
+        - button "Reports" [ref=f45e674] [cursor=pointer]
+      - generic [ref=f45e679]:
+        - paragraph [ref=f45e680]: System
+        - button "Security" [ref=f45e681] [cursor=pointer]
+        - button "Audit Logs" [ref=f45e686] [cursor=pointer]
+    - button "View Customer App" [ref=f45e691] [cursor=pointer]
+  - main [ref=f45e692]:
+    - generic [ref=f45e693]:
+      - generic [ref=f45e694]:
+        - button [ref=f45e695] [cursor=pointer]
+        - generic [ref=f45e698]:
+          - text: Super Admin /
+          - strong [ref=f45e699]: Users
+      - generic [ref=f45e700]:
+        - textbox "Search portal" [ref=f45e705]
+        - button "Notifications" [ref=f45e706] [cursor=pointer]
+        - button "A Admin" [ref=f45e709] [cursor=pointer]:
+          - generic [ref=f45e710]: A
+          - generic [ref=f45e711]: Admin
+    - generic [ref=f45e712]:
+      - generic [ref=f45e713]:
+        - heading "Users" [level=4] [ref=f45e821]
+        - paragraph [ref=f45e715]: Manage users within your assigned scope.
+      - button "View Customer App" [ref=f45e716] [cursor=pointer]
+    - generic [ref=f45e822]:
+      - generic [ref=f45e823]:
+        - generic [ref=f45e824]:
+          - generic: Search
+          - generic [ref=f45e825]:
+            - textbox "Search" [ref=f45e826]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f45e827]:
+          - combobox [ref=f45e828] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f45e829]:
+          - combobox [ref=f45e830] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [ref=f45e831] [cursor=pointer]
+        - button "Export" [ref=f45e832] [cursor=pointer]
+      - generic [ref=f45e833]:
+        - generic [ref=f45e834]:
+          - paragraph [ref=f45e835]: Hyderabad Location Administrator
+          - paragraph [ref=f45e836]: locationadminhyd@metaarch.local
+        - generic [ref=f45e837]:
+          - button "View" [ref=f45e838] [cursor=pointer]
+          - button "Edit" [ref=f45e839] [cursor=pointer]
+          - button "Deactivate" [ref=f45e840] [cursor=pointer]
+          - button "Delete" [ref=f45e841] [cursor=pointer]
+      - generic [ref=f45e842]:
+        - generic [ref=f45e843]:
+          - paragraph [ref=f45e844]: Global Administrator
+          - paragraph [ref=f45e845]: globaladmin@metaarch.local
+        - generic [ref=f45e846]:
+          - button "View" [ref=f45e847] [cursor=pointer]
+          - button "Edit" [ref=f45e848] [cursor=pointer]
+          - button "Deactivate" [ref=f45e849] [cursor=pointer]
+          - button "Delete" [ref=f45e850] [cursor=pointer]
+      - generic [ref=f45e851]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f45e852]: Page 1 of 1
+        - button "Next" [disabled]

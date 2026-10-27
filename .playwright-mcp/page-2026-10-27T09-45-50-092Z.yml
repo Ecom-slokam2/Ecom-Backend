@@ -1,0 +1,63 @@
+- generic [ref=f1e524]:
+  - complementary [ref=f1e525]:
+    - generic [ref=f1e526]:
+      - img "Spices and Pickles" [ref=f1e527]
+      - generic [ref=f1e528]:
+        - heading "Store Manager" [level=6] [ref=f1e529]
+        - paragraph [ref=f1e530]: SR Nagar Store
+    - navigation [ref=f1e531]:
+      - button "Dashboard" [ref=f1e532] [cursor=pointer]
+      - button "Products" [ref=f1e537] [cursor=pointer]
+      - button "Banners" [ref=f1e543] [cursor=pointer]
+      - button "Coupons" [ref=f1e548] [cursor=pointer]
+      - button "Inventory" [ref=f1e554] [cursor=pointer]
+      - button "Orders" [ref=f1e560] [cursor=pointer]
+      - button "Delivery Partners" [ref=f1e565] [cursor=pointer]
+      - button "Delivery Radius" [ref=f1e570] [cursor=pointer]
+      - button "Delivery Settings" [ref=f1e575] [cursor=pointer]
+      - button "Change Password" [ref=f1e580] [cursor=pointer]
+      - button "Profile" [ref=f1e585] [cursor=pointer]
+      - button "Logout" [ref=f1e590] [cursor=pointer]
+    - button "View Customer App" [ref=f1e595] [cursor=pointer]
+  - main [ref=f1e596]:
+    - generic [ref=f1e597]:
+      - button [ref=f1e598] [cursor=pointer]
+      - button "V Vikram SR Nagar" [ref=f1e602] [cursor=pointer]:
+        - generic [ref=f1e603]: V
+        - generic [ref=f1e604]: Vikram SR Nagar
+      - button "Sign out" [ref=f1e605] [cursor=pointer]
+    - generic [ref=f1e607]:
+      - heading "Delivery Settings" [level=4] [ref=f1e608]
+      - paragraph [ref=f1e609]: SR Nagar Store
+    - generic [ref=f1e610]:
+      - generic [ref=f1e611]:
+        - generic [ref=f1e615]:
+          - heading "SR Nagar Store" [level=5] [ref=f1e616]
+          - paragraph [ref=f1e617]: store-sr-nagar-store / HYD-SRN-003
+        - button "Edit Profile" [ref=f1e618] [cursor=pointer]
+      - generic [ref=f1e619]:
+        - generic [ref=f1e621]:
+          - combobox [ref=f1e622] [cursor=pointer]: "Yes"
+          - textbox [aria-hidden]: "Yes"
+          - group [aria-hidden]
+        - generic [ref=f1e624]:
+          - combobox [ref=f1e625] [cursor=pointer]: "Yes"
+          - textbox [aria-hidden]: "Yes"
+          - group [aria-hidden]
+        - generic [ref=f1e627]:
+          - generic [ref=f1e628]: Default Preparation / ETA Minutes
+          - generic [ref=f1e629]:
+            - spinbutton "Default Preparation / ETA Minutes" [ref=f1e630]: "20"
+            - group [aria-hidden]:
+              - generic: Default Preparation / ETA Minutes
+        - generic [ref=f1e632]:
+          - generic [ref=f1e633]: General Delivery Notes
+          - generic [ref=f1e634]:
+            - textbox "General Delivery Notes" [ref=f1e635]: Delivery settings seeded for checkout quote testing; delivery available within configured radius.
+            - group [aria-hidden]:
+              - generic: General Delivery Notes
+        - generic [ref=f1e637]:
+          - combobox [ref=f1e638] [cursor=pointer]: Active
+          - textbox [aria-hidden]: Active
+          - group [aria-hidden]
+      - button "Save Changes" [ref=f1e640] [cursor=pointer]

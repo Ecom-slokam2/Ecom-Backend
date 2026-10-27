@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-@SpringBootTest @Transactional
+@SpringBootTest(properties = "app.jwt.secret=local-isolated-test-secret-that-is-long-enough-for-hmac-sha256") @Transactional
 class StoreDeliveryMappingIntegrationTest {
   @Autowired StoreRepository stores;@Autowired StoreDeliveryZoneRepository zones;
   @Autowired StoreDeliveryService service;@Autowired EntityManager entities;

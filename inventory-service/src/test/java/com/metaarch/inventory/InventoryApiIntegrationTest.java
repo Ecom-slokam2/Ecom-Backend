@@ -24,6 +24,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
   "spring.sql.init.schema-locations=classpath:sync-schema.sql"})
 @AutoConfigureMockMvc
 class InventoryApiIntegrationTest {
+  private static final String MANAGER_TEST_STORE = "store-sm-stock-test";
+  private static final String OTHER_TEST_STORE = "store-sm-stock-other";
   @Autowired MockMvc mvc;
   @Autowired ObjectMapper json;
   @Autowired com.metaarch.inventory.inventory.InventoryService inventories;
@@ -31,6 +33,7 @@ class InventoryApiIntegrationTest {
   @Autowired com.metaarch.inventory.movement.StockMovementRepository movements;
   @Autowired org.springframework.jdbc.core.JdbcTemplate jdbc;
   @org.springframework.boot.test.mock.mockito.MockBean org.springframework.security.oauth2.jwt.JwtDecoder decoder;
+  @org.springframework.boot.test.mock.mockito.MockBean com.metaarch.sync.CatalogLocationClient catalog;
 
   @org.junit.jupiter.api.BeforeEach void authentication() {
     jdbc.execute("CREATE TABLE IF NOT EXISTS checkout_reservations(child_id VARCHAR(36) PRIMARY KEY,state VARCHAR(24))");
@@ -40,8 +43,96 @@ class InventoryApiIntegrationTest {
     for(String role:java.util.List.of("customer","manager")) org.mockito.Mockito.when(decoder.decode(role)).thenReturn(org.springframework.security.oauth2.jwt.Jwt.withTokenValue(role)
       .header("alg","HS512").subject(UUID.randomUUID().toString()).claim("accountType",role.equals("customer")?"customer":"staff")
       .claim("roles",java.util.List.of(role.equals("customer")?"ROLE_CUSTOMER":"ROLE_STORE_MANAGER")).build());
+    org.mockito.Mockito.when(decoder.decode("manager-hyd")).thenReturn(org.springframework.security.oauth2.jwt.Jwt.withTokenValue("manager-hyd")
+      .header("alg","HS512").subject("store-manager").claim("accountType","staff")
+      .claim("authorities",java.util.List.of("ROLE_STORE_MANAGER","SCOPE_STORE:store-hyd")).build());
+    org.mockito.Mockito.when(decoder.decode("manager-stock-test")).thenReturn(org.springframework.security.oauth2.jwt.Jwt.withTokenValue("manager-stock-test")
+      .header("alg","HS512").subject("store-manager-test").claim("accountType","staff")
+      .claim("authorities",java.util.List.of("ROLE_STORE_MANAGER","SCOPE_STORE:" + MANAGER_TEST_STORE)).build());
+    org.mockito.Mockito.when(decoder.decode("global-admin")).thenReturn(org.springframework.security.oauth2.jwt.Jwt.withTokenValue("global-admin")
+      .header("alg","HS512").subject("global-admin").claim("accountType","staff").claim("roles",java.util.List.of("ROLE_GLOBAL_ADMIN")).build());
     org.mockito.Mockito.when(decoder.decode("invalid")).thenThrow(new org.springframework.security.oauth2.jwt.BadJwtException("Invalid signature"));
     org.mockito.Mockito.when(decoder.decode("expired")).thenThrow(new org.springframework.security.oauth2.jwt.BadJwtException("Expired token"));
+    org.mockito.Mockito.when(decoder.decode("location")).thenReturn(org.springframework.security.oauth2.jwt.Jwt.withTokenValue("location")
+      .header("alg","HS512").subject("location-admin").claim("accountType","staff").claim("roles",java.util.List.of("ROLE_LOCATION_ADMIN"))
+      .claim("authorities",java.util.List.of("ROLE_LOCATION_ADMIN","SCOPE_LOCATION:Hyderabad")).build());
+    org.mockito.Mockito.when(catalog.locationOf("store-hyd")).thenReturn(java.util.Optional.of("Hyderabad"));
+    org.mockito.Mockito.when(catalog.locationOf("store-chn")).thenReturn(java.util.Optional.of("Chennai"));
+    org.mockito.Mockito.when(catalog.storesInLocation("Hyderabad")).thenReturn(java.util.List.of("store-hyd"));
+  }
+
+  @Test void locationAdminInventoryAccessIsLocationScoped() throws Exception {
+    var same=inventories.create(new com.metaarch.inventory.inventory.InventoryRequest(UUID.randomUUID(),null,"store-hyd",5,0,0,com.metaarch.inventory.inventory.InventoryStatus.ACTIVE));
+    var other=inventories.create(new com.metaarch.inventory.inventory.InventoryRequest(UUID.randomUUID(),null,"store-chn",9,0,0,com.metaarch.inventory.inventory.InventoryStatus.ACTIVE));
+    mvc.perform(get("/api/v1/inventories").header("Authorization","Bearer location")).andExpect(status().isOk()).andExpect(jsonPath("$.content.length()").value(1)).andExpect(jsonPath("$.content[0].storeId").value("store-hyd"));
+    mvc.perform(get("/api/v1/inventories/{id}",same.id()).header("Authorization","Bearer location")).andExpect(status().isOk());
+    mvc.perform(get("/api/v1/inventories/{id}",same.id())).andExpect(status().isUnauthorized());
+    mvc.perform(get("/api/v1/inventories/{id}",other.id()).header("Authorization","Bearer location")).andExpect(status().isForbidden());
+    mvc.perform(get("/api/v1/inventories/{id}",same.id()).header("Authorization","Bearer manager-hyd")).andExpect(status().isOk());
+    mvc.perform(get("/api/v1/inventories/{id}",other.id()).header("Authorization","Bearer manager-hyd")).andExpect(status().isForbidden());
+    mvc.perform(get("/api/v1/inventories/{id}",other.id()).header("Authorization","Bearer global-admin")).andExpect(status().isOk());
+    mvc.perform(post("/api/v1/inventories/{id}/stock/increase",other.id()).header("Authorization","Bearer location").contentType(MediaType.APPLICATION_JSON).content("{\"quantity\":1,\"reason\":\"cross-location attempt\"}")).andExpect(status().isForbidden());
+    mvc.perform(put("/api/v1/inventories/{id}",other.id()).header("Authorization","Bearer location").contentType(MediaType.APPLICATION_JSON)
+      .content("{\"availableQuantity\":99,\"reservedQuantity\":0,\"reorderLevel\":0,\"status\":\"ACTIVE\"}")).andExpect(status().isForbidden());
+    mvc.perform(post("/api/v1/inventories").header("Authorization","Bearer location").contentType(MediaType.APPLICATION_JSON).content("{\"productId\":\""+UUID.randomUUID()+"\",\"storeId\":\"store-chn\",\"availableQuantity\":1,\"reservedQuantity\":0,\"reorderLevel\":0,\"status\":\"ACTIVE\"}")).andExpect(status().isForbidden());
+
+    UUID productId=UUID.randomUUID();
+    String createdBody=mvc.perform(post("/api/v1/inventories").header("Authorization","Bearer location").contentType(MediaType.APPLICATION_JSON).content("""
+      {"productId":"%s","storeId":"store-hyd","availableQuantity":5,"reservedQuantity":0,"reorderLevel":2,"status":"ACTIVE"}
+      """.formatted(productId))).andExpect(status().isCreated()).andExpect(jsonPath("$.storeId").value("store-hyd"))
+      .andReturn().getResponse().getContentAsString();
+    String createdId=json.readTree(createdBody).get("id").asText();
+    mvc.perform(put("/api/v1/inventories/{id}",createdId).header("Authorization","Bearer location").contentType(MediaType.APPLICATION_JSON).content("""
+      {"availableQuantity":5,"reservedQuantity":0,"reorderLevel":3,"status":"ACTIVE"}
+      """)).andExpect(status().isOk()).andExpect(jsonPath("$.reorderLevel").value(3));
+    mvc.perform(post("/api/v1/inventories/{id}/stock/increase",createdId).header("Authorization","Bearer location").contentType(MediaType.APPLICATION_JSON)
+      .content("{\"quantity\":4,\"reason\":\"isolated Location Admin QA receipt\"}")).andExpect(status().isOk()).andExpect(jsonPath("$.availableQuantity").value(9));
+    mvc.perform(get("/api/v1/inventories/{id}",createdId).header("Authorization","Bearer location"))
+      .andExpect(status().isOk()).andExpect(jsonPath("$.availableQuantity").value(9)).andExpect(jsonPath("$.reorderLevel").value(3));
+    mvc.perform(get("/api/v1/inventories/{id}/movements",createdId).header("Authorization","Bearer location"))
+      .andExpect(status().isOk()).andExpect(jsonPath("$.totalElements").value(1)).andExpect(jsonPath("$.content[0].movementType").value("INCREASE"));
+    mvc.perform(post("/api/v1/inventories/{id}/stock/decrease",createdId).header("Authorization","Bearer location").contentType(MediaType.APPLICATION_JSON)
+      .content("{\"quantity\":10,\"reason\":\"invalid isolated QA decrease\"}")).andExpect(status().isConflict());
+    mvc.perform(post("/api/v1/inventories").contentType(MediaType.APPLICATION_JSON).content("{\"productId\":\""+UUID.randomUUID()+"\",\"storeId\":\"store-hyd\",\"availableQuantity\":1,\"reservedQuantity\":0,\"reorderLevel\":0,\"status\":\"ACTIVE\"}")).andExpect(status().isUnauthorized());
+  }
+
+  @Test void storeManagerCanAdjustOnlyAssignedStoreInventoryAndReadBackChanges() throws Exception {
+    var assigned = inventories.create(new com.metaarch.inventory.inventory.InventoryRequest(
+      UUID.randomUUID(), null, MANAGER_TEST_STORE, 5, 0, 1, com.metaarch.inventory.inventory.InventoryStatus.ACTIVE));
+    var other = inventories.create(new com.metaarch.inventory.inventory.InventoryRequest(
+      UUID.randomUUID(), null, OTHER_TEST_STORE, 8, 0, 1, com.metaarch.inventory.inventory.InventoryStatus.ACTIVE));
+
+    mvc.perform(get("/api/v1/inventories").header("Authorization", "Bearer manager-stock-test"))
+      .andExpect(status().isOk()).andExpect(jsonPath("$.content.length()").value(1))
+      .andExpect(jsonPath("$.content[0].storeId").value(MANAGER_TEST_STORE));
+    mvc.perform(put("/api/v1/inventories/{id}", assigned.id()).header("Authorization", "Bearer manager-stock-test")
+        .contentType(MediaType.APPLICATION_JSON)
+        .content("{\"availableQuantity\":5,\"reservedQuantity\":0,\"reorderLevel\":3,\"status\":\"ACTIVE\"}"))
+      .andExpect(status().isOk()).andExpect(jsonPath("$.reorderLevel").value(3));
+    mvc.perform(post("/api/v1/inventories/{id}/stock/increase", assigned.id()).header("Authorization", "Bearer manager-stock-test")
+        .contentType(MediaType.APPLICATION_JSON).content("{\"quantity\":2,\"reason\":\"isolated Store Manager QA receipt\"}"))
+      .andExpect(status().isOk()).andExpect(jsonPath("$.availableQuantity").value(7));
+    mvc.perform(get("/api/v1/inventories/{id}", assigned.id()).header("Authorization", "Bearer manager-stock-test"))
+      .andExpect(status().isOk()).andExpect(jsonPath("$.availableQuantity").value(7)).andExpect(jsonPath("$.reorderLevel").value(3));
+    mvc.perform(get("/api/v1/inventories/{id}/movements", assigned.id()).header("Authorization", "Bearer manager-stock-test"))
+      .andExpect(status().isOk()).andExpect(jsonPath("$.totalElements").value(1));
+
+    mvc.perform(get("/api/v1/inventories/{id}", other.id()).header("Authorization", "Bearer manager-stock-test"))
+      .andExpect(status().isForbidden());
+    mvc.perform(put("/api/v1/inventories/{id}", other.id()).header("Authorization", "Bearer manager-stock-test")
+        .contentType(MediaType.APPLICATION_JSON)
+        .content("{\"availableQuantity\":99,\"reservedQuantity\":0,\"reorderLevel\":0,\"status\":\"ACTIVE\"}"))
+      .andExpect(status().isForbidden());
+    mvc.perform(post("/api/v1/inventories/{id}/stock/increase", other.id()).header("Authorization", "Bearer manager-stock-test")
+        .contentType(MediaType.APPLICATION_JSON).content("{\"quantity\":1,\"reason\":\"cross-store attempt\"}"))
+      .andExpect(status().isForbidden());
+    mvc.perform(post("/api/v1/inventories").header("Authorization", "Bearer manager-stock-test").contentType(MediaType.APPLICATION_JSON)
+        .content("{\"productId\":\"" + UUID.randomUUID() + "\",\"storeId\":\"" + OTHER_TEST_STORE + "\",\"availableQuantity\":1,\"reservedQuantity\":0,\"reorderLevel\":0,\"status\":\"ACTIVE\"}"))
+      .andExpect(status().isForbidden());
+    mvc.perform(post("/api/v1/inventories/{id}/stock/increase", assigned.id()).contentType(MediaType.APPLICATION_JSON)
+        .content("{\"quantity\":1,\"reason\":\"anonymous attempt\"}"))
+      .andExpect(status().isUnauthorized());
+    org.junit.jupiter.api.Assertions.assertEquals(8, inventories.get(other.id()).availableQuantity());
   }
 
   @Test void manualAdminReleaseCannotConsumeCheckoutHeldStock() throws Exception {

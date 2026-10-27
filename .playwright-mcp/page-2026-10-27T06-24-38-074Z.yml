@@ -1,0 +1,141 @@
+- generic [ref=f13e8]:
+  - navigation [ref=f13e9]:
+    - generic [ref=f13e10]:
+      - img "Spices and Pickles" [ref=f13e1154]
+      - generic [ref=f13e12]:
+        - heading "Super Admin Portal" [level=6] [ref=f13e1155]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f13e1156] [cursor=pointer]
+    - generic [ref=f13e17]:
+      - generic [ref=f13e18]:
+        - paragraph [ref=f13e19]: Main
+        - button "Dashboard" [ref=f13e1157] [cursor=pointer]
+      - generic [ref=f13e25]:
+        - paragraph [ref=f13e26]: Management
+        - button "Locations" [ref=f13e1158] [cursor=pointer]
+        - button "Users" [ref=f13e1159] [cursor=pointer]
+        - button "Stores" [ref=f13e1160] [cursor=pointer]
+        - button "Products" [ref=f13e1161] [cursor=pointer]
+        - button "Categories" [ref=f13e1162] [cursor=pointer]
+        - button "Banners" [ref=f13e1163] [cursor=pointer]
+        - button "Inventory" [ref=f13e1164] [cursor=pointer]
+      - generic [ref=f13e65]:
+        - paragraph [ref=f13e66]: Orders & Payments
+        - button "Orders" [ref=f13e1165] [cursor=pointer]
+        - button "Payments" [ref=f13e1166] [cursor=pointer]
+        - button "Delivery" [ref=f13e1167] [cursor=pointer]
+      - generic [ref=f13e83]:
+        - paragraph [ref=f13e84]: Customer
+        - button "Customers" [ref=f13e1168] [cursor=pointer]
+        - button "Reviews" [ref=f13e1169] [cursor=pointer]
+        - button "Coupons" [ref=f13e1170] [cursor=pointer]
+        - button "Notifications" [ref=f13e1171] [cursor=pointer]
+      - generic [ref=f13e106]:
+        - paragraph [ref=f13e107]: Analytics
+        - button "Reports" [ref=f13e1172] [cursor=pointer]
+      - generic [ref=f13e113]:
+        - paragraph [ref=f13e114]: System
+        - button "Security" [ref=f13e1173] [cursor=pointer]
+        - button "Audit Logs" [ref=f13e1174] [cursor=pointer]
+    - button "View Customer App" [ref=f13e1175] [cursor=pointer]
+  - main [ref=f13e126]:
+    - generic [ref=f13e127]:
+      - generic [ref=f13e128]:
+        - button [ref=f13e129] [cursor=pointer]
+        - generic [ref=f13e132]:
+          - text: Super Admin /
+          - strong [ref=f13e133]: Products
+      - generic [ref=f13e134]:
+        - textbox "Search portal" [ref=f13e1176]
+        - button "Notifications" [ref=f13e1177] [cursor=pointer]
+        - button "A Admin" [ref=f13e1178] [cursor=pointer]:
+          - generic [ref=f13e144]: A
+          - generic [ref=f13e145]: Admin
+    - generic [ref=f13e146]:
+      - generic [ref=f13e147]:
+        - heading "Products" [level=4] [ref=f13e1179]
+        - paragraph [ref=f13e149]: Manage products within your assigned scope.
+      - button "View Customer App" [ref=f13e1180] [cursor=pointer]
+    - generic [ref=f13e151]:
+      - generic [ref=f13e152]:
+        - generic [ref=f13e153]:
+          - generic: Search
+          - generic [ref=f13e154]:
+            - textbox "Search" [ref=f13e1181]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f13e156]:
+          - combobox [ref=f13e157] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f13e158]:
+          - combobox [ref=f13e159] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=f13e1182] [cursor=pointer]
+        - button "Export" [ref=f13e1183] [cursor=pointer]
+      - status [ref=f13e964]: Product slug already exists
+      - generic [ref=f13e965]:
+        - generic [ref=f13e966]:
+          - paragraph [ref=f13e967]: California Almonds
+          - paragraph [ref=f13e968]: DRY-CAL-ALMOND
+        - generic [ref=f13e969]:
+          - button "View" [ref=f13e1184] [cursor=pointer]
+          - button "Edit" [ref=f13e1185] [cursor=pointer]
+          - button "Duplicate" [ref=f13e1186] [cursor=pointer]
+          - button "Deactivate" [ref=f13e1187] [cursor=pointer]
+          - button "Delete" [ref=f13e1188] [cursor=pointer]
+      - generic [ref=f13e975]:
+        - generic [ref=f13e976]:
+          - paragraph [ref=f13e977]: Premium Cashew Nuts
+          - paragraph [ref=f13e978]: DRY-PREM-CASHEW
+        - generic [ref=f13e979]:
+          - button "View" [ref=f13e1189] [cursor=pointer]
+          - button "Edit" [ref=f13e1190] [cursor=pointer]
+          - button "Duplicate" [ref=f13e1191] [cursor=pointer]
+          - button "Deactivate" [ref=f13e1192] [cursor=pointer]
+          - button "Delete" [ref=f13e1193] [cursor=pointer]
+      - generic [ref=f13e985]:
+        - generic [ref=f13e986]:
+          - paragraph [ref=f13e987]: Afghan Raisins
+          - paragraph [ref=f13e988]: DRY-AFG-RAISIN
+        - generic [ref=f13e989]:
+          - button "View" [ref=f13e1194] [cursor=pointer]
+          - button "Edit" [ref=f13e1195] [cursor=pointer]
+          - button "Duplicate" [ref=f13e1196] [cursor=pointer]
+          - button "Deactivate" [ref=f13e1197] [cursor=pointer]
+          - button "Delete" [ref=f13e1198] [cursor=pointer]
+      - generic [ref=f13e995]:
+        - generic [ref=f13e996]:
+          - paragraph [ref=f13e997]: Andhra Mango Avakaya Pickle
+          - paragraph [ref=f13e998]: PKL-ANDHRA-AVAKAYA
+        - generic [ref=f13e999]:
+          - button "View" [ref=f13e1199] [cursor=pointer]
+          - button "Edit" [ref=f13e1200] [cursor=pointer]
+          - button "Duplicate" [ref=f13e1201] [cursor=pointer]
+          - button "Deactivate" [ref=f13e1202] [cursor=pointer]
+          - button "Delete" [ref=f13e1203] [cursor=pointer]
+      - generic [ref=f13e1005]:
+        - generic [ref=f13e1006]:
+          - paragraph [ref=f13e1007]: Chicken Boneless
+          - paragraph [ref=f13e1008]: NV-CHICKEN-BONELESS
+        - generic [ref=f13e1009]:
+          - button "View" [ref=f13e1204] [cursor=pointer]
+          - button "Edit" [ref=f13e1205] [cursor=pointer]
+          - button "Duplicate" [ref=f13e1206] [cursor=pointer]
+          - button "Deactivate" [ref=f13e1207] [cursor=pointer]
+          - button "Delete" [ref=f13e1208] [cursor=pointer]
+      - generic [ref=f13e1015]:
+        - generic [ref=f13e1016]:
+          - paragraph [ref=f13e1017]: Chicken Breast
+          - paragraph [ref=f13e1018]: NV-CHICKEN-BREAST
+        - generic [ref=f13e1019]:
+          - button "View" [ref=f13e1209] [cursor=pointer]
+          - button "Edit" [ref=f13e1210] [cursor=pointer]
+          - button "Duplicate" [ref=f13e1211] [cursor=pointer]
+          - button "Deactivate" [ref=f13e1212] [cursor=pointer]
+          - button "Delete" [ref=f13e1213] [cursor=pointer]
+      - generic [ref=f13e222]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f13e223]: Page 1 of 6
+        - button "Next" [ref=f13e1214] [cursor=pointer]

@@ -1,0 +1,47 @@
+- generic [ref=e61]:
+  - complementary [ref=e62]:
+    - generic [ref=e63]:
+      - img "Spices and Pickles" [ref=e64]
+      - generic [ref=e65]:
+        - heading "Store Manager" [level=6] [ref=e66]
+        - paragraph [ref=e67]: SR Nagar Store
+    - navigation [ref=e68]:
+      - button "Dashboard" [ref=e69] [cursor=pointer]
+      - button "Products" [ref=e74] [cursor=pointer]
+      - button "Banners" [ref=e80] [cursor=pointer]
+      - button "Coupons" [ref=e85] [cursor=pointer]
+      - button "Inventory" [ref=e91] [cursor=pointer]
+      - button "Orders" [ref=e97] [cursor=pointer]
+      - button "Delivery Partners" [ref=e102] [cursor=pointer]
+      - button "Delivery Radius" [ref=e107] [cursor=pointer]
+      - button "Delivery Settings" [ref=e112] [cursor=pointer]
+      - button "Change Password" [ref=e117] [cursor=pointer]
+      - button "Profile" [ref=e122] [cursor=pointer]
+      - button "Logout" [ref=e127] [cursor=pointer]
+    - button "View Customer App" [ref=e132] [cursor=pointer]
+  - main [ref=e133]:
+    - generic [ref=e134]:
+      - button [ref=e135] [cursor=pointer]
+      - button "V Vikram SR Nagar" [ref=e139] [cursor=pointer]:
+        - generic [ref=e140]: V
+        - generic [ref=e141]: Vikram SR Nagar
+      - button "Sign out" [ref=e142] [cursor=pointer]
+    - generic [ref=e144]:
+      - heading "Welcome back, Vikram SR Nagar" [level=4] [ref=e145]
+      - paragraph [ref=e146]: SR Nagar Store
+    - generic [ref=e147]:
+      - generic [ref=e148]:
+        - paragraph [ref=e149]: Orders
+        - heading "0" [level=5] [ref=e150]
+      - generic [ref=e151]:
+        - paragraph [ref=e152]: Active Orders
+        - heading "0" [level=5] [ref=e153]
+      - generic [ref=e154]:
+        - paragraph [ref=e155]: Revenue
+        - heading "₹0" [level=5] [ref=e156]
+      - generic [ref=e157]:
+        - paragraph [ref=e158]: Store Status
+        - heading "Active" [level=5] [ref=e159]
+    - generic [ref=e160]:
+      - button "Manage Delivery Radius" [ref=e161] [cursor=pointer]
+      - button "View Orders" [ref=e162] [cursor=pointer]

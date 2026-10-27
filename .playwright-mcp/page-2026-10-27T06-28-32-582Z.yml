@@ -1,0 +1,211 @@
+- generic [ref=f15e1]:
+  - generic [ref=f15e8]:
+    - navigation [ref=f15e9]:
+      - generic [ref=f15e10]:
+        - generic [ref=f15e12]:
+          - heading [level=6] [ref=f15e220]: Super Admin Portal
+          - text: All locations
+        - button [ref=f15e221] [cursor=pointer]
+      - generic [ref=f15e17]:
+        - generic [ref=f15e18]:
+          - paragraph [ref=f15e19]: Main
+          - button [ref=f15e222] [cursor=pointer]:
+            - generic [ref=f15e24]: Dashboard
+        - generic [ref=f15e25]:
+          - paragraph [ref=f15e26]: Management
+          - button [ref=f15e223] [cursor=pointer]:
+            - generic [ref=f15e32]: Locations
+          - button [ref=f15e224] [cursor=pointer]:
+            - generic [ref=f15e37]: Users
+          - button [ref=f15e225] [cursor=pointer]:
+            - generic [ref=f15e42]: Stores
+          - button [ref=f15e226] [cursor=pointer]:
+            - generic [ref=f15e48]: Products
+          - button [ref=f15e227] [cursor=pointer]:
+            - generic [ref=f15e53]: Categories
+          - button [ref=f15e228] [cursor=pointer]:
+            - generic [ref=f15e58]: Banners
+          - button [ref=f15e229] [cursor=pointer]:
+            - generic [ref=f15e64]: Inventory
+        - generic [ref=f15e65]:
+          - paragraph [ref=f15e66]: Orders & Payments
+          - button [ref=f15e230] [cursor=pointer]:
+            - generic [ref=f15e71]: Orders
+          - button [ref=f15e231] [cursor=pointer]:
+            - generic [ref=f15e77]: Payments
+          - button [ref=f15e232] [cursor=pointer]:
+            - generic [ref=f15e82]: Delivery
+        - generic [ref=f15e83]:
+          - paragraph [ref=f15e84]: Customer
+          - button [ref=f15e233] [cursor=pointer]:
+            - generic [ref=f15e89]: Customers
+          - button [ref=f15e234] [cursor=pointer]:
+            - generic [ref=f15e94]: Reviews
+          - button [ref=f15e235] [cursor=pointer]:
+            - generic [ref=f15e100]: Coupons
+          - button [ref=f15e236] [cursor=pointer]:
+            - generic [ref=f15e105]: Notifications
+        - generic [ref=f15e106]:
+          - paragraph [ref=f15e107]: Analytics
+          - button [ref=f15e237] [cursor=pointer]:
+            - generic [ref=f15e112]: Reports
+        - generic [ref=f15e113]:
+          - paragraph [ref=f15e114]: System
+          - button [ref=f15e238] [cursor=pointer]:
+            - generic [ref=f15e119]: Security
+          - button [ref=f15e239] [cursor=pointer]:
+            - generic [ref=f15e124]: Audit Logs
+      - button [ref=f15e240] [cursor=pointer]: View Customer App
+    - main [ref=f15e126]:
+      - generic [ref=f15e127]:
+        - generic [ref=f15e128]:
+          - button [ref=f15e129] [cursor=pointer]
+          - generic [ref=f15e132]:
+            - text: Super Admin /
+            - strong [ref=f15e133]: Inventory
+        - generic [ref=f15e134]:
+          - textbox [ref=f15e241]:
+            - /placeholder: Search portal
+          - button [ref=f15e242] [cursor=pointer]
+          - button [ref=f15e243] [cursor=pointer]:
+            - generic [ref=f15e144]: A
+            - generic [ref=f15e145]: Admin
+      - generic [ref=f15e146]:
+        - generic [ref=f15e147]:
+          - heading [level=4] [ref=f15e244]: Inventory
+          - paragraph [ref=f15e149]: Manage inventory within your assigned scope.
+        - button [ref=f15e245] [cursor=pointer]: View Customer App
+      - generic [ref=f15e151]:
+        - generic [ref=f15e152]:
+          - generic [ref=f15e153]:
+            - generic: Search
+            - generic [ref=f15e154]:
+              - textbox [ref=f15e246]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f15e156]:
+            - combobox [ref=f15e157] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f15e158]:
+            - combobox [ref=f15e159] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f15e247] [cursor=pointer]: Create
+          - button [ref=f15e248] [cursor=pointer]: Export
+        - generic [ref=f15e162]:
+          - generic [ref=f15e163]:
+            - paragraph [ref=f15e164]: Demo Ragi Flour
+            - paragraph [ref=f15e165]: DEMO-RAGI-1KG-V1
+          - generic [ref=f15e166]:
+            - button [ref=f15e249] [cursor=pointer]: View
+            - button [ref=f15e250] [cursor=pointer]: Stock +10
+            - button [ref=f15e251] [cursor=pointer]: Stock -1
+            - button [ref=f15e252] [cursor=pointer]: Adjust
+        - generic [ref=f15e171]:
+          - generic [ref=f15e172]:
+            - paragraph [ref=f15e173]: Demo Foxtail Millet
+            - paragraph [ref=f15e174]: DEMO-FOXTAIL-1KG-V1
+          - generic [ref=f15e175]:
+            - button [ref=f15e253] [cursor=pointer]: View
+            - button [ref=f15e254] [cursor=pointer]: Stock +10
+            - button [ref=f15e255] [cursor=pointer]: Stock -1
+            - button [ref=f15e256] [cursor=pointer]: Adjust
+        - generic [ref=f15e180]:
+          - generic [ref=f15e181]:
+            - paragraph [ref=f15e182]: Demo Andhra Chilli Powder
+            - paragraph [ref=f15e183]: DEMO-CHILLI-200G-V1
+          - generic [ref=f15e184]:
+            - button [ref=f15e257] [cursor=pointer]: View
+            - button [ref=f15e258] [cursor=pointer]: Stock +10
+            - button [ref=f15e259] [cursor=pointer]: Stock -1
+            - button [ref=f15e260] [cursor=pointer]: Adjust
+        - generic [ref=f15e189]:
+          - generic [ref=f15e190]:
+            - paragraph [ref=f15e191]: Demo Turmeric Powder
+            - paragraph [ref=f15e192]: DEMO-TURMERIC-200G-V1
+          - generic [ref=f15e193]:
+            - button [ref=f15e261] [cursor=pointer]: View
+            - button [ref=f15e262] [cursor=pointer]: Stock +10
+            - button [ref=f15e263] [cursor=pointer]: Stock -1
+            - button [ref=f15e264] [cursor=pointer]: Adjust
+        - generic [ref=f15e198]:
+          - generic [ref=f15e199]:
+            - paragraph [ref=f15e200]: Afghan Raisins
+            - paragraph [ref=f15e201]: DRY-AFG-RAISIN-200G
+          - generic [ref=f15e202]:
+            - button [ref=f15e265] [cursor=pointer]: View
+            - button [ref=f15e266] [cursor=pointer]: Stock +10
+            - button [ref=f15e267] [cursor=pointer]: Stock -1
+            - button [ref=f15e268] [cursor=pointer]: Adjust
+        - generic [ref=f15e207]:
+          - generic [ref=f15e208]:
+            - paragraph [ref=f15e209]: Premium Walnut Kernels
+            - paragraph [ref=f15e210]: DRY-PREM-WALNUT-200G
+          - generic [ref=f15e211]:
+            - button [ref=f15e269] [cursor=pointer]: View
+            - button [ref=f15e270] [cursor=pointer]: Stock +10
+            - button [ref=f15e271] [cursor=pointer]: Stock -1
+            - button [ref=f15e272] [cursor=pointer]: Adjust
+        - generic [ref=f15e216]:
+          - button [disabled]: Previous
+          - paragraph [ref=f15e217]: Page 1 of 6
+          - button [ref=f15e273] [cursor=pointer]: Next
+  - dialog [active] [ref=f15e276]:
+    - heading "Details Inventory" [level=2] [ref=f15e277]
+    - generic [ref=f15e278]:
+      - generic [ref=f15e279]:
+        - text: productId
+        - paragraph [ref=f15e280]: 8745cf21-75b7-4067-8105-dd31cfa22c14
+      - generic [ref=f15e281]:
+        - text: variantId
+        - paragraph [ref=f15e282]: e1b5fa49-eb63-486e-981c-053926d3de84
+      - generic [ref=f15e283]:
+        - text: storeId
+        - paragraph [ref=f15e284]: store-demo-lb-nagar-fresh
+      - generic [ref=f15e285]:
+        - text: availableQuantity
+        - paragraph [ref=f15e286]: "25"
+      - generic [ref=f15e287]:
+        - text: reservedQuantity
+        - paragraph [ref=f15e288]: "0"
+      - generic [ref=f15e289]:
+        - text: reorderLevel
+        - paragraph [ref=f15e290]: "5"
+      - generic [ref=f15e291]:
+        - text: status
+        - paragraph [ref=f15e292]: ACTIVE
+      - generic [ref=f15e293]:
+        - text: createdAt
+        - paragraph [ref=f15e294]: 2026-10-27T06:28:12.453466Z
+      - generic [ref=f15e295]:
+        - text: updatedAt
+        - paragraph [ref=f15e296]: 2026-10-27T06:28:12.453466Z
+      - generic [ref=f15e297]:
+        - text: version
+        - paragraph [ref=f15e298]: "0"
+      - generic [ref=f15e299]:
+        - text: name
+        - paragraph [ref=f15e300]: Demo Ragi Flour
+      - generic [ref=f15e301]:
+        - text: sku
+        - paragraph [ref=f15e302]: DEMO-RAGI-1KG-V1
+      - generic [ref=f15e303]:
+        - text: store
+        - paragraph [ref=f15e304]: Demo LB Nagar Fresh
+      - generic [ref=f15e305]:
+        - text: location
+        - paragraph [ref=f15e306]: Hyderabad
+      - generic [ref=f15e307]:
+        - text: stock
+        - paragraph [ref=f15e308]: "25"
+      - generic [ref=f15e309]:
+        - text: reserved
+        - paragraph [ref=f15e310]: "0"
+      - generic [ref=f15e311]:
+        - text: lowStockAt
+        - paragraph [ref=f15e312]: "5"
+      - generic [ref=f15e313]:
+        - text: available
+        - paragraph [ref=f15e314]: Available
+    - button "Cancel" [ref=f15e317] [cursor=pointer]

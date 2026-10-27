@@ -21,7 +21,7 @@ public class PublicApiSecurity {
   @Bean SecurityFilterChain publicSecurity(HttpSecurity http) throws Exception {
     return http.csrf(c -> c.disable()).sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
       .authorizeHttpRequests(a -> a.requestMatchers("/actuator/health", "/api/v1/payments/capabilities",
-        "/internal/events", "/internal/provider/payment-webhook").permitAll()
+        "/internal/events", "/internal/provider/payment-webhook", "/api/v1/public/inventory-availability").permitAll()
         .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/v1/reviews/products", "/api/v1/reviews/products/**").permitAll()
         .requestMatchers("/api/v1/**").authenticated().anyRequest().denyAll())
       .oauth2ResourceServer(o -> o.jwt(j -> j.jwtAuthenticationConverter(jwt -> {

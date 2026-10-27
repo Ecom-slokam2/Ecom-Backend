@@ -1,0 +1,98 @@
+- generic [ref=f1e27]:
+  - navigation [ref=f1e28]:
+    - generic [ref=f1e29]:
+      - img "Spices and Pickles" [ref=f1e30]
+      - generic [ref=f1e31]:
+        - heading "Super Admin Portal" [level=6] [ref=f1e32]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f1e33] [cursor=pointer]
+    - generic [ref=f1e36]:
+      - generic [ref=f1e37]:
+        - paragraph [ref=f1e38]: Main
+        - button "Dashboard" [ref=f1e39] [cursor=pointer]
+      - generic [ref=f1e44]:
+        - paragraph [ref=f1e45]: Management
+        - button "Locations" [ref=f1e46] [cursor=pointer]
+        - button "Users" [active] [ref=f1e52] [cursor=pointer]
+        - button "Stores" [ref=f1e57] [cursor=pointer]
+        - button "Products" [ref=f1e62] [cursor=pointer]
+        - button "Categories" [ref=f1e68] [cursor=pointer]
+        - button "Banners" [ref=f1e73] [cursor=pointer]
+        - button "Inventory" [ref=f1e78] [cursor=pointer]
+      - generic [ref=f1e84]:
+        - paragraph [ref=f1e85]: Orders & Payments
+        - button "Orders" [ref=f1e86] [cursor=pointer]
+        - button "Payments" [ref=f1e91] [cursor=pointer]
+        - button "Delivery" [ref=f1e97] [cursor=pointer]
+      - generic [ref=f1e102]:
+        - paragraph [ref=f1e103]: Customer
+        - button "Customers" [ref=f1e104] [cursor=pointer]
+        - button "Reviews" [ref=f1e109] [cursor=pointer]
+        - button "Coupons" [ref=f1e114] [cursor=pointer]
+        - button "Notifications" [ref=f1e120] [cursor=pointer]
+      - generic [ref=f1e125]:
+        - paragraph [ref=f1e126]: Analytics
+        - button "Reports" [ref=f1e127] [cursor=pointer]
+      - generic [ref=f1e132]:
+        - paragraph [ref=f1e133]: System
+        - button "Security" [ref=f1e134] [cursor=pointer]
+        - button "Audit Logs" [ref=f1e139] [cursor=pointer]
+    - button "View Customer App" [ref=f1e144] [cursor=pointer]
+  - main [ref=f1e145]:
+    - generic [ref=f1e146]:
+      - generic [ref=f1e147]:
+        - button [ref=f1e148] [cursor=pointer]
+        - generic [ref=f1e151]:
+          - text: Super Admin /
+          - strong [ref=f1e152]: Users
+      - generic [ref=f1e153]:
+        - textbox "Search portal" [ref=f1e158]
+        - button "Notifications" [ref=f1e159] [cursor=pointer]
+        - button "A Admin" [ref=f1e162] [cursor=pointer]:
+          - generic [ref=f1e163]: A
+          - generic [ref=f1e164]: Admin
+    - generic [ref=f1e165]:
+      - generic [ref=f1e166]:
+        - heading "Users" [level=4] [ref=f1e274]
+        - paragraph [ref=f1e168]: Manage users within your assigned scope.
+      - button "View Customer App" [ref=f1e169] [cursor=pointer]
+    - generic [ref=f1e275]:
+      - generic [ref=f1e276]:
+        - generic [ref=f1e277]:
+          - generic: Search
+          - generic [ref=f1e278]:
+            - textbox "Search" [ref=f1e279]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f1e280]:
+          - combobox [ref=f1e281] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f1e282]:
+          - combobox [ref=f1e283] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [ref=f1e284] [cursor=pointer]
+        - button "Export" [ref=f1e285] [cursor=pointer]
+      - generic [ref=f1e286]:
+        - generic [ref=f1e287]:
+          - paragraph [ref=f1e288]: Hyderabad Location Administrator
+          - paragraph [ref=f1e289]: locationadminhyd@metaarch.local
+        - generic [ref=f1e290]:
+          - button "View" [ref=f1e291] [cursor=pointer]
+          - button "Edit" [ref=f1e292] [cursor=pointer]
+          - button "Deactivate" [ref=f1e293] [cursor=pointer]
+          - button "Delete" [ref=f1e294] [cursor=pointer]
+      - generic [ref=f1e295]:
+        - generic [ref=f1e296]:
+          - paragraph [ref=f1e297]: Global Administrator
+          - paragraph [ref=f1e298]: globaladmin@metaarch.local
+        - generic [ref=f1e299]:
+          - button "View" [ref=f1e300] [cursor=pointer]
+          - button "Edit" [ref=f1e301] [cursor=pointer]
+          - button "Deactivate" [ref=f1e302] [cursor=pointer]
+          - button "Delete" [ref=f1e303] [cursor=pointer]
+      - generic [ref=f1e304]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f1e305]: Page 1 of 1
+        - button "Next" [disabled]

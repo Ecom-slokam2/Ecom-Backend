@@ -13,8 +13,10 @@ import org.springframework.data.repository.query.Param;
 public interface InventoryRepository extends JpaRepository<Inventory, UUID> {
   Optional<Inventory> findByProductIdAndVariantKeyAndStoreId(UUID productId, UUID variantKey, String storeId);
   Page<Inventory> findByStoreId(String storeId, Pageable pageable);
+  Page<Inventory> findByStoreIdIn(java.util.Collection<String> storeIds, Pageable pageable);
   Page<Inventory> findByStatus(InventoryStatus status, Pageable pageable);
   Page<Inventory> findByStoreIdAndStatus(String storeId, InventoryStatus status, Pageable pageable);
+  Page<Inventory> findByStoreIdInAndStatus(java.util.Collection<String> storeIds, InventoryStatus status, Pageable pageable);
   boolean existsByProductIdAndVariantKeyAndStoreId(UUID productId, UUID variantKey, String storeId);
   boolean existsByProductIdAndVariantKeyAndStoreIdAndIdNot(UUID productId, UUID variantKey, String storeId, UUID id);
 

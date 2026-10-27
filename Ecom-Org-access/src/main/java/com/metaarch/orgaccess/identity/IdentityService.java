@@ -9,6 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -85,6 +86,9 @@ public class IdentityService {
       conflicts.put("mobile", "This mobile number is already registered. Use another mobile number.");
     if (!conflicts.isEmpty()) throw new DuplicateUserContactException(conflicts);
     Role role = roles.findByName(roleName).orElseThrow(() -> new IllegalArgumentException("Unknown role"));
+    if (!Set.of("GLOBAL_ADMIN", "LOCATION_ADMIN", "STORE_MANAGER").contains(roleName))
+      throw new org.springframework.security.access.AccessDeniedException("This role cannot be provisioned through staff management");
+    validateStaffAssignment(roleName, request);
     UserAccount user = new UserAccount();
     user.setUsername(username); user.setEmail(email);
     user.setPasswordHash(passwordEncoder.encode(request.password()));
@@ -111,10 +115,11 @@ public class IdentityService {
   public UserAccount updateStaff(Long id, UserUpdateRequest request, String actor) {
     UserAccount user = users.findWithRolesById(id)
         .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-    List<Membership> staffMemberships = memberships.findByUserId(id).stream()
-        .filter(m -> m.getRole().getName().equals("GLOBAL_ADMIN") || m.getRole().getName().equals("LOCATION_ADMIN"))
+    List<Membership> accountMemberships = memberships.findByUserId(id);
+    List<Membership> staffMemberships = accountMemberships.stream()
+        .filter(m -> Set.of("GLOBAL_ADMIN", "LOCATION_ADMIN", "STORE_MANAGER", "DELIVERY_PARTNER").contains(m.getRole().getName()))
         .toList();
-    if (staffMemberships.isEmpty())
+    if (staffMemberships.size() != 1 || accountMemberships.size() != 1)
       throw new org.springframework.security.access.AccessDeniedException("This account cannot be edited through staff management");
     boolean orgMatches = staffMemberships.stream()
         .allMatch(m -> "metaarch-commerce".equalsIgnoreCase(m.getOrganizationId()));
@@ -124,21 +129,23 @@ public class IdentityService {
     if (currentRoleNames.size() != 1)
       throw new org.springframework.security.access.AccessDeniedException("Staff account has inconsistent staff assignments");
     String currentRoleName = currentRoleNames.iterator().next();
+    Set<String> accountRoleNames = user.getRoles().stream().map(Role::getName).collect(java.util.stream.Collectors.toSet());
+    if (!accountRoleNames.equals(currentRoleNames))
+      throw new org.springframework.security.access.AccessDeniedException("Staff account has additional or inconsistent roles");
     String requestedRole = normalizeRole(request.role());
-    if (!requestedRole.equals("GLOBAL_ADMIN") && !requestedRole.equals("LOCATION_ADMIN"))
-      throw new org.springframework.security.access.AccessDeniedException("Only Global Admin and Location Admin roles can be assigned here");
-    if (requestedRole.equals("LOCATION_ADMIN") && (request.location() == null || request.location().isBlank()))
-      throw new IllegalArgumentException("Location is required for a Location Admin");
-    if (requestedRole.equals("GLOBAL_ADMIN") && request.location() != null && !request.location().isBlank())
-      throw new IllegalArgumentException("Global Admin cannot be assigned to a location");
+    if (!Set.of("GLOBAL_ADMIN", "LOCATION_ADMIN", "STORE_MANAGER", "DELIVERY_PARTNER").contains(requestedRole))
+      throw new org.springframework.security.access.AccessDeniedException("This role cannot be assigned through staff management");
+    if (currentRoleName.equals("STORE_MANAGER") != requestedRole.equals("STORE_MANAGER")
+        || currentRoleName.equals("DELIVERY_PARTNER") != requestedRole.equals("DELIVERY_PARTNER"))
+      throw new org.springframework.security.access.AccessDeniedException("Staff role assignments cannot be changed through profile editing");
     Role nextRole = roles.findByName(requestedRole)
         .orElseThrow(() -> new IllegalArgumentException("Unknown role"));
     user.setDisplayName(request.name().trim());
     user.setEmail(request.email().trim());
     user.setMobile(blank(request.mobile()));
     String nextStatus = status(request.status());
-    if (!nextStatus.equalsIgnoreCase("Active") && !nextStatus.equalsIgnoreCase("Blocked"))
-      throw new IllegalArgumentException("Status must be Active or Blocked");
+    if (!Set.of("ACTIVE", "INACTIVE", "BLOCKED").contains(nextStatus.toUpperCase(Locale.ROOT)))
+      throw new IllegalArgumentException("Status must be Active, Inactive, or Blocked");
     user.setStatus(nextStatus);
     user.setEnabled(nextStatus.equalsIgnoreCase("Active"));
     user.setLocked(nextStatus.equalsIgnoreCase("Blocked"));
@@ -148,17 +155,54 @@ public class IdentityService {
     for (Membership membership : staffMemberships) {
       membership.setRole(nextRole);
       if (requestedRole.equals("LOCATION_ADMIN")) membership.setLocationId(request.location().trim().toLowerCase(Locale.ROOT));
-      else membership.setLocationId(null);
+      else if (!requestedRole.equals("STORE_MANAGER") && !requestedRole.equals("DELIVERY_PARTNER")) membership.setLocationId(null);
       memberships.save(membership);
     }
     auditLogs.save(new AuditLog(actor, "UPDATE_USER", user.getUsername()));
     return user;
   }
 
+  @Transactional
+  public void deleteStaff(Long id, String actor) {
+    if (id == null || id <= 0) throw new IllegalArgumentException("A valid staff account ID is required");
+    UserAccount user = users.findWithRolesById(id)
+        .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    if (user.getUsername().equalsIgnoreCase(actor))
+      throw new org.springframework.security.access.AccessDeniedException("You cannot delete your own account");
+
+    List<Membership> accountMemberships = memberships.findByUserId(id);
+    if (accountMemberships.isEmpty())
+      throw new org.springframework.security.access.AccessDeniedException("Only assigned staff accounts can be deleted here");
+    Set<String> staffRoles = Set.of("GLOBAL_ADMIN", "LOCATION_ADMIN", "STORE_MANAGER", "DELIVERY_PARTNER");
+    boolean validStaffMemberships = accountMemberships.stream().allMatch(membership ->
+        "metaarch-commerce".equalsIgnoreCase(membership.getOrganizationId())
+            && staffRoles.contains(membership.getRole().getName()));
+    if (!validStaffMemberships)
+      throw new org.springframework.security.access.AccessDeniedException("Account has assignments outside the managed staff organization");
+
+    Set<String> assignedRoles = accountMemberships.stream().map(membership -> membership.getRole().getName())
+        .collect(java.util.stream.Collectors.toSet());
+    Set<String> accountRoles = user.getRoles().stream().map(Role::getName).collect(java.util.stream.Collectors.toSet());
+    if (assignedRoles.size() != 1 || !assignedRoles.equals(accountRoles))
+      throw new org.springframework.security.access.AccessDeniedException("Account has additional or inconsistent roles and cannot be deleted as staff");
+
+    Integer customerRecords = customerDb.queryForObject("SELECT COUNT(*) FROM customers WHERE user_id = ?", Integer.class, id);
+    if (customerRecords != null && customerRecords > 0)
+      throw new org.springframework.security.access.AccessDeniedException("This account has customer records and cannot be deleted as staff");
+
+    auditLogs.save(new AuditLog(actor, "DELETE_USER", user.getUsername()));
+    customerDb.update("DELETE FROM customer_otp WHERE user_id = ?", id);
+    customerDb.update("DELETE FROM customer_contact_claims WHERE user_id = ?", id);
+    memberships.deleteAll(accountMemberships);
+    user.getRoles().clear();
+    users.delete(user);
+    users.flush();
+  }
+
   @Transactional(readOnly = true)
   public List<StaffSummary> listStaff(String actor) {
     return memberships.findByOrganizationIdIgnoreCase("metaarch-commerce").stream()
-        .filter(membership -> membership.getRole().getName().equals("GLOBAL_ADMIN") || membership.getRole().getName().equals("LOCATION_ADMIN"))
+        .filter(membership -> Set.of("GLOBAL_ADMIN", "LOCATION_ADMIN", "STORE_MANAGER").contains(membership.getRole().getName()))
         .map(membership -> new StaffSummary(membership.getUser().getId(), membership.getUser().getUsername(),
             membership.getUser().getEmail(), membership.getUser().getDisplayName(), membership.getUser().getMobile(),
             membership.getRole().getName(), membership.getUser().getStatus(), membership.getOrganizationId(),
@@ -169,6 +213,52 @@ public class IdentityService {
 
   public record StaffSummary(Long id, String username, String email, String name, String mobile, String role,
       String status, String organizationId, String location, String storeId, String store) {}
+
+  @Transactional(readOnly = true)
+  public List<StaffSummary> listStaffForLocation(Authentication authentication) {
+    String location = locationAdminLocation(authentication);
+    return memberships.findByOrganizationIdIgnoreCase("metaarch-commerce").stream()
+        .filter(membership -> Set.of("STORE_MANAGER", "DELIVERY_PARTNER").contains(membership.getRole().getName()))
+        .filter(membership -> location.equalsIgnoreCase(membership.getLocationId() == null ? "" : membership.getLocationId().trim()))
+        .map(membership -> new StaffSummary(membership.getUser().getId(), membership.getUser().getUsername(),
+            membership.getUser().getEmail(), membership.getUser().getDisplayName(), membership.getUser().getMobile(),
+            membership.getRole().getName(), membership.getUser().getStatus(), membership.getOrganizationId(),
+            membership.getLocationId(), membership.getStoreId(), membership.getStoreName()))
+        .collect(java.util.stream.Collectors.collectingAndThen(java.util.stream.Collectors.toMap(StaffSummary::id,
+            summary -> summary, (first, ignored) -> first, java.util.LinkedHashMap::new), map -> List.copyOf(map.values())));
+  }
+
+  @Transactional
+  public UserAccount updateLocationStaff(Long id, UserUpdateRequest request, Authentication authentication) {
+    UserAccount user = requireLocationStaff(id, authentication);
+    Membership membership = memberships.findByUserId(id).getFirst();
+    if (!membership.getRole().getName().equals(normalizeRole(request.role())))
+      throw new org.springframework.security.access.AccessDeniedException("Location Admins cannot change staff roles");
+    String nextStatus = status(request.status());
+    if (!Set.of("ACTIVE", "INACTIVE", "BLOCKED").contains(nextStatus.toUpperCase(Locale.ROOT)))
+      throw new IllegalArgumentException("Status must be Active, Inactive, or Blocked");
+    user.setDisplayName(request.name().trim());
+    user.setEmail(request.email().trim());
+    user.setMobile(blank(request.mobile()));
+    user.setStatus(nextStatus);
+    user.setEnabled("ACTIVE".equalsIgnoreCase(nextStatus));
+    user.setLocked("BLOCKED".equalsIgnoreCase(nextStatus));
+    users.save(user);
+    auditLogs.save(new AuditLog(authentication.getName(), "UPDATE_USER", user.getUsername()));
+    return user;
+  }
+
+  @Transactional
+  public void deleteLocationStaff(Long id, Authentication authentication) {
+    requireLocationStaff(id, authentication);
+    deleteStaff(id, authentication.getName());
+  }
+
+  @Transactional
+  public void resetLocationStaffPassword(Long id, String newPassword, Authentication authentication) {
+    requireLocationStaff(id, authentication);
+    resetStaffPassword(id, newPassword, authentication.getName());
+  }
 
   private boolean contactClaimExists(String contact) {
     Integer count = customerDb.queryForObject(
@@ -186,11 +276,62 @@ public class IdentityService {
     auditLogs.save(new AuditLog(username, "CHANGE_PASSWORD", username));
   }
 
+  @Transactional
+  public void resetStaffPassword(Long id, String newPassword, String actor) {
+    UserAccount user = users.findWithRolesById(id)
+        .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    Set<String> staffRoles = Set.of("GLOBAL_ADMIN", "LOCATION_ADMIN", "STORE_MANAGER", "DELIVERY_PARTNER");
+    Set<String> roleNames = user.getRoles().stream().map(Role::getName).collect(java.util.stream.Collectors.toSet());
+    List<Membership> accountMemberships = memberships.findByUserId(id);
+    boolean assignedStaffAccount = !roleNames.isEmpty() && staffRoles.containsAll(roleNames)
+        && accountMemberships.size() == 1
+        && staffRoles.contains(accountMemberships.get(0).getRole().getName())
+        && "metaarch-commerce".equalsIgnoreCase(accountMemberships.get(0).getOrganizationId());
+    if (!assignedStaffAccount)
+      throw new org.springframework.security.access.AccessDeniedException("Only assigned staff accounts can be reset here");
+    user.setPasswordHash(passwordEncoder.encode(newPassword));
+    users.save(user);
+    auditLogs.save(new AuditLog(actor, "RESET_STAFF_PASSWORD", user.getUsername()));
+  }
+
+  private String locationAdminLocation(Authentication authentication) {
+    boolean locationAdmin = authentication.getAuthorities().stream()
+        .anyMatch(authority -> "ROLE_LOCATION_ADMIN".equals(authority.getAuthority()));
+    if (!locationAdmin) throw new org.springframework.security.access.AccessDeniedException("Location Admin role is required");
+    List<Membership> assigned = memberships.findByUserUsernameIgnoreCase(authentication.getName()).stream()
+        .filter(membership -> "LOCATION_ADMIN".equals(membership.getRole().getName()))
+        .filter(membership -> "metaarch-commerce".equalsIgnoreCase(membership.getOrganizationId()))
+        .filter(membership -> membership.getLocationId() != null && !membership.getLocationId().isBlank())
+        .toList();
+    if (assigned.size() != 1) throw new org.springframework.security.access.AccessDeniedException("A single assigned location is required");
+    return assigned.getFirst().getLocationId().trim();
+  }
+
+  private UserAccount requireLocationStaff(Long id, Authentication authentication) {
+    String location = locationAdminLocation(authentication);
+    UserAccount user = users.findWithRolesById(id)
+        .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    List<Membership> accountMemberships = memberships.findByUserId(id);
+    Set<String> allowedRoles = Set.of("STORE_MANAGER", "DELIVERY_PARTNER");
+    if (accountMemberships.size() != 1) throw new org.springframework.security.access.AccessDeniedException("Account is not a single assigned staff account");
+    Membership membership = accountMemberships.getFirst();
+    String role = membership.getRole().getName();
+    Set<String> accountRoles = user.getRoles().stream().map(Role::getName).collect(java.util.stream.Collectors.toSet());
+    if (!"metaarch-commerce".equalsIgnoreCase(membership.getOrganizationId())
+        || !allowedRoles.contains(role)
+        || !location.equalsIgnoreCase(membership.getLocationId() == null ? "" : membership.getLocationId().trim())
+        || !accountRoles.equals(Set.of(role)))
+      throw new org.springframework.security.access.AccessDeniedException("Staff account is outside your assigned location");
+    return user;
+  }
+
   private void saveMembership(UserAccount user, Role role, UserCreateRequest request, String actor) {
-    String organizationId = blank(request.organizationId());
-    String locationId = blank(request.location());
-    String storeId = blank(request.storeId());
-    String storeName = blank(request.store());
+    String roleName = role.getName();
+    boolean administrativeAccount = roleName.equals("GLOBAL_ADMIN") || roleName.equals("LOCATION_ADMIN");
+    String organizationId = administrativeAccount ? "metaarch-commerce" : blank(request.organizationId());
+    String locationId = request.location() == null ? null : request.location().trim().toLowerCase(Locale.ROOT);
+    String storeId = administrativeAccount ? null : blank(request.storeId());
+    String storeName = administrativeAccount ? null : blank(request.store());
     if (organizationId == null && locationId == null && storeId == null && storeName == null) return;
     Membership membership = new Membership();
     membership.setUser(user);
@@ -211,6 +352,30 @@ public class IdentityService {
     // Attribution is security-sensitive; never trust a caller-provided assignedBy value.
     membership.setAssignedBy(actor);
     memberships.save(membership);
+  }
+
+  private void validateStaffAssignment(String roleName, UserCreateRequest request) {
+    boolean hasStoreAssignment = request.storeId() != null && !request.storeId().isBlank()
+        || request.store() != null && !request.store().isBlank()
+        || request.storeLocation() != null && !request.storeLocation().isBlank()
+        || request.storeAddress() != null && !request.storeAddress().isBlank();
+    if (Set.of("GLOBAL_ADMIN", "LOCATION_ADMIN").contains(roleName) && hasStoreAssignment)
+      throw new IllegalArgumentException("Administrator accounts cannot have a store assignment");
+    if (roleName.equals("LOCATION_ADMIN") && (request.location() == null || request.location().isBlank()))
+      throw new IllegalArgumentException("Location is required for a Location Admin");
+    if (roleName.equals("GLOBAL_ADMIN") && request.location() != null && !request.location().isBlank())
+      throw new IllegalArgumentException("Global Admin cannot be assigned to a location");
+    if (roleName.equals("STORE_MANAGER")) {
+      if (request.storeId() == null || request.storeId().isBlank())
+        throw new IllegalArgumentException("Select an existing store before creating a Store Manager account");
+      if (request.store() == null || request.store().isBlank())
+        throw new IllegalArgumentException("Store name is required for a Store Manager account");
+      if (request.storeLocation() == null || request.storeLocation().isBlank())
+        throw new IllegalArgumentException("Store location is required for a Store Manager account");
+    }
+    String requestedOrganization = blank(request.organizationId());
+    if (requestedOrganization != null && !requestedOrganization.equalsIgnoreCase("metaarch-commerce"))
+      throw new org.springframework.security.access.AccessDeniedException("Administrator account is outside the managed organization");
   }
 
   private String normalizeRole(String value) {

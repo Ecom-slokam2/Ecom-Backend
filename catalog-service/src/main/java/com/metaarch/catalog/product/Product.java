@@ -15,6 +15,8 @@ public class Product extends AuditedEntity {
  @Column(nullable=false) private boolean featured=false; @Column(nullable=false) private boolean special=false;
  @Column(name="new_arrival",nullable=false) private boolean newArrival=false; @Column(name="best_seller",nullable=false) private boolean bestSeller=false;
  @Column(name="global_product",nullable=false) private boolean globalProduct=false; @Column(name="fulfillment_type",length=40) private String fulfillmentType; @Column(name="delivery_method",length=80) private String deliveryMethod;
+ @Column(name="owner_location",length=160) private String ownerLocation;
+ @Column(name="owner_store_id",length=100) private String ownerStoreId;
  @OneToMany(mappedBy="product",fetch=FetchType.LAZY) private List<ProductVariant> variants=new ArrayList<>();
  @OneToMany(mappedBy="product",fetch=FetchType.LAZY) private List<ProductImage> images=new ArrayList<>();
  protected Product(){} public Product(Category c,String n,String s,String k){category=c;name=n;slug=s;sku=k;}
@@ -28,5 +30,7 @@ public class Product extends AuditedEntity {
  public boolean isFeatured(){return featured;} public void setFeatured(boolean v){featured=v;} public boolean isSpecial(){return special;} public void setSpecial(boolean v){special=v;}
  public boolean isNewArrival(){return newArrival;} public void setNewArrival(boolean v){newArrival=v;} public boolean isBestSeller(){return bestSeller;} public void setBestSeller(boolean v){bestSeller=v;}
  public boolean isGlobalProduct(){return globalProduct;} public void setGlobalProduct(boolean v){globalProduct=v;} public String getFulfillmentType(){return fulfillmentType;} public void setFulfillmentType(String v){fulfillmentType=v;} public String getDeliveryMethod(){return deliveryMethod;} public void setDeliveryMethod(String v){deliveryMethod=v;}
+ public String getOwnerLocation(){return ownerLocation;} public void setOwnerLocation(String v){ownerLocation=v;}
+ public String getOwnerStoreId(){return ownerStoreId;} public void setOwnerStoreId(String v){ownerStoreId=v;}
  public List<ProductVariant> getVariants(){return Collections.unmodifiableList(variants);} public List<ProductImage> getImages(){return Collections.unmodifiableList(images);}
 }

@@ -1,0 +1,312 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e476]:
+    - navigation [ref=f1e477]:
+      - generic [ref=f1e478]:
+        - generic [ref=f1e480]:
+          - heading [level=6] [ref=f1e1300]: Location Admin Portal
+          - text: hyderabad
+        - button [ref=f1e1301] [cursor=pointer]
+      - generic [ref=f1e485]:
+        - generic [ref=f1e486]:
+          - paragraph [ref=f1e487]: Main
+          - button [ref=f1e1302] [cursor=pointer]:
+            - generic [ref=f1e492]: Dashboard
+        - generic [ref=f1e493]:
+          - paragraph [ref=f1e494]: Management
+          - button [ref=f1e1303] [cursor=pointer]:
+            - generic [ref=f1e499]: Stores
+          - button [ref=f1e1304] [cursor=pointer]:
+            - generic [ref=f1e505]: Products
+          - button [ref=f1e1305] [cursor=pointer]:
+            - generic [ref=f1e510]: Banners
+          - button [ref=f1e1306] [cursor=pointer]:
+            - generic [ref=f1e516]: Inventory
+        - generic [ref=f1e517]:
+          - paragraph [ref=f1e518]: Orders & Payments
+          - button [ref=f1e1307] [cursor=pointer]:
+            - generic [ref=f1e523]: Orders
+          - button [ref=f1e1308] [cursor=pointer]:
+            - generic [ref=f1e529]: Payments
+          - button [ref=f1e1309] [cursor=pointer]:
+            - generic [ref=f1e534]: Delivery
+        - generic [ref=f1e535]:
+          - paragraph [ref=f1e536]: Customer
+          - button [ref=f1e1310] [cursor=pointer]:
+            - generic [ref=f1e542]: Coupons
+        - generic [ref=f1e543]:
+          - paragraph [ref=f1e544]: Analytics
+          - button [ref=f1e1311] [cursor=pointer]:
+            - generic [ref=f1e549]: Reports
+      - button [ref=f1e1312] [cursor=pointer]: View Customer App
+    - main [ref=f1e551]:
+      - generic [ref=f1e552]:
+        - generic [ref=f1e553]:
+          - button [ref=f1e554] [cursor=pointer]
+          - generic [ref=f1e557]:
+            - text: Location Admin /
+            - strong [ref=f1e558]: Stores
+        - generic [ref=f1e559]:
+          - textbox [ref=f1e1313]:
+            - /placeholder: Search portal
+          - button [ref=f1e1314] [cursor=pointer]
+          - button [ref=f1e1315] [cursor=pointer]:
+            - generic [ref=f1e569]: H
+            - generic [ref=f1e570]: Hyderabad Location Administrator
+      - generic [ref=f1e571]:
+        - generic [ref=f1e572]:
+          - heading [level=4] [ref=f1e1316]: Stores
+          - paragraph [ref=f1e574]: Manage stores within your assigned scope.
+        - button [ref=f1e1317] [cursor=pointer]: View Customer App
+      - generic [ref=f1e710]:
+        - generic [ref=f1e711]:
+          - generic [ref=f1e712]:
+            - generic: Search
+            - generic [ref=f1e713]:
+              - textbox [ref=f1e1318]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f1e715]:
+            - combobox [ref=f1e716] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f1e717]:
+            - combobox [ref=f1e718] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f1e1319] [cursor=pointer]: Create
+          - button [ref=f1e1320] [cursor=pointer]: Export
+        - generic [ref=f1e1290]:
+          - generic [ref=f1e1291]:
+            - paragraph [ref=f1e1292]: Hyderabad Main Store
+            - paragraph [ref=f1e1293]: +91 91000 20000
+          - generic [ref=f1e1294]:
+            - button [ref=f1e1321] [cursor=pointer]: View
+            - button [ref=f1e1322] [cursor=pointer]: Edit
+            - button [ref=f1e1323] [cursor=pointer]: Deactivate
+            - button [ref=f1e1324] [cursor=pointer]: Delete
+        - generic [ref=f1e722]:
+          - button [disabled]: Previous
+          - paragraph [ref=f1e723]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f1e1675]:
+    - heading "Create Stores" [level=2] [ref=f1e1676]
+    - generic [ref=f1e1329]:
+      - generic [ref=f1e1331]:
+        - generic [ref=f1e1464]:
+          - text: Store name
+          - generic [aria-hidden] [ref=f1e1465]: "*"
+        - generic [ref=f1e1332]:
+          - textbox "Store name" [ref=f1e1677]: SR Nagar Store
+          - group [aria-hidden]:
+            - generic: Store name *
+      - generic [ref=f1e1335]:
+        - generic [ref=f1e1467]: Store code
+        - generic [ref=f1e1336]:
+          - textbox "Store code" [ref=f1e1678]: HYD-SRN-003
+          - group [aria-hidden]:
+            - generic: Store code
+      - generic [ref=f1e1339]:
+        - generic [ref=f1e1469]: Store description
+        - generic [ref=f1e1340]:
+          - textbox "Store description" [ref=f1e1679]: Neighborhood grocery and daily essentials store serving SR Nagar, Ameerpet and nearby Hyderabad customers.
+          - group [aria-hidden]:
+            - generic: Store description
+      - generic [ref=f1e1343]:
+        - generic [ref=f1e1471]: Store manager name
+        - generic [ref=f1e1344]:
+          - textbox "Store manager name" [ref=f1e1680]: Vikram SR Nagar
+          - group [aria-hidden]:
+            - generic: Store manager name
+      - generic [ref=f1e1347]:
+        - paragraph [ref=f1e1348]: Store map location
+        - generic [ref=f1e1349]:
+          - generic [ref=f1e1350]:
+            - generic [ref=f1e1351]: Search store location
+            - generic [ref=f1e1352]:
+              - textbox "Search store location" [ref=f1e1681]: Home, 4-1-209, Floor 2, SR Nagar Main Road, Srinivas Nagar, SR Nagar, Ameerpet, Hyderabad, Telangana 500038, India
+              - group [aria-hidden]:
+                - generic: Search store location
+            - paragraph [ref=f1e1354]: Search with area, city, landmark or full address.
+          - button "Search" [ref=f1e1682] [cursor=pointer]
+          - button "Use current map point" [ref=f1e1683] [cursor=pointer]
+          - button "Open map" [ref=f1e1684] [cursor=pointer]
+        - iframe [ref=f1e1478]:
+          - generic [ref=f3e2]:
+            - generic:
+              - region "Map" [ref=f3e3]
+              - button "Map marker" [ref=f3e4]
+            - generic:
+              - generic [ref=f3e8]:
+                - button "Zoom In" [ref=f3e9] [cursor=pointer]
+                - button "Zoom Out" [ref=f3e11] [cursor=pointer]
+              - group [ref=f3e13]:
+                - generic [ref=f3e14]:
+                  - link "Report a problem" [ref=f3e15] [cursor=pointer]:
+                    - /url: /fixthemap?lat=17.44192&lon=78.44829&zoom=13
+                  - text: "| ©"
+                  - link "OpenStreetMap contributors" [ref=f3e16] [cursor=pointer]:
+                    - /url: /copyright
+                  - text: ♥️
+                  - link "Make a Donation" [ref=f3e17] [cursor=pointer]:
+                    - /url: https://supporting.openstreetmap.org
+                  - text: .
+                  - link "Website and API terms" [ref=f3e18] [cursor=pointer]:
+                    - /url: https://wiki.osmfoundation.org/wiki/Terms_of_Use
+        - generic [ref=f1e1357]:
+          - generic [ref=f1e1358]:
+            - generic [ref=f1e1479]: Latitude
+            - generic [ref=f1e1359]:
+              - spinbutton "Latitude" [ref=f1e1685]: "17.4419210"
+              - group [aria-hidden]:
+                - generic: Latitude
+          - generic [ref=f1e1361]:
+            - generic [ref=f1e1481]: Longitude
+            - generic [ref=f1e1362]:
+              - spinbutton "Longitude" [ref=f1e1686]: "78.4482870"
+              - group [aria-hidden]:
+                - generic: Longitude
+      - generic [ref=f1e1365]:
+        - generic [ref=f1e1483]: Address
+        - generic [ref=f1e1366]:
+          - textbox "Address" [ref=f1e1687]: Home, 4-1-209, Floor 2, SR Nagar Main Road, Srinivas Nagar, SR Nagar, Ameerpet, Hyderabad, Telangana 500038, India
+          - group [aria-hidden]:
+            - generic: Address
+      - generic [ref=f1e1369]:
+        - generic [ref=f1e1485]: Door number
+        - generic [ref=f1e1370]:
+          - textbox "Door number" [ref=f1e1688]: 4-1-209
+          - group [aria-hidden]:
+            - generic: Door number
+      - generic [ref=f1e1373]:
+        - generic [ref=f1e1487]: Street / road name
+        - generic [ref=f1e1374]:
+          - textbox "Street / road name" [ref=f1e1689]: SR Nagar Main Road
+          - group [aria-hidden]:
+            - generic: Street / road name
+      - generic [ref=f1e1377]:
+        - generic [ref=f1e1489]: Area
+        - generic [ref=f1e1378]:
+          - textbox "Area" [ref=f1e1690]: SR Nagar
+          - group [aria-hidden]:
+            - generic: Area
+      - generic [ref=f1e1381]:
+        - generic [ref=f1e1491]: Landmark
+        - generic [ref=f1e1382]:
+          - textbox "Landmark" [ref=f1e1691]: Near Ameerpet Metro
+          - group [aria-hidden]:
+            - generic: Landmark
+      - generic [ref=f1e1385]:
+        - generic [ref=f1e1493]: City
+        - generic [ref=f1e1386]:
+          - textbox "City" [ref=f1e1692]: Hyderabad
+          - group [aria-hidden]:
+            - generic: City
+      - generic [ref=f1e1389]:
+        - generic [ref=f1e1495]: District
+        - generic [ref=f1e1390]:
+          - textbox "District" [ref=f1e1693]: Hyderabad
+          - group [aria-hidden]:
+            - generic: District
+      - generic [ref=f1e1393]:
+        - generic [ref=f1e1497]: State
+        - generic [ref=f1e1394]:
+          - textbox "State" [ref=f1e1694]: Telangana
+          - group [aria-hidden]:
+            - generic: State
+      - generic [ref=f1e1397]:
+        - generic [ref=f1e1499]: Pincode
+        - generic [ref=f1e1398]:
+          - textbox "Pincode" [ref=f1e1695]: "500038"
+          - group [aria-hidden]:
+            - generic: Pincode
+      - generic [ref=f1e1401]:
+        - generic [ref=f1e1501]: Store mobile number
+        - generic [ref=f1e1402]:
+          - textbox "Store mobile number" [ref=f1e1696]: +91 91000 20013
+          - group [aria-hidden]:
+            - generic: Store mobile number
+      - generic [ref=f1e1405]:
+        - generic [ref=f1e1503]: Alternate mobile number
+        - generic [ref=f1e1406]:
+          - textbox "Alternate mobile number" [ref=f1e1697]: +91 91000 21013
+          - group [aria-hidden]:
+            - generic: Alternate mobile number
+      - generic [ref=f1e1409]:
+        - generic [ref=f1e1505]: Store email
+        - generic [ref=f1e1410]:
+          - textbox "Store email" [ref=f1e1698]: srnagar@metaarch.local
+          - group [aria-hidden]:
+            - generic: Store email
+      - generic [ref=f1e1413]:
+        - generic: GST number
+        - generic [ref=f1e1414]:
+          - textbox "GST number" [ref=f1e1699]
+          - group [aria-hidden]:
+            - generic: GST number
+      - generic [ref=f1e1417]:
+        - generic [ref=f1e1508]: Store rating
+        - generic [ref=f1e1418]:
+          - spinbutton "Store rating" [ref=f1e1700]: "4.50"
+          - group [aria-hidden]:
+            - generic: Store rating
+      - generic [ref=f1e1421]:
+        - generic: Store logo/image URL
+        - generic [ref=f1e1422]:
+          - textbox "Store logo/image URL" [ref=f1e1701]
+          - group [aria-hidden]:
+            - generic: Store logo/image URL
+      - generic [ref=f1e1425]:
+        - combobox [ref=f1e1426] [cursor=pointer]: "Yes"
+        - textbox [aria-hidden]: "Yes"
+        - group [aria-hidden]
+      - generic [ref=f1e1428]:
+        - combobox [ref=f1e1429] [cursor=pointer]: "Yes"
+        - textbox [aria-hidden]: "Yes"
+        - group [aria-hidden]
+      - generic [ref=f1e1431]:
+        - combobox [active] [ref=f1e1432] [cursor=pointer]: Active
+        - textbox [aria-hidden]: Active
+        - group [aria-hidden]
+      - generic [ref=f1e1434]:
+        - generic:
+          - text: Order radius in KM
+          - generic [aria-hidden]: "*"
+        - generic [ref=f1e1435]:
+          - spinbutton "Order radius in KM" [ref=f1e1702]
+          - group [aria-hidden]:
+            - generic: Order radius in KM *
+      - generic [ref=f1e1438]:
+        - generic:
+          - text: Delivery ETA minutes
+          - generic [aria-hidden]: "*"
+        - generic [ref=f1e1439]:
+          - spinbutton "Delivery ETA minutes" [ref=f1e1703]
+          - group [aria-hidden]:
+            - generic: Delivery ETA minutes *
+      - generic [ref=f1e1442]:
+        - generic: Delivery charge
+        - generic [ref=f1e1443]:
+          - spinbutton "Delivery charge" [ref=f1e1704]
+          - group [aria-hidden]:
+            - generic: Delivery charge
+      - generic [ref=f1e1446]:
+        - generic: Free delivery above order value
+        - generic [ref=f1e1447]:
+          - spinbutton "Free delivery above order value" [ref=f1e1705]
+          - group [aria-hidden]:
+            - generic: Free delivery above order value
+      - generic [ref=f1e1450]:
+        - generic: Delivery modes (comma separated)
+        - generic [ref=f1e1451]:
+          - textbox "Delivery modes (comma separated)" [ref=f1e1706]
+          - group [aria-hidden]:
+            - generic: Delivery modes (comma separated)
+      - generic [ref=f1e1454]:
+        - generic: Delivery notes
+        - generic [ref=f1e1455]:
+          - textbox "Delivery notes" [ref=f1e1707]
+          - group [aria-hidden]:
+            - generic: Delivery notes
+    - generic [ref=f1e1458]:
+      - button "Cancel" [ref=f1e1708] [cursor=pointer]
+      - button "Save" [ref=f1e1709] [cursor=pointer]

@@ -204,9 +204,64 @@ class IdentityServiceTest {
     assertThat(membership.getValue().getRole()).isSameAs(locationAdminRole);
     assertThat(membership.getValue().getOrganizationId()).isEqualTo("metaarch-commerce");
     assertThat(membership.getValue().getLocationId()).isEqualTo("hyderabad");
+    assertThat(membership.getValue().getStoreId()).isNull();
+    assertThat(membership.getValue().getStoreName()).isNull();
     assertThat(membership.getValue().getAssignedBy()).isEqualTo("authenticated-super-admin");
     verify(auditLogs).save(any());
     verify(customerDb).update(anyString(), eq("email:new-location-admin@example.com"), eq((Object) null));
+  }
+
+  @Test
+  void createsGlobalAdminWithoutLocationOrGlobalAdminParent() {
+    Role globalAdminRole = role("GLOBAL_ADMIN", "CATALOG_WRITE");
+    when(users.existsByUsernameIgnoreCase("new-global-admin")).thenReturn(false);
+    when(users.existsByEmailIgnoreCase("new-global-admin@example.com")).thenReturn(false);
+    when(roles.findByName("GLOBAL_ADMIN")).thenReturn(Optional.of(globalAdminRole));
+    when(passwordEncoder.encode("ValidPass123")).thenReturn("encoded-password");
+    when(users.save(any(UserAccount.class))).thenAnswer(invocation -> invocation.getArgument(0));
+    UserCreateRequest request = new UserCreateRequest("new-global-admin", "new-global-admin@example.com",
+        "ValidPass123", "GLOBAL_ADMIN", "Global Admin", null, "Active", null, null,
+        null, null, null, null, null, null, null, null, null, null, null, null);
+
+    UserAccount created = service.create(request, "authenticated-super-admin");
+
+    assertThat(created.getRoles()).contains(globalAdminRole);
+    var membership = forClass(Membership.class);
+    verify(memberships).save(membership.capture());
+    assertThat(membership.getValue().getOrganizationId()).isEqualTo("metaarch-commerce");
+    assertThat(membership.getValue().getLocationId()).isNull();
+    assertThat(membership.getValue().getAssignedBy()).isEqualTo("authenticated-super-admin");
+  }
+
+  @Test
+  void rejectsInvalidLocationAdminAssignmentBeforeCreatingAccount() {
+    when(users.existsByUsernameIgnoreCase("unassigned-location-admin")).thenReturn(false);
+    when(users.existsByEmailIgnoreCase("unassigned@example.com")).thenReturn(false);
+    when(roles.findByName("LOCATION_ADMIN")).thenReturn(Optional.of(role("LOCATION_ADMIN", "USER_READ")));
+    UserCreateRequest request = new UserCreateRequest("unassigned-location-admin", "unassigned@example.com",
+        "ValidPass123", "LOCATION_ADMIN", "Location Admin", null, "Active", null, null,
+        null, null, null, null, null, null, null, null, null, null, null, null);
+
+    assertThatThrownBy(() -> service.create(request, "authenticated-super-admin"))
+        .isInstanceOf(IllegalArgumentException.class)
+        .hasMessage("Location is required for a Location Admin");
+    org.mockito.Mockito.verify(users, org.mockito.Mockito.never()).save(any(UserAccount.class));
+    org.mockito.Mockito.verify(memberships, org.mockito.Mockito.never()).save(any(Membership.class));
+  }
+
+  @Test
+  void rejectsClientSuppliedOrganizationOutsideManagedAdminOrganization() {
+    when(users.existsByUsernameIgnoreCase("foreign-org-admin")).thenReturn(false);
+    when(users.existsByEmailIgnoreCase("foreign-org@example.com")).thenReturn(false);
+    when(roles.findByName("GLOBAL_ADMIN")).thenReturn(Optional.of(role("GLOBAL_ADMIN", "USER_READ")));
+    UserCreateRequest request = new UserCreateRequest("foreign-org-admin", "foreign-org@example.com",
+        "ValidPass123", "GLOBAL_ADMIN", "Global Admin", null, "Active", "untrusted-org", null,
+        null, null, null, null, null, null, null, null, null, null, null, null);
+
+    assertThatThrownBy(() -> service.create(request, "authenticated-super-admin"))
+        .isInstanceOf(org.springframework.security.access.AccessDeniedException.class)
+        .hasMessage("Administrator account is outside the managed organization");
+    org.mockito.Mockito.verify(users, org.mockito.Mockito.never()).save(any(UserAccount.class));
   }
 
   @Test
@@ -240,7 +295,7 @@ class IdentityServiceTest {
   void rejectsOrganizationChangeAndPrivilegeEscalationDuringStaffUpdate() {
     UserAccount target = user("global-admin");
     target.getRoles().add(role("GLOBAL_ADMIN", "USER_READ"));
-    Membership membership = new Membership(); membership.setUser(target); membership.setOrganizationId("other-org");
+    Membership membership = new Membership(); membership.setUser(target); membership.setRole(role("GLOBAL_ADMIN", "USER_READ")); membership.setOrganizationId("other-org");
     when(users.findWithRolesById(8L)).thenReturn(Optional.of(target));
     when(memberships.findByUserId(8L)).thenReturn(List.of(membership));
     assertThatThrownBy(() -> service.updateStaff(8L,
@@ -253,6 +308,54 @@ class IdentityServiceTest {
         new UserUpdateRequest("Root", "root@example.com", null, "SUPER_ADMIN", "Active", null), "root-admin"))
         .isInstanceOf(org.springframework.security.access.AccessDeniedException.class);
     verify(users, org.mockito.Mockito.never()).save(any());
+  }
+
+  @Test
+  void deletesOnlyAssignedStaffAndRemovesItsMembershipAndContactClaims() {
+    UserAccount target = user("location-admin");
+    Role staffRole = role("LOCATION_ADMIN", "USER_READ");
+    target.getRoles().add(staffRole);
+    Membership membership = new Membership(); membership.setUser(target); membership.setRole(staffRole);
+    membership.setOrganizationId("metaarch-commerce");
+    when(users.findWithRolesById(7L)).thenReturn(Optional.of(target));
+    when(memberships.findByUserId(7L)).thenReturn(List.of(membership));
+    when(customerDb.queryForObject(anyString(), eq(Integer.class), eq(7L))).thenReturn(0);
+
+    service.deleteStaff(7L, "root-admin");
+
+    verify(customerDb).update("DELETE FROM customer_otp WHERE user_id = ?", 7L);
+    verify(customerDb).update("DELETE FROM customer_contact_claims WHERE user_id = ?", 7L);
+    verify(memberships).deleteAll(List.of(membership));
+    assertThat(target.getRoles()).isEmpty();
+    verify(users).delete(target);
+    verify(users).flush();
+    verify(auditLogs).save(any());
+  }
+
+  @Test
+  void preventsSelfDeletionAndAccountsWithCustomerRecordsOrAdditionalRoles() {
+    UserAccount target = user("location-admin");
+    Role staffRole = role("LOCATION_ADMIN", "USER_READ");
+    target.getRoles().add(staffRole);
+    Membership membership = new Membership(); membership.setUser(target); membership.setRole(staffRole);
+    membership.setOrganizationId("metaarch-commerce");
+    when(users.findWithRolesById(7L)).thenReturn(Optional.of(target));
+    when(memberships.findByUserId(7L)).thenReturn(List.of(membership));
+
+    assertThatThrownBy(() -> service.deleteStaff(7L, "location-admin"))
+        .isInstanceOf(org.springframework.security.access.AccessDeniedException.class);
+    verify(users, org.mockito.Mockito.never()).delete(any());
+
+    when(customerDb.queryForObject(anyString(), eq(Integer.class), eq(7L))).thenReturn(1);
+    assertThatThrownBy(() -> service.deleteStaff(7L, "root-admin"))
+        .isInstanceOf(org.springframework.security.access.AccessDeniedException.class);
+    verify(users, org.mockito.Mockito.never()).delete(any());
+
+    target.getRoles().add(role("CUSTOMER", "CUSTOMER_READ"));
+    when(customerDb.queryForObject(anyString(), eq(Integer.class), eq(7L))).thenReturn(0);
+    assertThatThrownBy(() -> service.deleteStaff(7L, "root-admin"))
+        .isInstanceOf(org.springframework.security.access.AccessDeniedException.class);
+    verify(users, org.mockito.Mockito.never()).delete(any());
   }
 
   private static UserAccount user(String username) {

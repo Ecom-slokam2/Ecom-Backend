@@ -1,0 +1,310 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e8]:
+    - navigation [ref=f12e9]:
+      - generic [ref=f12e10]:
+        - generic [ref=f12e12]:
+          - heading [level=6] [ref=f12e1497]: Super Admin Portal
+          - text: All locations
+        - button [ref=f12e1498] [cursor=pointer]
+      - generic [ref=f12e17]:
+        - generic [ref=f12e18]:
+          - paragraph [ref=f12e19]: Main
+          - button [ref=f12e1499] [cursor=pointer]:
+            - generic [ref=f12e24]: Dashboard
+        - generic [ref=f12e25]:
+          - paragraph [ref=f12e26]: Management
+          - button [ref=f12e1500] [cursor=pointer]:
+            - generic [ref=f12e32]: Locations
+          - button [ref=f12e1501] [cursor=pointer]:
+            - generic [ref=f12e37]: Users
+          - button [ref=f12e1502] [cursor=pointer]:
+            - generic [ref=f12e42]: Stores
+          - button [ref=f12e1503] [cursor=pointer]:
+            - generic [ref=f12e48]: Products
+          - button [ref=f12e1504] [cursor=pointer]:
+            - generic [ref=f12e53]: Categories
+          - button [ref=f12e1505] [cursor=pointer]:
+            - generic [ref=f12e58]: Banners
+          - button [ref=f12e1506] [cursor=pointer]:
+            - generic [ref=f12e64]: Inventory
+        - generic [ref=f12e65]:
+          - paragraph [ref=f12e66]: Orders & Payments
+          - button [ref=f12e1507] [cursor=pointer]:
+            - generic [ref=f12e71]: Orders
+          - button [ref=f12e1508] [cursor=pointer]:
+            - generic [ref=f12e77]: Payments
+          - button [ref=f12e1509] [cursor=pointer]:
+            - generic [ref=f12e82]: Delivery
+        - generic [ref=f12e83]:
+          - paragraph [ref=f12e84]: Customer
+          - button [ref=f12e1510] [cursor=pointer]:
+            - generic [ref=f12e89]: Customers
+          - button [ref=f12e1511] [cursor=pointer]:
+            - generic [ref=f12e94]: Reviews
+          - button [ref=f12e1512] [cursor=pointer]:
+            - generic [ref=f12e100]: Coupons
+          - button [ref=f12e1513] [cursor=pointer]:
+            - generic [ref=f12e105]: Notifications
+        - generic [ref=f12e106]:
+          - paragraph [ref=f12e107]: Analytics
+          - button [ref=f12e1514] [cursor=pointer]:
+            - generic [ref=f12e112]: Reports
+        - generic [ref=f12e113]:
+          - paragraph [ref=f12e114]: System
+          - button [ref=f12e1515] [cursor=pointer]:
+            - generic [ref=f12e119]: Security
+          - button [ref=f12e1516] [cursor=pointer]:
+            - generic [ref=f12e124]: Audit Logs
+      - button [ref=f12e1517] [cursor=pointer]: View Customer App
+    - main [ref=f12e126]:
+      - generic [ref=f12e127]:
+        - generic [ref=f12e128]:
+          - button [ref=f12e129] [cursor=pointer]
+          - generic [ref=f12e132]:
+            - text: Super Admin /
+            - strong [ref=f12e133]: Products
+        - generic [ref=f12e134]:
+          - textbox [ref=f12e1518]:
+            - /placeholder: Search portal
+          - button [ref=f12e1519] [cursor=pointer]
+          - button [ref=f12e1520] [cursor=pointer]:
+            - generic [ref=f12e144]: A
+            - generic [ref=f12e145]: Admin
+      - generic [ref=f12e146]:
+        - generic [ref=f12e147]:
+          - heading [level=4] [ref=f12e1521]: Products
+          - paragraph [ref=f12e149]: Manage products within your assigned scope.
+        - button [ref=f12e1522] [cursor=pointer]: View Customer App
+      - generic [ref=f12e1079]:
+        - generic [ref=f12e1080]:
+          - generic [ref=f12e1081]:
+            - generic: Search
+            - generic [ref=f12e1082]:
+              - textbox [ref=f12e1523]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f12e1084]:
+            - combobox [ref=f12e1085] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f12e1086]:
+            - combobox [ref=f12e1087] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f12e1524] [cursor=pointer]: Create
+          - button [ref=f12e1525] [cursor=pointer]: Export
+        - generic [ref=f12e1435]:
+          - generic [ref=f12e1436]:
+            - paragraph [ref=f12e1437]: California Almonds
+            - paragraph [ref=f12e1438]: DRY-CAL-ALMOND
+          - generic [ref=f12e1439]:
+            - button [ref=f12e1526] [cursor=pointer]: View
+            - button [ref=f12e1527] [cursor=pointer]: Edit
+            - button [ref=f12e1528] [cursor=pointer]: Duplicate
+            - button [ref=f12e1529] [cursor=pointer]: Deactivate
+            - button [ref=f12e1530] [cursor=pointer]: Delete
+        - generic [ref=f12e1445]:
+          - generic [ref=f12e1446]:
+            - paragraph [ref=f12e1447]: Premium Cashew Nuts
+            - paragraph [ref=f12e1448]: DRY-PREM-CASHEW
+          - generic [ref=f12e1449]:
+            - button [ref=f12e1531] [cursor=pointer]: View
+            - button [ref=f12e1532] [cursor=pointer]: Edit
+            - button [ref=f12e1533] [cursor=pointer]: Duplicate
+            - button [ref=f12e1534] [cursor=pointer]: Deactivate
+            - button [ref=f12e1535] [cursor=pointer]: Delete
+        - generic [ref=f12e1455]:
+          - generic [ref=f12e1456]:
+            - paragraph [ref=f12e1457]: Afghan Raisins
+            - paragraph [ref=f12e1458]: DRY-AFG-RAISIN
+          - generic [ref=f12e1459]:
+            - button [ref=f12e1536] [cursor=pointer]: View
+            - button [ref=f12e1537] [cursor=pointer]: Edit
+            - button [ref=f12e1538] [cursor=pointer]: Duplicate
+            - button [ref=f12e1539] [cursor=pointer]: Deactivate
+            - button [ref=f12e1540] [cursor=pointer]: Delete
+        - generic [ref=f12e1465]:
+          - generic [ref=f12e1466]:
+            - paragraph [ref=f12e1467]: Andhra Mango Avakaya Pickle
+            - paragraph [ref=f12e1468]: PKL-ANDHRA-AVAKAYA
+          - generic [ref=f12e1469]:
+            - button [ref=f12e1541] [cursor=pointer]: View
+            - button [ref=f12e1542] [cursor=pointer]: Edit
+            - button [ref=f12e1543] [cursor=pointer]: Duplicate
+            - button [ref=f12e1544] [cursor=pointer]: Deactivate
+            - button [ref=f12e1545] [cursor=pointer]: Delete
+        - generic [ref=f12e1475]:
+          - generic [ref=f12e1476]:
+            - paragraph [ref=f12e1477]: Chicken Boneless
+            - paragraph [ref=f12e1478]: NV-CHICKEN-BONELESS
+          - generic [ref=f12e1479]:
+            - button [ref=f12e1546] [cursor=pointer]: View
+            - button [ref=f12e1547] [cursor=pointer]: Edit
+            - button [ref=f12e1548] [cursor=pointer]: Duplicate
+            - button [ref=f12e1549] [cursor=pointer]: Deactivate
+            - button [ref=f12e1550] [cursor=pointer]: Delete
+        - generic [ref=f12e1485]:
+          - generic [ref=f12e1486]:
+            - paragraph [ref=f12e1487]: Chicken Breast
+            - paragraph [ref=f12e1488]: NV-CHICKEN-BREAST
+          - generic [ref=f12e1489]:
+            - button [ref=f12e1551] [cursor=pointer]: View
+            - button [ref=f12e1552] [cursor=pointer]: Edit
+            - button [ref=f12e1553] [cursor=pointer]: Duplicate
+            - button [ref=f12e1554] [cursor=pointer]: Deactivate
+            - button [ref=f12e1555] [cursor=pointer]: Delete
+        - generic [ref=f12e1126]:
+          - button [disabled]: Previous
+          - paragraph [ref=f12e1127]: Page 1 of 6
+          - button [ref=f12e1556] [cursor=pointer]: Next
+  - dialog [ref=f12e1559]:
+    - heading "Create Products" [level=2] [ref=f12e1560]
+    - generic [ref=f12e1561]:
+      - generic [ref=f12e1563]:
+        - generic [ref=f12e1662]:
+          - text: Product name
+          - generic [aria-hidden] [ref=f12e1663]: "*"
+        - generic [ref=f12e1564]:
+          - textbox "Product name" [ref=f12e1565]: Demo Turmeric Powder
+          - group [aria-hidden]:
+            - generic: Product name *
+      - generic [ref=f12e1567]:
+        - generic [ref=f12e1664]:
+          - text: Master SKU
+          - generic [aria-hidden] [ref=f12e1665]: "*"
+        - generic [ref=f12e1568]:
+          - textbox "Master SKU" [ref=f12e1569]: DEMO-TURMERIC-200G
+          - group [aria-hidden]:
+            - generic: Master SKU *
+      - generic [ref=f12e1572]:
+        - generic [ref=f12e1666]: Category
+        - generic [ref=f12e1573]:
+          - combobox "Category" [ref=f12e1574]: Premium Dry Fruits
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=f12e1577]:
+        - generic: Sub-category
+        - generic [ref=f12e1578]:
+          - textbox "Sub-category" [ref=f12e1579]
+          - group [aria-hidden]:
+            - generic: Sub-category
+      - generic [ref=f12e1581]:
+        - generic [ref=f12e1670]:
+          - text: Description
+          - generic [aria-hidden] [ref=f12e1671]: "*"
+        - generic [ref=f12e1582]:
+          - textbox "Description" [ref=f12e1583]: Demo 200 g turmeric powder listing for product discovery, cart, and checkout testing.
+          - group [aria-hidden]:
+            - generic: Description *
+      - generic [ref=f12e1585]:
+        - generic [ref=f12e1672]: Brand
+        - generic [ref=f12e1586]:
+          - textbox "Brand" [ref=f12e1587]: Demo Pantry
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=f12e1589]:
+        - generic: Ingredients
+        - generic [ref=f12e1590]:
+          - textbox "Ingredients" [ref=f12e1591]
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=f12e1593]:
+        - generic: Specifications
+        - generic [ref=f12e1594]:
+          - textbox "Specifications" [ref=f12e1595]
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=f12e1597]:
+        - generic [ref=f12e1673]: Pack
+        - generic [ref=f12e1598]:
+          - textbox "Pack" [ref=f12e1599]: 200 g
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=f12e1601]:
+        - generic: Type
+        - generic [ref=f12e1602]:
+          - textbox "Type" [ref=f12e1603]
+          - group [aria-hidden]:
+            - generic: Type
+      - generic [ref=f12e1605]:
+        - generic: Shelf life
+        - generic [ref=f12e1606]:
+          - textbox "Shelf life" [ref=f12e1607]
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=f12e1609]:
+        - generic: Tags
+        - generic [ref=f12e1610]:
+          - textbox "Tags" [ref=f12e1611]
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=f12e1613]:
+        - generic: Highlights
+        - generic [ref=f12e1614]:
+          - textbox "Highlights" [ref=f12e1615]
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=f12e1617]:
+        - generic: About the Source
+        - generic [ref=f12e1618]:
+          - textbox "About the Source" [ref=f12e1619]
+          - group [aria-hidden]:
+            - generic: About the Source
+      - generic [ref=f12e1621]:
+        - generic [ref=f12e1674]: "Variants (one per line: Label | SKU | Price)"
+        - generic [ref=f12e1622]:
+          - 'textbox "Variants (one per line: Label | SKU | Price)" [ref=f12e1623]': 200 g | DEMO-TURMERIC-200G-V1 | 129
+          - group [aria-hidden]:
+            - generic: "Variants (one per line: Label | SKU | Price)"
+      - generic [ref=f12e1625]:
+        - generic [ref=f12e1675]:
+          - text: Default price
+          - generic [aria-hidden] [ref=f12e1676]: "*"
+        - generic [ref=f12e1626]:
+          - spinbutton "Default price" [ref=f12e1627]: "129"
+          - group [aria-hidden]:
+            - generic: Default price *
+      - generic [ref=f12e1629]:
+        - generic: Main image URL
+        - generic [ref=f12e1630]:
+          - textbox "Main image URL" [ref=f12e1631]
+          - group [aria-hidden]:
+            - generic: Main image URL
+      - generic [ref=f12e1633]:
+        - combobox [ref=f12e1634] [cursor=pointer]: Featured product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f12e1636]:
+        - combobox [ref=f12e1637] [cursor=pointer]: Special product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f12e1639]:
+        - combobox [ref=f12e1640] [cursor=pointer]: New arrival
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f12e1642]:
+        - combobox [ref=f12e1643] [cursor=pointer]: Best seller
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f12e1645]:
+        - combobox [ref=f12e1646] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f12e1647]:
+        - paragraph [ref=f12e1648]: Store availability and pricing
+        - generic [ref=f12e1650]:
+          - generic [ref=f12e1683]: Mapped stores
+          - generic [ref=f12e1651]:
+            - button "Demo Kukatpally Basket (store-demo-kukatpally-basket)" [ref=f12e1696]:
+              - img [aria-hidden] [ref=f12e1698] [cursor=pointer]
+            - combobox "Mapped stores" [active] [ref=f12e1652]
+            - generic [ref=f12e1653]:
+              - button "Clear" [ref=f12e1700] [cursor=pointer]
+              - button "Open" [ref=f12e1703] [cursor=pointer]
+            - group [aria-hidden]:
+              - generic: Mapped stores
+          - paragraph [ref=f12e1657]: Select stores to assign; remove a selection to unassign.
+        - paragraph [ref=f12e1704]: "Demo Kukatpally Basket: will be assigned when saved."
+    - generic [ref=f12e1659]:
+      - button "Cancel" [ref=f12e1660] [cursor=pointer]
+      - button "Save" [ref=f12e1661] [cursor=pointer]

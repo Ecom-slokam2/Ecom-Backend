@@ -16,6 +16,8 @@ spring.sql.init.mode=never
 
 Schema changes are now managed manually. A missing or incompatible mapped table/column causes validation to fail rather than creating it.
 
+Catalog migration V36__normalize_banner_scope_columns.sql converts the banners.scope and banners.status columns to the VARCHAR(20) types already defined by the original banner schema and current entity mappings. It preserves existing enum text values. Review and apply this migration to the intended Catalog schema using the database change process before starting Catalog; runtime Flyway remains disabled.
+
 ## Verification on a database copy
 
 1. Restore backups to separate verification databases and point the services at those copies.

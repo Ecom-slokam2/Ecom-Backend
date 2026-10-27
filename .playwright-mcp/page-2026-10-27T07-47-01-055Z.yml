@@ -1,0 +1,260 @@
+- generic [ref=f37e1]:
+  - generic [ref=f37e8]:
+    - navigation [ref=f37e9]:
+      - generic [ref=f37e10]:
+        - generic [ref=f37e12]:
+          - heading [level=6] [ref=f37e515]: Global Admin Portal
+          - text: All locations
+        - button [ref=f37e516] [cursor=pointer]
+      - generic [ref=f37e17]:
+        - generic [ref=f37e18]:
+          - paragraph [ref=f37e19]: Main
+          - button [ref=f37e517] [cursor=pointer]:
+            - generic [ref=f37e24]: Dashboard
+        - generic [ref=f37e25]:
+          - paragraph [ref=f37e26]: Management
+          - button [ref=f37e518] [cursor=pointer]:
+            - generic [ref=f37e31]: Stores
+          - button [ref=f37e519] [cursor=pointer]:
+            - generic [ref=f37e37]: Products
+          - button [ref=f37e520] [cursor=pointer]:
+            - generic [ref=f37e42]: Categories
+          - button [ref=f37e521] [cursor=pointer]:
+            - generic [ref=f37e47]: Banners
+          - button [ref=f37e522] [cursor=pointer]:
+            - generic [ref=f37e53]: Inventory
+        - generic [ref=f37e54]:
+          - paragraph [ref=f37e55]: Orders & Payments
+          - button [ref=f37e523] [cursor=pointer]:
+            - generic [ref=f37e60]: Orders
+          - button [ref=f37e524] [cursor=pointer]:
+            - generic [ref=f37e66]: Payments
+          - button [ref=f37e525] [cursor=pointer]:
+            - generic [ref=f37e71]: Delivery
+        - generic [ref=f37e72]:
+          - paragraph [ref=f37e73]: Customer
+          - button [ref=f37e526] [cursor=pointer]:
+            - generic [ref=f37e78]: Customers
+          - button [ref=f37e527] [cursor=pointer]:
+            - generic [ref=f37e83]: Reviews
+          - button [ref=f37e528] [cursor=pointer]:
+            - generic [ref=f37e89]: Coupons
+          - button [ref=f37e529] [cursor=pointer]:
+            - generic [ref=f37e94]: Notifications
+        - generic [ref=f37e95]:
+          - paragraph [ref=f37e96]: Analytics
+          - button [ref=f37e530] [cursor=pointer]:
+            - generic [ref=f37e101]: Reports
+        - generic [ref=f37e102]:
+          - paragraph [ref=f37e103]: System
+          - button [ref=f37e531] [cursor=pointer]:
+            - generic [ref=f37e108]: Audit Logs
+      - button [ref=f37e532] [cursor=pointer]: View Customer App
+    - main [ref=f37e110]:
+      - generic [ref=f37e111]:
+        - generic [ref=f37e112]:
+          - button [ref=f37e113] [cursor=pointer]
+          - generic [ref=f37e116]:
+            - text: Global Admin /
+            - strong [ref=f37e117]: Products
+        - generic [ref=f37e118]:
+          - textbox [ref=f37e533]:
+            - /placeholder: Search portal
+          - button [ref=f37e534] [cursor=pointer]
+          - button [ref=f37e535] [cursor=pointer]:
+            - generic [ref=f37e128]: G
+            - generic [ref=f37e129]: Global Administrator
+      - generic [ref=f37e130]:
+        - generic [ref=f37e131]:
+          - heading [level=4] [ref=f37e536]: Products
+          - paragraph [ref=f37e133]: Manage products within your assigned scope.
+        - button [ref=f37e537] [cursor=pointer]: View Customer App
+      - generic [ref=f37e135]:
+        - generic [ref=f37e136]:
+          - generic [ref=f37e137]:
+            - generic: Search
+            - generic [ref=f37e138]:
+              - textbox [ref=f37e538]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f37e140]:
+            - combobox [ref=f37e141] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f37e142]:
+            - combobox [ref=f37e143] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f37e539] [cursor=pointer]: Create
+          - button [ref=f37e540] [cursor=pointer]: Export
+        - generic [ref=f37e492]:
+          - generic [ref=f37e493]:
+            - paragraph [ref=f37e494]: Spice Powders
+            - paragraph [ref=f37e495]: Active
+          - generic [ref=f37e496]:
+            - button [ref=f37e541] [cursor=pointer]: View
+            - button [ref=f37e542] [cursor=pointer]: Edit
+            - button [ref=f37e543] [cursor=pointer]: Duplicate
+            - button [ref=f37e544] [cursor=pointer]: Deactivate
+            - button [ref=f37e545] [cursor=pointer]: Delete
+        - generic [ref=f37e368]:
+          - generic [ref=f37e369]:
+            - paragraph [ref=f37e370]: Premium Dry Fruits
+            - paragraph [ref=f37e371]: Active
+          - generic [ref=f37e372]:
+            - button [ref=f37e546] [cursor=pointer]: View
+            - button [ref=f37e547] [cursor=pointer]: Edit
+            - button [ref=f37e548] [cursor=pointer]: Duplicate
+            - button [ref=f37e549] [cursor=pointer]: Deactivate
+            - button [ref=f37e550] [cursor=pointer]: Delete
+        - generic [ref=f37e252]:
+          - generic [ref=f37e253]:
+            - paragraph [ref=f37e254]: Traditional Pickles
+            - paragraph [ref=f37e255]: Active
+          - generic [ref=f37e256]:
+            - button [ref=f37e551] [cursor=pointer]: View
+            - button [ref=f37e552] [cursor=pointer]: Edit
+            - button [ref=f37e553] [cursor=pointer]: Duplicate
+            - button [ref=f37e554] [cursor=pointer]: Deactivate
+            - button [ref=f37e555] [cursor=pointer]: Delete
+        - generic [ref=f37e147]:
+          - button [disabled]: Previous
+          - paragraph [ref=f37e148]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f37e558]:
+    - heading "Create Products" [level=2] [ref=f37e559]
+    - generic [ref=f37e560]:
+      - generic [ref=f37e562]:
+        - generic:
+          - text: Product name
+          - generic [aria-hidden]: "*"
+        - generic [ref=f37e563]:
+          - textbox "Product name" [ref=f37e564]
+          - group [aria-hidden]:
+            - generic: Product name *
+      - generic [ref=f37e566]:
+        - generic:
+          - text: Master SKU
+          - generic [aria-hidden]: "*"
+        - generic [ref=f37e567]:
+          - textbox "Master SKU" [ref=f37e568]
+          - group [aria-hidden]:
+            - generic: Master SKU *
+      - generic [ref=f37e571]:
+        - generic [ref=f37e650]: Category
+        - generic [ref=f37e572]:
+          - combobox "Category" [active] [ref=f37e573]: Traditional Pickles
+          - button "Clear" [ref=f37e651] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=f37e576]:
+        - generic: Sub-category
+        - generic [ref=f37e577]:
+          - textbox "Sub-category" [ref=f37e578]
+          - group [aria-hidden]:
+            - generic: Sub-category
+      - generic [ref=f37e580]:
+        - generic:
+          - text: Description
+          - generic [aria-hidden]: "*"
+        - generic [ref=f37e581]:
+          - textbox "Description" [ref=f37e582]
+          - group [aria-hidden]:
+            - generic: Description *
+      - generic [ref=f37e584]:
+        - generic: Brand
+        - generic [ref=f37e585]:
+          - textbox "Brand" [ref=f37e586]
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=f37e588]:
+        - generic: Ingredients
+        - generic [ref=f37e589]:
+          - textbox "Ingredients" [ref=f37e590]
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=f37e592]:
+        - generic: Specifications
+        - generic [ref=f37e593]:
+          - textbox "Specifications" [ref=f37e594]
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=f37e596]:
+        - generic: Pack
+        - generic [ref=f37e597]:
+          - textbox "Pack" [ref=f37e598]
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=f37e600]:
+        - generic: Type
+        - generic [ref=f37e601]:
+          - textbox "Type" [ref=f37e602]
+          - group [aria-hidden]:
+            - generic: Type
+      - generic [ref=f37e604]:
+        - generic: Shelf life
+        - generic [ref=f37e605]:
+          - textbox "Shelf life" [ref=f37e606]
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=f37e608]:
+        - generic: Tags
+        - generic [ref=f37e609]:
+          - textbox "Tags" [ref=f37e610]
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=f37e612]:
+        - generic: Highlights
+        - generic [ref=f37e613]:
+          - textbox "Highlights" [ref=f37e614]
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=f37e616]:
+        - generic: About the Source
+        - generic [ref=f37e617]:
+          - textbox "About the Source" [ref=f37e618]
+          - group [aria-hidden]:
+            - generic: About the Source
+      - generic [ref=f37e620]:
+        - generic: "Variants (one per line: Label | SKU | Price)"
+        - generic [ref=f37e621]:
+          - 'textbox "Variants (one per line: Label | SKU | Price)" [ref=f37e622]'
+          - group [aria-hidden]:
+            - generic: "Variants (one per line: Label | SKU | Price)"
+      - generic [ref=f37e624]:
+        - generic:
+          - text: Default price
+          - generic [aria-hidden]: "*"
+        - generic [ref=f37e625]:
+          - spinbutton "Default price" [ref=f37e626]
+          - group [aria-hidden]:
+            - generic: Default price *
+      - generic [ref=f37e628]:
+        - generic: Main image URL
+        - generic [ref=f37e629]:
+          - textbox "Main image URL" [ref=f37e630]
+          - group [aria-hidden]:
+            - generic: Main image URL
+      - generic [ref=f37e632]:
+        - combobox [ref=f37e633] [cursor=pointer]: Featured product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f37e635]:
+        - combobox [ref=f37e636] [cursor=pointer]: Special product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f37e638]:
+        - combobox [ref=f37e639] [cursor=pointer]: New arrival
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f37e641]:
+        - combobox [ref=f37e642] [cursor=pointer]: Best seller
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f37e644]:
+        - combobox [ref=f37e645] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+    - generic [ref=f37e647]:
+      - button "Cancel" [ref=f37e648] [cursor=pointer]
+      - button "Save" [ref=f37e649] [cursor=pointer]

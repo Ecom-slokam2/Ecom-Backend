@@ -1,0 +1,377 @@
+- generic [ref=f8e1]:
+  - generic [ref=f8e8]:
+    - navigation [ref=f8e9]:
+      - generic [ref=f8e10]:
+        - generic [ref=f8e12]:
+          - heading [level=6] [ref=f8e1232]: Super Admin Portal
+          - text: All locations
+        - button [ref=f8e1233] [cursor=pointer]
+      - generic [ref=f8e17]:
+        - generic [ref=f8e18]:
+          - paragraph [ref=f8e19]: Main
+          - button [ref=f8e1234] [cursor=pointer]:
+            - generic [ref=f8e24]: Dashboard
+        - generic [ref=f8e25]:
+          - paragraph [ref=f8e26]: Management
+          - button [ref=f8e1235] [cursor=pointer]:
+            - generic [ref=f8e32]: Locations
+          - button [ref=f8e1236] [cursor=pointer]:
+            - generic [ref=f8e37]: Users
+          - button [ref=f8e1237] [cursor=pointer]:
+            - generic [ref=f8e42]: Stores
+          - button [ref=f8e1238] [cursor=pointer]:
+            - generic [ref=f8e48]: Products
+          - button [ref=f8e1239] [cursor=pointer]:
+            - generic [ref=f8e53]: Categories
+          - button [ref=f8e1240] [cursor=pointer]:
+            - generic [ref=f8e58]: Banners
+          - button [ref=f8e1241] [cursor=pointer]:
+            - generic [ref=f8e64]: Inventory
+        - generic [ref=f8e65]:
+          - paragraph [ref=f8e66]: Orders & Payments
+          - button [ref=f8e1242] [cursor=pointer]:
+            - generic [ref=f8e71]: Orders
+          - button [ref=f8e1243] [cursor=pointer]:
+            - generic [ref=f8e77]: Payments
+          - button [ref=f8e1244] [cursor=pointer]:
+            - generic [ref=f8e82]: Delivery
+        - generic [ref=f8e83]:
+          - paragraph [ref=f8e84]: Customer
+          - button [ref=f8e1245] [cursor=pointer]:
+            - generic [ref=f8e89]: Customers
+          - button [ref=f8e1246] [cursor=pointer]:
+            - generic [ref=f8e94]: Reviews
+          - button [ref=f8e1247] [cursor=pointer]:
+            - generic [ref=f8e100]: Coupons
+          - button [ref=f8e1248] [cursor=pointer]:
+            - generic [ref=f8e105]: Notifications
+        - generic [ref=f8e106]:
+          - paragraph [ref=f8e107]: Analytics
+          - button [ref=f8e1249] [cursor=pointer]:
+            - generic [ref=f8e112]: Reports
+        - generic [ref=f8e113]:
+          - paragraph [ref=f8e114]: System
+          - button [ref=f8e1250] [cursor=pointer]:
+            - generic [ref=f8e119]: Security
+          - button [ref=f8e1251] [cursor=pointer]:
+            - generic [ref=f8e124]: Audit Logs
+      - button [ref=f8e1252] [cursor=pointer]: View Customer App
+    - main [ref=f8e126]:
+      - generic [ref=f8e127]:
+        - generic [ref=f8e128]:
+          - button [ref=f8e129] [cursor=pointer]
+          - generic [ref=f8e132]:
+            - text: Super Admin /
+            - strong [ref=f8e133]: Stores
+        - generic [ref=f8e134]:
+          - textbox [ref=f8e1253]:
+            - /placeholder: Search portal
+          - button [ref=f8e1254] [cursor=pointer]
+          - button [ref=f8e1255] [cursor=pointer]:
+            - generic [ref=f8e144]: A
+            - generic [ref=f8e145]: Admin
+      - generic [ref=f8e146]:
+        - generic [ref=f8e147]:
+          - heading [level=4] [ref=f8e1256]: Stores
+          - paragraph [ref=f8e149]: Manage stores within your assigned scope.
+        - button [ref=f8e1257] [cursor=pointer]: View Customer App
+      - generic [ref=f8e151]:
+        - generic [ref=f8e152]:
+          - generic [ref=f8e153]:
+            - generic: Search
+            - generic [ref=f8e154]:
+              - textbox [ref=f8e1258]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f8e156]:
+            - combobox [ref=f8e157] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f8e158]:
+            - combobox [ref=f8e159] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f8e1259] [cursor=pointer]: Create
+          - button [ref=f8e1260] [cursor=pointer]: Export
+        - generic [ref=f8e1201]:
+          - generic [ref=f8e1202]:
+            - paragraph [ref=f8e1203]: Demo Secunderabad Market
+            - paragraph [ref=f8e1204]: demo.secunderabad@example.test
+          - generic [ref=f8e1205]:
+            - button [ref=f8e1261] [cursor=pointer]: View
+            - button [ref=f8e1262] [cursor=pointer]: Edit
+            - button [ref=f8e1263] [cursor=pointer]: Deactivate
+            - button [ref=f8e1264] [cursor=pointer]: Delete
+        - generic [ref=f8e694]:
+          - generic [ref=f8e695]:
+            - paragraph [ref=f8e696]: Demo Kukatpally Basket
+            - paragraph [ref=f8e697]: demo.kukatpally@example.test
+          - generic [ref=f8e698]:
+            - button [ref=f8e1265] [cursor=pointer]: View
+            - button [ref=f8e1266] [cursor=pointer]: Edit
+            - button [ref=f8e1267] [cursor=pointer]: Deactivate
+            - button [ref=f8e1268] [cursor=pointer]: Delete
+        - generic [ref=f8e162]:
+          - generic [ref=f8e163]:
+            - paragraph [ref=f8e164]: India-wide Global Store
+            - paragraph [ref=f8e165]: +91 91000 29999
+          - generic [ref=f8e166]:
+            - button [ref=f8e1269] [cursor=pointer]: View
+            - button [ref=f8e1270] [cursor=pointer]: Edit
+            - button [ref=f8e1271] [cursor=pointer]: Deactivate
+            - button [ref=f8e1272] [cursor=pointer]: Delete
+        - generic [ref=f8e171]:
+          - generic [ref=f8e172]:
+            - paragraph [ref=f8e173]: Gachibowli Fresh Hub
+            - paragraph [ref=f8e174]: +91 91000 20001
+          - generic [ref=f8e175]:
+            - button [ref=f8e1273] [cursor=pointer]: View
+            - button [ref=f8e1274] [cursor=pointer]: Edit
+            - button [ref=f8e1275] [cursor=pointer]: Deactivate
+            - button [ref=f8e1276] [cursor=pointer]: Delete
+        - generic [ref=f8e180]:
+          - generic [ref=f8e181]:
+            - paragraph [ref=f8e182]: Kondapur Market Hub
+            - paragraph [ref=f8e183]: +91 9100020011
+          - generic [ref=f8e184]:
+            - button [ref=f8e1277] [cursor=pointer]: View
+            - button [ref=f8e1278] [cursor=pointer]: Edit
+            - button [ref=f8e1279] [cursor=pointer]: Deactivate
+            - button [ref=f8e1280] [cursor=pointer]: Delete
+        - generic [ref=f8e189]:
+          - generic [ref=f8e190]:
+            - paragraph [ref=f8e191]: Banjara Hills Fresh Hub
+            - paragraph [ref=f8e192]: +91 9100020010
+          - generic [ref=f8e193]:
+            - button [ref=f8e1281] [cursor=pointer]: View
+            - button [ref=f8e1282] [cursor=pointer]: Edit
+            - button [ref=f8e1283] [cursor=pointer]: Deactivate
+            - button [ref=f8e1284] [cursor=pointer]: Delete
+        - generic [ref=f8e216]:
+          - button [disabled]: Previous
+          - paragraph [ref=f8e217]: Page 1 of 2
+          - button [ref=f8e1285] [cursor=pointer]: Next
+  - dialog [ref=f8e1566]:
+    - heading "Create Stores" [level=2] [ref=f8e1567]
+    - generic [ref=f8e1290]:
+      - generic [ref=f8e1292]:
+        - generic [ref=f8e1422]:
+          - text: Store name
+          - generic [aria-hidden] [ref=f8e1423]: "*"
+        - generic [ref=f8e1293]:
+          - textbox "Store name" [ref=f8e1568]: Demo LB Nagar Fresh
+          - group [aria-hidden]:
+            - generic: Store name *
+      - generic [ref=f8e1296]:
+        - generic [ref=f8e1424]: Store code
+        - generic [ref=f8e1297]:
+          - textbox "Store code" [ref=f8e1569]: DEMO-HYD-LBN-03
+          - group [aria-hidden]:
+            - generic: Store code
+      - generic [ref=f8e1300]:
+        - generic [ref=f8e1425]: Store description
+        - generic [ref=f8e1301]:
+          - textbox "Store description" [ref=f8e1570]: "Demo only: South Hyderabad fresh basket for delivery radius, pickup, store and order-flow testing."
+          - group [aria-hidden]:
+            - generic: Store description
+      - generic [ref=f8e1304]:
+        - generic [ref=f8e1426]: Store manager name
+        - generic [ref=f8e1305]:
+          - textbox "Store manager name" [ref=f8e1571]: Demo Store Manager
+          - group [aria-hidden]:
+            - generic: Store manager name
+      - generic [ref=f8e1308]:
+        - paragraph [ref=f8e1309]: Store map location
+        - generic [ref=f8e1310]:
+          - generic [ref=f8e1311]:
+            - generic [ref=f8e1312]: Search store location
+            - generic [ref=f8e1313]:
+              - textbox "Search store location" [ref=f8e1572]: LB Nagar, Hyderabad, Telangana, India
+              - group [aria-hidden]:
+                - generic: Search store location
+            - paragraph [ref=f8e1315]: Search with area, city, landmark or full address.
+          - button "Search" [ref=f8e1573] [cursor=pointer]
+          - button "Use current map point" [ref=f8e1574] [cursor=pointer]
+          - button "Open map" [ref=f8e1575] [cursor=pointer]
+        - generic [ref=f8e1428]:
+          - iframe [ref=f8e1429]:
+            - generic [ref=f11e2]:
+              - generic:
+                - region "Map" [ref=f11e3]
+                - button "Map marker" [ref=f11e4]
+              - generic:
+                - generic [ref=f11e8]:
+                  - button "Zoom In" [ref=f11e9] [cursor=pointer]
+                  - button "Zoom Out" [ref=f11e11] [cursor=pointer]
+                - group [ref=f11e13]:
+                  - generic [ref=f11e14]:
+                    - link "Report a problem" [ref=f11e18] [cursor=pointer]:
+                      - /url: /fixthemap?lat=17.35016&lon=78.55109&zoom=13
+                    - text: "| ©"
+                    - link "OpenStreetMap contributors" [ref=f11e19] [cursor=pointer]:
+                      - /url: /copyright
+                    - text: ♥️
+                    - link "Make a Donation" [ref=f11e20] [cursor=pointer]:
+                      - /url: https://supporting.openstreetmap.org
+                    - text: .
+                    - link "Website and API terms" [ref=f11e21] [cursor=pointer]:
+                      - /url: https://wiki.osmfoundation.org/wiki/Terms_of_Use
+          - generic: 8 km
+        - generic [ref=f8e1318]:
+          - generic [ref=f8e1319]:
+            - generic [ref=f8e1430]: Latitude
+            - generic [ref=f8e1320]:
+              - spinbutton "Latitude" [ref=f8e1576]: "17.3501617"
+              - group [aria-hidden]:
+                - generic: Latitude
+          - generic [ref=f8e1322]:
+            - generic [ref=f8e1431]: Longitude
+            - generic [ref=f8e1323]:
+              - spinbutton "Longitude" [ref=f8e1577]: "78.5510938"
+              - group [aria-hidden]:
+                - generic: Longitude
+      - generic [ref=f8e1326]:
+        - generic [ref=f8e1432]: Address
+        - generic [ref=f8e1327]:
+          - textbox "Address" [ref=f8e1578]: LB Nagar, Ward 18 Lingojiguda, Greater Hyderabad Municipal Corporation East Zone, Hyderabad, Saroornagar mandal, Ranga Reddy, Telangana, 500074, India
+          - group [aria-hidden]:
+            - generic: Address
+      - generic [ref=f8e1330]:
+        - generic [ref=f8e1433]: Door number
+        - generic [ref=f8e1331]:
+          - textbox "Door number" [ref=f8e1579]: DEMO-03
+          - group [aria-hidden]:
+            - generic: Door number
+      - generic [ref=f8e1334]:
+        - generic [ref=f8e1434]: Street / road name
+        - generic [ref=f8e1335]:
+          - textbox "Street / road name" [ref=f8e1580]: LB Nagar Main Road
+          - group [aria-hidden]:
+            - generic: Street / road name
+      - generic [ref=f8e1338]:
+        - generic [ref=f8e1435]: Area
+        - generic [ref=f8e1339]:
+          - textbox "Area" [ref=f8e1581]: LB Nagar
+          - group [aria-hidden]:
+            - generic: Area
+      - generic [ref=f8e1342]:
+        - generic [ref=f8e1436]: Landmark
+        - generic [ref=f8e1343]:
+          - textbox "Landmark" [ref=f8e1582]: Demo pickup point, LB Nagar
+          - group [aria-hidden]:
+            - generic: Landmark
+      - generic [ref=f8e1346]:
+        - generic [ref=f8e1437]: City
+        - generic [ref=f8e1347]:
+          - textbox "City" [ref=f8e1583]: Hyderabad
+          - group [aria-hidden]:
+            - generic: City
+      - generic [ref=f8e1350]:
+        - generic [ref=f8e1438]: District
+        - generic [ref=f8e1351]:
+          - textbox "District" [ref=f8e1584]: Hyderabad
+          - group [aria-hidden]:
+            - generic: District
+      - generic [ref=f8e1354]:
+        - generic [ref=f8e1439]: State
+        - generic [ref=f8e1355]:
+          - textbox "State" [ref=f8e1585]: Telangana
+          - group [aria-hidden]:
+            - generic: State
+      - generic [ref=f8e1358]:
+        - generic [ref=f8e1440]: Pincode
+        - generic [ref=f8e1359]:
+          - textbox "Pincode" [ref=f8e1586]: "500074"
+          - group [aria-hidden]:
+            - generic: Pincode
+      - generic [ref=f8e1362]:
+        - generic: Store mobile number
+        - generic [ref=f8e1363]:
+          - textbox "Store mobile number" [ref=f8e1587]
+          - group [aria-hidden]:
+            - generic: Store mobile number
+      - generic [ref=f8e1366]:
+        - generic: Alternate mobile number
+        - generic [ref=f8e1367]:
+          - textbox "Alternate mobile number" [ref=f8e1588]
+          - group [aria-hidden]:
+            - generic: Alternate mobile number
+      - generic [ref=f8e1370]:
+        - generic [ref=f8e1441]: Store email
+        - generic [ref=f8e1371]:
+          - textbox "Store email" [ref=f8e1589]: demo.lbnagar@example.test
+          - group [aria-hidden]:
+            - generic: Store email
+      - generic [ref=f8e1374]:
+        - generic: GST number
+        - generic [ref=f8e1375]:
+          - textbox "GST number" [ref=f8e1590]
+          - group [aria-hidden]:
+            - generic: GST number
+      - generic [ref=f8e1378]:
+        - generic: Store rating
+        - generic [ref=f8e1379]:
+          - spinbutton "Store rating" [ref=f8e1591]
+          - group [aria-hidden]:
+            - generic: Store rating
+      - generic [ref=f8e1382]:
+        - generic: Store logo/image URL
+        - generic [ref=f8e1383]:
+          - textbox "Store logo/image URL" [ref=f8e1592]
+          - group [aria-hidden]:
+            - generic: Store logo/image URL
+      - generic [ref=f8e1386]:
+        - combobox [ref=f8e1387] [cursor=pointer]: "Yes"
+        - textbox [aria-hidden]: "Yes"
+        - group [aria-hidden]
+      - generic [ref=f8e1389]:
+        - combobox [active] [ref=f8e1390] [cursor=pointer]: "Yes"
+        - textbox [aria-hidden]: "Yes"
+        - group [aria-hidden]
+      - generic [ref=f8e1392]:
+        - combobox [ref=f8e1393] [cursor=pointer]: Store status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f8e1395]:
+        - generic [ref=f8e1472]:
+          - text: Order radius in KM
+          - generic [aria-hidden] [ref=f8e1473]: "*"
+        - generic [ref=f8e1396]:
+          - spinbutton "Order radius in KM" [ref=f8e1593]: "8"
+          - group [aria-hidden]:
+            - generic: Order radius in KM *
+      - generic [ref=f8e1399]:
+        - generic [ref=f8e1475]:
+          - text: Delivery ETA minutes
+          - generic [aria-hidden] [ref=f8e1476]: "*"
+        - generic [ref=f8e1400]:
+          - spinbutton "Delivery ETA minutes" [ref=f8e1594]: "40"
+          - group [aria-hidden]:
+            - generic: Delivery ETA minutes *
+      - generic [ref=f8e1403]:
+        - generic [ref=f8e1478]: Delivery charge
+        - generic [ref=f8e1404]:
+          - spinbutton "Delivery charge" [ref=f8e1595]: "30"
+          - group [aria-hidden]:
+            - generic: Delivery charge
+      - generic [ref=f8e1407]:
+        - generic [ref=f8e1480]: Free delivery above order value
+        - generic [ref=f8e1408]:
+          - spinbutton "Free delivery above order value" [ref=f8e1596]: "499"
+          - group [aria-hidden]:
+            - generic: Free delivery above order value
+      - generic [ref=f8e1411]:
+        - generic [ref=f8e1442]: Delivery modes (comma separated)
+        - generic [ref=f8e1412]:
+          - textbox "Delivery modes (comma separated)" [ref=f8e1597]: Standard Delivery, Instant Delivery, Express Delivery, Scheduled Delivery, Store Pickup
+          - group [aria-hidden]:
+            - generic: Delivery modes (comma separated)
+      - generic [ref=f8e1415]:
+        - generic [ref=f8e1443]: Delivery notes
+        - generic [ref=f8e1416]:
+          - textbox "Delivery notes" [ref=f8e1598]: Demo only. Confirm service radius and replace test contacts before launch.
+          - group [aria-hidden]:
+            - generic: Delivery notes
+    - generic [ref=f8e1419]:
+      - button "Cancel" [ref=f8e1599] [cursor=pointer]
+      - button "Save" [ref=f8e1600] [cursor=pointer]

@@ -1,0 +1,180 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e8]:
+    - navigation [ref=f12e9]:
+      - generic [ref=f12e10]:
+        - generic [ref=f12e12]:
+          - heading [level=6] [ref=f12e162]: Super Admin Portal
+          - text: All locations
+        - button [ref=f12e163] [cursor=pointer]
+      - generic [ref=f12e17]:
+        - generic [ref=f12e18]:
+          - paragraph [ref=f12e19]: Main
+          - button [ref=f12e164] [cursor=pointer]:
+            - generic [ref=f12e24]: Dashboard
+        - generic [ref=f12e25]:
+          - paragraph [ref=f12e26]: Management
+          - button [ref=f12e165] [cursor=pointer]:
+            - generic [ref=f12e32]: Locations
+          - button [ref=f12e166] [cursor=pointer]:
+            - generic [ref=f12e37]: Users
+          - button [ref=f12e167] [cursor=pointer]:
+            - generic [ref=f12e42]: Stores
+          - button [ref=f12e168] [cursor=pointer]:
+            - generic [ref=f12e48]: Products
+          - button [ref=f12e169] [cursor=pointer]:
+            - generic [ref=f12e53]: Categories
+          - button [ref=f12e170] [cursor=pointer]:
+            - generic [ref=f12e58]: Banners
+          - button [ref=f12e171] [cursor=pointer]:
+            - generic [ref=f12e64]: Inventory
+        - generic [ref=f12e65]:
+          - paragraph [ref=f12e66]: Orders & Payments
+          - button [ref=f12e172] [cursor=pointer]:
+            - generic [ref=f12e71]: Orders
+          - button [ref=f12e173] [cursor=pointer]:
+            - generic [ref=f12e77]: Payments
+          - button [ref=f12e174] [cursor=pointer]:
+            - generic [ref=f12e82]: Delivery
+        - generic [ref=f12e83]:
+          - paragraph [ref=f12e84]: Customer
+          - button [ref=f12e175] [cursor=pointer]:
+            - generic [ref=f12e89]: Customers
+          - button [ref=f12e176] [cursor=pointer]:
+            - generic [ref=f12e94]: Reviews
+          - button [ref=f12e177] [cursor=pointer]:
+            - generic [ref=f12e100]: Coupons
+          - button [ref=f12e178] [cursor=pointer]:
+            - generic [ref=f12e105]: Notifications
+        - generic [ref=f12e106]:
+          - paragraph [ref=f12e107]: Analytics
+          - button [ref=f12e179] [cursor=pointer]:
+            - generic [ref=f12e112]: Reports
+        - generic [ref=f12e113]:
+          - paragraph [ref=f12e114]: System
+          - button [ref=f12e180] [cursor=pointer]:
+            - generic [ref=f12e119]: Security
+          - button [ref=f12e181] [cursor=pointer]:
+            - generic [ref=f12e124]: Audit Logs
+      - button [ref=f12e182] [cursor=pointer]: View Customer App
+    - main [ref=f12e126]:
+      - generic [ref=f12e127]:
+        - generic [ref=f12e128]:
+          - button [ref=f12e129] [cursor=pointer]
+          - generic [ref=f12e132]:
+            - text: Super Admin /
+            - strong [ref=f12e133]: Delivery
+        - generic [ref=f12e134]:
+          - textbox [ref=f12e183]:
+            - /placeholder: Search portal
+          - button [ref=f12e184] [cursor=pointer]
+          - button [ref=f12e185] [cursor=pointer]:
+            - generic [ref=f12e144]: A
+            - generic [ref=f12e145]: Admin
+      - generic [ref=f12e146]:
+        - generic [ref=f12e147]:
+          - heading [level=4] [ref=f12e186]: Delivery
+          - paragraph [ref=f12e149]: Manage delivery within your assigned scope.
+        - button [ref=f12e187] [cursor=pointer]: View Customer App
+      - generic [ref=f12e151]:
+        - generic [ref=f12e152]:
+          - paragraph [ref=f12e153]: Partner accounts are assigned to a store. Demo contact details should be replaced with verified staff details before launch.
+          - generic [ref=f12e154]:
+            - button [ref=f12e188] [cursor=pointer]: Add delivery partner
+            - button [ref=f12e189] [cursor=pointer]: Refresh partners
+        - generic [ref=f12e157]:
+          - generic: Search partners
+          - generic [ref=f12e158]:
+            - textbox [ref=f12e190]
+            - group [aria-hidden]:
+              - generic: Search partners
+        - paragraph [ref=f12e160]: No delivery partners in your authorized scope.
+  - dialog [active] [ref=f12e193]:
+    - heading "Add delivery partner" [level=2] [ref=f12e194]
+    - generic [ref=f12e195]:
+      - generic [ref=f12e196]:
+        - generic [ref=f12e197]: Assigned store
+        - generic [ref=f12e198]:
+          - combobox "Assigned store" [ref=f12e199] [cursor=pointer]: Banjara Hills Fresh Hub · Banjara Hills · 8 km
+          - textbox [aria-hidden]: store-banjara-hills-fresh-hub
+          - group [aria-hidden]:
+            - generic: Assigned store
+      - generic [ref=f12e200]:
+        - generic:
+          - text: Full name
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e201]:
+          - textbox "Full name" [ref=f12e202]
+          - group [aria-hidden]:
+            - generic: Full name *
+      - generic [ref=f12e203]:
+        - generic:
+          - text: Mobile number
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e204]:
+          - textbox "Mobile number" [ref=f12e205]
+          - group [aria-hidden]:
+            - generic: Mobile number *
+      - generic [ref=f12e206]:
+        - generic:
+          - text: Email
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e207]:
+          - textbox "Email" [ref=f12e208]
+          - group [aria-hidden]:
+            - generic: Email *
+      - generic [ref=f12e209]:
+        - generic:
+          - text: Login username
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e210]:
+          - textbox "Login username" [ref=f12e211]
+          - group [aria-hidden]:
+            - generic: Login username *
+      - generic [ref=f12e212]:
+        - generic:
+          - text: Temporary password
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e213]:
+          - textbox "Temporary password" [ref=f12e214]
+          - group [aria-hidden]:
+            - generic: Temporary password *
+        - paragraph [ref=f12e215]: At least 8 characters; rotate after first sign-in.
+      - generic [ref=f12e216]:
+        - generic [ref=f12e217]: Vehicle type
+        - generic [ref=f12e218]:
+          - combobox "Vehicle type" [ref=f12e219] [cursor=pointer]: Bike
+          - textbox [aria-hidden]: Bike
+          - group [aria-hidden]:
+            - generic: Vehicle type
+      - generic [ref=f12e220]:
+        - generic:
+          - text: Vehicle number
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e221]:
+          - textbox "Vehicle number" [ref=f12e222]
+          - group [aria-hidden]:
+            - generic: Vehicle number *
+      - generic [ref=f12e223]:
+        - generic:
+          - text: Driving licence number
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e224]:
+          - textbox "Driving licence number" [ref=f12e225]
+          - group [aria-hidden]:
+            - generic: Driving licence number *
+      - generic [ref=f12e226]:
+        - generic: Address
+        - generic [ref=f12e227]:
+          - textbox "Address" [ref=f12e228]
+          - group [aria-hidden]:
+            - generic: Address
+      - generic [ref=f12e229]:
+        - generic [ref=f12e230]: Account status
+        - generic [ref=f12e231]:
+          - combobox "Account status" [ref=f12e232] [cursor=pointer]: Active
+          - textbox [aria-hidden]: Active
+          - group [aria-hidden]:
+            - generic: Account status
+    - generic [ref=f12e233]:
+      - button "Cancel" [ref=f12e234] [cursor=pointer]
+      - button "Save" [ref=f12e235] [cursor=pointer]

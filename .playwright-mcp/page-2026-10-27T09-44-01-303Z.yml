@@ -1,0 +1,187 @@
+- generic [ref=e1]:
+  - generic [ref=e1639]:
+    - navigation [ref=e1640]:
+      - generic [ref=e1641]:
+        - generic [ref=e1643]:
+          - heading [level=6] [ref=e1925]: Store Manager Portal
+          - text: SR Nagar Store
+        - button [ref=e1926] [cursor=pointer]
+      - generic [ref=e1648]:
+        - button [ref=e1927] [cursor=pointer]:
+          - generic [ref=e1653]: Dashboard
+        - button [ref=e1928] [cursor=pointer]:
+          - generic [ref=e1659]: Products
+        - button [ref=e1929] [cursor=pointer]:
+          - generic [ref=e1664]: Banners
+        - button [ref=e1930] [cursor=pointer]:
+          - generic [ref=e1670]: Coupons
+        - button [ref=e1931] [cursor=pointer]:
+          - generic [ref=e1676]: Inventory
+        - button [ref=e1932] [cursor=pointer]:
+          - generic [ref=e1681]: Orders
+        - button [ref=e1933] [cursor=pointer]:
+          - generic [ref=e1686]: Delivery Partners
+        - button [ref=e1934] [cursor=pointer]:
+          - generic [ref=e1691]: Delivery Radius
+        - button [ref=e1935] [cursor=pointer]:
+          - generic [ref=e1696]: Delivery Settings
+        - button [ref=e1936] [cursor=pointer]:
+          - generic [ref=e1701]: Change Password
+        - button [ref=e1937] [cursor=pointer]:
+          - generic [ref=e1706]: Profile
+        - button [ref=e1938] [cursor=pointer]:
+          - generic [ref=e1711]: Logout
+      - button [ref=e1939] [cursor=pointer]: View Customer App
+    - main [ref=e1713]:
+      - generic [ref=e1714]:
+        - generic [ref=e1715]:
+          - button [ref=e1716] [cursor=pointer]
+          - generic [ref=e1719]:
+            - text: Store Manager /
+            - strong [ref=e1720]: Inventory
+        - generic [ref=e1721]:
+          - textbox [ref=e1940]:
+            - /placeholder: Search portal
+          - button [ref=e1941] [cursor=pointer]
+          - button [ref=e1942] [cursor=pointer]:
+            - generic [ref=e1731]: V
+            - generic [ref=e1732]: Vikram SR Nagar
+      - generic [ref=e1733]:
+        - generic [ref=e1734]:
+          - heading [level=4] [ref=e1943]: Inventory
+          - paragraph [ref=e1736]: Manage inventory within your assigned scope.
+        - button [ref=e1944] [cursor=pointer]: View Customer App
+      - generic [ref=e1738]:
+        - generic [ref=e1739]:
+          - generic [ref=e1740]:
+            - generic: Search
+            - generic [ref=e1741]:
+              - textbox [ref=e1945]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=e1743]:
+            - combobox [ref=e1744] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=e1745]:
+            - combobox [ref=e1746] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=e1946] [cursor=pointer]: Create
+          - button [ref=e1947] [cursor=pointer]: Export
+        - generic [ref=e1869]:
+          - generic [ref=e1870]:
+            - paragraph [ref=e1871]: Whole Walnut Kernels
+            - paragraph [ref=e1872]: META-DRY-WALNUT-500-V1-SRN
+          - generic [ref=e1873]:
+            - button [ref=e1948] [cursor=pointer]: View
+            - button [ref=e1949] [cursor=pointer]: Stock +10
+            - button [ref=e1950] [cursor=pointer]: Stock -1
+            - button [ref=e1951] [cursor=pointer]: Adjust
+        - generic [ref=e1878]:
+          - generic [ref=e1879]:
+            - paragraph [ref=e1880]: Whole Walnut Kernels
+            - paragraph [ref=e1881]: META-DRY-WALNUT-250-V1-SRN
+          - generic [ref=e1882]:
+            - button [ref=e1952] [cursor=pointer]: View
+            - button [ref=e1953] [cursor=pointer]: Stock +10
+            - button [ref=e1954] [cursor=pointer]: Stock -1
+            - button [ref=e1955] [cursor=pointer]: Adjust
+        - generic [ref=e1887]:
+          - generic [ref=e1888]:
+            - paragraph [ref=e1889]: Premium Roasted Pistachios
+            - paragraph [ref=e1890]: DRY-PISTA-500-V1-SRN
+          - generic [ref=e1891]:
+            - button [ref=e1956] [cursor=pointer]: View
+            - button [ref=e1957] [cursor=pointer]: Stock +10
+            - button [ref=e1958] [cursor=pointer]: Stock -1
+            - button [ref=e1959] [cursor=pointer]: Adjust
+        - generic [ref=e1896]:
+          - generic [ref=e1897]:
+            - paragraph [ref=e1898]: Premium Roasted Pistachios
+            - paragraph [ref=e1899]: DRY-PISTA-200-V1-SRN
+          - generic [ref=e1900]:
+            - button [ref=e1960] [cursor=pointer]: View
+            - button [ref=e1961] [cursor=pointer]: Stock +10
+            - button [ref=e1962] [cursor=pointer]: Stock -1
+            - button [ref=e1963] [cursor=pointer]: Adjust
+        - generic [ref=e1905]:
+          - generic [ref=e1906]:
+            - paragraph [ref=e1907]: Guntur Chilli Powder
+            - paragraph [ref=e1908]: SPC-GUNTUR-500-V1-SRN
+          - generic [ref=e1909]:
+            - button [ref=e1964] [cursor=pointer]: View
+            - button [ref=e1965] [cursor=pointer]: Stock +10
+            - button [ref=e1966] [cursor=pointer]: Stock -1
+            - button [ref=e1967] [cursor=pointer]: Adjust
+        - generic [ref=e1914]:
+          - generic [ref=e1915]:
+            - paragraph [ref=e1916]: Guntur Chilli Powder
+            - paragraph [ref=e1917]: SPC-GUNTUR-200-V1-SRN
+          - generic [ref=e1918]:
+            - button [ref=e1968] [cursor=pointer]: View
+            - button [ref=e1969] [cursor=pointer]: Stock +10
+            - button [ref=e1970] [cursor=pointer]: Stock -1
+            - button [ref=e1971] [cursor=pointer]: Adjust
+        - generic [ref=e1750]:
+          - button [disabled]: Previous
+          - paragraph [ref=e1751]: Page 1 of 4
+          - button [ref=e1972] [cursor=pointer]: Next
+  - dialog [active] [ref=e1975]:
+    - heading "Details Inventory" [level=2] [ref=e1976]
+    - generic [ref=e1977]:
+      - generic [ref=e1978]:
+        - text: productId
+        - paragraph [ref=e1979]: c38d641c-69fe-4ae5-bcb7-fcdbe076e45f
+      - generic [ref=e1980]:
+        - text: variantId
+        - paragraph [ref=e1981]: 71bae737-81ae-49df-8f74-c253bb1f652d
+      - generic [ref=e1982]:
+        - text: storeId
+        - paragraph [ref=e1983]: store-sr-nagar-store
+      - generic [ref=e1984]:
+        - text: availableQuantity
+        - paragraph [ref=e1985]: "50"
+      - generic [ref=e1986]:
+        - text: reservedQuantity
+        - paragraph [ref=e1987]: "0"
+      - generic [ref=e1988]:
+        - text: reorderLevel
+        - paragraph [ref=e1989]: "10"
+      - generic [ref=e1990]:
+        - text: status
+        - paragraph [ref=e1991]: ACTIVE
+      - generic [ref=e1992]:
+        - text: createdAt
+        - paragraph [ref=e1993]: 2026-10-27T09:43:49.558913Z
+      - generic [ref=e1994]:
+        - text: updatedAt
+        - paragraph [ref=e1995]: 2026-10-27T09:43:49.558913Z
+      - generic [ref=e1996]:
+        - text: version
+        - paragraph [ref=e1997]: "0"
+      - generic [ref=e1998]:
+        - text: name
+        - paragraph [ref=e1999]: Catalog product missing
+      - generic [ref=e2000]:
+        - text: sku
+        - paragraph [ref=e2001]: c38d641c-69fe-4ae5-bcb7-fcdbe076e45f
+      - generic [ref=e2002]:
+        - text: store
+        - paragraph [ref=e2003]: SR Nagar Store
+      - generic [ref=e2004]:
+        - text: location
+        - paragraph [ref=e2005]: hyderabad
+      - generic [ref=e2006]:
+        - text: stock
+        - paragraph [ref=e2007]: "50"
+      - generic [ref=e2008]:
+        - text: reserved
+        - paragraph [ref=e2009]: "0"
+      - generic [ref=e2010]:
+        - text: lowStockAt
+        - paragraph [ref=e2011]: "10"
+      - generic [ref=e2012]:
+        - text: available
+        - paragraph [ref=e2013]: Available
+    - button "Cancel" [ref=e2016] [cursor=pointer]

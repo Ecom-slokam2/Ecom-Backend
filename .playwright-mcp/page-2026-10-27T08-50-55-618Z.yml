@@ -1,0 +1,158 @@
+- generic [ref=f84e1]:
+  - generic [ref=f84e5]:
+    - navigation [ref=f84e6]:
+      - generic [ref=f84e7]:
+        - generic [ref=f84e9]:
+          - heading [level=6] [ref=f84e150]: Global Admin Portal
+          - text: All locations
+        - button [ref=f84e151] [cursor=pointer]
+      - generic [ref=f84e14]:
+        - generic [ref=f84e15]:
+          - paragraph [ref=f84e16]: Main
+          - button [ref=f84e152] [cursor=pointer]:
+            - generic [ref=f84e21]: Dashboard
+        - generic [ref=f84e22]:
+          - paragraph [ref=f84e23]: Management
+          - button [ref=f84e153] [cursor=pointer]:
+            - generic [ref=f84e28]: Stores
+          - button [ref=f84e154] [cursor=pointer]:
+            - generic [ref=f84e34]: Products
+          - button [ref=f84e155] [cursor=pointer]:
+            - generic [ref=f84e39]: Categories
+          - button [ref=f84e156] [cursor=pointer]:
+            - generic [ref=f84e44]: Banners
+          - button [ref=f84e157] [cursor=pointer]:
+            - generic [ref=f84e50]: Inventory
+        - generic [ref=f84e51]:
+          - paragraph [ref=f84e52]: Orders & Payments
+          - button [ref=f84e158] [cursor=pointer]:
+            - generic [ref=f84e57]: Orders
+          - button [ref=f84e159] [cursor=pointer]:
+            - generic [ref=f84e63]: Payments
+        - generic [ref=f84e64]:
+          - paragraph [ref=f84e65]: Customer
+          - button [ref=f84e160] [cursor=pointer]:
+            - generic [ref=f84e70]: Customers
+          - button [ref=f84e161] [cursor=pointer]:
+            - generic [ref=f84e75]: Reviews
+          - button [ref=f84e162] [cursor=pointer]:
+            - generic [ref=f84e81]: Coupons
+          - button [ref=f84e163] [cursor=pointer]:
+            - generic [ref=f84e86]: Notifications
+        - generic [ref=f84e87]:
+          - paragraph [ref=f84e88]: Analytics
+          - button [ref=f84e164] [cursor=pointer]:
+            - generic [ref=f84e93]: Reports
+        - generic [ref=f84e94]:
+          - paragraph [ref=f84e95]: System
+          - button [ref=f84e165] [cursor=pointer]:
+            - generic [ref=f84e100]: Audit Logs
+      - button [ref=f84e166] [cursor=pointer]: View Customer App
+    - main [ref=f84e102]:
+      - generic [ref=f84e103]:
+        - generic [ref=f84e104]:
+          - button [ref=f84e105] [cursor=pointer]
+          - generic [ref=f84e108]:
+            - text: Global Admin /
+            - strong [ref=f84e109]: Inventory
+        - generic [ref=f84e110]:
+          - textbox [ref=f84e167]:
+            - /placeholder: Search portal
+          - button [ref=f84e168] [cursor=pointer]
+          - button [ref=f84e169] [cursor=pointer]:
+            - generic [ref=f84e120]: G
+            - generic [ref=f84e121]: Global Administrator
+      - generic [ref=f84e122]:
+        - generic [ref=f84e123]:
+          - heading [level=4] [ref=f84e170]: Inventory
+          - paragraph [ref=f84e125]: Manage inventory within your assigned scope.
+        - button [ref=f84e171] [cursor=pointer]: View Customer App
+      - generic [ref=f84e127]:
+        - generic [ref=f84e128]:
+          - generic [ref=f84e129]:
+            - generic: Search
+            - generic [ref=f84e130]:
+              - textbox [ref=f84e172]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f84e132]:
+            - combobox [ref=f84e133] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f84e134]:
+            - combobox [ref=f84e135] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f84e173] [cursor=pointer]: Create
+          - button [ref=f84e174] [cursor=pointer]: Export
+        - generic [ref=f84e138]:
+          - generic [ref=f84e139]:
+            - paragraph [ref=f84e140]: Afghan Black Raisins
+            - paragraph [ref=f84e141]: DRY-RAISIN-AFG-500-V1
+          - generic [ref=f84e142]:
+            - button [ref=f84e175] [cursor=pointer]: View
+            - button [ref=f84e176] [cursor=pointer]: Stock +10
+            - button [ref=f84e177] [cursor=pointer]: Stock -1
+            - button [ref=f84e178] [cursor=pointer]: Adjust
+        - generic [ref=f84e147]:
+          - button [disabled]: Previous
+          - paragraph [ref=f84e148]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [active] [ref=f84e181]:
+    - heading "Details Inventory" [level=2] [ref=f84e182]
+    - generic [ref=f84e183]:
+      - generic [ref=f84e184]:
+        - text: productId
+        - paragraph [ref=f84e185]: a83cfbed-541c-47ba-a410-7a6768dda995
+      - generic [ref=f84e186]:
+        - text: variantId
+        - paragraph [ref=f84e187]: 42437208-8ab4-41fc-a372-cbf80435883c
+      - generic [ref=f84e188]:
+        - text: storeId
+        - paragraph [ref=f84e189]: global-store
+      - generic [ref=f84e190]:
+        - text: availableQuantity
+        - paragraph [ref=f84e191]: "200"
+      - generic [ref=f84e192]:
+        - text: reservedQuantity
+        - paragraph [ref=f84e193]: "100"
+      - generic [ref=f84e194]:
+        - text: reorderLevel
+        - paragraph [ref=f84e195]: "10"
+      - generic [ref=f84e196]:
+        - text: status
+        - paragraph [ref=f84e197]: ACTIVE
+      - generic [ref=f84e198]:
+        - text: createdAt
+        - paragraph [ref=f84e199]: 2026-10-27T08:50:23.592540Z
+      - generic [ref=f84e200]:
+        - text: updatedAt
+        - paragraph [ref=f84e201]: 2026-10-27T08:50:23.592540Z
+      - generic [ref=f84e202]:
+        - text: version
+        - paragraph [ref=f84e203]: "0"
+      - generic [ref=f84e204]:
+        - text: name
+        - paragraph [ref=f84e205]: Afghan Black Raisins
+      - generic [ref=f84e206]:
+        - text: sku
+        - paragraph [ref=f84e207]: DRY-RAISIN-AFG-500-V1
+      - generic [ref=f84e208]:
+        - text: store
+        - paragraph [ref=f84e209]: global-store
+      - generic [ref=f84e210]:
+        - text: location
+        - paragraph
+      - generic [ref=f84e211]:
+        - text: stock
+        - paragraph [ref=f84e212]: "200"
+      - generic [ref=f84e213]:
+        - text: reserved
+        - paragraph [ref=f84e214]: "100"
+      - generic [ref=f84e215]:
+        - text: lowStockAt
+        - paragraph [ref=f84e216]: "10"
+      - generic [ref=f84e217]:
+        - text: available
+        - paragraph [ref=f84e218]: Available
+    - button "Cancel" [ref=f84e221] [cursor=pointer]

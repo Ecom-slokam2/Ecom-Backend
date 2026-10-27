@@ -1,0 +1,208 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e8]:
+    - navigation [ref=f12e9]:
+      - generic [ref=f12e10]:
+        - generic [ref=f12e12]:
+          - heading [level=6] [ref=f12e572]: Super Admin Portal
+          - text: All locations
+        - button [ref=f12e573] [cursor=pointer]
+      - generic [ref=f12e17]:
+        - generic [ref=f12e18]:
+          - paragraph [ref=f12e19]: Main
+          - button [ref=f12e574] [cursor=pointer]:
+            - generic [ref=f12e24]: Dashboard
+        - generic [ref=f12e25]:
+          - paragraph [ref=f12e26]: Management
+          - button [ref=f12e575] [cursor=pointer]:
+            - generic [ref=f12e32]: Locations
+          - button [ref=f12e576] [cursor=pointer]:
+            - generic [ref=f12e37]: Users
+          - button [ref=f12e577] [cursor=pointer]:
+            - generic [ref=f12e42]: Stores
+          - button [ref=f12e578] [cursor=pointer]:
+            - generic [ref=f12e48]: Products
+          - button [ref=f12e579] [cursor=pointer]:
+            - generic [ref=f12e53]: Categories
+          - button [ref=f12e580] [cursor=pointer]:
+            - generic [ref=f12e58]: Banners
+          - button [ref=f12e581] [cursor=pointer]:
+            - generic [ref=f12e64]: Inventory
+        - generic [ref=f12e65]:
+          - paragraph [ref=f12e66]: Orders & Payments
+          - button [ref=f12e582] [cursor=pointer]:
+            - generic [ref=f12e71]: Orders
+          - button [ref=f12e583] [cursor=pointer]:
+            - generic [ref=f12e77]: Payments
+          - button [ref=f12e584] [cursor=pointer]:
+            - generic [ref=f12e82]: Delivery
+        - generic [ref=f12e83]:
+          - paragraph [ref=f12e84]: Customer
+          - button [ref=f12e585] [cursor=pointer]:
+            - generic [ref=f12e89]: Customers
+          - button [ref=f12e586] [cursor=pointer]:
+            - generic [ref=f12e94]: Reviews
+          - button [ref=f12e587] [cursor=pointer]:
+            - generic [ref=f12e100]: Coupons
+          - button [ref=f12e588] [cursor=pointer]:
+            - generic [ref=f12e105]: Notifications
+        - generic [ref=f12e106]:
+          - paragraph [ref=f12e107]: Analytics
+          - button [ref=f12e589] [cursor=pointer]:
+            - generic [ref=f12e112]: Reports
+        - generic [ref=f12e113]:
+          - paragraph [ref=f12e114]: System
+          - button [ref=f12e590] [cursor=pointer]:
+            - generic [ref=f12e119]: Security
+          - button [ref=f12e591] [cursor=pointer]:
+            - generic [ref=f12e124]: Audit Logs
+      - button [ref=f12e592] [cursor=pointer]: View Customer App
+    - main [ref=f12e126]:
+      - generic [ref=f12e127]:
+        - generic [ref=f12e128]:
+          - button [ref=f12e129] [cursor=pointer]
+          - generic [ref=f12e132]:
+            - text: Super Admin /
+            - strong [ref=f12e133]: Delivery
+        - generic [ref=f12e134]:
+          - textbox [ref=f12e593]:
+            - /placeholder: Search portal
+          - button [ref=f12e594] [cursor=pointer]
+          - button [ref=f12e595] [cursor=pointer]:
+            - generic [ref=f12e144]: A
+            - generic [ref=f12e145]: Admin
+      - generic [ref=f12e146]:
+        - generic [ref=f12e147]:
+          - heading [level=4] [ref=f12e596]: Delivery
+          - paragraph [ref=f12e149]: Manage delivery within your assigned scope.
+        - button [ref=f12e597] [cursor=pointer]: View Customer App
+      - generic [ref=f12e151]:
+        - generic [ref=f12e152]:
+          - paragraph [ref=f12e153]: Partner accounts are assigned to a store. Demo contact details should be replaced with verified staff details before launch.
+          - generic [ref=f12e154]:
+            - button [ref=f12e598] [cursor=pointer]: Add delivery partner
+            - button [ref=f12e599] [cursor=pointer]: Refresh partners
+        - generic [ref=f12e157]:
+          - generic: Search partners
+          - generic [ref=f12e158]:
+            - textbox [ref=f12e600]
+            - group [aria-hidden]:
+              - generic: Search partners
+        - generic [ref=f12e547]:
+          - generic [ref=f12e548]:
+            - paragraph [ref=f12e549]: Demo Courier Kukatpally
+            - paragraph [ref=f12e550]: "Store: Demo Kukatpally Basket · Store location: Kukatpally"
+            - paragraph [ref=f12e551]: "Service region: Hyderabad"
+            - paragraph [ref=f12e552]: Bike · DEMO-KUK-01
+            - text: No valid GPS location shared
+          - generic [ref=f12e553]:
+            - generic [ref=f12e554]: Active
+            - button [ref=f12e601] [cursor=pointer]: Edit details
+            - button [ref=f12e602] [cursor=pointer]: Deactivate
+            - button [ref=f12e603] [cursor=pointer]: View full details & location
+        - generic [ref=f12e559]:
+          - generic [ref=f12e560]:
+            - paragraph [ref=f12e561]: Demo Rider Secunderabad
+            - paragraph [ref=f12e562]: "Store: Demo Secunderabad Market · Store location: Secunderabad"
+            - paragraph [ref=f12e563]: "Service region: Hyderabad"
+            - paragraph [ref=f12e564]: Scooter · DEMO-SEC-01
+            - text: No valid GPS location shared
+          - generic [ref=f12e565]:
+            - generic [ref=f12e566]: Active
+            - button [ref=f12e604] [cursor=pointer]: Edit details
+            - button [ref=f12e605] [cursor=pointer]: Deactivate
+            - button [ref=f12e606] [cursor=pointer]: View full details & location
+  - dialog [ref=f12e694]:
+    - heading [level=2] [ref=f12e695]: Add delivery partner
+    - generic [ref=f12e611]:
+      - generic [ref=f12e612]:
+        - generic [ref=f12e613]: Assigned store
+        - generic [ref=f12e614]:
+          - combobox [ref=f12e696] [cursor=pointer]: Demo LB Nagar Fresh · LB Nagar · 8 km
+          - textbox [aria-hidden]: store-demo-lb-nagar-fresh
+          - group [aria-hidden]:
+            - generic: Assigned store
+      - generic [ref=f12e616]:
+        - generic [ref=f12e697]:
+          - text: Full name
+          - generic [aria-hidden] [ref=f12e698]: "*"
+        - generic [ref=f12e617]:
+          - textbox [ref=f12e699]: Demo Courier LB Nagar
+          - group [aria-hidden]:
+            - generic: Full name *
+      - generic [ref=f12e619]:
+        - generic [ref=f12e700]:
+          - text: Mobile number
+          - generic [aria-hidden] [ref=f12e701]: "*"
+        - generic [ref=f12e620]:
+          - textbox [ref=f12e702]: +91 00000 00003
+          - group [aria-hidden]:
+            - generic: Mobile number *
+      - generic [ref=f12e622]:
+        - generic [ref=f12e703]:
+          - text: Email
+          - generic [aria-hidden] [ref=f12e704]: "*"
+        - generic [ref=f12e623]:
+          - textbox [ref=f12e705]: demo.courier.lbnagar@example.test
+          - group [aria-hidden]:
+            - generic: Email *
+      - generic [ref=f12e625]:
+        - generic [ref=f12e706]:
+          - text: Login username
+          - generic [aria-hidden] [ref=f12e707]: "*"
+        - generic [ref=f12e626]:
+          - textbox [ref=f12e708]: demo.courier.lbnagar
+          - group [aria-hidden]:
+            - generic: Login username *
+      - generic [ref=f12e628]:
+        - generic [ref=f12e709]:
+          - text: Temporary password
+          - generic [aria-hidden] [ref=f12e710]: "*"
+        - generic [ref=f12e629]:
+          - textbox [ref=f12e711]: DemoOnly!Hyd2026#
+          - group [aria-hidden]:
+            - generic: Temporary password *
+        - paragraph [ref=f12e631]: At least 8 characters; rotate after first sign-in.
+      - generic [ref=f12e632]:
+        - generic [ref=f12e633]: Vehicle type
+        - generic [ref=f12e634]:
+          - combobox [expanded] [ref=f12e712] [cursor=pointer]: Bike
+          - textbox [aria-hidden]: Bike
+          - group [aria-hidden]:
+            - generic: Vehicle type
+      - generic [ref=f12e636]:
+        - generic [ref=f12e713]:
+          - text: Vehicle number
+          - generic [aria-hidden] [ref=f12e714]: "*"
+        - generic [ref=f12e637]:
+          - textbox [ref=f12e715]: DEMO-LBN-01
+          - group [aria-hidden]:
+            - generic: Vehicle number *
+      - generic [ref=f12e639]:
+        - generic [ref=f12e716]:
+          - text: Driving licence number
+          - generic [aria-hidden] [ref=f12e717]: "*"
+        - generic [ref=f12e640]:
+          - textbox [ref=f12e718]: DEMO-LIC-LBN-01
+          - group [aria-hidden]:
+            - generic: Driving licence number *
+      - generic [ref=f12e642]:
+        - generic [ref=f12e719]: Address
+        - generic [ref=f12e643]:
+          - textbox [ref=f12e720]: Demo staff address on file; LB Nagar, Hyderabad (test record).
+          - group [aria-hidden]:
+            - generic: Address
+      - generic [ref=f12e645]:
+        - generic [ref=f12e646]: Account status
+        - generic [ref=f12e647]:
+          - combobox [ref=f12e721] [cursor=pointer]: Active
+          - textbox [aria-hidden]: Active
+          - group [aria-hidden]:
+            - generic: Account status
+    - generic [ref=f12e649]:
+      - button [ref=f12e722] [cursor=pointer]: Cancel
+      - button [ref=f12e723] [cursor=pointer]: Save
+  - listbox "Vehicle type" [ref=f12e726]:
+    - option "Bike" [active] [selected] [ref=f12e727] [cursor=pointer]
+    - option "Scooter" [ref=f12e728] [cursor=pointer]
+    - option "Electric Bike" [ref=f12e729] [cursor=pointer]
+    - option "Van" [ref=f12e730] [cursor=pointer]

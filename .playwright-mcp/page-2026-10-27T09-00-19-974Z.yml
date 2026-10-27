@@ -1,0 +1,71 @@
+- generic [ref=f1e476]:
+  - navigation [ref=f1e477]:
+    - generic [ref=f1e478]:
+      - img "Spices and Pickles" [ref=f1e479]
+      - generic [ref=f1e480]:
+        - heading "Location Admin Portal" [level=6] [ref=f1e481]
+        - text: hyderabad
+      - button "Collapse sidebar" [ref=f1e482] [cursor=pointer]
+    - generic [ref=f1e485]:
+      - generic [ref=f1e486]:
+        - paragraph [ref=f1e487]: Main
+        - button "Dashboard" [ref=f1e488] [cursor=pointer]
+      - generic [ref=f1e493]:
+        - paragraph [ref=f1e494]: Management
+        - button "Stores" [active] [ref=f1e495] [cursor=pointer]
+        - button "Products" [ref=f1e500] [cursor=pointer]
+        - button "Banners" [ref=f1e506] [cursor=pointer]
+        - button "Inventory" [ref=f1e511] [cursor=pointer]
+      - generic [ref=f1e517]:
+        - paragraph [ref=f1e518]: Orders & Payments
+        - button "Orders" [ref=f1e519] [cursor=pointer]
+        - button "Payments" [ref=f1e524] [cursor=pointer]
+        - button "Delivery" [ref=f1e530] [cursor=pointer]
+      - generic [ref=f1e535]:
+        - paragraph [ref=f1e536]: Customer
+        - button "Coupons" [ref=f1e537] [cursor=pointer]
+      - generic [ref=f1e543]:
+        - paragraph [ref=f1e544]: Analytics
+        - button "Reports" [ref=f1e545] [cursor=pointer]
+    - button "View Customer App" [ref=f1e550] [cursor=pointer]
+  - main [ref=f1e551]:
+    - generic [ref=f1e552]:
+      - generic [ref=f1e553]:
+        - button [ref=f1e554] [cursor=pointer]
+        - generic [ref=f1e557]:
+          - text: Location Admin /
+          - strong [ref=f1e558]: Stores
+      - generic [ref=f1e559]:
+        - textbox "Search portal" [ref=f1e564]
+        - button "Notifications" [ref=f1e565] [cursor=pointer]
+        - button "H Hyderabad Location Administrator" [ref=f1e568] [cursor=pointer]:
+          - generic [ref=f1e569]: H
+          - generic [ref=f1e570]: Hyderabad Location Administrator
+    - generic [ref=f1e571]:
+      - generic [ref=f1e572]:
+        - heading "Stores" [level=4] [ref=f1e709]
+        - paragraph [ref=f1e574]: Manage stores within your assigned scope.
+      - button "View Customer App" [ref=f1e575] [cursor=pointer]
+    - generic [ref=f1e710]:
+      - generic [ref=f1e711]:
+        - generic [ref=f1e712]:
+          - generic: Search
+          - generic [ref=f1e713]:
+            - textbox "Search" [ref=f1e714]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f1e715]:
+          - combobox [ref=f1e716] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f1e717]:
+          - combobox [ref=f1e718] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [ref=f1e719] [cursor=pointer]
+        - button "Export" [ref=f1e720] [cursor=pointer]
+      - paragraph [ref=f1e721]: No matching records. Use Create to add the first record.
+      - generic [ref=f1e722]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f1e723]: Page 1 of 1
+        - button "Next" [disabled]

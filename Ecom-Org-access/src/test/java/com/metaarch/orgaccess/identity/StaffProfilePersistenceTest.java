@@ -45,9 +45,9 @@ class StaffProfilePersistenceTest {
   }
 
   private void createSchema(JdbcTemplate jdbc) {
-    jdbc.execute("CREATE TABLE users(id BIGINT PRIMARY KEY,username VARCHAR(190),email VARCHAR(255),mobile VARCHAR(30),display_name VARCHAR(180),status VARCHAR(30),enabled BOOLEAN,locked BOOLEAN,vehicle_type VARCHAR(40),vehicle_number VARCHAR(40),licence_number VARCHAR(60),address VARCHAR(700),emergency_contact VARCHAR(30))");
+    jdbc.execute("CREATE TABLE users(id BIGINT PRIMARY KEY,username VARCHAR(190),email VARCHAR(255),mobile VARCHAR(30),display_name VARCHAR(180),status VARCHAR(30),enabled BOOLEAN,locked BOOLEAN,vehicle_type VARCHAR(40),vehicle_number VARCHAR(40),licence_number VARCHAR(60),address VARCHAR(700),emergency_contact VARCHAR(30),delivery_latitude DOUBLE,delivery_longitude DOUBLE,delivery_location_updated_at TIMESTAMP)");
     jdbc.execute("CREATE TABLE customers(user_id BIGINT,full_name VARCHAR(180))");
-    jdbc.execute("CREATE TABLE memberships(user_id BIGINT,store_id VARCHAR(80),store_name VARCHAR(180),location_id VARCHAR(120),role_id BIGINT)");
+    jdbc.execute("CREATE TABLE memberships(user_id BIGINT,store_id VARCHAR(80),store_name VARCHAR(180),store_location VARCHAR(160),store_address VARCHAR(700),location_id VARCHAR(120),role_id BIGINT)");
     jdbc.execute("CREATE TABLE user_roles(user_id BIGINT,role_id BIGINT)");
     jdbc.execute("CREATE TABLE roles(id BIGINT PRIMARY KEY,name VARCHAR(80))");
   }

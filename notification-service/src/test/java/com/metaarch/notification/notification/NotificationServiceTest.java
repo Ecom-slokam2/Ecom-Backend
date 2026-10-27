@@ -64,7 +64,7 @@ class NotificationServiceTest {
   @Test
   void queriesCustomerOrderAndHistoryPages() {
     PageRequest page = PageRequest.of(0, 10);
-    when(repository.findByCustomerId(any(), any())).thenReturn(new PageImpl<>(List.of()));
+    when(repository.findByCustomerIdAndClearedAtIsNull(any(), any())).thenReturn(new PageImpl<>(List.of()));
     when(repository.findByOrderId(any(), any())).thenReturn(new PageImpl<>(List.of()));
     when(repository.findAll(page)).thenReturn(new PageImpl<>(List.of()));
 

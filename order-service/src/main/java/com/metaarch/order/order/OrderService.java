@@ -107,6 +107,12 @@ public class OrderService {
   }
 
   @Transactional(readOnly = true)
+  public List<OrderResponse> listStores(java.util.Collection<String> storeIds) {
+    if (storeIds == null || storeIds.isEmpty()) return List.of();
+    return orders.findByStoreIdInOrderByCreatedAtDesc(storeIds).stream().map(OrderResponse::from).toList();
+  }
+
+  @Transactional(readOnly = true)
   public List<OrderResponse> getByCustomer(UUID customerId) {
     return orders.findByCustomerIdOrderByCreatedAtDesc(customerId).stream().map(OrderResponse::from).toList();
   }
@@ -130,23 +136,25 @@ public class OrderService {
   @Transactional
   public OrderResponse assignGlobalStore(UUID orderId, String storeId) {
     Order order = orders.findLockedById(orderId).orElseThrow(() -> new ResourceNotFoundException("Order not found"));
-    if (!isGlobalOrder(order)) throw new IllegalArgumentException("Only Global Store orders can be assigned to a stocked store");
+    if (!isGlobalOrder(order)) throw new IllegalArgumentException("Only Global Store orders can be approved in Global Fulfillment");
+    if (!"global-store".equalsIgnoreCase(storeId == null ? "" : storeId.trim()))
+      throw new IllegalArgumentException("Global orders are fulfilled by the India-wide Global Store and cannot be assigned to a local store.");
     if (order.getGlobalAssignedStoreId() != null || "Approved".equalsIgnoreCase(order.getGlobalApproval()))
       throw new ConflictException("This global order has already been assigned");
     GlobalStoreAssignmentCatalogClient.Store store;
-    try { store = assignmentCatalog.store(storeId.trim()); }
-    catch (org.springframework.web.client.HttpClientErrorException.NotFound error) { throw new IllegalArgumentException("Selected store was not found"); }
+    try { store = assignmentCatalog.store("global-store"); }
+    catch (org.springframework.web.client.HttpClientErrorException.NotFound error) { throw new IllegalArgumentException("The India-wide Global Store is not configured"); }
     if (store == null || !store.active() || !"Active".equalsIgnoreCase(store.status()))
-      throw new IllegalArgumentException("Selected store is inactive");
+      throw new IllegalArgumentException("The India-wide Global Store is inactive");
     if (order.getItems().isEmpty()) throw new IllegalArgumentException("Global order has no items to assign");
     for (OrderItem item : order.getItems()) {
       GlobalStoreAssignmentInventoryClient.Inventory stock;
-      try { stock = assignmentInventory.inventory(item.getProductId(), item.getVariantId(), store.id()); }
-      catch (org.springframework.web.client.HttpClientErrorException.NotFound error) { throw new ConflictException("Selected store does not have stock for every order item"); }
+      try { stock = assignmentInventory.inventory(item.getProductId(), item.getVariantId(), "global-store"); }
+      catch (org.springframework.web.client.HttpClientErrorException.NotFound error) { throw new ConflictException("Global Store inventory does not have stock for every order item"); }
       if (stock == null || !store.id().equals(stock.storeId()) || !"ACTIVE".equalsIgnoreCase(stock.status()) || stock.availableQuantity() < item.getQuantity())
-        throw new ConflictException("Selected store does not have enough active stock for every order item");
+        throw new ConflictException("Global Store does not have enough active stock for every order item");
     }
-    order.setGlobalAssignedStoreId(store.id());
+    order.setGlobalAssignedStoreId("global-store");
     order.setGlobalAssignedAt(Instant.now());
     order.setGlobalApproval("Approved");
     order.setStatus(OrderStatus.CONFIRMED);
@@ -159,20 +167,22 @@ public class OrderService {
     Order order = find(orderId);
     if (!isGlobalOrder(order)) throw new IllegalArgumentException("Only Global Store orders can be assigned to a stocked store");
     List<GlobalStoreAssignmentOption> options = new ArrayList<>();
-    for (GlobalStoreAssignmentCatalogClient.Store store : assignmentCatalog.activeStores()) {
+    GlobalStoreAssignmentCatalogClient.Store store;
+    try { store = assignmentCatalog.store("global-store"); }
+    catch (org.springframework.web.client.HttpClientErrorException.NotFound error) { return options; }
+    if (store == null || !store.active() || !"Active".equalsIgnoreCase(store.status())) return options;
       List<GlobalStoreAssignmentOption.ItemAvailability> availability = new ArrayList<>();
       boolean allAvailable = !order.getItems().isEmpty();
       for (OrderItem item : order.getItems()) {
         GlobalStoreAssignmentInventoryClient.Inventory stock;
-        try { stock = assignmentInventory.inventory(item.getProductId(), item.getVariantId(), store.id()); }
+        try { stock = assignmentInventory.inventory(item.getProductId(), item.getVariantId(), "global-store"); }
         catch (org.springframework.web.client.HttpClientErrorException.NotFound missing) { stock = null; }
         int quantity = stock == null ? 0 : stock.availableQuantity();
         boolean available = stock != null && "ACTIVE".equalsIgnoreCase(stock.status()) && quantity >= item.getQuantity();
         availability.add(new GlobalStoreAssignmentOption.ItemAvailability(item.getProductName(), item.getQuantity(), quantity, available));
         allAvailable &= available;
       }
-      if (allAvailable) options.add(new GlobalStoreAssignmentOption(store.id(), availability));
-    }
+      if (allAvailable) options.add(new GlobalStoreAssignmentOption("global-store", availability));
     return options;
   }
 

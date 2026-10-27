@@ -1,0 +1,57 @@
+- generic [ref=f1e407]:
+  - complementary [ref=f1e408]:
+    - generic [ref=f1e409]:
+      - img "Spices and Pickles" [ref=f1e410]
+      - generic [ref=f1e411]:
+        - heading "Store Manager" [level=6] [ref=f1e412]
+        - paragraph [ref=f1e413]: SR Nagar Store
+    - navigation [ref=f1e414]:
+      - button "Dashboard" [ref=f1e415] [cursor=pointer]
+      - button "Products" [ref=f1e420] [cursor=pointer]
+      - button "Banners" [ref=f1e426] [cursor=pointer]
+      - button "Coupons" [ref=f1e431] [cursor=pointer]
+      - button "Inventory" [ref=f1e437] [cursor=pointer]
+      - button "Orders" [ref=f1e443] [cursor=pointer]
+      - button "Delivery Partners" [ref=f1e448] [cursor=pointer]
+      - button "Delivery Radius" [ref=f1e453] [cursor=pointer]
+      - button "Delivery Settings" [ref=f1e458] [cursor=pointer]
+      - button "Change Password" [ref=f1e463] [cursor=pointer]
+      - button "Profile" [ref=f1e468] [cursor=pointer]
+      - button "Logout" [ref=f1e473] [cursor=pointer]
+    - button "View Customer App" [ref=f1e478] [cursor=pointer]
+  - main [ref=f1e479]:
+    - generic [ref=f1e480]:
+      - button [ref=f1e481] [cursor=pointer]
+      - button "V Vikram SR Nagar" [ref=f1e485] [cursor=pointer]:
+        - generic [ref=f1e486]: V
+        - generic [ref=f1e487]: Vikram SR Nagar
+      - button "Sign out" [ref=f1e488] [cursor=pointer]
+    - generic [ref=f1e489]:
+      - generic [ref=f1e490]:
+        - heading "Delivery Radius & Service Area" [level=4] [ref=f1e491]
+        - paragraph [ref=f1e492]: SR Nagar Store - hyderabad
+      - button "+ Add Delivery Radius" [ref=f1e493] [cursor=pointer]
+    - generic [ref=f1e494]:
+      - generic [ref=f1e495]:
+        - generic [ref=f1e497]:
+          - button "Zoom in" [ref=f1e498] [cursor=pointer]: +
+          - button "Zoom out" [ref=f1e499] [cursor=pointer]: "-"
+        - generic [ref=f1e500]: Store
+        - generic: 10 KM
+      - complementary [ref=f1e501]:
+        - heading "Delivery Radius Rules" [level=6] [ref=f1e502]
+        - generic [ref=f1e503]:
+          - generic [ref=f1e504]:
+            - paragraph [ref=f1e505]: 0-10 KM
+            - generic [ref=f1e506]: Active
+          - paragraph [ref=f1e508]: ₹30 Standard Delivery
+          - paragraph [ref=f1e509]: 15-30 min
+          - generic [ref=f1e510]:
+            - generic [ref=f1e511]: Express
+            - generic [ref=f1e513]: Instant
+            - generic [ref=f1e515]: Scheduled
+            - generic [ref=f1e517]: Standard
+            - generic [ref=f1e519]: Store Pickup
+          - generic [ref=f1e521]:
+            - button "Edit" [ref=f1e522] [cursor=pointer]
+            - button "Delete" [ref=f1e523] [cursor=pointer]

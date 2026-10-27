@@ -52,6 +52,23 @@ public class JwtTokenProvider {
       .compact();
   }
 
+  /** Short-lived, order-bound credential used only by Delivery Operations when forwarding
+   * a server-validated partner action to Fulfillment. It is never returned to a browser. */
+  public String generateDeliveryActionToken(String partnerId, String orderId) {
+    Instant now = Instant.now();
+    return Jwts.builder().setId(java.util.UUID.randomUUID().toString())
+      .setSubject("delivery-operations")
+      .setIssuer(properties.getIssuer())
+      .claim(ROLES, List.of("ROLE_DELIVERY_PARTNER"))
+      .claim("deliveryPartnerId", partnerId)
+      .claim("deliveryActionOrderId", orderId)
+      .claim("deliveryActionProxy", true)
+      .setIssuedAt(Date.from(now))
+      .setExpiration(Date.from(now.plusSeconds(30)))
+      .signWith(signingKey)
+      .compact();
+  }
+
     public String generateToken(UserAccount user) {
     List<String> authorities = identities.authorities(user).stream()
       .map(GrantedAuthority::getAuthority).toList();

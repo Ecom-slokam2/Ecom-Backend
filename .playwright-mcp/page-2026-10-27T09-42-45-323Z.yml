@@ -1,0 +1,71 @@
+- generic [ref=e1639]:
+  - navigation [ref=e1640]:
+    - generic [ref=e1641]:
+      - img "Spices and Pickles" [ref=e1836]
+      - generic [ref=e1643]:
+        - heading "Store Manager Portal" [level=6] [ref=e1837]
+        - text: SR Nagar Store
+      - button "Collapse sidebar" [ref=e1838] [cursor=pointer]
+    - generic [ref=e1648]:
+      - button "Dashboard" [ref=e1839] [cursor=pointer]
+      - button "Products" [ref=e1840] [cursor=pointer]
+      - button "Banners" [ref=e1841] [cursor=pointer]
+      - button "Coupons" [ref=e1842] [cursor=pointer]
+      - button "Inventory" [ref=e1843] [cursor=pointer]
+      - button "Orders" [ref=e1844] [cursor=pointer]
+      - button "Delivery Partners" [ref=e1845] [cursor=pointer]
+      - button "Delivery Radius" [ref=e1846] [cursor=pointer]
+      - button "Delivery Settings" [ref=e1847] [cursor=pointer]
+      - button "Change Password" [ref=e1848] [cursor=pointer]
+      - button "Profile" [ref=e1849] [cursor=pointer]
+      - button "Logout" [ref=e1850] [cursor=pointer]
+    - button "View Customer App" [ref=e1851] [cursor=pointer]
+  - main [ref=e1713]:
+    - generic [ref=e1714]:
+      - generic [ref=e1715]:
+        - button [ref=e1716] [cursor=pointer]
+        - generic [ref=e1719]:
+          - text: Store Manager /
+          - strong [ref=e1720]: Inventory
+      - generic [ref=e1721]:
+        - textbox "Search portal" [ref=e1852]
+        - button "Notifications" [ref=e1853] [cursor=pointer]
+        - button "V Vikram SR Nagar" [ref=e1854] [cursor=pointer]:
+          - generic [ref=e1731]: V
+          - generic [ref=e1732]: Vikram SR Nagar
+    - generic [ref=e1733]:
+      - generic [ref=e1734]:
+        - heading "Inventory" [level=4] [ref=e1855]
+        - paragraph [ref=e1736]: Manage inventory within your assigned scope.
+      - button "View Customer App" [ref=e1856] [cursor=pointer]
+    - generic [ref=e1738]:
+      - generic [ref=e1739]:
+        - generic [ref=e1740]:
+          - generic: Search
+          - generic [ref=e1741]:
+            - textbox "Search" [ref=e1857]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=e1743]:
+          - combobox [ref=e1744] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=e1745]:
+          - combobox [ref=e1746] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=e1858] [cursor=pointer]
+        - button "Export" [ref=e1859] [cursor=pointer]
+      - generic [ref=e1860]:
+        - generic [ref=e1861]:
+          - paragraph [ref=e1862]: Catalog product missing
+          - paragraph [ref=e1863]: df4adcd0-93cb-423c-8d0e-7549ff703228
+        - generic [ref=e1864]:
+          - button "View" [ref=e1865] [cursor=pointer]
+          - button "Stock +10" [ref=e1866] [cursor=pointer]
+          - button "Stock -1" [ref=e1867] [cursor=pointer]
+          - button "Adjust" [ref=e1868] [cursor=pointer]
+      - generic [ref=e1750]:
+        - button "Previous" [disabled]
+        - paragraph [ref=e1751]: Page 1 of 1
+        - button "Next" [disabled]

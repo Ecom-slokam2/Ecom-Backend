@@ -1,0 +1,98 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e476]:
+    - navigation [ref=f1e477]:
+      - generic [ref=f1e478]:
+        - generic [ref=f1e480]:
+          - heading [level=6] [ref=f1e1171]: Location Admin Portal
+          - text: hyderabad
+        - button [ref=f1e1172] [cursor=pointer]
+      - generic [ref=f1e485]:
+        - generic [ref=f1e486]:
+          - paragraph [ref=f1e487]: Main
+          - button [ref=f1e1173] [cursor=pointer]:
+            - generic [ref=f1e492]: Dashboard
+        - generic [ref=f1e493]:
+          - paragraph [ref=f1e494]: Management
+          - button [ref=f1e1174] [cursor=pointer]:
+            - generic [ref=f1e499]: Stores
+          - button [ref=f1e1175] [cursor=pointer]:
+            - generic [ref=f1e505]: Products
+          - button [ref=f1e1176] [cursor=pointer]:
+            - generic [ref=f1e510]: Banners
+          - button [ref=f1e1177] [cursor=pointer]:
+            - generic [ref=f1e516]: Inventory
+        - generic [ref=f1e517]:
+          - paragraph [ref=f1e518]: Orders & Payments
+          - button [ref=f1e1178] [cursor=pointer]:
+            - generic [ref=f1e523]: Orders
+          - button [ref=f1e1179] [cursor=pointer]:
+            - generic [ref=f1e529]: Payments
+          - button [ref=f1e1180] [cursor=pointer]:
+            - generic [ref=f1e534]: Delivery
+        - generic [ref=f1e535]:
+          - paragraph [ref=f1e536]: Customer
+          - button [ref=f1e1181] [cursor=pointer]:
+            - generic [ref=f1e542]: Coupons
+        - generic [ref=f1e543]:
+          - paragraph [ref=f1e544]: Analytics
+          - button [ref=f1e1182] [cursor=pointer]:
+            - generic [ref=f1e549]: Reports
+      - button [ref=f1e1183] [cursor=pointer]: View Customer App
+    - main [ref=f1e551]:
+      - generic [ref=f1e552]:
+        - generic [ref=f1e553]:
+          - button [ref=f1e554] [cursor=pointer]
+          - generic [ref=f1e557]:
+            - text: Location Admin /
+            - strong [ref=f1e558]: Products
+        - generic [ref=f1e559]:
+          - textbox [ref=f1e1184]:
+            - /placeholder: Search portal
+          - button [ref=f1e1185] [cursor=pointer]
+          - button [ref=f1e1186] [cursor=pointer]:
+            - generic [ref=f1e569]: H
+            - generic [ref=f1e570]: Hyderabad Location Administrator
+      - generic [ref=f1e571]:
+        - generic [ref=f1e572]:
+          - heading [level=4] [ref=f1e1187]: Products
+          - paragraph [ref=f1e574]: Manage products within your assigned scope.
+        - button [ref=f1e1188] [cursor=pointer]: View Customer App
+      - generic [ref=f1e710]:
+        - generic [ref=f1e711]:
+          - generic [ref=f1e712]:
+            - generic: Search
+            - generic [ref=f1e713]:
+              - textbox [ref=f1e1189]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f1e715]:
+            - combobox [ref=f1e716] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f1e717]:
+            - combobox [ref=f1e718] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f1e1190] [cursor=pointer]: Create Product
+          - button [ref=f1e1191] [cursor=pointer]: Map Product
+          - button [ref=f1e1192] [cursor=pointer]: Export
+        - paragraph [ref=f1e1169]: No matching records. Use Create to add the first record.
+        - generic [ref=f1e722]:
+          - button [disabled]: Previous
+          - paragraph [ref=f1e723]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f1e1195]:
+    - heading "Select product to map Products" [level=2] [ref=f1e1196]
+    - generic [ref=f1e1199]:
+      - generic [ref=f1e1210]: Catalog product
+      - generic [ref=f1e1200]:
+        - combobox "Catalog product" [active] [ref=f1e1201]: California Almonds (1009a64e-c0f2-4dd6-9473-6fd50b2adc09)
+        - generic [ref=f1e1202]:
+          - button "Clear" [ref=f1e1224] [cursor=pointer]
+          - button "Open" [ref=f1e1227] [cursor=pointer]
+        - group [aria-hidden]:
+          - generic: Catalog product
+      - paragraph [ref=f1e1206]: Select a product to map to the Global Store or your assigned stores.
+    - generic [ref=f1e1208]:
+      - button "Cancel" [ref=f1e1209] [cursor=pointer]
+      - button "Continue" [ref=f1e1228] [cursor=pointer]

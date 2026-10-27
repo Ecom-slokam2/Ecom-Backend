@@ -1,0 +1,203 @@
+- generic [ref=f13e1]:
+  - generic [ref=f13e8]:
+    - navigation [ref=f13e9]:
+      - generic [ref=f13e10]:
+        - generic [ref=f13e12]:
+          - heading [level=6] [ref=f13e468]: Super Admin Portal
+          - text: All locations
+        - button [ref=f13e469] [cursor=pointer]
+      - generic [ref=f13e17]:
+        - generic [ref=f13e18]:
+          - paragraph [ref=f13e19]: Main
+          - button [ref=f13e470] [cursor=pointer]:
+            - generic [ref=f13e24]: Dashboard
+        - generic [ref=f13e25]:
+          - paragraph [ref=f13e26]: Management
+          - button [ref=f13e471] [cursor=pointer]:
+            - generic [ref=f13e32]: Locations
+          - button [ref=f13e472] [cursor=pointer]:
+            - generic [ref=f13e37]: Users
+          - button [ref=f13e473] [cursor=pointer]:
+            - generic [ref=f13e42]: Stores
+          - button [ref=f13e474] [cursor=pointer]:
+            - generic [ref=f13e48]: Products
+          - button [ref=f13e475] [cursor=pointer]:
+            - generic [ref=f13e53]: Categories
+          - button [ref=f13e476] [cursor=pointer]:
+            - generic [ref=f13e58]: Banners
+          - button [ref=f13e477] [cursor=pointer]:
+            - generic [ref=f13e64]: Inventory
+        - generic [ref=f13e65]:
+          - paragraph [ref=f13e66]: Orders & Payments
+          - button [ref=f13e478] [cursor=pointer]:
+            - generic [ref=f13e71]: Orders
+          - button [ref=f13e479] [cursor=pointer]:
+            - generic [ref=f13e77]: Payments
+          - button [ref=f13e480] [cursor=pointer]:
+            - generic [ref=f13e82]: Delivery
+        - generic [ref=f13e83]:
+          - paragraph [ref=f13e84]: Customer
+          - button [ref=f13e481] [cursor=pointer]:
+            - generic [ref=f13e89]: Customers
+          - button [ref=f13e482] [cursor=pointer]:
+            - generic [ref=f13e94]: Reviews
+          - button [ref=f13e483] [cursor=pointer]:
+            - generic [ref=f13e100]: Coupons
+          - button [ref=f13e484] [cursor=pointer]:
+            - generic [ref=f13e105]: Notifications
+        - generic [ref=f13e106]:
+          - paragraph [ref=f13e107]: Analytics
+          - button [ref=f13e485] [cursor=pointer]:
+            - generic [ref=f13e112]: Reports
+        - generic [ref=f13e113]:
+          - paragraph [ref=f13e114]: System
+          - button [ref=f13e486] [cursor=pointer]:
+            - generic [ref=f13e119]: Security
+          - button [ref=f13e487] [cursor=pointer]:
+            - generic [ref=f13e124]: Audit Logs
+      - button [ref=f13e488] [cursor=pointer]: View Customer App
+    - main [ref=f13e126]:
+      - generic [ref=f13e127]:
+        - generic [ref=f13e128]:
+          - button [ref=f13e129] [cursor=pointer]
+          - generic [ref=f13e132]:
+            - text: Super Admin /
+            - strong [ref=f13e133]: Inventory
+        - generic [ref=f13e134]:
+          - textbox [ref=f13e489]:
+            - /placeholder: Search portal
+          - button [ref=f13e490] [cursor=pointer]
+          - button [ref=f13e491] [cursor=pointer]:
+            - generic [ref=f13e144]: A
+            - generic [ref=f13e145]: Admin
+      - generic [ref=f13e146]:
+        - generic [ref=f13e147]:
+          - heading [level=4] [ref=f13e492]: Inventory
+          - paragraph [ref=f13e149]: Manage inventory within your assigned scope.
+        - button [ref=f13e493] [cursor=pointer]: View Customer App
+      - generic [ref=f13e151]:
+        - generic [ref=f13e152]:
+          - generic [ref=f13e153]:
+            - generic: Search
+            - generic [ref=f13e154]:
+              - textbox [ref=f13e494]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f13e156]:
+            - combobox [ref=f13e157] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f13e158]:
+            - combobox [ref=f13e159] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f13e495] [cursor=pointer]: Create
+          - button [ref=f13e496] [cursor=pointer]: Export
+        - generic [ref=f13e413]:
+          - generic [ref=f13e414]:
+            - paragraph [ref=f13e415]: Afghan Raisins
+            - paragraph [ref=f13e416]: DRY-AFG-RAISIN-200G
+          - generic [ref=f13e417]:
+            - button [ref=f13e497] [cursor=pointer]: View
+            - button [ref=f13e498] [cursor=pointer]: Stock +10
+            - button [ref=f13e499] [cursor=pointer]: Stock -1
+            - button [ref=f13e500] [cursor=pointer]: Adjust
+        - generic [ref=f13e422]:
+          - generic [ref=f13e423]:
+            - paragraph [ref=f13e424]: Premium Walnut Kernels
+            - paragraph [ref=f13e425]: DRY-PREM-WALNUT-200G
+          - generic [ref=f13e426]:
+            - button [ref=f13e501] [cursor=pointer]: View
+            - button [ref=f13e502] [cursor=pointer]: Stock +10
+            - button [ref=f13e503] [cursor=pointer]: Stock -1
+            - button [ref=f13e504] [cursor=pointer]: Adjust
+        - generic [ref=f13e431]:
+          - generic [ref=f13e432]:
+            - paragraph [ref=f13e433]: Andhra Mango Avakaya Pickle
+            - paragraph [ref=f13e434]: PKL-ANDHRA-AVAKAYA-500G
+          - generic [ref=f13e435]:
+            - button [ref=f13e505] [cursor=pointer]: View
+            - button [ref=f13e506] [cursor=pointer]: Stock +10
+            - button [ref=f13e507] [cursor=pointer]: Stock -1
+            - button [ref=f13e508] [cursor=pointer]: Adjust
+        - generic [ref=f13e440]:
+          - generic [ref=f13e441]:
+            - paragraph [ref=f13e442]: Gongura Red Chilli Pickle
+            - paragraph [ref=f13e443]: PKL-GONGURA-RED-400G
+          - generic [ref=f13e444]:
+            - button [ref=f13e509] [cursor=pointer]: View
+            - button [ref=f13e510] [cursor=pointer]: Stock +10
+            - button [ref=f13e511] [cursor=pointer]: Stock -1
+            - button [ref=f13e512] [cursor=pointer]: Adjust
+        - generic [ref=f13e449]:
+          - generic [ref=f13e450]:
+            - paragraph [ref=f13e451]: Garlic Ginger Pickle
+            - paragraph [ref=f13e452]: PKL-GARLIC-GINGER-300G
+          - generic [ref=f13e453]:
+            - button [ref=f13e513] [cursor=pointer]: View
+            - button [ref=f13e514] [cursor=pointer]: Stock +10
+            - button [ref=f13e515] [cursor=pointer]: Stock -1
+            - button [ref=f13e516] [cursor=pointer]: Adjust
+        - generic [ref=f13e458]:
+          - generic [ref=f13e459]:
+            - paragraph [ref=f13e460]: Lemon Green Chilli Pickle
+            - paragraph [ref=f13e461]: PKL-LEMON-GREEN-350G
+          - generic [ref=f13e462]:
+            - button [ref=f13e517] [cursor=pointer]: View
+            - button [ref=f13e518] [cursor=pointer]: Stock +10
+            - button [ref=f13e519] [cursor=pointer]: Stock -1
+            - button [ref=f13e520] [cursor=pointer]: Adjust
+        - generic [ref=f13e222]:
+          - button [disabled]: Previous
+          - paragraph [ref=f13e223]: Page 1 of 5
+          - button [ref=f13e521] [cursor=pointer]: Next
+  - dialog [ref=f13e524]:
+    - heading "Create Inventory" [level=2] [ref=f13e525]
+    - generic [ref=f13e526]:
+      - generic [ref=f13e529]:
+        - generic [ref=f13e563]:
+          - text: Product
+          - generic [aria-hidden] [ref=f13e564]: "*"
+        - generic [ref=f13e530]:
+          - combobox "Product" [active] [ref=f13e531]: Demo Turmeric Powder (aca83ea7-496d-4818-94ed-cb2fe50beb63)
+          - generic [ref=f13e532]:
+            - button "Clear" [ref=f13e602] [cursor=pointer]
+            - button "Open" [ref=f13e605] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Product *
+        - paragraph [ref=f13e536]: Product ID fills from the selected catalog product.
+      - generic [ref=f13e538]:
+        - combobox [ref=f13e539] [cursor=pointer]: 200 g (adb039e9-4483-4cd2-8f8e-237369e55f72)
+        - textbox [aria-hidden]: adb039e9-4483-4cd2-8f8e-237369e55f72
+        - group [aria-hidden]
+      - generic [ref=f13e542]:
+        - combobox [ref=f13e543] [cursor=pointer]: Demo Kukatpally Basket (store-demo-kukatpally-basket)
+        - textbox [aria-hidden]: store-demo-kukatpally-basket
+        - group [aria-hidden]
+      - generic [ref=f13e545]:
+        - generic:
+          - text: Current stock
+          - generic [aria-hidden]: "*"
+        - generic [ref=f13e546]:
+          - spinbutton "Current stock" [ref=f13e547]
+          - group [aria-hidden]:
+            - generic: Current stock *
+      - generic [ref=f13e549]:
+        - generic: Reserved stock
+        - generic [ref=f13e550]:
+          - spinbutton "Reserved stock" [ref=f13e551]
+          - group [aria-hidden]:
+            - generic: Reserved stock
+      - generic [ref=f13e553]:
+        - generic: Low-stock threshold
+        - generic [ref=f13e554]:
+          - spinbutton "Low-stock threshold" [ref=f13e555]
+          - group [aria-hidden]:
+            - generic: Low-stock threshold
+      - generic [ref=f13e557]:
+        - combobox [ref=f13e558] [cursor=pointer]: ACTIVE
+        - textbox [aria-hidden]: ACTIVE
+        - group [aria-hidden]
+    - generic [ref=f13e560]:
+      - button "Cancel" [ref=f13e561] [cursor=pointer]
+      - button "Save" [ref=f13e562] [cursor=pointer]

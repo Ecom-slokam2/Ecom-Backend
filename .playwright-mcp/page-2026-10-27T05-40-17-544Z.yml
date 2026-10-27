@@ -1,0 +1,39 @@
+- generic [ref=f1e5]:
+  - button [ref=f1e7] [cursor=pointer]
+  - generic [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - generic [ref=f1e12]: No image specified
+      - paragraph [ref=f1e13]: Loading product images...
+    - generic [ref=f1e14]:
+      - paragraph [ref=f1e15]: Loading product
+      - paragraph [ref=f1e16]: Catalog product details are not available.
+      - paragraph [ref=f1e20]: Loading product options…
+      - paragraph [ref=f1e21]: Not specified
+      - paragraph [ref=f1e23]: Checking availability...
+      - generic [ref=f1e24]:
+        - paragraph [ref=f1e25]: Ingredients
+        - paragraph [ref=f1e26]: Not specified
+      - generic [ref=f1e27]:
+        - paragraph [ref=f1e28]: Specifications
+        - paragraph [ref=f1e29]: Not specified
+      - generic [ref=f1e30]:
+        - paragraph [ref=f1e31]: Tags
+        - paragraph [ref=f1e32]: Not specified
+      - button "0 Stars No approved reviews yet" [ref=f1e33] [cursor=pointer]:
+        - img "0 Stars"
+        - text: No approved reviews yet
+      - generic [ref=f1e34]:
+        - paragraph [ref=f1e35]: "Highlights:"
+        - list [ref=f1e36]:
+          - listitem [ref=f1e37]: Not specified
+      - generic [ref=f1e38]:
+        - paragraph [ref=f1e39]: About the Source
+        - paragraph [ref=f1e40]: Not specified
+      - generic [ref=f1e41]:
+        - paragraph [ref=f1e42]: Bestsellers in this category
+        - paragraph [ref=f1e44]: No products in this category are marked as bestsellers yet.
+  - generic [ref=f1e45]:
+    - generic [ref=f1e46]:
+      - paragraph [ref=f1e47]: ₹0.00
+      - paragraph [ref=f1e48]: (incl. of all taxes)
+    - button "CHECKING..." [disabled]

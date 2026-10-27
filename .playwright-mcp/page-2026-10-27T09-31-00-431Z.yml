@@ -1,0 +1,29 @@
+- generic [ref=f2e5]:
+  - generic [ref=f2e6]:
+    - generic [ref=f2e7]:
+      - img "Pickles & Spices" [ref=f2e8] [cursor=pointer]
+      - generic [ref=f2e9]:
+        - paragraph [ref=f2e10]: Delivery location
+        - button [ref=f2e11] [cursor=pointer]:
+          - paragraph [ref=f2e12]: "Deliver to: Select delivery location"
+    - generic [ref=f2e16]:
+      - textbox "Search for" [ref=f2e18]:
+        - /placeholder: "Search for "
+      - img [aria-hidden] [ref=f2e19] [cursor=pointer]
+    - generic [ref=f2e21]:
+      - 'generic "Current time in Asia/Calcutta: 03:01:00 pm" [ref=f2e22]':
+        - generic [ref=f2e23]: 03:01:00 pm
+        - generic [ref=f2e24]: Asia/Calcutta
+      - generic "Language, currency and time zone" [ref=f2e25] [cursor=pointer]:
+        - paragraph [ref=f2e28]: English
+      - button "Wishlist" [ref=f2e29] [cursor=pointer]:
+        - paragraph [ref=f2e32]: Wishlist
+      - paragraph [ref=f2e36] [cursor=pointer]: Login
+      - paragraph [ref=f2e41] [cursor=pointer]: Cart
+  - generic [ref=f2e42]:
+    - heading "Store not found" [level=6] [ref=f2e43]
+    - button "Return home" [ref=f2e44] [cursor=pointer]
+  - generic [ref=f2e45]:
+    - button [ref=f2e46] [cursor=pointer]:
+      - paragraph [ref=f2e49]: Home
+    - paragraph [ref=f2e53] [cursor=pointer]: Categories

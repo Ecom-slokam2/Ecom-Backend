@@ -1,0 +1,135 @@
+- generic [ref=f8e8]:
+  - navigation [ref=f8e9]:
+    - generic [ref=f8e10]:
+      - img "Spices and Pickles" [ref=f8e663]
+      - generic [ref=f8e12]:
+        - heading "Super Admin Portal" [level=6] [ref=f8e664]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f8e665] [cursor=pointer]
+    - generic [ref=f8e17]:
+      - generic [ref=f8e18]:
+        - paragraph [ref=f8e19]: Main
+        - button "Dashboard" [ref=f8e666] [cursor=pointer]
+      - generic [ref=f8e25]:
+        - paragraph [ref=f8e26]: Management
+        - button "Locations" [ref=f8e667] [cursor=pointer]
+        - button "Users" [ref=f8e668] [cursor=pointer]
+        - button "Stores" [ref=f8e669] [cursor=pointer]
+        - button "Products" [ref=f8e670] [cursor=pointer]
+        - button "Categories" [ref=f8e671] [cursor=pointer]
+        - button "Banners" [ref=f8e672] [cursor=pointer]
+        - button "Inventory" [ref=f8e673] [cursor=pointer]
+      - generic [ref=f8e65]:
+        - paragraph [ref=f8e66]: Orders & Payments
+        - button "Orders" [ref=f8e674] [cursor=pointer]
+        - button "Payments" [ref=f8e675] [cursor=pointer]
+        - button "Delivery" [ref=f8e676] [cursor=pointer]
+      - generic [ref=f8e83]:
+        - paragraph [ref=f8e84]: Customer
+        - button "Customers" [ref=f8e677] [cursor=pointer]
+        - button "Reviews" [ref=f8e678] [cursor=pointer]
+        - button "Coupons" [ref=f8e679] [cursor=pointer]
+        - button "Notifications" [ref=f8e680] [cursor=pointer]
+      - generic [ref=f8e106]:
+        - paragraph [ref=f8e107]: Analytics
+        - button "Reports" [ref=f8e681] [cursor=pointer]
+      - generic [ref=f8e113]:
+        - paragraph [ref=f8e114]: System
+        - button "Security" [ref=f8e682] [cursor=pointer]
+        - button "Audit Logs" [ref=f8e683] [cursor=pointer]
+    - button "View Customer App" [ref=f8e684] [cursor=pointer]
+  - main [ref=f8e126]:
+    - generic [ref=f8e127]:
+      - generic [ref=f8e128]:
+        - button [ref=f8e129] [cursor=pointer]
+        - generic [ref=f8e132]:
+          - text: Super Admin /
+          - strong [ref=f8e133]: Stores
+      - generic [ref=f8e134]:
+        - textbox "Search portal" [ref=f8e685]
+        - button "Notifications" [ref=f8e686] [cursor=pointer]
+        - button "A Admin" [ref=f8e687] [cursor=pointer]:
+          - generic [ref=f8e144]: A
+          - generic [ref=f8e145]: Admin
+    - generic [ref=f8e146]:
+      - generic [ref=f8e147]:
+        - heading "Stores" [level=4] [ref=f8e688]
+        - paragraph [ref=f8e149]: Manage stores within your assigned scope.
+      - button "View Customer App" [ref=f8e689] [cursor=pointer]
+    - generic [ref=f8e151]:
+      - generic [ref=f8e152]:
+        - generic [ref=f8e153]:
+          - generic: Search
+          - generic [ref=f8e154]:
+            - textbox "Search" [ref=f8e690]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f8e156]:
+          - combobox [ref=f8e157] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f8e158]:
+          - combobox [ref=f8e159] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=f8e691] [cursor=pointer]
+        - button "Export" [ref=f8e692] [cursor=pointer]
+      - status [ref=f8e693]: Saved successfully.
+      - generic [ref=f8e694]:
+        - generic [ref=f8e695]:
+          - paragraph [ref=f8e696]: Demo Kukatpally Basket
+          - paragraph [ref=f8e697]: demo.kukatpally@example.test
+        - generic [ref=f8e698]:
+          - button "View" [ref=f8e699] [cursor=pointer]
+          - button "Edit" [ref=f8e700] [cursor=pointer]
+          - button "Deactivate" [ref=f8e701] [cursor=pointer]
+          - button "Delete" [ref=f8e702] [cursor=pointer]
+      - generic [ref=f8e162]:
+        - generic [ref=f8e163]:
+          - paragraph [ref=f8e164]: India-wide Global Store
+          - paragraph [ref=f8e165]: +91 91000 29999
+        - generic [ref=f8e166]:
+          - button "View" [ref=f8e703] [cursor=pointer]
+          - button "Edit" [ref=f8e704] [cursor=pointer]
+          - button "Deactivate" [ref=f8e705] [cursor=pointer]
+          - button "Delete" [ref=f8e706] [cursor=pointer]
+      - generic [ref=f8e171]:
+        - generic [ref=f8e172]:
+          - paragraph [ref=f8e173]: Gachibowli Fresh Hub
+          - paragraph [ref=f8e174]: +91 91000 20001
+        - generic [ref=f8e175]:
+          - button "View" [ref=f8e707] [cursor=pointer]
+          - button "Edit" [ref=f8e708] [cursor=pointer]
+          - button "Deactivate" [ref=f8e709] [cursor=pointer]
+          - button "Delete" [ref=f8e710] [cursor=pointer]
+      - generic [ref=f8e180]:
+        - generic [ref=f8e181]:
+          - paragraph [ref=f8e182]: Kondapur Market Hub
+          - paragraph [ref=f8e183]: +91 9100020011
+        - generic [ref=f8e184]:
+          - button "View" [ref=f8e711] [cursor=pointer]
+          - button "Edit" [ref=f8e712] [cursor=pointer]
+          - button "Deactivate" [ref=f8e713] [cursor=pointer]
+          - button "Delete" [ref=f8e714] [cursor=pointer]
+      - generic [ref=f8e189]:
+        - generic [ref=f8e190]:
+          - paragraph [ref=f8e191]: Banjara Hills Fresh Hub
+          - paragraph [ref=f8e192]: +91 9100020010
+        - generic [ref=f8e193]:
+          - button "View" [ref=f8e715] [cursor=pointer]
+          - button "Edit" [ref=f8e716] [cursor=pointer]
+          - button "Deactivate" [ref=f8e717] [cursor=pointer]
+          - button "Delete" [ref=f8e718] [cursor=pointer]
+      - generic [ref=f8e198]:
+        - generic [ref=f8e199]:
+          - paragraph [ref=f8e200]: Sangareddy Fresh Hub
+          - paragraph [ref=f8e201]: +91 91000 20004
+        - generic [ref=f8e202]:
+          - button "View" [ref=f8e719] [cursor=pointer]
+          - button "Edit" [ref=f8e720] [cursor=pointer]
+          - button "Deactivate" [ref=f8e721] [cursor=pointer]
+          - button "Delete" [ref=f8e722] [cursor=pointer]
+      - generic [ref=f8e216]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f8e217]: Page 1 of 2
+        - button "Next" [ref=f8e723] [cursor=pointer]

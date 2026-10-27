@@ -1,0 +1,148 @@
+- generic [ref=f38e1]:
+  - generic [ref=f38e8]:
+    - navigation [ref=f38e9]:
+      - generic [ref=f38e10]:
+        - generic [ref=f38e12]:
+          - heading [level=6] [ref=f38e384]: Global Admin Portal
+          - text: All locations
+        - button [ref=f38e385] [cursor=pointer]
+      - generic [ref=f38e17]:
+        - generic [ref=f38e18]:
+          - paragraph [ref=f38e19]: Main
+          - button [ref=f38e386] [cursor=pointer]:
+            - generic [ref=f38e24]: Dashboard
+        - generic [ref=f38e25]:
+          - paragraph [ref=f38e26]: Management
+          - button [ref=f38e387] [cursor=pointer]:
+            - generic [ref=f38e31]: Stores
+          - button [ref=f38e388] [cursor=pointer]:
+            - generic [ref=f38e37]: Products
+          - button [ref=f38e389] [cursor=pointer]:
+            - generic [ref=f38e42]: Categories
+          - button [ref=f38e390] [cursor=pointer]:
+            - generic [ref=f38e47]: Banners
+          - button [ref=f38e391] [cursor=pointer]:
+            - generic [ref=f38e53]: Inventory
+        - generic [ref=f38e54]:
+          - paragraph [ref=f38e55]: Orders & Payments
+          - button [ref=f38e392] [cursor=pointer]:
+            - generic [ref=f38e60]: Orders
+          - button [ref=f38e393] [cursor=pointer]:
+            - generic [ref=f38e66]: Payments
+          - button [ref=f38e394] [cursor=pointer]:
+            - generic [ref=f38e71]: Delivery
+        - generic [ref=f38e72]:
+          - paragraph [ref=f38e73]: Customer
+          - button [ref=f38e395] [cursor=pointer]:
+            - generic [ref=f38e78]: Customers
+          - button [ref=f38e396] [cursor=pointer]:
+            - generic [ref=f38e83]: Reviews
+          - button [ref=f38e397] [cursor=pointer]:
+            - generic [ref=f38e89]: Coupons
+          - button [ref=f38e398] [cursor=pointer]:
+            - generic [ref=f38e94]: Notifications
+        - generic [ref=f38e95]:
+          - paragraph [ref=f38e96]: Analytics
+          - button [ref=f38e399] [cursor=pointer]:
+            - generic [ref=f38e101]: Reports
+        - generic [ref=f38e102]:
+          - paragraph [ref=f38e103]: System
+          - button [ref=f38e400] [cursor=pointer]:
+            - generic [ref=f38e108]: Audit Logs
+      - button [ref=f38e401] [cursor=pointer]: View Customer App
+    - main [ref=f38e110]:
+      - generic [ref=f38e111]:
+        - generic [ref=f38e112]:
+          - button [ref=f38e113] [cursor=pointer]
+          - generic [ref=f38e116]:
+            - text: Global Admin /
+            - strong [ref=f38e117]: Banners
+        - generic [ref=f38e118]:
+          - textbox [ref=f38e402]:
+            - /placeholder: Search portal
+          - button [ref=f38e403] [cursor=pointer]
+          - button [ref=f38e404] [cursor=pointer]:
+            - generic [ref=f38e128]: G
+            - generic [ref=f38e129]: Global Administrator
+      - generic [ref=f38e130]:
+        - generic [ref=f38e131]:
+          - heading [level=4] [ref=f38e405]: Banners
+          - paragraph [ref=f38e133]: Manage banners within your assigned scope.
+        - button [ref=f38e406] [cursor=pointer]: View Customer App
+      - generic [ref=f38e135]:
+        - generic [ref=f38e136]:
+          - generic [ref=f38e137]:
+            - generic: Search
+            - generic [ref=f38e138]:
+              - textbox [ref=f38e407]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f38e140]:
+            - combobox [ref=f38e141] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f38e142]:
+            - combobox [ref=f38e143] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f38e408] [cursor=pointer]: Create
+          - button [ref=f38e409] [cursor=pointer]: Export
+        - paragraph [ref=f38e147]: No matching records. Use Create to add the first record.
+        - generic [ref=f38e148]:
+          - button [disabled]: Previous
+          - paragraph [ref=f38e149]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f38e412]:
+    - heading "Create Banners" [level=2] [ref=f38e413]
+    - generic [ref=f38e414]:
+      - generic [ref=f38e416]:
+        - generic:
+          - text: Banner title
+          - generic [aria-hidden]: "*"
+        - generic [ref=f38e417]:
+          - textbox "Banner title" [ref=f38e418]
+          - group [aria-hidden]:
+            - generic: Banner title *
+      - generic [ref=f38e420]:
+        - generic: Description
+        - generic [ref=f38e421]:
+          - textbox "Description" [ref=f38e422]
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=f38e424]:
+        - button "Select Desktop image" [active] [ref=f38e425] [cursor=pointer]
+        - generic [ref=f38e452]:
+          - img "Desktop image preview" [ref=f38e453]
+          - button "Remove" [ref=f38e454] [cursor=pointer]
+      - button "Select Mobile image" [ref=f38e428] [cursor=pointer]
+      - generic [ref=f38e430]:
+        - generic: Start date
+        - generic [ref=f38e431]:
+          - textbox "Start date" [ref=f38e432]
+          - group [aria-hidden]:
+            - generic: Start date
+      - generic [ref=f38e434]:
+        - generic: End date
+        - generic [ref=f38e435]:
+          - textbox "End date" [ref=f38e436]
+          - group [aria-hidden]:
+            - generic: End date
+      - generic [ref=f38e438]:
+        - generic: Sort order
+        - generic [ref=f38e439]:
+          - spinbutton "Sort order" [ref=f38e440]
+          - group [aria-hidden]:
+            - generic: Sort order
+      - generic [ref=f38e442]:
+        - generic: Target URL
+        - generic [ref=f38e443]:
+          - textbox "Target URL" [ref=f38e444]
+          - group [aria-hidden]:
+            - generic: Target URL
+      - generic [ref=f38e446]:
+        - combobox [ref=f38e447] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+    - generic [ref=f38e449]:
+      - button "Cancel" [ref=f38e450] [cursor=pointer]
+      - button "Save" [ref=f38e451] [cursor=pointer]

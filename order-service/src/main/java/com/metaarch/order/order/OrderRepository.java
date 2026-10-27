@@ -9,6 +9,7 @@ public interface OrderRepository extends JpaRepository<Order, UUID> {
   Optional<Order> findLockedById(@org.springframework.data.repository.query.Param("id") UUID id);
   List<Order> findAllByOrderByCreatedAtDesc();
   List<Order> findByStoreIdOrderByCreatedAtDesc(String storeId);
+  List<Order> findByStoreIdInOrderByCreatedAtDesc(java.util.Collection<String> storeIds);
   List<Order> findByCustomerIdOrderByCreatedAtDesc(UUID customerId);
   List<Order> findByCustomerIdAndStatusOrderByCreatedAtDesc(UUID customerId, OrderStatus status);
   boolean existsByOrderNumber(String orderNumber);

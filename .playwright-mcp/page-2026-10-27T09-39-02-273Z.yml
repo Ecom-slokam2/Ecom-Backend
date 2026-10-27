@@ -1,0 +1,276 @@
+- generic [ref=e1]:
+  - generic [ref=e163]:
+    - complementary [ref=e164]:
+      - generic [ref=e167]:
+        - heading [level=6] [ref=e971]: Store Manager
+        - paragraph [ref=e169]: SR Nagar Store
+      - navigation [ref=e170]:
+        - button [ref=e972] [cursor=pointer]:
+          - generic [ref=e175]: Dashboard
+        - button [ref=e973] [cursor=pointer]:
+          - generic [ref=e181]: Products
+        - button [ref=e974] [cursor=pointer]:
+          - generic [ref=e186]: Banners
+        - button [ref=e975] [cursor=pointer]:
+          - generic [ref=e192]: Coupons
+        - button [ref=e976] [cursor=pointer]:
+          - generic [ref=e198]: Inventory
+        - button [ref=e977] [cursor=pointer]:
+          - generic [ref=e203]: Orders
+        - button [ref=e978] [cursor=pointer]:
+          - generic [ref=e208]: Delivery Partners
+        - button [ref=e979] [cursor=pointer]:
+          - generic [ref=e213]: Delivery Radius
+        - button [ref=e980] [cursor=pointer]:
+          - generic [ref=e218]: Delivery Settings
+        - button [ref=e981] [cursor=pointer]:
+          - generic [ref=e223]: Change Password
+        - button [ref=e982] [cursor=pointer]:
+          - generic [ref=e228]: Profile
+        - button [ref=e983] [cursor=pointer]:
+          - generic [ref=e233]: Logout
+      - button [ref=e984] [cursor=pointer]: View Customer App
+    - main [ref=e235]:
+      - generic [ref=e236]:
+        - button [ref=e985] [cursor=pointer]: Store Manager
+        - button [ref=e986] [cursor=pointer]:
+          - generic [ref=e242]: V
+          - generic [ref=e243]: Vikram SR Nagar
+        - button [ref=e987] [cursor=pointer]: Sign out
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - heading [level=4] [ref=e988]: Store Products
+          - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+        - button [ref=e989] [cursor=pointer]: Create Product
+      - alert [ref=e949]:
+        - generic [ref=e953]: Product created for your assigned store.
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic: Search your products
+          - generic [ref=e252]:
+            - textbox [ref=e990]
+            - group [aria-hidden]:
+              - generic: Search your products
+        - paragraph [ref=e254]: 3 products
+      - generic [ref=e531]:
+        - generic [ref=e532]:
+          - generic [ref=e533]:
+            - paragraph [ref=e534]: Afghan Black Raisins
+            - paragraph [ref=e535]: DRY-RAISIN-AFG-001-SRN · Premium Dry Fruits · Spices and Pickles
+          - generic [ref=e536]: ACTIVE
+          - button [ref=e991] [cursor=pointer]: Available
+          - button [ref=e992] [cursor=pointer]: Edit
+          - button [ref=e993] [cursor=pointer]: Delete
+        - generic [ref=e744]:
+          - generic [ref=e745]:
+            - paragraph [ref=e746]: Andhra Lemon Pickle
+            - paragraph [ref=e747]: PKL-LEMON-250-001-SRN · Traditional Pickles · Spices and Pickles
+          - generic [ref=e748]: ACTIVE
+          - button [ref=e994] [cursor=pointer]: Available
+          - button [ref=e995] [cursor=pointer]: Edit
+          - button [ref=e996] [cursor=pointer]: Delete
+        - generic [ref=e961]:
+          - generic [ref=e962]:
+            - paragraph [ref=e963]: Andhra Mango Avakaya Pickle
+            - paragraph [ref=e964]: PKL-ANDHRA-AVAKAYA-500-001-SRN · Traditional Pickles · Spices and Pickles
+          - generic [ref=e965]: ACTIVE
+          - button [ref=e997] [cursor=pointer]: Available
+          - button [ref=e998] [cursor=pointer]: Edit
+          - button [ref=e999] [cursor=pointer]: Delete
+  - dialog [ref=e1131]:
+    - heading "Create Store Product" [level=2] [ref=e1132]
+    - generic [ref=e1004]:
+      - generic [ref=e1005]:
+        - generic [ref=e1006]: Category
+        - generic [ref=e1007]:
+          - combobox "Category" [ref=e1133] [cursor=pointer]: Spice Powders
+          - textbox [aria-hidden]: 938cb64b-d1e1-454b-96d6-0b69e0933d6c
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=e1009]:
+        - generic [ref=e1160]: Product name
+        - generic [ref=e1010]:
+          - textbox "Product name" [ref=e1134]: Aromatic Coriander Powder
+          - group [aria-hidden]:
+            - generic: Product name
+      - generic [ref=e1012]:
+        - generic [ref=e1161]: SKU
+        - generic [ref=e1013]:
+          - textbox "SKU" [ref=e1135]: SPC-CORIANDER-AROM-001-SRN
+          - group [aria-hidden]:
+            - generic: SKU
+      - generic [ref=e1015]:
+        - generic [ref=e1162]: Brand
+        - generic [ref=e1016]:
+          - textbox "Brand" [ref=e1136]: Spices and Pickles
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=e1018]:
+        - generic [ref=e1163]: URL slug (optional)
+        - generic [ref=e1019]:
+          - textbox "URL slug (optional)" [ref=e1137]: aromatic-coriander-powder-srn
+          - group [aria-hidden]:
+            - generic: URL slug (optional)
+      - generic [ref=e1021]:
+        - generic [ref=e1022]: Subcategory
+        - generic [ref=e1023]:
+          - textbox "Subcategory" [ref=e1138]: Ground Spices
+          - group [aria-hidden]:
+            - generic: Subcategory
+      - generic [ref=e1025]:
+        - generic [ref=e1164]: Pack
+        - generic [ref=e1026]:
+          - textbox "Pack" [ref=e1139]: 200 g
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=e1028]:
+        - generic [ref=e1165]: Product type
+        - generic [ref=e1029]:
+          - textbox "Product type" [ref=e1140]: Ground spice
+          - group [aria-hidden]:
+            - generic: Product type
+      - generic [ref=e1031]:
+        - generic [ref=e1166]: Shelf life
+        - generic [ref=e1032]:
+          - textbox "Shelf life" [ref=e1141]: 12 months
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=e1034]:
+        - generic [ref=e1035]: Status
+        - generic [ref=e1036]:
+          - combobox "Status" [ref=e1142] [cursor=pointer]: Active
+          - textbox [aria-hidden]: ACTIVE
+          - group [aria-hidden]:
+            - generic: Status
+      - generic [ref=e1038]:
+        - generic [ref=e1167]: Description
+        - generic [ref=e1039]:
+          - textbox "Description" [ref=e1143]: Fragrant coriander powder for curries, marinades and everyday masalas.
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=e1041]:
+        - generic [ref=e1168]: Ingredients
+        - generic [ref=e1042]:
+          - textbox "Ingredients" [ref=e1144]: Coriander seeds
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=e1044]:
+        - generic [ref=e1169]: Specifications
+        - generic [ref=e1045]:
+          - textbox "Specifications" [ref=e1145]: Vegetarian; packed for freshness; store in a cool, dry place.
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=e1047]:
+        - generic [ref=e1170]: Highlights
+        - generic [ref=e1048]:
+          - textbox "Highlights" [ref=e1146]: Fresh aroma; versatile everyday seasoning
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=e1050]:
+        - generic [ref=e1171]: Tags
+        - generic [ref=e1051]:
+          - textbox "Tags" [ref=e1147]: coriander, dhania, spice powder
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=e1053]:
+        - generic [ref=e1054]:
+          - paragraph [ref=e1055]: Variants and prices
+          - button "Add Variant" [ref=e1148] [cursor=pointer]
+        - generic [ref=e1057]:
+          - generic [ref=e1058]:
+            - generic [ref=e1172]: Variant SKU
+            - generic [ref=e1059]:
+              - textbox "Variant SKU" [ref=e1149]: SPC-CORIANDER-200-V1-SRN
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e1061]:
+            - generic [ref=e1173]: Variant / pack name
+            - generic [ref=e1062]:
+              - textbox "Variant / pack name" [ref=e1150]: 200 g
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e1064]:
+            - generic [ref=e1174]: Price
+            - generic [ref=e1065]:
+              - spinbutton "Price" [ref=e1151]: "89"
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e1067]:
+            - generic [ref=e1175]: Compare-at price
+            - generic [ref=e1068]:
+              - spinbutton "Compare-at price" [ref=e1152]: "89"
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e1070]:
+            - generic [ref=e1071] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e1153]
+              - generic [ref=e1076]: Active
+            - button "Remove" [ref=e1154] [cursor=pointer]
+          - generic [ref=e1078]:
+            - generic [ref=e1176]: Variant attributes (JSON or text)
+            - generic [ref=e1079]:
+              - textbox "Variant attributes (JSON or text)" [ref=e1155]: "{\"label\":\"200 g\"}"
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e1177]:
+          - generic [ref=e1178]:
+            - generic [ref=e1201]: Variant SKU
+            - generic [ref=e1179]:
+              - textbox "Variant SKU" [ref=e1180]: SPC-CORIANDER-500-V1-SRN
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e1181]:
+            - generic [ref=e1202]: Variant / pack name
+            - generic [ref=e1182]:
+              - textbox "Variant / pack name" [ref=e1183]: 500 g
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e1184]:
+            - generic [ref=e1203]: Price
+            - generic [ref=e1185]:
+              - spinbutton "Price" [ref=e1186]: "199"
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e1187]:
+            - generic [ref=e1204]: Compare-at price
+            - generic [ref=e1188]:
+              - spinbutton "Compare-at price" [ref=e1189]: "199"
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e1190]:
+            - generic [ref=e1191] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e1193]
+              - generic [ref=e1196]: Active
+            - button "Remove" [ref=e1197] [cursor=pointer]
+          - generic [ref=e1198]:
+            - generic [ref=e1205]: Variant attributes (JSON or text)
+            - generic [ref=e1199]:
+              - textbox "Variant attributes (JSON or text)" [ref=e1200]: "{\"label\":\"500 g\"}"
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e1081]: Active products need at least one active, priced variant.
+      - generic [ref=e1082]:
+        - generic [ref=e1083]:
+          - paragraph [ref=e1084]: Product images
+          - button "Add Image" [active] [ref=e1156] [cursor=pointer]
+        - generic [ref=e1206]:
+          - generic [ref=e1207]:
+            - generic: Image URL
+            - generic [ref=e1208]:
+              - textbox "Image URL" [ref=e1209]:
+                - /placeholder: https://…
+              - group [aria-hidden]:
+                - generic: Image URL
+          - generic [ref=e1210]:
+            - generic: Alt text
+            - generic [ref=e1211]:
+              - textbox "Alt text" [ref=e1212]
+              - group [aria-hidden]:
+                - generic: Alt text
+          - button "Remove" [ref=e1213] [cursor=pointer]
+      - generic [ref=e1086] [cursor=pointer]:
+        - checkbox "Available in my store" [checked] [ref=e1157]
+        - generic [ref=e1091]: Available in my store
+    - generic [ref=e1092]:
+      - button "Cancel" [ref=e1158] [cursor=pointer]
+      - button "Save Product" [ref=e1159] [cursor=pointer]

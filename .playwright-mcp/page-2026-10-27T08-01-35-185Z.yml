@@ -1,0 +1,139 @@
+- generic [ref=f41e8]:
+  - navigation [ref=f41e9]:
+    - generic [ref=f41e10]:
+      - img "Spices and Pickles" [ref=f41e324]
+      - generic [ref=f41e12]:
+        - heading "Global Admin Portal" [level=6] [ref=f41e325]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f41e326] [cursor=pointer]
+    - generic [ref=f41e17]:
+      - generic [ref=f41e18]:
+        - paragraph [ref=f41e19]: Main
+        - button "Dashboard" [ref=f41e327] [cursor=pointer]
+      - generic [ref=f41e25]:
+        - paragraph [ref=f41e26]: Management
+        - button "Stores" [ref=f41e328] [cursor=pointer]
+        - button "Products" [ref=f41e329] [cursor=pointer]
+        - button "Categories" [ref=f41e330] [cursor=pointer]
+        - button "Banners" [ref=f41e331] [cursor=pointer]
+        - button "Inventory" [ref=f41e332] [cursor=pointer]
+      - generic [ref=f41e54]:
+        - paragraph [ref=f41e55]: Orders & Payments
+        - button "Orders" [ref=f41e333] [cursor=pointer]
+        - button "Payments" [ref=f41e334] [cursor=pointer]
+        - button "Delivery" [ref=f41e335] [cursor=pointer]
+      - generic [ref=f41e72]:
+        - paragraph [ref=f41e73]: Customer
+        - button "Customers" [ref=f41e336] [cursor=pointer]
+        - button "Reviews" [ref=f41e337] [cursor=pointer]
+        - button "Coupons" [ref=f41e338] [cursor=pointer]
+        - button "Notifications" [ref=f41e339] [cursor=pointer]
+      - generic [ref=f41e95]:
+        - paragraph [ref=f41e96]: Analytics
+        - button "Reports" [ref=f41e340] [cursor=pointer]
+      - generic [ref=f41e102]:
+        - paragraph [ref=f41e103]: System
+        - button "Audit Logs" [ref=f41e341] [cursor=pointer]
+    - button "View Customer App" [ref=f41e342] [cursor=pointer]
+  - main [ref=f41e110]:
+    - generic [ref=f41e111]:
+      - generic [ref=f41e112]:
+        - button [ref=f41e113] [cursor=pointer]
+        - generic [ref=f41e116]:
+          - text: Global Admin /
+          - strong [ref=f41e117]: Products
+      - generic [ref=f41e118]:
+        - textbox "Search portal" [ref=f41e343]
+        - button "Notifications" [ref=f41e344] [cursor=pointer]
+        - button "G Global Administrator" [ref=f41e345] [cursor=pointer]:
+          - generic [ref=f41e128]: G
+          - generic [ref=f41e129]: Global Administrator
+    - generic [ref=f41e130]:
+      - generic [ref=f41e131]:
+        - heading "Products" [level=4] [ref=f41e346]
+        - paragraph [ref=f41e133]: Manage products within your assigned scope.
+      - button "View Customer App" [ref=f41e347] [cursor=pointer]
+    - generic [ref=f41e135]:
+      - generic [ref=f41e136]:
+        - generic [ref=f41e137]:
+          - generic: Search
+          - generic [ref=f41e138]:
+            - textbox "Search" [ref=f41e348]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f41e140]:
+          - combobox [ref=f41e141] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f41e142]:
+          - combobox [ref=f41e143] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create Product" [ref=f41e349] [cursor=pointer]
+        - button "Map Product" [active] [ref=f41e350] [cursor=pointer]
+        - button "Export" [ref=f41e351] [cursor=pointer]
+      - status [ref=f41e352]: Global Store and store mappings saved.
+      - generic [ref=f41e147]:
+        - generic [ref=f41e148]:
+          - paragraph [ref=f41e149]: Aromatic Coriander Powder
+          - paragraph [ref=f41e150]: SPC-CORIANDER-AROM-001
+        - generic [ref=f41e151]:
+          - button "View" [ref=f41e353] [cursor=pointer]
+          - button "Edit" [ref=f41e354] [cursor=pointer]
+          - button "Duplicate" [ref=f41e355] [cursor=pointer]
+          - button "Deactivate" [ref=f41e356] [cursor=pointer]
+          - button "Delete" [ref=f41e357] [cursor=pointer]
+      - generic [ref=f41e157]:
+        - generic [ref=f41e158]:
+          - paragraph [ref=f41e159]: Guntur Chilli Powder
+          - paragraph [ref=f41e160]: SPC-GUNTUR-CHILLI-001
+        - generic [ref=f41e161]:
+          - button "View" [ref=f41e358] [cursor=pointer]
+          - button "Edit" [ref=f41e359] [cursor=pointer]
+          - button "Duplicate" [ref=f41e360] [cursor=pointer]
+          - button "Deactivate" [ref=f41e361] [cursor=pointer]
+          - button "Delete" [ref=f41e362] [cursor=pointer]
+      - generic [ref=f41e167]:
+        - generic [ref=f41e168]:
+          - paragraph [ref=f41e169]: Golden Turmeric Powder
+          - paragraph [ref=f41e170]: SPC-TURMERIC-GOLD-001
+        - generic [ref=f41e171]:
+          - button "View" [ref=f41e363] [cursor=pointer]
+          - button "Edit" [ref=f41e364] [cursor=pointer]
+          - button "Duplicate" [ref=f41e365] [cursor=pointer]
+          - button "Deactivate" [ref=f41e366] [cursor=pointer]
+          - button "Delete" [ref=f41e367] [cursor=pointer]
+      - generic [ref=f41e177]:
+        - generic [ref=f41e178]:
+          - paragraph [ref=f41e179]: Premium Roasted Pistachios
+          - paragraph [ref=f41e180]: DRY-PISTA-ROAST-001
+        - generic [ref=f41e181]:
+          - button "View" [ref=f41e368] [cursor=pointer]
+          - button "Edit" [ref=f41e369] [cursor=pointer]
+          - button "Duplicate" [ref=f41e370] [cursor=pointer]
+          - button "Deactivate" [ref=f41e371] [cursor=pointer]
+          - button "Delete" [ref=f41e372] [cursor=pointer]
+      - generic [ref=f41e187]:
+        - generic [ref=f41e188]:
+          - paragraph [ref=f41e189]: Afghan Black Raisins
+          - paragraph [ref=f41e190]: DRY-RAISIN-AFG-001
+        - generic [ref=f41e191]:
+          - button "View" [ref=f41e373] [cursor=pointer]
+          - button "Edit" [ref=f41e374] [cursor=pointer]
+          - button "Duplicate" [ref=f41e375] [cursor=pointer]
+          - button "Deactivate" [ref=f41e376] [cursor=pointer]
+          - button "Delete" [ref=f41e377] [cursor=pointer]
+      - generic [ref=f41e197]:
+        - generic [ref=f41e198]:
+          - paragraph [ref=f41e199]: Whole Walnut Kernels
+          - paragraph [ref=f41e200]: DRY-WALNUT-KERNEL-001
+        - generic [ref=f41e201]:
+          - button "View" [ref=f41e378] [cursor=pointer]
+          - button "Edit" [ref=f41e379] [cursor=pointer]
+          - button "Duplicate" [ref=f41e380] [cursor=pointer]
+          - button "Deactivate" [ref=f41e381] [cursor=pointer]
+          - button "Delete" [ref=f41e382] [cursor=pointer]
+      - generic [ref=f41e207]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f41e208]: Page 1 of 2
+        - button "Next" [ref=f41e383] [cursor=pointer]

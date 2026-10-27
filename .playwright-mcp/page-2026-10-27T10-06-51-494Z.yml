@@ -1,0 +1,129 @@
+- generic [ref=f5e1]:
+  - generic [ref=f5e5]:
+    - complementary [ref=f5e6]:
+      - generic [ref=f5e9]:
+        - heading [level=6] [ref=f5e10]: Store Manager
+        - paragraph [ref=f5e11]: SR Nagar Store
+      - navigation [ref=f5e12]:
+        - button [ref=f5e13] [cursor=pointer]:
+          - generic [ref=f5e17]: Dashboard
+        - button [ref=f5e18] [cursor=pointer]:
+          - generic [ref=f5e23]: Products
+        - button [ref=f5e24] [cursor=pointer]:
+          - generic [ref=f5e28]: Banners
+        - button [ref=f5e29] [cursor=pointer]:
+          - generic [ref=f5e34]: Coupons
+        - button [ref=f5e35] [cursor=pointer]:
+          - generic [ref=f5e40]: Inventory
+        - button [ref=f5e41] [cursor=pointer]:
+          - generic [ref=f5e45]: Orders
+        - button [ref=f5e46] [cursor=pointer]:
+          - generic [ref=f5e50]: Delivery Partners
+        - button [ref=f5e51] [cursor=pointer]:
+          - generic [ref=f5e55]: Delivery Radius
+        - button [ref=f5e56] [cursor=pointer]:
+          - generic [ref=f5e60]: Delivery Settings
+        - button [ref=f5e61] [cursor=pointer]:
+          - generic [ref=f5e65]: Change Password
+        - button [ref=f5e66] [cursor=pointer]:
+          - generic [ref=f5e70]: Profile
+        - button [ref=f5e71] [cursor=pointer]:
+          - generic [ref=f5e75]: Logout
+      - button [ref=f5e76] [cursor=pointer]: View Customer App
+    - main [ref=f5e77]:
+      - generic [ref=f5e78]:
+        - button [ref=f5e79] [cursor=pointer]: Store Manager
+        - button [ref=f5e83] [cursor=pointer]:
+          - generic [ref=f5e84]: V
+          - generic [ref=f5e85]: Vikram SR Nagar
+        - button [ref=f5e86] [cursor=pointer]: Sign out
+      - generic [ref=f5e87]:
+        - heading [level=4] [ref=f5e88]: Delivery Partners
+        - generic [ref=f5e89]:
+          - generic [ref=f5e90]: 0/0 active
+          - button [ref=f5e92] [cursor=pointer]: Create Delivery Partner
+      - paragraph [ref=f5e94]: No delivery partners for this store yet.
+  - dialog [ref=f5e97]:
+    - generic [ref=f5e98]:
+      - heading "Create Delivery Partner" [level=2] [ref=f5e99]
+      - generic [ref=f5e100]:
+        - paragraph [ref=f5e101]: The partner will be assigned to your store automatically.
+        - alert [ref=f5e142]:
+          - generic [ref=f5e146]: This account does not have permission for this action. Please sign in again.
+        - generic [ref=f5e102]:
+          - generic [ref=f5e103]:
+            - generic [ref=f5e147]:
+              - text: Name
+              - generic [aria-hidden] [ref=f5e148]: "*"
+            - generic [ref=f5e104]:
+              - textbox "Name" [ref=f5e105]: Demo Delivery Partner SR Nagar
+              - group [aria-hidden]:
+                - generic: Name *
+          - generic [ref=f5e106]:
+            - generic [ref=f5e149]:
+              - text: Mobile number
+              - generic [aria-hidden] [ref=f5e150]: "*"
+            - generic [ref=f5e107]:
+              - textbox "Mobile number" [ref=f5e108]: "9000000010"
+              - group [aria-hidden]:
+                - generic: Mobile number *
+          - generic [ref=f5e109]:
+            - generic [ref=f5e151]:
+              - text: Login username
+              - generic [aria-hidden] [ref=f5e152]: "*"
+            - generic [ref=f5e110]:
+              - textbox "Login username" [ref=f5e111]: demo.srnagar.delivery01
+              - group [aria-hidden]:
+                - generic: Login username *
+          - generic [ref=f5e112]:
+            - generic [ref=f5e153]:
+              - text: Email
+              - generic [aria-hidden] [ref=f5e154]: "*"
+            - generic [ref=f5e113]:
+              - textbox "Email" [ref=f5e114]: delivery.srnagar.demo01@example.test
+              - group [aria-hidden]:
+                - generic: Email *
+          - generic [ref=f5e115]:
+            - generic [ref=f5e155]:
+              - text: Password
+              - generic [aria-hidden] [ref=f5e156]: "*"
+            - generic [ref=f5e116]:
+              - textbox "Password" [ref=f5e117]: SRNagar-Demo-2026!
+              - group [aria-hidden]:
+                - generic: Password *
+          - generic [ref=f5e118]:
+            - generic [ref=f5e119]:
+              - text: Vehicle type
+              - generic [aria-hidden] [ref=f5e120]: "*"
+            - generic [ref=f5e121]:
+              - textbox "Vehicle type" [ref=f5e122]: Bike
+              - group [aria-hidden]:
+                - generic: Vehicle type *
+          - generic [ref=f5e123]:
+            - generic [ref=f5e157]:
+              - text: Bike / vehicle number
+              - generic [aria-hidden] [ref=f5e158]: "*"
+            - generic [ref=f5e124]:
+              - textbox "Bike / vehicle number" [ref=f5e125]: TS09DEMO0001
+              - group [aria-hidden]:
+                - generic: Bike / vehicle number *
+          - generic [ref=f5e126]:
+            - generic [ref=f5e159]:
+              - text: Licence number
+              - generic [aria-hidden] [ref=f5e160]: "*"
+            - generic [ref=f5e127]:
+              - textbox "Licence number" [ref=f5e128]: DEMO-LIC-TS-0001
+              - group [aria-hidden]:
+                - generic: Licence number *
+          - generic [ref=f5e129]:
+            - generic [ref=f5e161]: Address
+            - generic [ref=f5e130]:
+              - textbox "Address" [ref=f5e131]: Demo record - SR Nagar Store, Hyderabad
+              - group [aria-hidden]:
+                - generic: Address
+          - generic [ref=f5e132] [cursor=pointer]:
+            - switch "Active" [checked] [ref=f5e135]
+            - generic [ref=f5e138]: Active
+      - generic [ref=f5e139]:
+        - button "Cancel" [ref=f5e140] [cursor=pointer]
+        - button "Create Delivery Partner" [ref=f5e141] [cursor=pointer]

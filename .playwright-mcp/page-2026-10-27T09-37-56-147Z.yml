@@ -1,0 +1,68 @@
+- generic [ref=e163]:
+  - complementary [ref=e164]:
+    - generic [ref=e165]:
+      - img "Spices and Pickles" [ref=e929]
+      - generic [ref=e167]:
+        - heading "Store Manager" [level=6] [ref=e930]
+        - paragraph [ref=e169]: SR Nagar Store
+    - navigation [ref=e170]:
+      - button "Dashboard" [ref=e931] [cursor=pointer]
+      - button "Products" [ref=e932] [cursor=pointer]
+      - button "Banners" [ref=e933] [cursor=pointer]
+      - button "Coupons" [ref=e934] [cursor=pointer]
+      - button "Inventory" [ref=e935] [cursor=pointer]
+      - button "Orders" [ref=e936] [cursor=pointer]
+      - button "Delivery Partners" [ref=e937] [cursor=pointer]
+      - button "Delivery Radius" [ref=e938] [cursor=pointer]
+      - button "Delivery Settings" [ref=e939] [cursor=pointer]
+      - button "Change Password" [ref=e940] [cursor=pointer]
+      - button "Profile" [ref=e941] [cursor=pointer]
+      - button "Logout" [ref=e942] [cursor=pointer]
+    - button "View Customer App" [ref=e943] [cursor=pointer]
+  - main [ref=e235]:
+    - generic [ref=e236]:
+      - button [ref=e944] [cursor=pointer]
+      - button "V Vikram SR Nagar" [ref=e945] [cursor=pointer]:
+        - generic [ref=e242]: V
+        - generic [ref=e243]: Vikram SR Nagar
+      - button "Sign out" [ref=e946] [cursor=pointer]
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - heading "Store Products" [level=4] [ref=e947]
+        - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+      - button "Create Product" [active] [ref=e948] [cursor=pointer]
+    - alert [ref=e949]:
+      - generic [ref=e953]: Product created for your assigned store.
+    - generic [ref=e250]:
+      - generic [ref=e251]:
+        - generic: Search your products
+        - generic [ref=e252]:
+          - textbox "Search your products" [ref=e954]
+          - group [aria-hidden]:
+            - generic: Search your products
+      - paragraph [ref=e254]: 3 products
+    - generic [ref=e531]:
+      - generic [ref=e532]:
+        - generic [ref=e533]:
+          - paragraph [ref=e534]: Afghan Black Raisins
+          - paragraph [ref=e535]: DRY-RAISIN-AFG-001-SRN · Premium Dry Fruits · Spices and Pickles
+        - generic [ref=e536]: ACTIVE
+        - button "Available" [ref=e955] [cursor=pointer]
+        - button "Edit" [ref=e956] [cursor=pointer]
+        - button "Delete" [ref=e957] [cursor=pointer]
+      - generic [ref=e744]:
+        - generic [ref=e745]:
+          - paragraph [ref=e746]: Andhra Lemon Pickle
+          - paragraph [ref=e747]: PKL-LEMON-250-001-SRN · Traditional Pickles · Spices and Pickles
+        - generic [ref=e748]: ACTIVE
+        - button "Available" [ref=e958] [cursor=pointer]
+        - button "Edit" [ref=e959] [cursor=pointer]
+        - button "Delete" [ref=e960] [cursor=pointer]
+      - generic [ref=e961]:
+        - generic [ref=e962]:
+          - paragraph [ref=e963]: Andhra Mango Avakaya Pickle
+          - paragraph [ref=e964]: PKL-ANDHRA-AVAKAYA-500-001-SRN · Traditional Pickles · Spices and Pickles
+        - generic [ref=e965]: ACTIVE
+        - button "Available" [ref=e967] [cursor=pointer]
+        - button "Edit" [ref=e968] [cursor=pointer]
+        - button "Delete" [ref=e969] [cursor=pointer]

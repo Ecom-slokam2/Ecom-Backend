@@ -40,7 +40,14 @@ public class CartService {
     cart.getItems().stream().filter(item -> item.getId().equals(itemId)).findFirst().ifPresent(cart::removeItem);
     calculate(cart); return CartResponse.from(cart);
   }
-  @Transactional public CartResponse clear(UUID cartId) { Cart cart = find(cartId); ensureActive(cart); cart.clearItems(); cart.setTotalAmount(ZERO); return CartResponse.from(cart); }
+  @Transactional public CartResponse clear(UUID cartId) {
+    Cart cart = find(cartId); ensureActive(cart);
+    for (CartItem item : new ArrayList<>(cart.getItems())) {
+      if (item.getStatus() == CartItemStatus.ACTIVE) cart.removeItem(item);
+    }
+    cart.setTotalAmount(ZERO);
+    return CartResponse.from(cart);
+  }
   @Transactional public CartResponse calculateTotal(UUID cartId) { Cart cart = find(cartId); calculate(cart); return CartResponse.from(cart); }
   @Transactional public CartResponse saveForLater(UUID cartId, UUID itemId) { Cart cart = find(cartId); ensureActive(cart); CartItem item = findItem(cart, itemId); item.setStatus(CartItemStatus.SAVED_FOR_LATER); calculate(cart); return CartResponse.from(cart); }
   @Transactional public CartResponse moveToCart(UUID cartId, UUID itemId) { Cart cart = find(cartId); ensureActive(cart); CartItem item = findItem(cart, itemId); item.setStatus(CartItemStatus.ACTIVE); calculate(cart); return CartResponse.from(cart); }

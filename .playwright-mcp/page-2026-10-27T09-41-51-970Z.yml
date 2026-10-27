@@ -1,0 +1,63 @@
+- generic [ref=e1433]:
+  - navigation [ref=e1434]:
+    - generic [ref=e1435]:
+      - img "Spices and Pickles" [ref=e1615]
+      - generic [ref=e1437]:
+        - heading "Store Manager Portal" [level=6] [ref=e1616]
+        - text: SR Nagar Store
+      - button "Collapse sidebar" [ref=e1617] [cursor=pointer]
+    - generic [ref=e1442]:
+      - button "Dashboard" [ref=e1618] [cursor=pointer]
+      - button "Products" [ref=e1619] [cursor=pointer]
+      - button "Banners" [ref=e1620] [cursor=pointer]
+      - button "Coupons" [ref=e1621] [cursor=pointer]
+      - button "Inventory" [ref=e1622] [cursor=pointer]
+      - button "Orders" [ref=e1623] [cursor=pointer]
+      - button "Delivery Partners" [ref=e1624] [cursor=pointer]
+      - button "Delivery Radius" [ref=e1625] [cursor=pointer]
+      - button "Delivery Settings" [ref=e1626] [cursor=pointer]
+      - button "Change Password" [ref=e1627] [cursor=pointer]
+      - button "Profile" [ref=e1628] [cursor=pointer]
+      - button "Logout" [ref=e1629] [cursor=pointer]
+    - button "View Customer App" [ref=e1630] [cursor=pointer]
+  - main [ref=e1507]:
+    - generic [ref=e1508]:
+      - generic [ref=e1509]:
+        - button [ref=e1510] [cursor=pointer]
+        - generic [ref=e1513]:
+          - text: Store Manager /
+          - strong [ref=e1514]: Inventory
+      - generic [ref=e1515]:
+        - textbox "Search portal" [ref=e1631]
+        - button "Notifications" [ref=e1632] [cursor=pointer]
+        - button "V Vikram SR Nagar" [ref=e1633] [cursor=pointer]:
+          - generic [ref=e1525]: V
+          - generic [ref=e1526]: Vikram SR Nagar
+    - generic [ref=e1527]:
+      - generic [ref=e1528]:
+        - heading "Inventory" [level=4] [ref=e1634]
+        - paragraph [ref=e1530]: Manage inventory within your assigned scope.
+      - button "View Customer App" [ref=e1635] [cursor=pointer]
+    - generic [ref=e1532]:
+      - generic [ref=e1533]:
+        - generic [ref=e1534]:
+          - generic: Search
+          - generic [ref=e1535]:
+            - textbox "Search" [ref=e1636]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=e1537]:
+          - combobox [ref=e1538] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=e1539]:
+          - combobox [ref=e1540] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=e1637] [cursor=pointer]
+        - button "Export" [ref=e1638] [cursor=pointer]
+      - paragraph [ref=e1543]: No matching records. Use Create to add the first record.
+      - generic [ref=e1544]:
+        - button "Previous" [disabled]
+        - paragraph [ref=e1545]: Page 1 of 1
+        - button "Next" [disabled]

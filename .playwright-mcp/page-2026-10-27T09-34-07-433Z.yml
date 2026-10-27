@@ -1,0 +1,42 @@
+- generic [ref=e163]:
+  - complementary [ref=e164]:
+    - generic [ref=e165]:
+      - img "Spices and Pickles" [ref=e166]
+      - generic [ref=e167]:
+        - heading "Store Manager" [level=6] [ref=e168]
+        - paragraph [ref=e169]: SR Nagar Store
+    - navigation [ref=e170]:
+      - button "Dashboard" [ref=e171] [cursor=pointer]
+      - button "Products" [ref=e176] [cursor=pointer]
+      - button "Banners" [ref=e182] [cursor=pointer]
+      - button "Coupons" [ref=e187] [cursor=pointer]
+      - button "Inventory" [ref=e193] [cursor=pointer]
+      - button "Orders" [ref=e199] [cursor=pointer]
+      - button "Delivery Partners" [ref=e204] [cursor=pointer]
+      - button "Delivery Radius" [ref=e209] [cursor=pointer]
+      - button "Delivery Settings" [ref=e214] [cursor=pointer]
+      - button "Change Password" [ref=e219] [cursor=pointer]
+      - button "Profile" [ref=e224] [cursor=pointer]
+      - button "Logout" [ref=e229] [cursor=pointer]
+    - button "View Customer App" [ref=e234] [cursor=pointer]
+  - main [ref=e235]:
+    - generic [ref=e236]:
+      - button [ref=e237] [cursor=pointer]
+      - button "V Vikram SR Nagar" [ref=e241] [cursor=pointer]:
+        - generic [ref=e242]: V
+        - generic [ref=e243]: Vikram SR Nagar
+      - button "Sign out" [ref=e244] [cursor=pointer]
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - heading "Store Products" [level=4] [ref=e247]
+        - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+      - button "Create Product" [ref=e249] [cursor=pointer]
+    - generic [ref=e250]:
+      - generic [ref=e251]:
+        - generic: Search your products
+        - generic [ref=e252]:
+          - textbox "Search your products" [ref=e253]
+          - group [aria-hidden]:
+            - generic: Search your products
+      - paragraph [ref=e254]: 0 products
+    - paragraph [ref=e255]: No products yet. Select Create Product to add one to this store.

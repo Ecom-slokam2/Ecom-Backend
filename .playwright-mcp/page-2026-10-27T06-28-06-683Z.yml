@@ -1,0 +1,134 @@
+- generic [ref=f14e8]:
+  - navigation [ref=f14e9]:
+    - generic [ref=f14e10]:
+      - img "Spices and Pickles" [ref=f14e663]
+      - generic [ref=f14e12]:
+        - heading "Super Admin Portal" [level=6] [ref=f14e664]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f14e665] [cursor=pointer]
+    - generic [ref=f14e17]:
+      - generic [ref=f14e18]:
+        - paragraph [ref=f14e19]: Main
+        - button "Dashboard" [ref=f14e666] [cursor=pointer]
+      - generic [ref=f14e25]:
+        - paragraph [ref=f14e26]: Management
+        - button "Locations" [ref=f14e667] [cursor=pointer]
+        - button "Users" [ref=f14e668] [cursor=pointer]
+        - button "Stores" [ref=f14e669] [cursor=pointer]
+        - button "Products" [ref=f14e670] [cursor=pointer]
+        - button "Categories" [ref=f14e671] [cursor=pointer]
+        - button "Banners" [ref=f14e672] [cursor=pointer]
+        - button "Inventory" [ref=f14e673] [cursor=pointer]
+      - generic [ref=f14e65]:
+        - paragraph [ref=f14e66]: Orders & Payments
+        - button "Orders" [ref=f14e674] [cursor=pointer]
+        - button "Payments" [ref=f14e675] [cursor=pointer]
+        - button "Delivery" [ref=f14e676] [cursor=pointer]
+      - generic [ref=f14e83]:
+        - paragraph [ref=f14e84]: Customer
+        - button "Customers" [ref=f14e677] [cursor=pointer]
+        - button "Reviews" [ref=f14e678] [cursor=pointer]
+        - button "Coupons" [ref=f14e679] [cursor=pointer]
+        - button "Notifications" [ref=f14e680] [cursor=pointer]
+      - generic [ref=f14e106]:
+        - paragraph [ref=f14e107]: Analytics
+        - button "Reports" [ref=f14e681] [cursor=pointer]
+      - generic [ref=f14e113]:
+        - paragraph [ref=f14e114]: System
+        - button "Security" [ref=f14e682] [cursor=pointer]
+        - button "Audit Logs" [ref=f14e683] [cursor=pointer]
+    - button "View Customer App" [ref=f14e684] [cursor=pointer]
+  - main [ref=f14e126]:
+    - generic [ref=f14e127]:
+      - generic [ref=f14e128]:
+        - button [ref=f14e129] [cursor=pointer]
+        - generic [ref=f14e132]:
+          - text: Super Admin /
+          - strong [ref=f14e133]: Inventory
+      - generic [ref=f14e134]:
+        - textbox "Search portal" [ref=f14e685]
+        - button "Notifications" [ref=f14e686] [cursor=pointer]
+        - button "A Admin" [ref=f14e687] [cursor=pointer]:
+          - generic [ref=f14e144]: A
+          - generic [ref=f14e145]: Admin
+    - generic [ref=f14e146]:
+      - generic [ref=f14e147]:
+        - heading "Inventory" [level=4] [ref=f14e688]
+        - paragraph [ref=f14e149]: Manage inventory within your assigned scope.
+      - button "View Customer App" [ref=f14e689] [cursor=pointer]
+    - generic [ref=f14e151]:
+      - generic [ref=f14e152]:
+        - generic [ref=f14e153]:
+          - generic: Search
+          - generic [ref=f14e154]:
+            - textbox "Search" [ref=f14e690]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f14e156]:
+          - combobox [ref=f14e157] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f14e158]:
+          - combobox [ref=f14e159] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=f14e691] [cursor=pointer]
+        - button "Export" [ref=f14e692] [cursor=pointer]
+      - generic [ref=f14e528]:
+        - generic [ref=f14e529]:
+          - paragraph [ref=f14e530]: Demo Foxtail Millet
+          - paragraph [ref=f14e531]: DEMO-FOXTAIL-1KG-V1
+        - generic [ref=f14e532]:
+          - button "View" [ref=f14e693] [cursor=pointer]
+          - button "Stock +10" [ref=f14e694] [cursor=pointer]
+          - button "Stock -1" [ref=f14e695] [cursor=pointer]
+          - button "Adjust" [ref=f14e696] [cursor=pointer]
+      - generic [ref=f14e537]:
+        - generic [ref=f14e538]:
+          - paragraph [ref=f14e539]: Demo Andhra Chilli Powder
+          - paragraph [ref=f14e540]: DEMO-CHILLI-200G-V1
+        - generic [ref=f14e541]:
+          - button "View" [ref=f14e697] [cursor=pointer]
+          - button "Stock +10" [ref=f14e698] [cursor=pointer]
+          - button "Stock -1" [ref=f14e699] [cursor=pointer]
+          - button "Adjust" [ref=f14e700] [cursor=pointer]
+      - generic [ref=f14e546]:
+        - generic [ref=f14e547]:
+          - paragraph [ref=f14e548]: Demo Turmeric Powder
+          - paragraph [ref=f14e549]: DEMO-TURMERIC-200G-V1
+        - generic [ref=f14e550]:
+          - button "View" [ref=f14e701] [cursor=pointer]
+          - button "Stock +10" [ref=f14e702] [cursor=pointer]
+          - button "Stock -1" [ref=f14e703] [cursor=pointer]
+          - button "Adjust" [ref=f14e704] [cursor=pointer]
+      - generic [ref=f14e555]:
+        - generic [ref=f14e556]:
+          - paragraph [ref=f14e557]: Afghan Raisins
+          - paragraph [ref=f14e558]: DRY-AFG-RAISIN-200G
+        - generic [ref=f14e559]:
+          - button "View" [ref=f14e705] [cursor=pointer]
+          - button "Stock +10" [ref=f14e706] [cursor=pointer]
+          - button "Stock -1" [ref=f14e707] [cursor=pointer]
+          - button "Adjust" [ref=f14e708] [cursor=pointer]
+      - generic [ref=f14e564]:
+        - generic [ref=f14e565]:
+          - paragraph [ref=f14e566]: Premium Walnut Kernels
+          - paragraph [ref=f14e567]: DRY-PREM-WALNUT-200G
+        - generic [ref=f14e568]:
+          - button "View" [ref=f14e709] [cursor=pointer]
+          - button "Stock +10" [ref=f14e710] [cursor=pointer]
+          - button "Stock -1" [ref=f14e711] [cursor=pointer]
+          - button "Adjust" [ref=f14e712] [cursor=pointer]
+      - generic [ref=f14e573]:
+        - generic [ref=f14e574]:
+          - paragraph [ref=f14e575]: Andhra Mango Avakaya Pickle
+          - paragraph [ref=f14e576]: PKL-ANDHRA-AVAKAYA-500G
+        - generic [ref=f14e577]:
+          - button "View" [ref=f14e713] [cursor=pointer]
+          - button "Stock +10" [ref=f14e714] [cursor=pointer]
+          - button "Stock -1" [ref=f14e715] [cursor=pointer]
+          - button "Adjust" [ref=f14e716] [cursor=pointer]
+      - generic [ref=f14e216]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f14e217]: Page 1 of 6
+        - button "Next" [ref=f14e717] [cursor=pointer]

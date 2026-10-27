@@ -12,7 +12,9 @@ import org.junit.jupiter.api.Test;
 class VerifiedDeliveryTest {
   private final OrderRepository repository = mock(OrderRepository.class);
   private final OrderEventPublisher publisher = mock(OrderEventPublisher.class);
-  private final OrderService service = new OrderService(repository, mock(OrderItemRepository.class), publisher, mock(CatalogDeliveryQuoteClient.class));
+  private final OrderService service = new OrderService(repository, mock(OrderItemRepository.class), publisher,
+      mock(CatalogDeliveryQuoteClient.class), mock(GlobalStoreAssignmentCatalogClient.class),
+      mock(GlobalStoreAssignmentInventoryClient.class), mock(FulfillmentLifecycleVerifier.class));
   private final UUID id = UUID.randomUUID();
   private final Order order = new Order(UUID.randomUUID(), UUID.randomUUID(), "store-a", "test-order");
   private FulfillmentEvent event(String status, UUID customer, String store) {

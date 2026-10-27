@@ -20,9 +20,9 @@ class CatalogItemPricingTest {
   private void expectCatalog(boolean available) {
     server.expect(requestTo("http://catalog/api/v1/products/" + product)).andRespond(withSuccess(
         "{\"id\":\""+product+"\",\"name\":\"Catalog name\",\"status\":\"ACTIVE\",\"globalProduct\":false,\"variants\":[{\"id\":\""+variant+"\",\"productId\":\""+product+"\",\"price\":100,\"active\":true}]}", MediaType.APPLICATION_JSON));
-    server.expect(requestTo("http://catalog/api/v1/stores/store-1")).andRespond(withSuccess(
-        "{\"active\":true,\"status\":\"Active\",\"deliveryEnabled\":true,\"pickupEnabled\":true}", MediaType.APPLICATION_JSON));
-    server.expect(requestTo("http://catalog/api/v1/store-products?storeId=store-1&productId="+product)).andRespond(withSuccess(
+    server.expect(requestTo("http://catalog/api/v1/stores")).andRespond(withSuccess(
+        "[{\"id\":\"store-1\",\"active\":true,\"status\":\"Active\",\"deliveryEnabled\":true,\"pickupEnabled\":true}]", MediaType.APPLICATION_JSON));
+    server.expect(requestTo("http://catalog/api/v1/public/store-products?storeId=store-1&productId="+product)).andRespond(withSuccess(
         "[{\"storeId\":\"store-1\",\"productId\":\""+product+"\",\"available\":"+available+",\"priceOverride\":80}]", MediaType.APPLICATION_JSON));
   }
 

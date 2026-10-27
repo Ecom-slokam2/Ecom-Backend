@@ -1,0 +1,97 @@
+- generic [ref=f1e476]:
+  - navigation [ref=f1e477]:
+    - generic [ref=f1e478]:
+      - img "Spices and Pickles" [ref=f1e2391]
+      - generic [ref=f1e480]:
+        - heading "Location Admin Portal" [level=6] [ref=f1e2392]
+        - text: hyderabad
+      - button "Collapse sidebar" [ref=f1e2393] [cursor=pointer]
+    - generic [ref=f1e485]:
+      - generic [ref=f1e486]:
+        - paragraph [ref=f1e487]: Main
+        - button "Dashboard" [ref=f1e2394] [cursor=pointer]
+      - generic [ref=f1e493]:
+        - paragraph [ref=f1e494]: Management
+        - button "Stores" [active] [ref=f1e2395] [cursor=pointer]
+        - button "Products" [ref=f1e2396] [cursor=pointer]
+        - button "Banners" [ref=f1e2397] [cursor=pointer]
+        - button "Inventory" [ref=f1e2398] [cursor=pointer]
+      - generic [ref=f1e517]:
+        - paragraph [ref=f1e518]: Orders & Payments
+        - button "Orders" [ref=f1e2399] [cursor=pointer]
+        - button "Payments" [ref=f1e2400] [cursor=pointer]
+        - button "Delivery" [ref=f1e2401] [cursor=pointer]
+      - generic [ref=f1e535]:
+        - paragraph [ref=f1e536]: Customer
+        - button "Coupons" [ref=f1e2402] [cursor=pointer]
+      - generic [ref=f1e543]:
+        - paragraph [ref=f1e544]: Analytics
+        - button "Reports" [ref=f1e2403] [cursor=pointer]
+    - button "View Customer App" [ref=f1e2404] [cursor=pointer]
+  - main [ref=f1e551]:
+    - generic [ref=f1e552]:
+      - generic [ref=f1e553]:
+        - button [ref=f1e554] [cursor=pointer]
+        - generic [ref=f1e557]:
+          - text: Location Admin /
+          - strong [ref=f1e558]: Stores
+      - generic [ref=f1e559]:
+        - textbox "Search portal" [ref=f1e2405]
+        - button "Notifications" [ref=f1e2406] [cursor=pointer]
+        - button "H Hyderabad Location Administrator" [ref=f1e2407] [cursor=pointer]:
+          - generic [ref=f1e569]: H
+          - generic [ref=f1e570]: Hyderabad Location Administrator
+    - generic [ref=f1e571]:
+      - generic [ref=f1e572]:
+        - heading "Stores" [level=4] [ref=f1e2439]
+        - paragraph [ref=f1e574]: Manage stores within your assigned scope.
+      - button "View Customer App" [ref=f1e2409] [cursor=pointer]
+    - generic [ref=f1e2425]:
+      - generic [ref=f1e2426]:
+        - generic [ref=f1e2427]:
+          - generic: Search
+          - generic [ref=f1e2428]:
+            - textbox "Search" [ref=f1e2429]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f1e2430]:
+          - combobox [ref=f1e2431] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f1e2432]:
+          - combobox [ref=f1e2433] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [ref=f1e2434] [cursor=pointer]
+        - button "Export" [ref=f1e2435] [cursor=pointer]
+      - generic [ref=f1e2440]:
+        - generic [ref=f1e2441]:
+          - paragraph [ref=f1e2442]: Gachibowli Fresh Hub
+          - paragraph [ref=f1e2443]: +91 91000 20001
+        - generic [ref=f1e2444]:
+          - button "View" [ref=f1e2445] [cursor=pointer]
+          - button "Edit" [ref=f1e2446] [cursor=pointer]
+          - button "Deactivate" [ref=f1e2447] [cursor=pointer]
+          - button "Delete" [ref=f1e2448] [cursor=pointer]
+      - generic [ref=f1e2449]:
+        - generic [ref=f1e2450]:
+          - paragraph [ref=f1e2451]: SR Nagar Store
+          - paragraph [ref=f1e2452]: +91 91000 20013
+        - generic [ref=f1e2453]:
+          - button "View" [ref=f1e2454] [cursor=pointer]
+          - button "Edit" [ref=f1e2455] [cursor=pointer]
+          - button "Deactivate" [ref=f1e2456] [cursor=pointer]
+          - button "Delete" [ref=f1e2457] [cursor=pointer]
+      - generic [ref=f1e2458]:
+        - generic [ref=f1e2459]:
+          - paragraph [ref=f1e2460]: Hyderabad Main Store
+          - paragraph [ref=f1e2461]: +91 91000 20000
+        - generic [ref=f1e2462]:
+          - button "View" [ref=f1e2463] [cursor=pointer]
+          - button "Edit" [ref=f1e2464] [cursor=pointer]
+          - button "Deactivate" [ref=f1e2465] [cursor=pointer]
+          - button "Delete" [ref=f1e2466] [cursor=pointer]
+      - generic [ref=f1e2437]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f1e2438]: Page 1 of 1
+        - button "Next" [disabled]

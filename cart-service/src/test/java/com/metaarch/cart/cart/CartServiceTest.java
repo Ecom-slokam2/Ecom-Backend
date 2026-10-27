@@ -61,4 +61,25 @@ class CartServiceTest {
       assertThat(active.status()).isEqualTo(CartItemStatus.ACTIVE);
     });
   }
+
+  @Test
+  void clearRemovesActiveItemsAndKeepsSavedForLaterItems() {
+    UUID cartId = UUID.randomUUID();
+    Cart cart = new Cart(UUID.randomUUID(), "SR Nagar Store");
+    ReflectionTestUtils.setField(cart, "id", cartId);
+    cart.addItem(new CartItem(UUID.randomUUID(), null, "Active item", 1, new BigDecimal("10.00")));
+    CartItem saved = new CartItem(UUID.randomUUID(), null, "Saved item", 2, new BigDecimal("5.00"));
+    saved.setStatus(CartItemStatus.SAVED_FOR_LATER);
+    cart.addItem(saved);
+    when(carts.findLockedById(cartId)).thenReturn(Optional.of(cart));
+
+    CartResponse response = new CartService(carts).clear(cartId);
+
+    assertThat(response.totalAmount()).isEqualByComparingTo("0.00");
+    assertThat(response.items()).isEmpty();
+    assertThat(response.savedForLaterItems()).singleElement().satisfies(item -> {
+      assertThat(item.productName()).isEqualTo("Saved item");
+      assertThat(item.quantity()).isEqualTo(2);
+    });
+  }
 }

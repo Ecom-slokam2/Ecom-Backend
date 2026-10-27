@@ -1,0 +1,190 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e476]:
+    - navigation [ref=f1e477]:
+      - generic [ref=f1e478]:
+        - generic [ref=f1e480]:
+          - heading [level=6] [ref=f1e2470]: Location Admin Portal
+          - text: hyderabad
+        - button [ref=f1e2471] [cursor=pointer]
+      - generic [ref=f1e485]:
+        - generic [ref=f1e486]:
+          - paragraph [ref=f1e487]: Main
+          - button [ref=f1e2472] [cursor=pointer]:
+            - generic [ref=f1e492]: Dashboard
+        - generic [ref=f1e493]:
+          - paragraph [ref=f1e494]: Management
+          - button [ref=f1e2473] [cursor=pointer]:
+            - generic [ref=f1e499]: Stores
+          - button [ref=f1e2474] [cursor=pointer]:
+            - generic [ref=f1e505]: Products
+          - button [ref=f1e2475] [cursor=pointer]:
+            - generic [ref=f1e510]: Banners
+          - button [ref=f1e2476] [cursor=pointer]:
+            - generic [ref=f1e516]: Inventory
+        - generic [ref=f1e517]:
+          - paragraph [ref=f1e518]: Orders & Payments
+          - button [ref=f1e2477] [cursor=pointer]:
+            - generic [ref=f1e523]: Orders
+          - button [ref=f1e2478] [cursor=pointer]:
+            - generic [ref=f1e529]: Payments
+          - button [ref=f1e2479] [cursor=pointer]:
+            - generic [ref=f1e534]: Delivery
+        - generic [ref=f1e535]:
+          - paragraph [ref=f1e536]: Customer
+          - button [ref=f1e2480] [cursor=pointer]:
+            - generic [ref=f1e542]: Coupons
+        - generic [ref=f1e543]:
+          - paragraph [ref=f1e544]: Analytics
+          - button [ref=f1e2481] [cursor=pointer]:
+            - generic [ref=f1e549]: Reports
+      - button [ref=f1e2482] [cursor=pointer]: View Customer App
+    - main [ref=f1e551]:
+      - generic [ref=f1e552]:
+        - generic [ref=f1e553]:
+          - button [ref=f1e554] [cursor=pointer]
+          - generic [ref=f1e557]:
+            - text: Location Admin /
+            - strong [ref=f1e558]: Coupons
+        - generic [ref=f1e559]:
+          - textbox [ref=f1e2483]:
+            - /placeholder: Search portal
+          - button [ref=f1e2484] [cursor=pointer]
+          - button [ref=f1e2485] [cursor=pointer]:
+            - generic [ref=f1e569]: H
+            - generic [ref=f1e570]: Hyderabad Location Administrator
+      - generic [ref=f1e571]:
+        - generic [ref=f1e572]:
+          - heading [level=4] [ref=f1e2486]: Coupons
+          - paragraph [ref=f1e574]: Manage coupons within your assigned scope.
+        - button [ref=f1e2487] [cursor=pointer]: View Customer App
+      - generic [ref=f1e2425]:
+        - generic [ref=f1e2426]:
+          - generic [ref=f1e2427]:
+            - generic: Search
+            - generic [ref=f1e2428]:
+              - textbox [ref=f1e2488]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f1e2430]:
+            - combobox [ref=f1e2431] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f1e2432]:
+            - combobox [ref=f1e2433] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f1e2489] [cursor=pointer]: Create
+          - button [ref=f1e2490] [cursor=pointer]: Export
+        - paragraph [ref=f1e2468]: No matching records. Use Create to add the first record.
+        - generic [ref=f1e2437]:
+          - button [disabled]: Previous
+          - paragraph [ref=f1e2438]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f1e2606]:
+    - heading "Create Coupons" [level=2] [ref=f1e2607]
+    - generic [ref=f1e2495]:
+      - generic [ref=f1e2497]:
+        - generic [ref=f1e2570]:
+          - text: Coupon code
+          - generic [aria-hidden] [ref=f1e2571]: "*"
+        - generic [ref=f1e2498]:
+          - textbox "Coupon code" [ref=f1e2608]: HYDTEST10
+          - group [aria-hidden]:
+            - generic: Coupon code *
+      - generic [ref=f1e2501]:
+        - generic [ref=f1e2573]:
+          - text: Coupon name
+          - generic [aria-hidden] [ref=f1e2574]: "*"
+        - generic [ref=f1e2502]:
+          - textbox "Coupon name" [ref=f1e2609]: Hyderabad Test 10 Percent
+          - group [aria-hidden]:
+            - generic: Coupon name *
+      - generic [ref=f1e2505]:
+        - generic [ref=f1e2576]: Description
+        - generic [ref=f1e2506]:
+          - textbox "Description" [ref=f1e2610]: Demo coupon based on the existing checkout test values. 10% off eligible Hyderabad orders of ₹500 or more; maximum discount ₹250.
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=f1e2509]:
+        - combobox [active] [ref=f1e2510] [cursor=pointer]: Percentage
+        - textbox [aria-hidden]: Percentage
+        - group [aria-hidden]
+      - generic [ref=f1e2512]:
+        - generic [ref=f1e2578]:
+          - text: Discount value
+          - generic [aria-hidden] [ref=f1e2579]: "*"
+        - generic [ref=f1e2513]:
+          - spinbutton "Discount value" [ref=f1e2611]: "10"
+          - group [aria-hidden]:
+            - generic: Discount value *
+      - generic [ref=f1e2516]:
+        - generic [ref=f1e2581]: Minimum order
+        - generic [ref=f1e2517]:
+          - spinbutton "Minimum order" [ref=f1e2612]: "500"
+          - group [aria-hidden]:
+            - generic: Minimum order
+      - generic [ref=f1e2520]:
+        - generic [ref=f1e2583]: Maximum discount
+        - generic [ref=f1e2521]:
+          - spinbutton "Maximum discount" [ref=f1e2613]: "250"
+          - group [aria-hidden]:
+            - generic: Maximum discount
+      - generic [ref=f1e2524]:
+        - generic [ref=f1e2585]:
+          - text: Start date
+          - generic [aria-hidden] [ref=f1e2586]: "*"
+        - generic [ref=f1e2525]:
+          - textbox "Start date" [ref=f1e2614]: 2026-10-27
+          - group [aria-hidden]:
+            - generic: Start date *
+      - generic [ref=f1e2528]:
+        - generic [ref=f1e2588]:
+          - text: Expiry date
+          - generic [aria-hidden] [ref=f1e2589]: "*"
+        - generic [ref=f1e2529]:
+          - textbox "Expiry date" [ref=f1e2615]: 2030-12-31
+          - group [aria-hidden]:
+            - generic: Expiry date *
+      - generic [ref=f1e2532]:
+        - generic [ref=f1e2591]:
+          - text: Usage limit
+          - generic [aria-hidden] [ref=f1e2592]: "*"
+        - generic [ref=f1e2533]:
+          - spinbutton "Usage limit" [ref=f1e2616]: "1000"
+          - group [aria-hidden]:
+            - generic: Usage limit *
+      - generic [ref=f1e2536]:
+        - generic [ref=f1e2594]: Per-user limit
+        - generic [ref=f1e2537]:
+          - spinbutton "Per-user limit" [ref=f1e2617]: "5"
+          - group [aria-hidden]:
+            - generic: Per-user limit
+      - generic [ref=f1e2541]:
+        - generic: Product
+        - generic [ref=f1e2542]:
+          - combobox "Product" [ref=f1e2618]
+          - group [aria-hidden]:
+            - generic: Product
+      - generic [ref=f1e2547]:
+        - generic: Category
+        - generic [ref=f1e2548]:
+          - combobox "Category" [ref=f1e2619]
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=f1e2552]:
+        - combobox [ref=f1e2553] [cursor=pointer]: Customer eligibility
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f1e2555]:
+        - combobox [ref=f1e2556] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f1e2559]:
+        - generic: Target store (optional)
+        - generic [ref=f1e2560]:
+          - combobox "Target store (optional)" [ref=f1e2620]
+          - group [aria-hidden]:
+            - generic: Target store (optional)
+    - generic [ref=f1e2564]:
+      - button "Cancel" [ref=f1e2621] [cursor=pointer]
+      - button "Save" [ref=f1e2622] [cursor=pointer]

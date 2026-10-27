@@ -1,0 +1,142 @@
+- generic [ref=f5e5]:
+  - navigation [ref=f5e6]:
+    - generic [ref=f5e7]:
+      - img "Spices and Pickles" [ref=f5e8]
+      - generic [ref=f5e9]:
+        - heading "Super Admin Portal" [level=6] [ref=f5e10]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f5e11] [cursor=pointer]
+    - generic [ref=f5e14]:
+      - generic [ref=f5e15]:
+        - paragraph [ref=f5e16]: Main
+        - button "Dashboard" [ref=f5e17] [cursor=pointer]
+      - generic [ref=f5e22]:
+        - paragraph [ref=f5e23]: Management
+        - button "Locations" [ref=f5e24] [cursor=pointer]
+        - button "Users" [ref=f5e30] [cursor=pointer]
+        - button "Stores" [ref=f5e35] [cursor=pointer]
+        - button "Products" [active] [ref=f5e40] [cursor=pointer]
+        - button "Categories" [ref=f5e46] [cursor=pointer]
+        - button "Banners" [ref=f5e51] [cursor=pointer]
+        - button "Inventory" [ref=f5e56] [cursor=pointer]
+      - generic [ref=f5e62]:
+        - paragraph [ref=f5e63]: Orders & Payments
+        - button "Orders" [ref=f5e64] [cursor=pointer]
+        - button "Payments" [ref=f5e69] [cursor=pointer]
+        - button "Delivery" [ref=f5e75] [cursor=pointer]
+      - generic [ref=f5e80]:
+        - paragraph [ref=f5e81]: Customer
+        - button "Customers" [ref=f5e82] [cursor=pointer]
+        - button "Reviews" [ref=f5e87] [cursor=pointer]
+        - button "Coupons" [ref=f5e92] [cursor=pointer]
+        - button "Notifications" [ref=f5e98] [cursor=pointer]
+      - generic [ref=f5e103]:
+        - paragraph [ref=f5e104]: Analytics
+        - button "Reports" [ref=f5e105] [cursor=pointer]
+      - generic [ref=f5e110]:
+        - paragraph [ref=f5e111]: System
+        - button "Security" [ref=f5e112] [cursor=pointer]
+        - button "Audit Logs" [ref=f5e117] [cursor=pointer]
+    - button "View Customer App" [ref=f5e122] [cursor=pointer]
+  - main [ref=f5e123]:
+    - generic [ref=f5e124]:
+      - generic [ref=f5e125]:
+        - button [ref=f5e126] [cursor=pointer]
+        - generic [ref=f5e129]:
+          - text: Super Admin /
+          - strong [ref=f5e130]: Products
+      - generic [ref=f5e131]:
+        - textbox "Search portal" [ref=f5e136]
+        - button "Notifications" [ref=f5e137] [cursor=pointer]
+        - button "A Admin" [ref=f5e140] [cursor=pointer]:
+          - generic [ref=f5e141]: A
+          - generic [ref=f5e142]: Admin
+    - generic [ref=f5e143]:
+      - generic [ref=f5e144]:
+        - heading "Products" [level=4] [ref=f5e321]
+        - paragraph [ref=f5e146]: Manage products within your assigned scope.
+      - button "View Customer App" [ref=f5e147] [cursor=pointer]
+    - generic [ref=f5e253]:
+      - generic [ref=f5e254]:
+        - generic [ref=f5e255]:
+          - generic: Search
+          - generic [ref=f5e256]:
+            - textbox "Search" [ref=f5e257]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f5e258]:
+          - combobox [ref=f5e259] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f5e260]:
+          - combobox [ref=f5e261] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [ref=f5e262] [cursor=pointer]
+        - button "Export" [ref=f5e263] [cursor=pointer]
+      - alert [ref=f5e322]:
+        - generic [ref=f5e326]: 23 product IDs are present in inventory but missing from the catalog. Inventory stock records do not create product records. Recreate the products in this page before assigning new stock.
+      - generic [ref=f5e327]:
+        - generic [ref=f5e328]:
+          - paragraph [ref=f5e329]: California Almonds 500 g
+          - paragraph [ref=f5e330]: META-DRY-ALMOND-500-001
+        - generic [ref=f5e331]:
+          - button "View" [ref=f5e332] [cursor=pointer]
+          - button "Edit" [ref=f5e333] [cursor=pointer]
+          - button "Duplicate" [ref=f5e334] [cursor=pointer]
+          - button "Deactivate" [ref=f5e335] [cursor=pointer]
+          - button "Delete" [ref=f5e336] [cursor=pointer]
+      - generic [ref=f5e337]:
+        - generic [ref=f5e338]:
+          - paragraph [ref=f5e339]: Whole Walnut Kernels
+          - paragraph [ref=f5e340]: META-DRY-WALNUT-001
+        - generic [ref=f5e341]:
+          - button "View" [ref=f5e342] [cursor=pointer]
+          - button "Edit" [ref=f5e343] [cursor=pointer]
+          - button "Duplicate" [ref=f5e344] [cursor=pointer]
+          - button "Deactivate" [ref=f5e345] [cursor=pointer]
+          - button "Delete" [ref=f5e346] [cursor=pointer]
+      - generic [ref=f5e347]:
+        - generic [ref=f5e348]:
+          - paragraph [ref=f5e349]: Afghan Black Raisins
+          - paragraph [ref=f5e350]: META-DRY-RAISIN-001
+        - generic [ref=f5e351]:
+          - button "View" [ref=f5e352] [cursor=pointer]
+          - button "Edit" [ref=f5e353] [cursor=pointer]
+          - button "Duplicate" [ref=f5e354] [cursor=pointer]
+          - button "Deactivate" [ref=f5e355] [cursor=pointer]
+          - button "Delete" [ref=f5e356] [cursor=pointer]
+      - generic [ref=f5e357]:
+        - generic [ref=f5e358]:
+          - paragraph [ref=f5e359]: Premium Roasted Pistachios
+          - paragraph [ref=f5e360]: META-DRY-PISTA-001
+        - generic [ref=f5e361]:
+          - button "View" [ref=f5e362] [cursor=pointer]
+          - button "Edit" [ref=f5e363] [cursor=pointer]
+          - button "Duplicate" [ref=f5e364] [cursor=pointer]
+          - button "Deactivate" [ref=f5e365] [cursor=pointer]
+          - button "Delete" [ref=f5e366] [cursor=pointer]
+      - generic [ref=f5e367]:
+        - generic [ref=f5e368]:
+          - paragraph [ref=f5e369]: Gongura Leaf Pickle
+          - paragraph [ref=f5e370]: META-PICKLE-GONGURA-001
+        - generic [ref=f5e371]:
+          - button "View" [ref=f5e372] [cursor=pointer]
+          - button "Edit" [ref=f5e373] [cursor=pointer]
+          - button "Duplicate" [ref=f5e374] [cursor=pointer]
+          - button "Deactivate" [ref=f5e375] [cursor=pointer]
+          - button "Delete" [ref=f5e376] [cursor=pointer]
+      - generic [ref=f5e377]:
+        - generic [ref=f5e378]:
+          - paragraph [ref=f5e379]: Andhra Avakaya Mango Pickle
+          - paragraph [ref=f5e380]: META-PICKLE-AVAKAYA-001
+        - generic [ref=f5e381]:
+          - button "View" [ref=f5e382] [cursor=pointer]
+          - button "Edit" [ref=f5e383] [cursor=pointer]
+          - button "Duplicate" [ref=f5e384] [cursor=pointer]
+          - button "Deactivate" [ref=f5e385] [cursor=pointer]
+          - button "Delete" [ref=f5e386] [cursor=pointer]
+      - generic [ref=f5e318]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f5e319]: Page 1 of 2
+        - button "Next" [ref=f5e320] [cursor=pointer]

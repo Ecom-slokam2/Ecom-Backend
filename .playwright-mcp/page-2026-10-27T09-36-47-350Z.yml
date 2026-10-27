@@ -1,0 +1,243 @@
+- generic [ref=e1]:
+  - generic [ref=e163]:
+    - complementary [ref=e164]:
+      - generic [ref=e167]:
+        - heading [level=6] [ref=e542]: Store Manager
+        - paragraph [ref=e169]: SR Nagar Store
+      - navigation [ref=e170]:
+        - button [ref=e543] [cursor=pointer]:
+          - generic [ref=e175]: Dashboard
+        - button [ref=e544] [cursor=pointer]:
+          - generic [ref=e181]: Products
+        - button [ref=e545] [cursor=pointer]:
+          - generic [ref=e186]: Banners
+        - button [ref=e546] [cursor=pointer]:
+          - generic [ref=e192]: Coupons
+        - button [ref=e547] [cursor=pointer]:
+          - generic [ref=e198]: Inventory
+        - button [ref=e548] [cursor=pointer]:
+          - generic [ref=e203]: Orders
+        - button [ref=e549] [cursor=pointer]:
+          - generic [ref=e208]: Delivery Partners
+        - button [ref=e550] [cursor=pointer]:
+          - generic [ref=e213]: Delivery Radius
+        - button [ref=e551] [cursor=pointer]:
+          - generic [ref=e218]: Delivery Settings
+        - button [ref=e552] [cursor=pointer]:
+          - generic [ref=e223]: Change Password
+        - button [ref=e553] [cursor=pointer]:
+          - generic [ref=e228]: Profile
+        - button [ref=e554] [cursor=pointer]:
+          - generic [ref=e233]: Logout
+      - button [ref=e555] [cursor=pointer]: View Customer App
+    - main [ref=e235]:
+      - generic [ref=e236]:
+        - button [ref=e556] [cursor=pointer]: Store Manager
+        - button [ref=e557] [cursor=pointer]:
+          - generic [ref=e242]: V
+          - generic [ref=e243]: Vikram SR Nagar
+        - button [ref=e558] [cursor=pointer]: Sign out
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - heading [level=4] [ref=e559]: Store Products
+          - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+        - button [ref=e560] [cursor=pointer]: Create Product
+      - alert [ref=e525]:
+        - generic [ref=e529]: Product changes saved.
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic: Search your products
+          - generic [ref=e252]:
+            - textbox [ref=e561]
+            - group [aria-hidden]:
+              - generic: Search your products
+        - paragraph [ref=e254]: 1 products
+      - generic [ref=e532]:
+        - generic [ref=e533]:
+          - paragraph [ref=e534]: Afghan Black Raisins
+          - paragraph [ref=e535]: DRY-RAISIN-AFG-001-SRN · Premium Dry Fruits · Spices and Pickles
+        - generic [ref=e536]: ACTIVE
+        - button [ref=e562] [cursor=pointer]: Available
+        - button [ref=e563] [cursor=pointer]: Edit
+        - button [ref=e564] [cursor=pointer]: Delete
+  - dialog [ref=e567]:
+    - heading "Create Store Product" [level=2] [ref=e568]
+    - generic [ref=e569]:
+      - generic [ref=e570]:
+        - generic [ref=e571]: Category
+        - generic [ref=e572]:
+          - combobox "Category" [ref=e573] [cursor=pointer]: Traditional Pickles
+          - textbox [aria-hidden]: 0c13c8a0-6d42-496c-9370-7f8e850371b0
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=e574]:
+        - generic [ref=e660]: Product name
+        - generic [ref=e575]:
+          - textbox "Product name" [ref=e576]: Andhra Lemon Pickle
+          - group [aria-hidden]:
+            - generic: Product name
+      - generic [ref=e577]:
+        - generic [ref=e661]: SKU
+        - generic [ref=e578]:
+          - textbox "SKU" [ref=e579]: PKL-LEMON-250-001-SRN
+          - group [aria-hidden]:
+            - generic: SKU
+      - generic [ref=e580]:
+        - generic [ref=e662]: Brand
+        - generic [ref=e581]:
+          - textbox "Brand" [ref=e582]: Spices and Pickles
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=e583]:
+        - generic [ref=e663]: URL slug (optional)
+        - generic [ref=e584]:
+          - textbox "URL slug (optional)" [ref=e585]: andhra-lemon-pickle-srn
+          - group [aria-hidden]:
+            - generic: URL slug (optional)
+      - generic [ref=e586]:
+        - generic [ref=e587]: Subcategory
+        - generic [ref=e588]:
+          - textbox "Subcategory" [ref=e589]: Lemon Pickles
+          - group [aria-hidden]:
+            - generic: Subcategory
+      - generic [ref=e590]:
+        - generic [ref=e664]: Pack
+        - generic [ref=e591]:
+          - textbox "Pack" [ref=e592]: 250 g
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=e593]:
+        - generic [ref=e665]: Product type
+        - generic [ref=e594]:
+          - textbox "Product type" [ref=e595]: Lemon Pickle
+          - group [aria-hidden]:
+            - generic: Product type
+      - generic [ref=e596]:
+        - generic [ref=e666]: Shelf life
+        - generic [ref=e597]:
+          - textbox "Shelf life" [ref=e598]: 6 months
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=e599]:
+        - generic [ref=e600]: Status
+        - generic [ref=e601]:
+          - combobox "Status" [ref=e602] [cursor=pointer]: Active
+          - textbox [aria-hidden]: ACTIVE
+          - group [aria-hidden]:
+            - generic: Status
+      - generic [ref=e603]:
+        - generic [ref=e667]: Description
+        - generic [ref=e604]:
+          - textbox "Description" [ref=e605]: Bright, tangy lemon pickle balanced with chilli and aromatic spices.
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=e606]:
+        - generic [ref=e668]: Ingredients
+        - generic [ref=e607]:
+          - textbox "Ingredients" [ref=e608]: Lemon, sesame oil, red chilli, mustard, fenugreek, salt
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=e609]:
+        - generic [ref=e669]: Specifications
+        - generic [ref=e610]:
+          - textbox "Specifications" [ref=e611]: Vegetarian; packed for freshness; store in a cool, dry place.
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=e612]:
+        - generic [ref=e670]: Highlights
+        - generic [ref=e613]:
+          - textbox "Highlights" [ref=e614]: Tangy and spicy; ready to serve
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=e615]:
+        - generic [ref=e671]: Tags
+        - generic [ref=e616]:
+          - textbox "Tags" [ref=e617]: lemon, nimbu, andhra, pickle
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=e618]:
+        - generic [ref=e619]:
+          - paragraph [ref=e620]: Variants and prices
+          - button "Add Variant" [active] [ref=e621] [cursor=pointer]
+        - generic [ref=e622]:
+          - generic [ref=e623]:
+            - generic [ref=e672]: Variant SKU
+            - generic [ref=e624]:
+              - textbox "Variant SKU" [ref=e625]: PKL-LEMON-250-V1-SRN
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e626]:
+            - generic [ref=e673]: Variant / pack name
+            - generic [ref=e627]:
+              - textbox "Variant / pack name" [ref=e628]: 250 g
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e629]:
+            - generic [ref=e674]: Price
+            - generic [ref=e630]:
+              - spinbutton "Price" [ref=e631]: "169"
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e632]:
+            - generic [ref=e675]: Compare-at price
+            - generic [ref=e633]:
+              - spinbutton "Compare-at price" [ref=e634]: "169"
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e635]:
+            - generic [ref=e636] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e638]
+              - generic [ref=e641]: Active
+            - button "Remove" [ref=e642] [cursor=pointer]
+          - generic [ref=e643]:
+            - generic [ref=e676]: Variant attributes (JSON or text)
+            - generic [ref=e644]:
+              - textbox "Variant attributes (JSON or text)" [ref=e645]: "{\"label\":\"250 g\"}"
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e677]:
+          - generic [ref=e678]:
+            - generic: Variant SKU
+            - generic [ref=e679]:
+              - textbox "Variant SKU" [ref=e680]
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e681]:
+            - generic: Variant / pack name
+            - generic [ref=e682]:
+              - textbox "Variant / pack name" [ref=e683]
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e684]:
+            - generic: Price
+            - generic [ref=e685]:
+              - spinbutton "Price" [ref=e686]
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e687]:
+            - generic: Compare-at price
+            - generic [ref=e688]:
+              - spinbutton "Compare-at price" [ref=e689]
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e690]:
+            - generic [ref=e691] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e693]
+              - generic [ref=e696]: Active
+            - button "Remove" [ref=e697] [cursor=pointer]
+          - generic [ref=e698]:
+            - generic: Variant attributes (JSON or text)
+            - generic [ref=e699]:
+              - textbox "Variant attributes (JSON or text)" [ref=e700]
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e646]: Active products need at least one active, priced variant.
+      - generic [ref=e648]:
+        - paragraph [ref=e649]: Product images
+        - button "Add Image" [ref=e650] [cursor=pointer]
+      - generic [ref=e651] [cursor=pointer]:
+        - checkbox "Available in my store" [checked] [ref=e653]
+        - generic [ref=e656]: Available in my store
+    - generic [ref=e657]:
+      - button "Cancel" [ref=e658] [cursor=pointer]
+      - button "Save Product" [ref=e659] [cursor=pointer]

@@ -1,0 +1,116 @@
+- generic [ref=e1639]:
+  - navigation [ref=e1640]:
+    - generic [ref=e1641]:
+      - img "Spices and Pickles" [ref=e2017]
+      - generic [ref=e1643]:
+        - heading "Store Manager Portal" [level=6] [ref=e2018]
+        - text: SR Nagar Store
+      - button "Collapse sidebar" [ref=e2019] [cursor=pointer]
+    - generic [ref=e1648]:
+      - button "Dashboard" [ref=e2020] [cursor=pointer]
+      - button "Products" [ref=e2021] [cursor=pointer]
+      - button "Banners" [ref=e2022] [cursor=pointer]
+      - button "Coupons" [ref=e2023] [cursor=pointer]
+      - button "Inventory" [ref=e2024] [cursor=pointer]
+      - button "Orders" [ref=e2025] [cursor=pointer]
+      - button "Delivery Partners" [ref=e2026] [cursor=pointer]
+      - button "Delivery Radius" [ref=e2027] [cursor=pointer]
+      - button "Delivery Settings" [ref=e2028] [cursor=pointer]
+      - button "Change Password" [ref=e2029] [cursor=pointer]
+      - button "Profile" [ref=e2030] [cursor=pointer]
+      - button "Logout" [ref=e2031] [cursor=pointer]
+    - button "View Customer App" [ref=e2032] [cursor=pointer]
+  - main [ref=e1713]:
+    - generic [ref=e1714]:
+      - generic [ref=e1715]:
+        - button [ref=e1716] [cursor=pointer]
+        - generic [ref=e1719]:
+          - text: Store Manager /
+          - strong [ref=e1720]: Inventory
+      - generic [ref=e1721]:
+        - textbox "Search portal" [ref=e2033]
+        - button "Notifications" [ref=e2034] [cursor=pointer]
+        - button "V Vikram SR Nagar" [ref=e2035] [cursor=pointer]:
+          - generic [ref=e1731]: V
+          - generic [ref=e1732]: Vikram SR Nagar
+    - generic [ref=e1733]:
+      - generic [ref=e1734]:
+        - heading "Inventory" [level=4] [ref=e2036]
+        - paragraph [ref=e1736]: Manage inventory within your assigned scope.
+      - button "View Customer App" [ref=e2037] [cursor=pointer]
+    - generic [ref=e1738]:
+      - generic [ref=e1739]:
+        - generic [ref=e1740]:
+          - generic: Search
+          - generic [ref=e1741]:
+            - textbox "Search" [ref=e2038]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=e1743]:
+          - combobox [ref=e1744] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=e1745]:
+          - combobox [ref=e1746] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [ref=e2039] [cursor=pointer]
+        - button "Export" [ref=e2040] [cursor=pointer]
+      - generic [ref=e1869]:
+        - generic [ref=e1870]:
+          - paragraph [ref=e1871]: Whole Walnut Kernels
+          - paragraph [ref=e1872]: META-DRY-WALNUT-500-V1-SRN
+        - generic [ref=e1873]:
+          - button "View" [active] [ref=e2041] [cursor=pointer]
+          - button "Stock +10" [ref=e2042] [cursor=pointer]
+          - button "Stock -1" [ref=e2043] [cursor=pointer]
+          - button "Adjust" [ref=e2044] [cursor=pointer]
+      - generic [ref=e1878]:
+        - generic [ref=e1879]:
+          - paragraph [ref=e1880]: Whole Walnut Kernels
+          - paragraph [ref=e1881]: META-DRY-WALNUT-250-V1-SRN
+        - generic [ref=e1882]:
+          - button "View" [ref=e2045] [cursor=pointer]
+          - button "Stock +10" [ref=e2046] [cursor=pointer]
+          - button "Stock -1" [ref=e2047] [cursor=pointer]
+          - button "Adjust" [ref=e2048] [cursor=pointer]
+      - generic [ref=e1887]:
+        - generic [ref=e1888]:
+          - paragraph [ref=e1889]: Premium Roasted Pistachios
+          - paragraph [ref=e1890]: DRY-PISTA-500-V1-SRN
+        - generic [ref=e1891]:
+          - button "View" [ref=e2049] [cursor=pointer]
+          - button "Stock +10" [ref=e2050] [cursor=pointer]
+          - button "Stock -1" [ref=e2051] [cursor=pointer]
+          - button "Adjust" [ref=e2052] [cursor=pointer]
+      - generic [ref=e1896]:
+        - generic [ref=e1897]:
+          - paragraph [ref=e1898]: Premium Roasted Pistachios
+          - paragraph [ref=e1899]: DRY-PISTA-200-V1-SRN
+        - generic [ref=e1900]:
+          - button "View" [ref=e2053] [cursor=pointer]
+          - button "Stock +10" [ref=e2054] [cursor=pointer]
+          - button "Stock -1" [ref=e2055] [cursor=pointer]
+          - button "Adjust" [ref=e2056] [cursor=pointer]
+      - generic [ref=e1905]:
+        - generic [ref=e1906]:
+          - paragraph [ref=e1907]: Guntur Chilli Powder
+          - paragraph [ref=e1908]: SPC-GUNTUR-500-V1-SRN
+        - generic [ref=e1909]:
+          - button "View" [ref=e2057] [cursor=pointer]
+          - button "Stock +10" [ref=e2058] [cursor=pointer]
+          - button "Stock -1" [ref=e2059] [cursor=pointer]
+          - button "Adjust" [ref=e2060] [cursor=pointer]
+      - generic [ref=e1914]:
+        - generic [ref=e1915]:
+          - paragraph [ref=e1916]: Guntur Chilli Powder
+          - paragraph [ref=e1917]: SPC-GUNTUR-200-V1-SRN
+        - generic [ref=e1918]:
+          - button "View" [ref=e2061] [cursor=pointer]
+          - button "Stock +10" [ref=e2062] [cursor=pointer]
+          - button "Stock -1" [ref=e2063] [cursor=pointer]
+          - button "Adjust" [ref=e2064] [cursor=pointer]
+      - generic [ref=e1750]:
+        - button "Previous" [disabled]
+        - paragraph [ref=e1751]: Page 1 of 4
+        - button "Next" [ref=e2065] [cursor=pointer]

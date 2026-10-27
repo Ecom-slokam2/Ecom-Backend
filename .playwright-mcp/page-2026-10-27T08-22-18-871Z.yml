@@ -1,0 +1,47 @@
+- generic [ref=f45e526]:
+  - generic [ref=f45e527]:
+    - img "Pickles & Spices" [ref=f45e528]
+    - paragraph [ref=f45e529]: All your favorite pickles at one place
+    - img "Pickles and spices" [ref=f45e530]
+    - button "Explore Products" [ref=f45e531] [cursor=pointer]
+  - generic [ref=f45e532]:
+    - generic [ref=f45e533]:
+      - button [ref=f45e534] [cursor=pointer]
+      - button "Skip" [ref=f45e538] [cursor=pointer]
+    - generic [ref=f45e539]:
+      - heading "Sign in" [level=4] [ref=f45e540]
+      - generic [ref=f45e541]:
+        - generic [ref=f45e542]:
+          - generic [ref=f45e543]:
+            - text: Email, Mobile Number or Username
+            - generic [aria-hidden] [ref=f45e544]: "*"
+          - generic [ref=f45e545]:
+            - textbox "Email, Mobile Number or Username" [ref=f45e546]: globaladmin
+            - group [aria-hidden]:
+              - generic: Email, Mobile Number or Username *
+        - generic [ref=f45e547]:
+          - generic [ref=f45e567]:
+            - text: Password
+            - generic [aria-hidden] [ref=f45e568]: "*"
+          - generic [ref=f45e548]:
+            - textbox "Password" [ref=f45e549]: admin123
+            - button "Show password" [ref=f45e551] [cursor=pointer]
+            - group [aria-hidden]:
+              - generic: Password *
+        - button "Forgot Password?" [ref=f45e555] [cursor=pointer]
+        - alert [ref=f45e569]:
+          - generic [ref=f45e573]: Incorrect credentials or account unavailable.
+        - button "Sign in" [ref=f45e556] [cursor=pointer]
+        - generic [ref=f45e557]: OR
+        - button "Sign in with Mobile OTP" [ref=f45e559] [cursor=pointer]
+        - button "Sign in with Email OTP" [ref=f45e560] [cursor=pointer]
+        - paragraph [ref=f45e561]:
+          - text: Don't have an account?
+          - button "Create Account" [ref=f45e562] [cursor=pointer]
+        - paragraph [ref=f45e564]:
+          - text: By creating an account, you agree to our
+          - link "Terms & Conditions" [ref=f45e565] [cursor=pointer]:
+            - /url: /terms-conditions
+          - text: and
+          - link "Privacy Policy" [ref=f45e566] [cursor=pointer]:
+            - /url: /privacy-policy

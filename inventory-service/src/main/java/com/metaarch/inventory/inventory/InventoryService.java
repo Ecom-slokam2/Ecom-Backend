@@ -47,12 +47,25 @@ public class InventoryService {
     return inventories.findByProductIdAndVariantKeyAndStoreId(productId, variantKey(variantId), clean(storeId)).map(InventoryResponse::from).orElseThrow(() -> new ResourceNotFoundException("Inventory not found for product, variant and store"));
   }
 
+  @Transactional(readOnly = true) public boolean isPubliclyAvailable(UUID productId, UUID variantId, String storeId) {
+    Inventory inventory = inventories.findByProductIdAndVariantKeyAndStoreId(productId, variantKey(variantId), clean(storeId)).orElse(null);
+    if (inventory == null && variantId != null) {
+      inventory = inventories.findByProductIdAndVariantKeyAndStoreId(productId, NO_VARIANT, clean(storeId)).orElse(null);
+    }
+    return inventory != null && inventory.getStatus() == InventoryStatus.ACTIVE && inventory.getAvailableQuantity() > 0;
+  }
+
   @Transactional(readOnly = true) public PageResponse<InventoryResponse> list(String storeId, InventoryStatus status, Pageable pageable) {
     if (storeId == null || storeId.isBlank()) {
       return PageResponse.from(status == null ? inventories.findAll(pageable) : inventories.findByStatus(status, pageable), InventoryResponse::from);
     }
     String cleanStoreId = clean(storeId);
     return PageResponse.from(status == null ? inventories.findByStoreId(cleanStoreId, pageable) : inventories.findByStoreIdAndStatus(cleanStoreId, status, pageable), InventoryResponse::from);
+  }
+
+  @Transactional(readOnly = true) public PageResponse<InventoryResponse> listStores(java.util.Collection<String> storeIds, InventoryStatus status, Pageable pageable) {
+    if (storeIds == null || storeIds.isEmpty()) return PageResponse.from(new org.springframework.data.domain.PageImpl<>(java.util.List.of(), pageable, 0), InventoryResponse::from);
+    return PageResponse.from(status == null ? inventories.findByStoreIdIn(storeIds, pageable) : inventories.findByStoreIdInAndStatus(storeIds, status, pageable), InventoryResponse::from);
   }
 
   @Transactional(readOnly = true) public Inventory find(UUID id) {

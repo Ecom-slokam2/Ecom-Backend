@@ -1,0 +1,45 @@
+- generic [ref=f1e437]:
+  - generic [ref=f1e438]:
+    - img "Pickles & Spices" [ref=f1e439]
+    - paragraph [ref=f1e440]: All your favorite pickles at one place
+    - img "Pickles and spices" [ref=f1e441]
+    - button "Explore Products" [ref=f1e442] [cursor=pointer]
+  - generic [ref=f1e443]:
+    - generic [ref=f1e444]:
+      - button [ref=f1e445] [cursor=pointer]
+      - button "Skip" [ref=f1e449] [cursor=pointer]
+    - generic [ref=f1e450]:
+      - heading "Sign in" [level=4] [ref=f1e451]
+      - generic [ref=f1e452]:
+        - generic [ref=f1e453]:
+          - generic:
+            - text: Email, Mobile Number or Username
+            - generic [aria-hidden]: "*"
+          - generic [ref=f1e454]:
+            - textbox "Email, Mobile Number or Username" [ref=f1e455]
+            - group [aria-hidden]:
+              - generic: Email, Mobile Number or Username *
+        - generic [ref=f1e456]:
+          - generic:
+            - text: Password
+            - generic [aria-hidden]: "*"
+          - generic [ref=f1e457]:
+            - textbox "Password" [ref=f1e458]
+            - button "Show password" [ref=f1e460] [cursor=pointer]
+            - group [aria-hidden]:
+              - generic: Password *
+        - button "Forgot Password?" [ref=f1e464] [cursor=pointer]
+        - button "Sign in" [ref=f1e465] [cursor=pointer]
+        - generic [ref=f1e466]: OR
+        - button "Sign in with Mobile OTP" [ref=f1e468] [cursor=pointer]
+        - button "Sign in with Email OTP" [ref=f1e469] [cursor=pointer]
+        - paragraph [ref=f1e470]:
+          - text: Don't have an account?
+          - button "Create Account" [ref=f1e471] [cursor=pointer]
+        - paragraph [ref=f1e473]:
+          - text: By creating an account, you agree to our
+          - link "Terms & Conditions" [ref=f1e474] [cursor=pointer]:
+            - /url: /terms-conditions
+          - text: and
+          - link "Privacy Policy" [ref=f1e475] [cursor=pointer]:
+            - /url: /privacy-policy

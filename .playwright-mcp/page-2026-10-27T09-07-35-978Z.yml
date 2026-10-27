@@ -1,0 +1,89 @@
+- generic [ref=f1e476]:
+  - navigation [ref=f1e477]:
+    - generic [ref=f1e478]:
+      - img "Spices and Pickles" [ref=f1e1710]
+      - generic [ref=f1e480]:
+        - heading "Location Admin Portal" [level=6] [ref=f1e1711]
+        - text: hyderabad
+      - button "Collapse sidebar" [ref=f1e1712] [cursor=pointer]
+    - generic [ref=f1e485]:
+      - generic [ref=f1e486]:
+        - paragraph [ref=f1e487]: Main
+        - button "Dashboard" [ref=f1e1713] [cursor=pointer]
+      - generic [ref=f1e493]:
+        - paragraph [ref=f1e494]: Management
+        - button "Stores" [ref=f1e1714] [cursor=pointer]
+        - button "Products" [ref=f1e1715] [cursor=pointer]
+        - button "Banners" [ref=f1e1716] [cursor=pointer]
+        - button "Inventory" [ref=f1e1717] [cursor=pointer]
+      - generic [ref=f1e517]:
+        - paragraph [ref=f1e518]: Orders & Payments
+        - button "Orders" [ref=f1e1718] [cursor=pointer]
+        - button "Payments" [ref=f1e1719] [cursor=pointer]
+        - button "Delivery" [ref=f1e1720] [cursor=pointer]
+      - generic [ref=f1e535]:
+        - paragraph [ref=f1e536]: Customer
+        - button "Coupons" [ref=f1e1721] [cursor=pointer]
+      - generic [ref=f1e543]:
+        - paragraph [ref=f1e544]: Analytics
+        - button "Reports" [ref=f1e1722] [cursor=pointer]
+    - button "View Customer App" [ref=f1e1723] [cursor=pointer]
+  - main [ref=f1e551]:
+    - generic [ref=f1e552]:
+      - generic [ref=f1e553]:
+        - button [ref=f1e554] [cursor=pointer]
+        - generic [ref=f1e557]:
+          - text: Location Admin /
+          - strong [ref=f1e558]: Stores
+      - generic [ref=f1e559]:
+        - textbox "Search portal" [ref=f1e1724]
+        - button "Notifications" [ref=f1e1725] [cursor=pointer]
+        - button "H Hyderabad Location Administrator" [ref=f1e1726] [cursor=pointer]:
+          - generic [ref=f1e569]: H
+          - generic [ref=f1e570]: Hyderabad Location Administrator
+    - generic [ref=f1e571]:
+      - generic [ref=f1e572]:
+        - heading "Stores" [level=4] [ref=f1e1727]
+        - paragraph [ref=f1e574]: Manage stores within your assigned scope.
+      - button "View Customer App" [ref=f1e1728] [cursor=pointer]
+    - generic [ref=f1e710]:
+      - generic [ref=f1e711]:
+        - generic [ref=f1e712]:
+          - generic: Search
+          - generic [ref=f1e713]:
+            - textbox "Search" [ref=f1e1729]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f1e715]:
+          - combobox [ref=f1e716] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f1e717]:
+          - combobox [ref=f1e718] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=f1e1730] [cursor=pointer]
+        - button "Export" [ref=f1e1731] [cursor=pointer]
+      - status [ref=f1e1732]: Saved successfully.
+      - generic [ref=f1e1733]:
+        - generic [ref=f1e1734]:
+          - paragraph [ref=f1e1735]: SR Nagar Store
+          - paragraph [ref=f1e1736]: +91 91000 20013
+        - generic [ref=f1e1737]:
+          - button "View" [ref=f1e1738] [cursor=pointer]
+          - button "Edit" [ref=f1e1739] [cursor=pointer]
+          - button "Deactivate" [ref=f1e1740] [cursor=pointer]
+          - button "Delete" [ref=f1e1741] [cursor=pointer]
+      - generic [ref=f1e1290]:
+        - generic [ref=f1e1291]:
+          - paragraph [ref=f1e1292]: Hyderabad Main Store
+          - paragraph [ref=f1e1293]: +91 91000 20000
+        - generic [ref=f1e1294]:
+          - button "View" [ref=f1e1742] [cursor=pointer]
+          - button "Edit" [ref=f1e1743] [cursor=pointer]
+          - button "Deactivate" [ref=f1e1744] [cursor=pointer]
+          - button "Delete" [ref=f1e1745] [cursor=pointer]
+      - generic [ref=f1e722]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f1e723]: Page 1 of 1
+        - button "Next" [disabled]

@@ -106,12 +106,14 @@ public class CatalogDeliveryQuoteClient {
       }
       BigDecimal price = variant.price();
       if (!global) {
-        StoreSnapshot store = restClient.get().uri(baseUrl + "/api/v1/stores/" + storeId).retrieve().body(StoreSnapshot.class);
+        StoreSnapshot[] stores = restClient.get().uri(baseUrl + "/api/v1/stores").retrieve().body(StoreSnapshot[].class);
+        StoreSnapshot store = java.util.Arrays.stream(stores == null ? new StoreSnapshot[0] : stores)
+            .filter(candidate -> storeId.equals(candidate.id())).findFirst().orElse(null);
         if (store == null || !store.active() || !"Active".equalsIgnoreCase(store.status()) || (pickup ? !store.pickupEnabled() : !store.deliveryEnabled())) {
           throw new DeliveryQuoteVerificationException("Store is unavailable for the selected fulfilment method.");
         }
         StoreProductSnapshot[] mappings = restClient.get().uri(builder -> builder.scheme(URI.create(baseUrl).getScheme()).host(URI.create(baseUrl).getHost()).port(URI.create(baseUrl).getPort())
-            .path("/api/v1/store-products").queryParam("storeId", storeId).queryParam("productId", item.productId()).build()).retrieve().body(StoreProductSnapshot[].class);
+            .path("/api/v1/public/store-products").queryParam("storeId", storeId).queryParam("productId", item.productId()).build()).retrieve().body(StoreProductSnapshot[].class);
         StoreProductSnapshot mapping = java.util.Arrays.stream(mappings == null ? new StoreProductSnapshot[0] : mappings)
             .filter(m -> storeId.equals(m.storeId()) && item.productId().equals(m.productId()) && m.available()).findFirst()
             .orElseThrow(() -> new DeliveryQuoteVerificationException("Product is unavailable at the selected store."));
@@ -130,7 +132,7 @@ public class CatalogDeliveryQuoteClient {
 
   public record ProductSnapshot(UUID id, String name, String status, boolean globalProduct, List<VariantSnapshot> variants) { }
   public record VariantSnapshot(UUID id, UUID productId, BigDecimal price, boolean active) { }
-  public record StoreSnapshot(boolean active, String status, boolean deliveryEnabled, boolean pickupEnabled) { }
+  public record StoreSnapshot(String id, boolean active, String status, boolean deliveryEnabled, boolean pickupEnabled) { }
   public record StoreProductSnapshot(String storeId, UUID productId, boolean available, BigDecimal priceOverride) { }
 
   public record DeliveryQuote(

@@ -30,6 +30,8 @@ import static org.assertj.core.api.Assertions.*;
 class PaymentHttpIntegrationTest {
   @org.springframework.boot.test.mock.mockito.MockBean org.springframework.security.oauth2.jwt.JwtDecoder decoder;
   @org.springframework.boot.test.mock.mockito.MockBean FulfillmentDeliveryClient deliveryClient;
+  @org.springframework.boot.test.mock.mockito.MockBean FulfillmentLifecycleVerifier fulfillmentLifecycleVerifier;
+  @org.springframework.boot.test.mock.mockito.MockBean ReviewDeliveryVerifier reviewDeliveryVerifier;
   @Autowired OrderRepository orders;
   @Autowired TestRestTemplate http;
   @Autowired ObjectMapper mapper;
@@ -38,6 +40,7 @@ class PaymentHttpIntegrationTest {
   @Autowired OrderCreation creation;
   @Autowired OrderService service;
   @org.springframework.boot.test.mock.mockito.MockBean CatalogDeliveryQuoteClient catalog;
+  @org.springframework.boot.test.mock.mockito.MockBean com.metaarch.sync.CatalogLocationClient locationCatalog;
   @org.springframework.boot.test.mock.mockito.MockBean CheckoutCartClient cart;
 
   @Test void reviewsRetainAuthenticationOwnershipAndDeliveryGuards() {
@@ -58,18 +61,27 @@ class PaymentHttpIntegrationTest {
   }
 
   @org.junit.jupiter.api.BeforeEach void prepareCreationSchema() {
-    org.mockito.Mockito.reset(decoder, deliveryClient);
+    org.mockito.Mockito.reset(decoder, deliveryClient, locationCatalog, fulfillmentLifecycleVerifier);
+    org.mockito.Mockito.when(reviewDeliveryVerifier.isDelivered(org.mockito.ArgumentMatchers.any())).thenReturn(false);
+    org.mockito.Mockito.when(fulfillmentLifecycleVerifier.shipmentIs(org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.anyString())).thenReturn(false);
+    org.mockito.Mockito.when(fulfillmentLifecycleVerifier.shipmentHasStatus(org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.anySet())).thenReturn(false);
     org.mockito.Mockito.when(decoder.decode(org.mockito.ArgumentMatchers.anyString())).thenAnswer(call ->
       org.springframework.security.oauth2.jwt.Jwt.withTokenValue(call.getArgument(0)).header("alg", "HS256")
         .subject("test-owner").claim("customerId", call.getArgument(0).toString())
         .claim("accountType", "admin".equals(call.getArgument(0)) ? "staff" : "customer")
         .claim("roles", java.util.List.of("admin".equals(call.getArgument(0)) ? "ROLE_ADMIN" : "ROLE_CUSTOMER")).build());
+    org.mockito.Mockito.when(decoder.decode("location-admin")).thenReturn(
+      org.springframework.security.oauth2.jwt.Jwt.withTokenValue("location-admin").header("alg", "HS512")
+        .subject("location-admin").claim("accountType", "staff")
+        .claim("authorities", java.util.List.of("ROLE_LOCATION_ADMIN", "SCOPE_LOCATION:Hyderabad")).build());
     for (String store : java.util.List.of("test-store", "other-store")) {
       org.mockito.Mockito.when(decoder.decode("manager-" + store)).thenReturn(
         org.springframework.security.oauth2.jwt.Jwt.withTokenValue("manager-" + store).header("alg", "HS512")
           .subject("test-manager").claim("accountType", "staff")
           .claim("authorities", java.util.List.of("ROLE_STORE_MANAGER", "SCOPE_STORE:" + store)).build());
     }
+    org.mockito.Mockito.when(locationCatalog.locationOf("store-hyd")).thenReturn(java.util.Optional.of("Hyderabad"));
+    org.mockito.Mockito.when(locationCatalog.locationOf("store-chn")).thenReturn(java.util.Optional.of("Chennai"));
     jdbc.execute("CREATE TABLE IF NOT EXISTS order_creation_requests(customer_id VARCHAR(36),request_key VARCHAR(128),request_hash VARCHAR(64),order_id VARCHAR(36) UNIQUE,PRIMARY KEY(customer_id,request_key))");
     jdbc.update("DELETE FROM order_creation_requests");
     jdbc.update("DELETE FROM sync_inbox");
@@ -78,6 +90,59 @@ class PaymentHttpIntegrationTest {
     org.mockito.Mockito.reset(cart);
     org.mockito.Mockito.when(catalog.verifyItem(org.mockito.ArgumentMatchers.anyString(), org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.anyBoolean(), org.mockito.ArgumentMatchers.anyBoolean()))
       .thenAnswer(call -> call.getArgument(1));
+  }
+
+  @Test void locationAdminCanReadSameLocationOrderDetailsAndItemsOnly() {
+    Order same = new Order(UUID.randomUUID(), UUID.randomUUID(), "store-hyd", "HYD-" + UUID.randomUUID().toString().substring(0, 12));
+    same.addItem(new OrderItem(UUID.randomUUID(), null, "QA item", 2, new BigDecimal("12.50")));
+    same = orders.saveAndFlush(same);
+    Order other = new Order(UUID.randomUUID(), UUID.randomUUID(), "store-chn", "CHN-" + UUID.randomUUID().toString().substring(0, 12));
+    other.addItem(new OrderItem(UUID.randomUUID(), null, "Other QA item", 1, new BigDecimal("5.00")));
+    other = orders.saveAndFlush(other);
+
+    var anonymous = new HttpHeaders();
+    String samePath = "/api/v1/orders/" + same.getId();
+    String otherPath = "/api/v1/orders/" + other.getId();
+    assertThat(http.exchange(samePath, HttpMethod.GET, new HttpEntity<>(anonymous), String.class).getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
+    assertThat(http.exchange(samePath + "/items", HttpMethod.GET, new HttpEntity<>(anonymous), String.class).getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
+
+    var headers = new HttpHeaders();
+    headers.setBearerAuth("location-admin");
+    assertThat(http.exchange(samePath, HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.OK);
+    var items = http.exchange(samePath + "/items", HttpMethod.GET, new HttpEntity<>(headers), String.class);
+    assertThat(items.getStatusCode()).isEqualTo(HttpStatus.OK);
+    assertThat(items.getBody()).contains("QA item");
+    assertThat(http.exchange(otherPath, HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
+    assertThat(http.exchange(otherPath + "/items", HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
+
+    headers.setBearerAuth("admin");
+    assertThat(http.exchange(otherPath, HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.OK);
+  }
+
+  @Test void locationAdminCanConfirmOnlyAnEligibleOrderInAssignedLocation() {
+    Order same = new Order(UUID.randomUUID(), UUID.randomUUID(), "store-hyd", "HYD-QA-" + UUID.randomUUID().toString().substring(0, 8));
+    same.addItem(new OrderItem(UUID.randomUUID(), null, "Disposable authorization QA item", 1, new BigDecimal("10.00")));
+    same = orders.saveAndFlush(same);
+    Order other = new Order(UUID.randomUUID(), UUID.randomUUID(), "store-chn", "CHN-QA-" + UUID.randomUUID().toString().substring(0, 8));
+    other.addItem(new OrderItem(UUID.randomUUID(), null, "Cross-location QA item", 1, new BigDecimal("5.00")));
+    other = orders.saveAndFlush(other);
+
+    String samePath = "/api/v1/orders/" + same.getId();
+    String otherPath = "/api/v1/orders/" + other.getId();
+    var headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    assertThat(http.exchange(samePath + "/status", HttpMethod.PATCH,
+      new HttpEntity<>("{\"status\":\"CONFIRMED\"}", headers), String.class).getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
+
+    headers.setBearerAuth("location-admin");
+    assertThat(http.exchange(otherPath + "/status", HttpMethod.PATCH,
+      new HttpEntity<>("{\"status\":\"CONFIRMED\"}", headers), String.class).getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
+    assertThat(http.exchange(samePath + "/status", HttpMethod.PATCH,
+      new HttpEntity<>("{\"status\":\"DELIVERED\"}", headers), String.class).getStatusCode()).isEqualTo(HttpStatus.CONFLICT);
+    assertThat(http.exchange(samePath + "/status", HttpMethod.PATCH,
+      new HttpEntity<>("{\"status\":\"CONFIRMED\"}", headers), String.class).getStatusCode()).isEqualTo(HttpStatus.OK);
+    assertThat(orders.findById(same.getId()).orElseThrow().getStatus()).isEqualTo(OrderStatus.CONFIRMED);
+    assertThat(orders.findById(other.getId()).orElseThrow().getStatus()).isEqualTo(OrderStatus.CREATED);
   }
 
   private CreateOrderRequest pickupRequest() throws Exception {
@@ -96,6 +161,8 @@ class PaymentHttpIntegrationTest {
     assertThat(http.exchange(path, HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
     assertThat(http.exchange(path + "/status", HttpMethod.PATCH, new HttpEntity<>("{\"status\":\"CONFIRMED\"}", headers), String.class).getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
     headers.setBearerAuth("manager-test-store");
+    assertThat(http.exchange(path, HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.OK);
+    assertThat(http.exchange(path + "/items", HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(http.exchange("/api/v1/orders?storeId=test-store", HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(http.exchange("/api/v1/orders", HttpMethod.GET, new HttpEntity<>(headers), String.class).getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
     assertThat(http.exchange(path + "/status", HttpMethod.PATCH, new HttpEntity<>("{\"status\":\"CONFIRMED\"}", headers), String.class).getStatusCode()).isEqualTo(HttpStatus.OK);

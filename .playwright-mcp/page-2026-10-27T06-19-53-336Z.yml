@@ -1,0 +1,165 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e8]:
+    - navigation [ref=f12e9]:
+      - generic [ref=f12e10]:
+        - generic [ref=f12e12]:
+          - heading [level=6] [ref=f12e1129]: Super Admin Portal
+          - text: All locations
+        - button [ref=f12e1130] [cursor=pointer]
+      - generic [ref=f12e17]:
+        - generic [ref=f12e18]:
+          - paragraph [ref=f12e19]: Main
+          - button [ref=f12e1131] [cursor=pointer]:
+            - generic [ref=f12e24]: Dashboard
+        - generic [ref=f12e25]:
+          - paragraph [ref=f12e26]: Management
+          - button [ref=f12e1132] [cursor=pointer]:
+            - generic [ref=f12e32]: Locations
+          - button [ref=f12e1133] [cursor=pointer]:
+            - generic [ref=f12e37]: Users
+          - button [ref=f12e1134] [cursor=pointer]:
+            - generic [ref=f12e42]: Stores
+          - button [ref=f12e1135] [cursor=pointer]:
+            - generic [ref=f12e48]: Products
+          - button [ref=f12e1136] [cursor=pointer]:
+            - generic [ref=f12e53]: Categories
+          - button [ref=f12e1137] [cursor=pointer]:
+            - generic [ref=f12e58]: Banners
+          - button [ref=f12e1138] [cursor=pointer]:
+            - generic [ref=f12e64]: Inventory
+        - generic [ref=f12e65]:
+          - paragraph [ref=f12e66]: Orders & Payments
+          - button [ref=f12e1139] [cursor=pointer]:
+            - generic [ref=f12e71]: Orders
+          - button [ref=f12e1140] [cursor=pointer]:
+            - generic [ref=f12e77]: Payments
+          - button [ref=f12e1141] [cursor=pointer]:
+            - generic [ref=f12e82]: Delivery
+        - generic [ref=f12e83]:
+          - paragraph [ref=f12e84]: Customer
+          - button [ref=f12e1142] [cursor=pointer]:
+            - generic [ref=f12e89]: Customers
+          - button [ref=f12e1143] [cursor=pointer]:
+            - generic [ref=f12e94]: Reviews
+          - button [ref=f12e1144] [cursor=pointer]:
+            - generic [ref=f12e100]: Coupons
+          - button [ref=f12e1145] [cursor=pointer]:
+            - generic [ref=f12e105]: Notifications
+        - generic [ref=f12e106]:
+          - paragraph [ref=f12e107]: Analytics
+          - button [ref=f12e1146] [cursor=pointer]:
+            - generic [ref=f12e112]: Reports
+        - generic [ref=f12e113]:
+          - paragraph [ref=f12e114]: System
+          - button [ref=f12e1147] [cursor=pointer]:
+            - generic [ref=f12e119]: Security
+          - button [ref=f12e1148] [cursor=pointer]:
+            - generic [ref=f12e124]: Audit Logs
+      - button [ref=f12e1149] [cursor=pointer]: View Customer App
+    - main [ref=f12e126]:
+      - generic [ref=f12e127]:
+        - generic [ref=f12e128]:
+          - button [ref=f12e129] [cursor=pointer]
+          - generic [ref=f12e132]:
+            - text: Super Admin /
+            - strong [ref=f12e133]: Categories
+        - generic [ref=f12e134]:
+          - textbox [ref=f12e1150]:
+            - /placeholder: Search portal
+          - button [ref=f12e1151] [cursor=pointer]
+          - button [ref=f12e1152] [cursor=pointer]:
+            - generic [ref=f12e144]: A
+            - generic [ref=f12e145]: Admin
+      - generic [ref=f12e146]:
+        - generic [ref=f12e147]:
+          - heading [level=4] [ref=f12e1153]: Categories
+          - paragraph [ref=f12e149]: Manage categories within your assigned scope.
+        - button [ref=f12e1154] [cursor=pointer]: View Customer App
+      - generic [ref=f12e1079]:
+        - generic [ref=f12e1080]:
+          - generic [ref=f12e1081]:
+            - generic: Search
+            - generic [ref=f12e1082]:
+              - textbox [ref=f12e1155]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f12e1084]:
+            - combobox [ref=f12e1085] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f12e1086]:
+            - combobox [ref=f12e1087] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f12e1156] [cursor=pointer]: Create
+          - button [ref=f12e1157] [cursor=pointer]: Export
+        - generic [ref=f12e1090]:
+          - generic [ref=f12e1091]:
+            - paragraph [ref=f12e1092]: Traditional Pickles
+            - paragraph [ref=f12e1093]: Active
+          - generic [ref=f12e1094]:
+            - button [ref=f12e1158] [cursor=pointer]: View
+            - button [ref=f12e1159] [cursor=pointer]: Edit
+            - button [ref=f12e1160] [cursor=pointer]: Deactivate
+            - button [ref=f12e1161] [cursor=pointer]: Delete
+        - generic [ref=f12e1099]:
+          - generic [ref=f12e1100]:
+            - paragraph [ref=f12e1101]: Premium Dry Fruits
+            - paragraph [ref=f12e1102]: Active
+          - generic [ref=f12e1103]:
+            - button [ref=f12e1162] [cursor=pointer]: View
+            - button [ref=f12e1163] [cursor=pointer]: Edit
+            - button [ref=f12e1164] [cursor=pointer]: Deactivate
+            - button [ref=f12e1165] [cursor=pointer]: Delete
+        - generic [ref=f12e1108]:
+          - generic [ref=f12e1109]:
+            - paragraph [ref=f12e1110]: Fresh Vegetables
+            - paragraph [ref=f12e1111]: Active
+          - generic [ref=f12e1112]:
+            - button [ref=f12e1166] [cursor=pointer]: View
+            - button [ref=f12e1167] [cursor=pointer]: Edit
+            - button [ref=f12e1168] [cursor=pointer]: Deactivate
+            - button [ref=f12e1169] [cursor=pointer]: Delete
+        - generic [ref=f12e1117]:
+          - generic [ref=f12e1118]:
+            - paragraph [ref=f12e1119]: Fresh Non-Veg
+            - paragraph [ref=f12e1120]: Active
+          - generic [ref=f12e1121]:
+            - button [ref=f12e1170] [cursor=pointer]: View
+            - button [ref=f12e1171] [cursor=pointer]: Edit
+            - button [ref=f12e1172] [cursor=pointer]: Deactivate
+            - button [ref=f12e1173] [cursor=pointer]: Delete
+        - generic [ref=f12e1126]:
+          - button [disabled]: Previous
+          - paragraph [ref=f12e1127]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [active] [ref=f12e1176]:
+    - heading "Create Categories" [level=2] [ref=f12e1177]
+    - generic [ref=f12e1178]:
+      - generic [ref=f12e1180]:
+        - generic:
+          - text: Category name
+          - generic [aria-hidden]: "*"
+        - generic [ref=f12e1181]:
+          - textbox "Category name" [ref=f12e1182]
+          - group [aria-hidden]:
+            - generic: Category name *
+      - generic [ref=f12e1184]:
+        - generic: Description
+        - generic [ref=f12e1185]:
+          - textbox "Description" [ref=f12e1186]
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=f12e1188]:
+        - generic: Thumbnail URL
+        - generic [ref=f12e1189]:
+          - textbox "Thumbnail URL" [ref=f12e1190]
+          - group [aria-hidden]:
+            - generic: Thumbnail URL
+      - generic [ref=f12e1192]:
+        - combobox [ref=f12e1193] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+    - generic [ref=f12e1195]:
+      - button "Cancel" [ref=f12e1196] [cursor=pointer]
+      - button "Save" [ref=f12e1197] [cursor=pointer]

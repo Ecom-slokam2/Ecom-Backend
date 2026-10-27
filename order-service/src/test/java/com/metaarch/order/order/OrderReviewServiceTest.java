@@ -57,17 +57,20 @@ class OrderReviewServiceTest {
   void deliveredOrderSavesReviewForItsPersistedCustomer() {
     UUID orderId = UUID.randomUUID();
     UUID customerId = UUID.randomUUID();
+    UUID productId = UUID.randomUUID();
     Order order = new Order(customerId, UUID.randomUUID(), "store", "test-order");
+    order.addItem(new OrderItem(productId, null, "Test product", 1, java.math.BigDecimal.ONE));
     order.setStatus(OrderStatus.DELIVERED);
     when(orders.findLockedById(orderId)).thenReturn(Optional.of(order));
-    OrderReviewResponse response = new OrderReviewResponse(UUID.randomUUID(), orderId, customerId,
-      5, "Great service", List.of(), java.time.Instant.now(), java.time.Instant.now());
+    Instant now = java.time.Instant.now();
+    OrderReviewResponse response = new OrderReviewResponse(UUID.randomUUID(), orderId, productId, "Test product",
+      "test-order", 5, "Great service", List.of(), ReviewStatus.PENDING, null, now, now);
     OrderReviewService service = spy(new OrderReviewService(orders, jdbc, new ObjectMapper()));
     doReturn(Optional.of(response)).when(service).get(orderId);
 
     assertThat(service.save(orderId, new OrderReviewRequest(5, " Great service ", List.of()))).isEqualTo(response);
     verify(jdbc).update(anyString(), anyString(), eq(orderId.toString()), eq(customerId.toString()),
-      eq(5), eq("Great service"), eq("[]"));
+      eq(productId.toString()), eq("Test product"), eq(5), eq("Great service"), eq("[]"));
   }
 
   @Test

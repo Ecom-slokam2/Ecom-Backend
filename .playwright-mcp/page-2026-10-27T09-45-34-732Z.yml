@@ -1,0 +1,34 @@
+- generic [ref=f1e317]:
+  - complementary [ref=f1e318]:
+    - generic [ref=f1e319]:
+      - img "Spices and Pickles" [ref=f1e320]
+      - generic [ref=f1e321]:
+        - heading "Store Manager" [level=6] [ref=f1e322]
+        - paragraph [ref=f1e323]: SR Nagar Store
+    - navigation [ref=f1e324]:
+      - button "Dashboard" [ref=f1e325] [cursor=pointer]
+      - button "Products" [ref=f1e330] [cursor=pointer]
+      - button "Banners" [ref=f1e336] [cursor=pointer]
+      - button "Coupons" [ref=f1e341] [cursor=pointer]
+      - button "Inventory" [ref=f1e347] [cursor=pointer]
+      - button "Orders" [ref=f1e353] [cursor=pointer]
+      - button "Delivery Partners" [ref=f1e358] [cursor=pointer]
+      - button "Delivery Radius" [ref=f1e363] [cursor=pointer]
+      - button "Delivery Settings" [ref=f1e368] [cursor=pointer]
+      - button "Change Password" [ref=f1e373] [cursor=pointer]
+      - button "Profile" [ref=f1e378] [cursor=pointer]
+      - button "Logout" [ref=f1e383] [cursor=pointer]
+    - button "View Customer App" [ref=f1e388] [cursor=pointer]
+  - main [ref=f1e389]:
+    - generic [ref=f1e390]:
+      - button [ref=f1e391] [cursor=pointer]
+      - button "V Vikram SR Nagar" [ref=f1e395] [cursor=pointer]:
+        - generic [ref=f1e396]: V
+        - generic [ref=f1e397]: Vikram SR Nagar
+      - button "Sign out" [ref=f1e398] [cursor=pointer]
+    - generic [ref=f1e399]:
+      - heading "Delivery Partners" [level=4] [ref=f1e400]
+      - generic [ref=f1e401]:
+        - generic [ref=f1e402]: 0/0 active
+        - button "Create Delivery Partner" [ref=f1e404] [cursor=pointer]
+    - paragraph [ref=f1e406]: No delivery partners for this store yet.

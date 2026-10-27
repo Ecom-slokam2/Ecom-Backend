@@ -1,0 +1,120 @@
+- generic [ref=f12e8]:
+  - navigation [ref=f12e9]:
+    - generic [ref=f12e10]:
+      - img "Spices and Pickles" [ref=f12e995]
+      - generic [ref=f12e12]:
+        - heading "Super Admin Portal" [level=6] [ref=f12e996]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f12e997] [cursor=pointer]
+    - generic [ref=f12e17]:
+      - generic [ref=f12e18]:
+        - paragraph [ref=f12e19]: Main
+        - button "Dashboard" [ref=f12e998] [cursor=pointer]
+      - generic [ref=f12e25]:
+        - paragraph [ref=f12e26]: Management
+        - button "Locations" [ref=f12e999] [cursor=pointer]
+        - button "Users" [ref=f12e1000] [cursor=pointer]
+        - button "Stores" [ref=f12e1001] [cursor=pointer]
+        - button "Products" [ref=f12e1002] [cursor=pointer]
+        - button "Categories" [ref=f12e1003] [cursor=pointer]
+        - button "Banners" [ref=f12e1004] [cursor=pointer]
+        - button "Inventory" [ref=f12e1005] [cursor=pointer]
+      - generic [ref=f12e65]:
+        - paragraph [ref=f12e66]: Orders & Payments
+        - button "Orders" [ref=f12e1006] [cursor=pointer]
+        - button "Payments" [ref=f12e1007] [cursor=pointer]
+        - button "Delivery" [ref=f12e1008] [cursor=pointer]
+      - generic [ref=f12e83]:
+        - paragraph [ref=f12e84]: Customer
+        - button "Customers" [ref=f12e1009] [cursor=pointer]
+        - button "Reviews" [ref=f12e1010] [cursor=pointer]
+        - button "Coupons" [ref=f12e1011] [cursor=pointer]
+        - button "Notifications" [ref=f12e1012] [cursor=pointer]
+      - generic [ref=f12e106]:
+        - paragraph [ref=f12e107]: Analytics
+        - button "Reports" [ref=f12e1013] [cursor=pointer]
+      - generic [ref=f12e113]:
+        - paragraph [ref=f12e114]: System
+        - button "Security" [ref=f12e1014] [cursor=pointer]
+        - button "Audit Logs" [ref=f12e1015] [cursor=pointer]
+    - button "View Customer App" [ref=f12e1016] [cursor=pointer]
+  - main [ref=f12e126]:
+    - generic [ref=f12e127]:
+      - generic [ref=f12e128]:
+        - button [ref=f12e129] [cursor=pointer]
+        - generic [ref=f12e132]:
+          - text: Super Admin /
+          - strong [ref=f12e133]: Delivery
+      - generic [ref=f12e134]:
+        - textbox "Search portal" [ref=f12e1017]
+        - button "Notifications" [ref=f12e1018] [cursor=pointer]
+        - button "A Admin" [ref=f12e1019] [cursor=pointer]:
+          - generic [ref=f12e144]: A
+          - generic [ref=f12e145]: Admin
+    - generic [ref=f12e146]:
+      - generic [ref=f12e147]:
+        - heading "Delivery" [level=4] [ref=f12e1020]
+        - paragraph [ref=f12e149]: Manage delivery within your assigned scope.
+      - button "View Customer App" [ref=f12e1021] [cursor=pointer]
+    - generic [ref=f12e151]:
+      - generic [ref=f12e152]:
+        - paragraph [ref=f12e153]: Partner accounts are assigned to a store. Demo contact details should be replaced with verified staff details before launch.
+        - generic [ref=f12e154]:
+          - button "Add delivery partner" [active] [ref=f12e1022] [cursor=pointer]
+          - button "Refresh partners" [ref=f12e1023] [cursor=pointer]
+      - alert [ref=f12e1024]:
+        - generic [ref=f12e1028]: Delivery partner account created. Share its temporary login securely and ask the partner to change the password.
+      - generic [ref=f12e157]:
+        - generic: Search partners
+        - generic [ref=f12e158]:
+          - textbox "Search partners" [ref=f12e1029]
+          - group [aria-hidden]:
+            - generic: Search partners
+      - generic [ref=f12e1030]:
+        - generic [ref=f12e1031]:
+          - paragraph [ref=f12e1032]: Demo Courier Kukatpally
+          - paragraph [ref=f12e1033]: "Store: Demo Kukatpally Basket · Store location: Kukatpally"
+          - paragraph [ref=f12e1034]: "Service region: Hyderabad"
+          - paragraph [ref=f12e1035]: Bike · DEMO-KUK-01
+          - text: No valid GPS location shared
+        - generic [ref=f12e1036]:
+          - generic [ref=f12e1037]: Active
+          - button "Edit details" [ref=f12e1039] [cursor=pointer]
+          - button "Deactivate" [ref=f12e1040] [cursor=pointer]
+          - button "View full details & location" [ref=f12e1041] [cursor=pointer]
+      - generic [ref=f12e1042]:
+        - generic [ref=f12e1043]:
+          - paragraph [ref=f12e1044]: Demo Courier LB Nagar
+          - paragraph [ref=f12e1045]: "Store: Demo LB Nagar Fresh · Store location: LB Nagar"
+          - paragraph [ref=f12e1046]: "Service region: Hyderabad"
+          - paragraph [ref=f12e1047]: Electric Bike · DEMO-LBN-01
+          - text: No valid GPS location shared
+        - generic [ref=f12e1048]:
+          - generic [ref=f12e1049]: Active
+          - button "Edit details" [ref=f12e1051] [cursor=pointer]
+          - button "Deactivate" [ref=f12e1052] [cursor=pointer]
+          - button "View full details & location" [ref=f12e1053] [cursor=pointer]
+      - generic [ref=f12e1054]:
+        - generic [ref=f12e1055]:
+          - paragraph [ref=f12e1056]: Demo Rider Gachibowli
+          - paragraph [ref=f12e1057]: "Store: Gachibowli Fresh Hub · Store location: Gachibowli"
+          - paragraph [ref=f12e1058]: "Service region: Hyderabad"
+          - paragraph [ref=f12e1059]: Van · DEMO-GCB-01
+          - text: No valid GPS location shared
+        - generic [ref=f12e1060]:
+          - generic [ref=f12e1061]: Active
+          - button "Edit details" [ref=f12e1063] [cursor=pointer]
+          - button "Deactivate" [ref=f12e1064] [cursor=pointer]
+          - button "View full details & location" [ref=f12e1065] [cursor=pointer]
+      - generic [ref=f12e1066]:
+        - generic [ref=f12e1067]:
+          - paragraph [ref=f12e1068]: Demo Rider Secunderabad
+          - paragraph [ref=f12e1069]: "Store: Demo Secunderabad Market · Store location: Secunderabad"
+          - paragraph [ref=f12e1070]: "Service region: Hyderabad"
+          - paragraph [ref=f12e1071]: Scooter · DEMO-SEC-01
+          - text: No valid GPS location shared
+        - generic [ref=f12e1072]:
+          - generic [ref=f12e1073]: Active
+          - button "Edit details" [ref=f12e1075] [cursor=pointer]
+          - button "Deactivate" [ref=f12e1076] [cursor=pointer]
+          - button "View full details & location" [ref=f12e1077] [cursor=pointer]

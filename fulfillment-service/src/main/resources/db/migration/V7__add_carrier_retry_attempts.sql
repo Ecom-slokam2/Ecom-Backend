@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS carrier_retry_attempts (
+  id BINARY(16) NOT NULL,
+  shipment_id BINARY(16) NOT NULL,
+  idempotency_key VARCHAR(100) NOT NULL,
+  attempt_number INT NOT NULL,
+  outcome VARCHAR(30) NOT NULL,
+  carrier_status INT NULL,
+  error_code VARCHAR(80) NULL,
+  retryable BOOLEAN NOT NULL DEFAULT FALSE,
+  started_at TIMESTAMP(6) NOT NULL,
+  completed_at TIMESTAMP(6) NULL,
+  created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  updated_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+  version BIGINT NOT NULL DEFAULT 0,
+  PRIMARY KEY (id),
+  CONSTRAINT fk_carrier_retry_attempt_shipment FOREIGN KEY (shipment_id) REFERENCES shipments(id),
+  CONSTRAINT uk_carrier_retry_shipment_attempt UNIQUE (shipment_id, attempt_number),
+  CONSTRAINT uk_carrier_retry_request_attempt UNIQUE (shipment_id, idempotency_key, attempt_number),
+  INDEX idx_carrier_retry_shipment (shipment_id, attempt_number)
+) ENGINE=InnoDB;

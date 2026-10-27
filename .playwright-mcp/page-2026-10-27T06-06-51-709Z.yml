@@ -1,0 +1,69 @@
+- generic [ref=f6e8]:
+  - navigation [ref=f6e9]:
+    - generic [ref=f6e10]:
+      - img "Spices and Pickles" [ref=f6e524]
+      - generic [ref=f6e12]:
+        - heading "Super Admin Portal" [level=6] [ref=f6e525]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f6e526] [cursor=pointer]
+    - generic [ref=f6e17]:
+      - generic [ref=f6e18]:
+        - paragraph [ref=f6e19]: Main
+        - button "Dashboard" [ref=f6e527] [cursor=pointer]
+      - generic [ref=f6e25]:
+        - paragraph [ref=f6e26]: Management
+        - button "Locations" [ref=f6e528] [cursor=pointer]
+        - button "Users" [ref=f6e529] [cursor=pointer]
+        - button "Stores" [ref=f6e530] [cursor=pointer]
+        - button "Products" [ref=f6e531] [cursor=pointer]
+        - button "Categories" [ref=f6e532] [cursor=pointer]
+        - button "Banners" [ref=f6e533] [cursor=pointer]
+        - button "Inventory" [ref=f6e534] [cursor=pointer]
+      - generic [ref=f6e65]:
+        - paragraph [ref=f6e66]: Orders & Payments
+        - button "Orders" [ref=f6e535] [cursor=pointer]
+        - button "Payments" [ref=f6e536] [cursor=pointer]
+        - button "Delivery" [active] [ref=f6e537] [cursor=pointer]
+      - generic [ref=f6e83]:
+        - paragraph [ref=f6e84]: Customer
+        - button "Customers" [ref=f6e538] [cursor=pointer]
+        - button "Reviews" [ref=f6e539] [cursor=pointer]
+        - button "Coupons" [ref=f6e540] [cursor=pointer]
+        - button "Notifications" [ref=f6e541] [cursor=pointer]
+      - generic [ref=f6e106]:
+        - paragraph [ref=f6e107]: Analytics
+        - button "Reports" [ref=f6e542] [cursor=pointer]
+      - generic [ref=f6e113]:
+        - paragraph [ref=f6e114]: System
+        - button "Security" [ref=f6e543] [cursor=pointer]
+        - button "Audit Logs" [ref=f6e544] [cursor=pointer]
+    - button "View Customer App" [ref=f6e545] [cursor=pointer]
+  - main [ref=f6e126]:
+    - generic [ref=f6e127]:
+      - generic [ref=f6e128]:
+        - button [ref=f6e129] [cursor=pointer]
+        - generic [ref=f6e132]:
+          - text: Super Admin /
+          - strong [ref=f6e133]: Delivery
+      - generic [ref=f6e134]:
+        - textbox "Search portal" [ref=f6e546]
+        - button "Notifications" [ref=f6e547] [cursor=pointer]
+        - button "A Admin" [ref=f6e548] [cursor=pointer]:
+          - generic [ref=f6e144]: A
+          - generic [ref=f6e145]: Admin
+    - generic [ref=f6e146]:
+      - generic [ref=f6e147]:
+        - heading "Delivery" [level=4] [ref=f6e578]
+        - paragraph [ref=f6e149]: Manage delivery within your assigned scope.
+      - button "View Customer App" [ref=f6e550] [cursor=pointer]
+    - generic [ref=f6e579]:
+      - generic [ref=f6e580]:
+        - paragraph [ref=f6e581]: Delivery Partner details and last shared GPS are limited to your authorized organization scope.
+        - button "Refresh partners" [ref=f6e582] [cursor=pointer]
+      - generic [ref=f6e583]:
+        - generic: Search partners
+        - generic [ref=f6e584]:
+          - textbox "Search partners" [ref=f6e585]
+          - group [aria-hidden]:
+            - generic: Search partners
+      - paragraph [ref=f6e586]: No delivery partners in your authorized scope.

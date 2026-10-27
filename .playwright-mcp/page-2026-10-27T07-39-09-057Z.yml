@@ -1,0 +1,45 @@
+- generic [ref=f34e730]:
+  - generic [ref=f34e731]:
+    - img "Pickles & Spices" [ref=f34e732]
+    - paragraph [ref=f34e733]: All your favorite pickles at one place
+    - img "Pickles and spices" [ref=f34e734]
+    - button "Explore Products" [ref=f34e735] [cursor=pointer]
+  - generic [ref=f34e736]:
+    - generic [ref=f34e737]:
+      - button [ref=f34e738] [cursor=pointer]
+      - button "Skip" [ref=f34e742] [cursor=pointer]
+    - generic [ref=f34e743]:
+      - heading "Sign in" [level=4] [ref=f34e744]
+      - generic [ref=f34e745]:
+        - generic [ref=f34e746]:
+          - generic:
+            - text: Email, Mobile Number or Username
+            - generic [aria-hidden]: "*"
+          - generic [ref=f34e747]:
+            - textbox "Email, Mobile Number or Username" [ref=f34e748]
+            - group [aria-hidden]:
+              - generic: Email, Mobile Number or Username *
+        - generic [ref=f34e749]:
+          - generic:
+            - text: Password
+            - generic [aria-hidden]: "*"
+          - generic [ref=f34e750]:
+            - textbox "Password" [ref=f34e751]
+            - button "Show password" [ref=f34e753] [cursor=pointer]
+            - group [aria-hidden]:
+              - generic: Password *
+        - button "Forgot Password?" [ref=f34e757] [cursor=pointer]
+        - button "Sign in" [ref=f34e758] [cursor=pointer]
+        - generic [ref=f34e759]: OR
+        - button "Sign in with Mobile OTP" [ref=f34e761] [cursor=pointer]
+        - button "Sign in with Email OTP" [ref=f34e762] [cursor=pointer]
+        - paragraph [ref=f34e763]:
+          - text: Don't have an account?
+          - button "Create Account" [ref=f34e764] [cursor=pointer]
+        - paragraph [ref=f34e766]:
+          - text: By creating an account, you agree to our
+          - link "Terms & Conditions" [ref=f34e767] [cursor=pointer]:
+            - /url: /terms-conditions
+          - text: and
+          - link "Privacy Policy" [ref=f34e768] [cursor=pointer]:
+            - /url: /privacy-policy

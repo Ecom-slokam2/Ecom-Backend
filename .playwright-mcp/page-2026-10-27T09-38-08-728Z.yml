@@ -1,0 +1,228 @@
+- generic [ref=e1]:
+  - generic [ref=e163]:
+    - complementary [ref=e164]:
+      - generic [ref=e167]:
+        - heading [level=6] [ref=e971]: Store Manager
+        - paragraph [ref=e169]: SR Nagar Store
+      - navigation [ref=e170]:
+        - button [ref=e972] [cursor=pointer]:
+          - generic [ref=e175]: Dashboard
+        - button [ref=e973] [cursor=pointer]:
+          - generic [ref=e181]: Products
+        - button [ref=e974] [cursor=pointer]:
+          - generic [ref=e186]: Banners
+        - button [ref=e975] [cursor=pointer]:
+          - generic [ref=e192]: Coupons
+        - button [ref=e976] [cursor=pointer]:
+          - generic [ref=e198]: Inventory
+        - button [ref=e977] [cursor=pointer]:
+          - generic [ref=e203]: Orders
+        - button [ref=e978] [cursor=pointer]:
+          - generic [ref=e208]: Delivery Partners
+        - button [ref=e979] [cursor=pointer]:
+          - generic [ref=e213]: Delivery Radius
+        - button [ref=e980] [cursor=pointer]:
+          - generic [ref=e218]: Delivery Settings
+        - button [ref=e981] [cursor=pointer]:
+          - generic [ref=e223]: Change Password
+        - button [ref=e982] [cursor=pointer]:
+          - generic [ref=e228]: Profile
+        - button [ref=e983] [cursor=pointer]:
+          - generic [ref=e233]: Logout
+      - button [ref=e984] [cursor=pointer]: View Customer App
+    - main [ref=e235]:
+      - generic [ref=e236]:
+        - button [ref=e985] [cursor=pointer]: Store Manager
+        - button [ref=e986] [cursor=pointer]:
+          - generic [ref=e242]: V
+          - generic [ref=e243]: Vikram SR Nagar
+        - button [ref=e987] [cursor=pointer]: Sign out
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - heading [level=4] [ref=e988]: Store Products
+          - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+        - button [ref=e989] [cursor=pointer]: Create Product
+      - alert [ref=e949]:
+        - generic [ref=e953]: Product created for your assigned store.
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic: Search your products
+          - generic [ref=e252]:
+            - textbox [ref=e990]
+            - group [aria-hidden]:
+              - generic: Search your products
+        - paragraph [ref=e254]: 3 products
+      - generic [ref=e531]:
+        - generic [ref=e532]:
+          - generic [ref=e533]:
+            - paragraph [ref=e534]: Afghan Black Raisins
+            - paragraph [ref=e535]: DRY-RAISIN-AFG-001-SRN · Premium Dry Fruits · Spices and Pickles
+          - generic [ref=e536]: ACTIVE
+          - button [ref=e991] [cursor=pointer]: Available
+          - button [ref=e992] [cursor=pointer]: Edit
+          - button [ref=e993] [cursor=pointer]: Delete
+        - generic [ref=e744]:
+          - generic [ref=e745]:
+            - paragraph [ref=e746]: Andhra Lemon Pickle
+            - paragraph [ref=e747]: PKL-LEMON-250-001-SRN · Traditional Pickles · Spices and Pickles
+          - generic [ref=e748]: ACTIVE
+          - button [ref=e994] [cursor=pointer]: Available
+          - button [ref=e995] [cursor=pointer]: Edit
+          - button [ref=e996] [cursor=pointer]: Delete
+        - generic [ref=e961]:
+          - generic [ref=e962]:
+            - paragraph [ref=e963]: Andhra Mango Avakaya Pickle
+            - paragraph [ref=e964]: PKL-ANDHRA-AVAKAYA-500-001-SRN · Traditional Pickles · Spices and Pickles
+          - generic [ref=e965]: ACTIVE
+          - button [ref=e997] [cursor=pointer]: Available
+          - button [ref=e998] [cursor=pointer]: Edit
+          - button [ref=e999] [cursor=pointer]: Delete
+  - dialog [ref=e1096]:
+    - heading [level=2] [ref=e1097]: Create Store Product
+    - generic [ref=e1004]:
+      - generic [ref=e1005]:
+        - generic [ref=e1006]: Category
+        - generic [ref=e1007]:
+          - combobox [expanded] [ref=e1098] [cursor=pointer]: Traditional Pickles
+          - textbox [aria-hidden]: 0c13c8a0-6d42-496c-9370-7f8e850371b0
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=e1009]:
+        - generic: Product name
+        - generic [ref=e1010]:
+          - textbox [ref=e1099]
+          - group [aria-hidden]:
+            - generic: Product name
+      - generic [ref=e1012]:
+        - generic: SKU
+        - generic [ref=e1013]:
+          - textbox [ref=e1100]
+          - group [aria-hidden]:
+            - generic: SKU
+      - generic [ref=e1015]:
+        - generic: Brand
+        - generic [ref=e1016]:
+          - textbox [ref=e1101]
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=e1018]:
+        - generic: URL slug (optional)
+        - generic [ref=e1019]:
+          - textbox [ref=e1102]
+          - group [aria-hidden]:
+            - generic: URL slug (optional)
+      - generic [ref=e1021]:
+        - generic [ref=e1022]: Subcategory
+        - generic [ref=e1023]:
+          - textbox [ref=e1103]: Other
+          - group [aria-hidden]:
+            - generic: Subcategory
+      - generic [ref=e1025]:
+        - generic: Pack
+        - generic [ref=e1026]:
+          - textbox [ref=e1104]
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=e1028]:
+        - generic: Product type
+        - generic [ref=e1029]:
+          - textbox [ref=e1105]
+          - group [aria-hidden]:
+            - generic: Product type
+      - generic [ref=e1031]:
+        - generic: Shelf life
+        - generic [ref=e1032]:
+          - textbox [ref=e1106]
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=e1034]:
+        - generic [ref=e1035]: Status
+        - generic [ref=e1036]:
+          - combobox [ref=e1107] [cursor=pointer]: Active
+          - textbox [aria-hidden]: ACTIVE
+          - group [aria-hidden]:
+            - generic: Status
+      - generic [ref=e1038]:
+        - generic: Description
+        - generic [ref=e1039]:
+          - textbox [ref=e1108]
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=e1041]:
+        - generic: Ingredients
+        - generic [ref=e1042]:
+          - textbox [ref=e1109]
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=e1044]:
+        - generic: Specifications
+        - generic [ref=e1045]:
+          - textbox [ref=e1110]
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=e1047]:
+        - generic: Highlights
+        - generic [ref=e1048]:
+          - textbox [ref=e1111]
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=e1050]:
+        - generic: Tags
+        - generic [ref=e1051]:
+          - textbox [ref=e1112]
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=e1053]:
+        - generic [ref=e1054]:
+          - paragraph [ref=e1055]: Variants and prices
+          - button [ref=e1113] [cursor=pointer]: Add Variant
+        - generic [ref=e1057]:
+          - generic [ref=e1058]:
+            - generic: Variant SKU
+            - generic [ref=e1059]:
+              - textbox [ref=e1114]
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e1061]:
+            - generic: Variant / pack name
+            - generic [ref=e1062]:
+              - textbox [ref=e1115]
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e1064]:
+            - generic: Price
+            - generic [ref=e1065]:
+              - spinbutton [ref=e1116]
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e1067]:
+            - generic: Compare-at price
+            - generic [ref=e1068]:
+              - spinbutton [ref=e1117]
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e1070]:
+            - generic [ref=e1071] [cursor=pointer]:
+              - checkbox [checked] [ref=e1118]
+              - generic [ref=e1076]: Active
+            - button [ref=e1119] [cursor=pointer]: Remove
+          - generic [ref=e1078]:
+            - generic: Variant attributes (JSON or text)
+            - generic [ref=e1079]:
+              - textbox [ref=e1120]
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e1081]: Active products need at least one active, priced variant.
+      - generic [ref=e1083]:
+        - paragraph [ref=e1084]: Product images
+        - button [ref=e1121] [cursor=pointer]: Add Image
+      - generic [ref=e1086] [cursor=pointer]:
+        - checkbox [checked] [ref=e1122]
+        - generic [ref=e1091]: Available in my store
+    - generic [ref=e1092]:
+      - button [ref=e1123] [cursor=pointer]: Cancel
+      - button [ref=e1124] [cursor=pointer]: Save Product
+  - listbox "Category" [ref=e1127]:
+    - option "Traditional Pickles" [active] [selected] [ref=e1128] [cursor=pointer]
+    - option "Premium Dry Fruits" [ref=e1129] [cursor=pointer]
+    - option "Spice Powders" [ref=e1130] [cursor=pointer]

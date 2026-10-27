@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.UUID;
 import com.metaarch.catalog.common.AuditedEntity;
 import jakarta.persistence.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 @Entity
 @Table(name = "banners")
@@ -15,11 +17,11 @@ public class Banner extends AuditedEntity {
   @Column(name = "image_url", nullable = false, columnDefinition = "MEDIUMTEXT") private String imageUrl;
   @Column(name = "mobile_image_url", columnDefinition = "MEDIUMTEXT") private String mobileImageUrl;
   @Column(name = "target_url", length = 2048) private String targetUrl;
-  @Enumerated(EnumType.STRING) @Column(nullable = false, length = 20) private BannerScope scope = BannerScope.GLOBAL;
+  @Enumerated(EnumType.STRING) @JdbcTypeCode(SqlTypes.VARCHAR) @Column(nullable = false, length = 20) private BannerScope scope = BannerScope.GLOBAL;
   @Column(name = "location_id", length = 100) private String locationId;
   @Column(name = "store_id", length = 100) private String storeId;
   @Column(name = "sort_order", nullable = false) private int sortOrder = 0;
-  @Enumerated(EnumType.STRING) @Column(nullable = false, length = 20) private BannerStatus status = BannerStatus.ACTIVE;
+  @Enumerated(EnumType.STRING) @JdbcTypeCode(SqlTypes.VARCHAR) @Column(nullable = false, length = 20) private BannerStatus status = BannerStatus.ACTIVE;
   @Column(name = "starts_on") private LocalDate startsOn;
   @Column(name = "ends_on") private LocalDate endsOn;
 

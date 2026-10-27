@@ -1,0 +1,178 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e8]:
+    - navigation [ref=f12e9]:
+      - generic [ref=f12e10]:
+        - generic [ref=f12e12]:
+          - heading [level=6] [ref=f12e1278]: Super Admin Portal
+          - text: All locations
+        - button [ref=f12e1279] [cursor=pointer]
+      - generic [ref=f12e17]:
+        - generic [ref=f12e18]:
+          - paragraph [ref=f12e19]: Main
+          - button [ref=f12e1280] [cursor=pointer]:
+            - generic [ref=f12e24]: Dashboard
+        - generic [ref=f12e25]:
+          - paragraph [ref=f12e26]: Management
+          - button [ref=f12e1281] [cursor=pointer]:
+            - generic [ref=f12e32]: Locations
+          - button [ref=f12e1282] [cursor=pointer]:
+            - generic [ref=f12e37]: Users
+          - button [ref=f12e1283] [cursor=pointer]:
+            - generic [ref=f12e42]: Stores
+          - button [ref=f12e1284] [cursor=pointer]:
+            - generic [ref=f12e48]: Products
+          - button [ref=f12e1285] [cursor=pointer]:
+            - generic [ref=f12e53]: Categories
+          - button [ref=f12e1286] [cursor=pointer]:
+            - generic [ref=f12e58]: Banners
+          - button [ref=f12e1287] [cursor=pointer]:
+            - generic [ref=f12e64]: Inventory
+        - generic [ref=f12e65]:
+          - paragraph [ref=f12e66]: Orders & Payments
+          - button [ref=f12e1288] [cursor=pointer]:
+            - generic [ref=f12e71]: Orders
+          - button [ref=f12e1289] [cursor=pointer]:
+            - generic [ref=f12e77]: Payments
+          - button [ref=f12e1290] [cursor=pointer]:
+            - generic [ref=f12e82]: Delivery
+        - generic [ref=f12e83]:
+          - paragraph [ref=f12e84]: Customer
+          - button [ref=f12e1291] [cursor=pointer]:
+            - generic [ref=f12e89]: Customers
+          - button [ref=f12e1292] [cursor=pointer]:
+            - generic [ref=f12e94]: Reviews
+          - button [ref=f12e1293] [cursor=pointer]:
+            - generic [ref=f12e100]: Coupons
+          - button [ref=f12e1294] [cursor=pointer]:
+            - generic [ref=f12e105]: Notifications
+        - generic [ref=f12e106]:
+          - paragraph [ref=f12e107]: Analytics
+          - button [ref=f12e1295] [cursor=pointer]:
+            - generic [ref=f12e112]: Reports
+        - generic [ref=f12e113]:
+          - paragraph [ref=f12e114]: System
+          - button [ref=f12e1296] [cursor=pointer]:
+            - generic [ref=f12e119]: Security
+          - button [ref=f12e1297] [cursor=pointer]:
+            - generic [ref=f12e124]: Audit Logs
+      - button [ref=f12e1298] [cursor=pointer]: View Customer App
+    - main [ref=f12e126]:
+      - generic [ref=f12e127]:
+        - generic [ref=f12e128]:
+          - button [ref=f12e129] [cursor=pointer]
+          - generic [ref=f12e132]:
+            - text: Super Admin /
+            - strong [ref=f12e133]: Categories
+        - generic [ref=f12e134]:
+          - textbox [ref=f12e1299]:
+            - /placeholder: Search portal
+          - button [ref=f12e1300] [cursor=pointer]
+          - button [ref=f12e1301] [cursor=pointer]:
+            - generic [ref=f12e144]: A
+            - generic [ref=f12e145]: Admin
+      - generic [ref=f12e146]:
+        - generic [ref=f12e147]:
+          - heading [level=4] [ref=f12e1302]: Categories
+          - paragraph [ref=f12e149]: Manage categories within your assigned scope.
+        - button [ref=f12e1303] [cursor=pointer]: View Customer App
+      - generic [ref=f12e1079]:
+        - generic [ref=f12e1080]:
+          - generic [ref=f12e1081]:
+            - generic: Search
+            - generic [ref=f12e1082]:
+              - textbox [ref=f12e1304]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f12e1084]:
+            - combobox [ref=f12e1085] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f12e1086]:
+            - combobox [ref=f12e1087] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f12e1305] [cursor=pointer]: Create
+          - button [ref=f12e1306] [cursor=pointer]: Export
+        - generic [ref=f12e1252]:
+          - generic [ref=f12e1253]:
+            - paragraph [ref=f12e1254]: Demo Regional Spice Blends
+            - paragraph [ref=f12e1255]: Active
+          - generic [ref=f12e1256]:
+            - button [ref=f12e1307] [cursor=pointer]: View
+            - button [ref=f12e1308] [cursor=pointer]: Edit
+            - button [ref=f12e1309] [cursor=pointer]: Deactivate
+            - button [ref=f12e1310] [cursor=pointer]: Delete
+        - generic [ref=f12e1090]:
+          - generic [ref=f12e1091]:
+            - paragraph [ref=f12e1092]: Traditional Pickles
+            - paragraph [ref=f12e1093]: Active
+          - generic [ref=f12e1094]:
+            - button [ref=f12e1311] [cursor=pointer]: View
+            - button [ref=f12e1312] [cursor=pointer]: Edit
+            - button [ref=f12e1313] [cursor=pointer]: Deactivate
+            - button [ref=f12e1314] [cursor=pointer]: Delete
+        - generic [ref=f12e1099]:
+          - generic [ref=f12e1100]:
+            - paragraph [ref=f12e1101]: Premium Dry Fruits
+            - paragraph [ref=f12e1102]: Active
+          - generic [ref=f12e1103]:
+            - button [ref=f12e1315] [cursor=pointer]: View
+            - button [ref=f12e1316] [cursor=pointer]: Edit
+            - button [ref=f12e1317] [cursor=pointer]: Deactivate
+            - button [ref=f12e1318] [cursor=pointer]: Delete
+        - generic [ref=f12e1108]:
+          - generic [ref=f12e1109]:
+            - paragraph [ref=f12e1110]: Fresh Vegetables
+            - paragraph [ref=f12e1111]: Active
+          - generic [ref=f12e1112]:
+            - button [ref=f12e1319] [cursor=pointer]: View
+            - button [ref=f12e1320] [cursor=pointer]: Edit
+            - button [ref=f12e1321] [cursor=pointer]: Deactivate
+            - button [ref=f12e1322] [cursor=pointer]: Delete
+        - generic [ref=f12e1117]:
+          - generic [ref=f12e1118]:
+            - paragraph [ref=f12e1119]: Fresh Non-Veg
+            - paragraph [ref=f12e1120]: Active
+          - generic [ref=f12e1121]:
+            - button [ref=f12e1323] [cursor=pointer]: View
+            - button [ref=f12e1324] [cursor=pointer]: Edit
+            - button [ref=f12e1325] [cursor=pointer]: Deactivate
+            - button [ref=f12e1326] [cursor=pointer]: Delete
+        - generic [ref=f12e1126]:
+          - button [disabled]: Previous
+          - paragraph [ref=f12e1127]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f12e1352]:
+    - heading [level=2] [ref=f12e1353]: Create Categories
+    - generic [ref=f12e1331]:
+      - generic [ref=f12e1333]:
+        - generic [ref=f12e1354]:
+          - text: Category name
+          - generic [aria-hidden] [ref=f12e1355]: "*"
+        - generic [ref=f12e1334]:
+          - textbox [ref=f12e1356]: Demo Millet Pantry
+          - group [aria-hidden]:
+            - generic: Category name *
+      - generic [ref=f12e1337]:
+        - generic [ref=f12e1357]: Description
+        - generic [ref=f12e1338]:
+          - textbox [ref=f12e1358]: Demo pantry category for Hyderabad catalog and checkout tests.
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=f12e1341]:
+        - generic: Thumbnail URL
+        - generic [ref=f12e1342]:
+          - textbox [ref=f12e1359]
+          - group [aria-hidden]:
+            - generic: Thumbnail URL
+      - generic [ref=f12e1345]:
+        - combobox [expanded] [ref=f12e1346] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+    - generic [ref=f12e1348]:
+      - button [ref=f12e1360] [cursor=pointer]: Cancel
+      - button [ref=f12e1361] [cursor=pointer]: Save
+  - listbox [ref=f12e1364]:
+    - option "Status" [disabled] [selected]
+    - option "Active" [active] [ref=f12e1365] [cursor=pointer]
+    - option "Inactive" [ref=f12e1366] [cursor=pointer]

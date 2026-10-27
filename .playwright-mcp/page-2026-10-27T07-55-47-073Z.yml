@@ -1,0 +1,88 @@
+- generic [ref=f39e8]:
+  - navigation [ref=f39e9]:
+    - generic [ref=f39e10]:
+      - img "Spices and Pickles" [ref=f39e348]
+      - generic [ref=f39e12]:
+        - heading "Global Admin Portal" [level=6] [ref=f39e349]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f39e350] [cursor=pointer]
+    - generic [ref=f39e17]:
+      - generic [ref=f39e18]:
+        - paragraph [ref=f39e19]: Main
+        - button "Dashboard" [ref=f39e351] [cursor=pointer]
+      - generic [ref=f39e25]:
+        - paragraph [ref=f39e26]: Management
+        - button "Stores" [ref=f39e352] [cursor=pointer]
+        - button "Products" [ref=f39e353] [cursor=pointer]
+        - button "Categories" [ref=f39e354] [cursor=pointer]
+        - button "Banners" [ref=f39e355] [cursor=pointer]
+        - button "Inventory" [ref=f39e356] [cursor=pointer]
+      - generic [ref=f39e54]:
+        - paragraph [ref=f39e55]: Orders & Payments
+        - button "Orders" [ref=f39e357] [cursor=pointer]
+        - button "Payments" [ref=f39e358] [cursor=pointer]
+        - button "Delivery" [ref=f39e359] [cursor=pointer]
+      - generic [ref=f39e72]:
+        - paragraph [ref=f39e73]: Customer
+        - button "Customers" [ref=f39e360] [cursor=pointer]
+        - button "Reviews" [ref=f39e361] [cursor=pointer]
+        - button "Coupons" [ref=f39e362] [cursor=pointer]
+        - button "Notifications" [ref=f39e363] [cursor=pointer]
+      - generic [ref=f39e95]:
+        - paragraph [ref=f39e96]: Analytics
+        - button "Reports" [ref=f39e364] [cursor=pointer]
+      - generic [ref=f39e102]:
+        - paragraph [ref=f39e103]: System
+        - button "Audit Logs" [ref=f39e365] [cursor=pointer]
+    - button "View Customer App" [ref=f39e366] [cursor=pointer]
+  - main [ref=f39e110]:
+    - generic [ref=f39e111]:
+      - generic [ref=f39e112]:
+        - button [ref=f39e113] [cursor=pointer]
+        - generic [ref=f39e116]:
+          - text: Global Admin /
+          - strong [ref=f39e117]: Products
+      - generic [ref=f39e118]:
+        - textbox "Search portal" [ref=f39e367]
+        - button "Notifications" [ref=f39e368] [cursor=pointer]
+        - button "G Global Administrator" [ref=f39e369] [cursor=pointer]:
+          - generic [ref=f39e128]: G
+          - generic [ref=f39e129]: Global Administrator
+    - generic [ref=f39e130]:
+      - generic [ref=f39e131]:
+        - heading "Products" [level=4] [ref=f39e370]
+        - paragraph [ref=f39e133]: Manage products within your assigned scope.
+      - button "View Customer App" [ref=f39e371] [cursor=pointer]
+    - generic [ref=f39e135]:
+      - generic [ref=f39e136]:
+        - generic [ref=f39e137]:
+          - generic: Search
+          - generic [ref=f39e138]:
+            - textbox "Search" [ref=f39e372]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f39e140]:
+          - combobox [ref=f39e141] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f39e142]:
+          - combobox [ref=f39e143] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=f39e373] [cursor=pointer]
+        - button "Export" [ref=f39e374] [cursor=pointer]
+      - status [ref=f39e375]: Saved successfully.
+      - generic [ref=f39e376]:
+        - generic [ref=f39e377]:
+          - paragraph [ref=f39e378]: Andhra Mango Avakaya Pickle
+          - paragraph [ref=f39e379]: PKL-ANDHRA-AVAKAYA-500-001
+        - generic [ref=f39e380]:
+          - button "View" [ref=f39e381] [cursor=pointer]
+          - button "Edit" [ref=f39e382] [cursor=pointer]
+          - button "Duplicate" [ref=f39e383] [cursor=pointer]
+          - button "Deactivate" [ref=f39e384] [cursor=pointer]
+          - button "Delete" [ref=f39e385] [cursor=pointer]
+      - generic [ref=f39e147]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f39e148]: Page 1 of 1
+        - button "Next" [disabled]

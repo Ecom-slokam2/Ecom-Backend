@@ -1,0 +1,308 @@
+- generic [ref=f13e1]:
+  - generic [ref=f13e8]:
+    - navigation [ref=f13e9]:
+      - generic [ref=f13e10]:
+        - generic [ref=f13e12]:
+          - heading [level=6] [ref=f13e13]: Super Admin Portal
+          - text: All locations
+        - button [ref=f13e14] [cursor=pointer]
+      - generic [ref=f13e17]:
+        - generic [ref=f13e18]:
+          - paragraph [ref=f13e19]: Main
+          - button [ref=f13e20] [cursor=pointer]:
+            - generic [ref=f13e24]: Dashboard
+        - generic [ref=f13e25]:
+          - paragraph [ref=f13e26]: Management
+          - button [ref=f13e27] [cursor=pointer]:
+            - generic [ref=f13e32]: Locations
+          - button [ref=f13e33] [cursor=pointer]:
+            - generic [ref=f13e37]: Users
+          - button [ref=f13e38] [cursor=pointer]:
+            - generic [ref=f13e42]: Stores
+          - button [ref=f13e43] [cursor=pointer]:
+            - generic [ref=f13e48]: Products
+          - button [ref=f13e49] [cursor=pointer]:
+            - generic [ref=f13e53]: Categories
+          - button [ref=f13e54] [cursor=pointer]:
+            - generic [ref=f13e58]: Banners
+          - button [ref=f13e59] [cursor=pointer]:
+            - generic [ref=f13e64]: Inventory
+        - generic [ref=f13e65]:
+          - paragraph [ref=f13e66]: Orders & Payments
+          - button [ref=f13e67] [cursor=pointer]:
+            - generic [ref=f13e71]: Orders
+          - button [ref=f13e72] [cursor=pointer]:
+            - generic [ref=f13e77]: Payments
+          - button [ref=f13e78] [cursor=pointer]:
+            - generic [ref=f13e82]: Delivery
+        - generic [ref=f13e83]:
+          - paragraph [ref=f13e84]: Customer
+          - button [ref=f13e85] [cursor=pointer]:
+            - generic [ref=f13e89]: Customers
+          - button [ref=f13e90] [cursor=pointer]:
+            - generic [ref=f13e94]: Reviews
+          - button [ref=f13e95] [cursor=pointer]:
+            - generic [ref=f13e100]: Coupons
+          - button [ref=f13e101] [cursor=pointer]:
+            - generic [ref=f13e105]: Notifications
+        - generic [ref=f13e106]:
+          - paragraph [ref=f13e107]: Analytics
+          - button [ref=f13e108] [cursor=pointer]:
+            - generic [ref=f13e112]: Reports
+        - generic [ref=f13e113]:
+          - paragraph [ref=f13e114]: System
+          - button [ref=f13e115] [cursor=pointer]:
+            - generic [ref=f13e119]: Security
+          - button [ref=f13e120] [cursor=pointer]:
+            - generic [ref=f13e124]: Audit Logs
+      - button [ref=f13e125] [cursor=pointer]: View Customer App
+    - main [ref=f13e126]:
+      - generic [ref=f13e127]:
+        - generic [ref=f13e128]:
+          - button [ref=f13e129] [cursor=pointer]
+          - generic [ref=f13e132]:
+            - text: Super Admin /
+            - strong [ref=f13e133]: Products
+        - generic [ref=f13e134]:
+          - textbox [ref=f13e139]:
+            - /placeholder: Search portal
+          - button [ref=f13e140] [cursor=pointer]
+          - button [ref=f13e143] [cursor=pointer]:
+            - generic [ref=f13e144]: A
+            - generic [ref=f13e145]: Admin
+      - generic [ref=f13e146]:
+        - generic [ref=f13e147]:
+          - heading [level=4] [ref=f13e148]: Products
+          - paragraph [ref=f13e149]: Manage products within your assigned scope.
+        - button [ref=f13e150] [cursor=pointer]: View Customer App
+      - generic [ref=f13e151]:
+        - generic [ref=f13e152]:
+          - generic [ref=f13e153]:
+            - generic: Search
+            - generic [ref=f13e154]:
+              - textbox [ref=f13e155]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f13e156]:
+            - combobox [ref=f13e157] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f13e158]:
+            - combobox [ref=f13e159] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f13e160] [cursor=pointer]: Create
+          - button [ref=f13e161] [cursor=pointer]: Export
+        - generic [ref=f13e162]:
+          - generic [ref=f13e163]:
+            - paragraph [ref=f13e164]: California Almonds
+            - paragraph [ref=f13e165]: DRY-CAL-ALMOND
+          - generic [ref=f13e166]:
+            - button [ref=f13e167] [cursor=pointer]: View
+            - button [ref=f13e168] [cursor=pointer]: Edit
+            - button [ref=f13e169] [cursor=pointer]: Duplicate
+            - button [ref=f13e170] [cursor=pointer]: Deactivate
+            - button [ref=f13e171] [cursor=pointer]: Delete
+        - generic [ref=f13e172]:
+          - generic [ref=f13e173]:
+            - paragraph [ref=f13e174]: Premium Cashew Nuts
+            - paragraph [ref=f13e175]: DRY-PREM-CASHEW
+          - generic [ref=f13e176]:
+            - button [ref=f13e177] [cursor=pointer]: View
+            - button [ref=f13e178] [cursor=pointer]: Edit
+            - button [ref=f13e179] [cursor=pointer]: Duplicate
+            - button [ref=f13e180] [cursor=pointer]: Deactivate
+            - button [ref=f13e181] [cursor=pointer]: Delete
+        - generic [ref=f13e182]:
+          - generic [ref=f13e183]:
+            - paragraph [ref=f13e184]: Afghan Raisins
+            - paragraph [ref=f13e185]: DRY-AFG-RAISIN
+          - generic [ref=f13e186]:
+            - button [ref=f13e187] [cursor=pointer]: View
+            - button [ref=f13e188] [cursor=pointer]: Edit
+            - button [ref=f13e189] [cursor=pointer]: Duplicate
+            - button [ref=f13e190] [cursor=pointer]: Deactivate
+            - button [ref=f13e191] [cursor=pointer]: Delete
+        - generic [ref=f13e192]:
+          - generic [ref=f13e193]:
+            - paragraph [ref=f13e194]: Andhra Mango Avakaya Pickle
+            - paragraph [ref=f13e195]: PKL-ANDHRA-AVAKAYA
+          - generic [ref=f13e196]:
+            - button [ref=f13e197] [cursor=pointer]: View
+            - button [ref=f13e198] [cursor=pointer]: Edit
+            - button [ref=f13e199] [cursor=pointer]: Duplicate
+            - button [ref=f13e200] [cursor=pointer]: Deactivate
+            - button [ref=f13e201] [cursor=pointer]: Delete
+        - generic [ref=f13e202]:
+          - generic [ref=f13e203]:
+            - paragraph [ref=f13e204]: Chicken Boneless
+            - paragraph [ref=f13e205]: NV-CHICKEN-BONELESS
+          - generic [ref=f13e206]:
+            - button [ref=f13e207] [cursor=pointer]: View
+            - button [ref=f13e208] [cursor=pointer]: Edit
+            - button [ref=f13e209] [cursor=pointer]: Duplicate
+            - button [ref=f13e210] [cursor=pointer]: Deactivate
+            - button [ref=f13e211] [cursor=pointer]: Delete
+        - generic [ref=f13e212]:
+          - generic [ref=f13e213]:
+            - paragraph [ref=f13e214]: Chicken Breast
+            - paragraph [ref=f13e215]: NV-CHICKEN-BREAST
+          - generic [ref=f13e216]:
+            - button [ref=f13e217] [cursor=pointer]: View
+            - button [ref=f13e218] [cursor=pointer]: Edit
+            - button [ref=f13e219] [cursor=pointer]: Duplicate
+            - button [ref=f13e220] [cursor=pointer]: Deactivate
+            - button [ref=f13e221] [cursor=pointer]: Delete
+        - generic [ref=f13e222]:
+          - button [disabled]: Previous
+          - paragraph [ref=f13e223]: Page 1 of 6
+          - button [ref=f13e224] [cursor=pointer]: Next
+  - dialog [ref=f13e227]:
+    - heading "Create Products" [level=2] [ref=f13e228]
+    - generic [ref=f13e229]:
+      - generic [ref=f13e231]:
+        - generic [ref=f13e232]:
+          - text: Product name
+          - generic [aria-hidden] [ref=f13e233]: "*"
+        - generic [ref=f13e234]:
+          - textbox "Product name" [ref=f13e235]: Demo Ragi Flour
+          - group [aria-hidden]:
+            - generic: Product name *
+      - generic [ref=f13e237]:
+        - generic [ref=f13e238]:
+          - text: Master SKU
+          - generic [aria-hidden] [ref=f13e239]: "*"
+        - generic [ref=f13e240]:
+          - textbox "Master SKU" [ref=f13e241]: DEMO-RAGI-1KG
+          - group [aria-hidden]:
+            - generic: Master SKU *
+      - generic [ref=f13e244]:
+        - generic [ref=f13e245]: Category
+        - generic [ref=f13e246]:
+          - combobox "Category" [ref=f13e247]: Demo Millet Pantry
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=f13e250]:
+        - generic: Sub-category
+        - generic [ref=f13e251]:
+          - textbox "Sub-category" [ref=f13e252]
+          - group [aria-hidden]:
+            - generic: Sub-category
+      - generic [ref=f13e254]:
+        - generic [ref=f13e255]:
+          - text: Description
+          - generic [aria-hidden] [ref=f13e256]: "*"
+        - generic [ref=f13e257]:
+          - textbox "Description" [ref=f13e258]: Demo 1 kg ragi flour listing for product discovery, cart, and checkout testing.
+          - group [aria-hidden]:
+            - generic: Description *
+      - generic [ref=f13e260]:
+        - generic [ref=f13e261]: Brand
+        - generic [ref=f13e262]:
+          - textbox "Brand" [ref=f13e263]: Demo Pantry
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=f13e265]:
+        - generic: Ingredients
+        - generic [ref=f13e266]:
+          - textbox "Ingredients" [ref=f13e267]
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=f13e269]:
+        - generic: Specifications
+        - generic [ref=f13e270]:
+          - textbox "Specifications" [ref=f13e271]
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=f13e273]:
+        - generic [ref=f13e274]: Pack
+        - generic [ref=f13e275]:
+          - textbox "Pack" [ref=f13e276]: 1 kg
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=f13e278]:
+        - generic: Type
+        - generic [ref=f13e279]:
+          - textbox "Type" [ref=f13e280]
+          - group [aria-hidden]:
+            - generic: Type
+      - generic [ref=f13e282]:
+        - generic: Shelf life
+        - generic [ref=f13e283]:
+          - textbox "Shelf life" [ref=f13e284]
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=f13e286]:
+        - generic: Tags
+        - generic [ref=f13e287]:
+          - textbox "Tags" [ref=f13e288]
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=f13e290]:
+        - generic: Highlights
+        - generic [ref=f13e291]:
+          - textbox "Highlights" [ref=f13e292]
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=f13e294]:
+        - generic: About the Source
+        - generic [ref=f13e295]:
+          - textbox "About the Source" [ref=f13e296]
+          - group [aria-hidden]:
+            - generic: About the Source
+      - generic [ref=f13e298]:
+        - generic [ref=f13e299]: "Variants (one per line: Label | SKU | Price)"
+        - generic [ref=f13e300]:
+          - 'textbox "Variants (one per line: Label | SKU | Price)" [ref=f13e301]': 1 kg | DEMO-RAGI-1KG-V1 | 89
+          - group [aria-hidden]:
+            - generic: "Variants (one per line: Label | SKU | Price)"
+      - generic [ref=f13e303]:
+        - generic [ref=f13e304]:
+          - text: Default price
+          - generic [aria-hidden] [ref=f13e305]: "*"
+        - generic [ref=f13e306]:
+          - spinbutton "Default price" [ref=f13e307]: "89"
+          - group [aria-hidden]:
+            - generic: Default price *
+      - generic [ref=f13e309]:
+        - generic: Main image URL
+        - generic [ref=f13e310]:
+          - textbox "Main image URL" [ref=f13e311]
+          - group [aria-hidden]:
+            - generic: Main image URL
+      - generic [ref=f13e313]:
+        - combobox [ref=f13e314] [cursor=pointer]: Featured product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f13e316]:
+        - combobox [ref=f13e317] [cursor=pointer]: Special product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f13e319]:
+        - combobox [ref=f13e320] [cursor=pointer]: New arrival
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f13e322]:
+        - combobox [ref=f13e323] [cursor=pointer]: Best seller
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f13e325]:
+        - combobox [ref=f13e326] [cursor=pointer]: Status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f13e327]:
+        - paragraph [ref=f13e328]: Store availability and pricing
+        - generic [ref=f13e330]:
+          - generic [ref=f13e331]: Mapped stores
+          - generic [ref=f13e332]:
+            - button "Demo Kukatpally Basket (store-demo-kukatpally-basket)" [ref=f13e333]:
+              - img [aria-hidden] [ref=f13e335] [cursor=pointer]
+            - combobox "Mapped stores" [ref=f13e337]
+            - button "Open" [ref=f13e342] [cursor=pointer]
+            - group [aria-hidden]:
+              - generic: Mapped stores
+          - paragraph [ref=f13e345]: Select stores to assign; remove a selection to unassign.
+        - paragraph [ref=f13e346]: "Demo Kukatpally Basket: will be assigned when saved."
+    - generic [ref=f13e348]:
+      - button "Cancel" [ref=f13e349] [cursor=pointer]
+      - button "Save" [active] [ref=f13e350] [cursor=pointer]

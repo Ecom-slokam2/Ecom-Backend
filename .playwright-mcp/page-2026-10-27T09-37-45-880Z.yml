@@ -1,0 +1,268 @@
+- generic [ref=e1]:
+  - generic [ref=e163]:
+    - complementary [ref=e164]:
+      - generic [ref=e167]:
+        - heading [level=6] [ref=e754]: Store Manager
+        - paragraph [ref=e169]: SR Nagar Store
+      - navigation [ref=e170]:
+        - button [ref=e755] [cursor=pointer]:
+          - generic [ref=e175]: Dashboard
+        - button [ref=e756] [cursor=pointer]:
+          - generic [ref=e181]: Products
+        - button [ref=e757] [cursor=pointer]:
+          - generic [ref=e186]: Banners
+        - button [ref=e758] [cursor=pointer]:
+          - generic [ref=e192]: Coupons
+        - button [ref=e759] [cursor=pointer]:
+          - generic [ref=e198]: Inventory
+        - button [ref=e760] [cursor=pointer]:
+          - generic [ref=e203]: Orders
+        - button [ref=e761] [cursor=pointer]:
+          - generic [ref=e208]: Delivery Partners
+        - button [ref=e762] [cursor=pointer]:
+          - generic [ref=e213]: Delivery Radius
+        - button [ref=e763] [cursor=pointer]:
+          - generic [ref=e218]: Delivery Settings
+        - button [ref=e764] [cursor=pointer]:
+          - generic [ref=e223]: Change Password
+        - button [ref=e765] [cursor=pointer]:
+          - generic [ref=e228]: Profile
+        - button [ref=e766] [cursor=pointer]:
+          - generic [ref=e233]: Logout
+      - button [ref=e767] [cursor=pointer]: View Customer App
+    - main [ref=e235]:
+      - generic [ref=e236]:
+        - button [ref=e768] [cursor=pointer]: Store Manager
+        - button [ref=e769] [cursor=pointer]:
+          - generic [ref=e242]: V
+          - generic [ref=e243]: Vikram SR Nagar
+        - button [ref=e770] [cursor=pointer]: Sign out
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - heading [level=4] [ref=e771]: Store Products
+          - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+        - button [ref=e772] [cursor=pointer]: Create Product
+      - alert [ref=e735]:
+        - generic [ref=e739]: Product created for your assigned store.
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic: Search your products
+          - generic [ref=e252]:
+            - textbox [ref=e773]
+            - group [aria-hidden]:
+              - generic: Search your products
+        - paragraph [ref=e254]: 2 products
+      - generic [ref=e531]:
+        - generic [ref=e532]:
+          - generic [ref=e533]:
+            - paragraph [ref=e534]: Afghan Black Raisins
+            - paragraph [ref=e535]: DRY-RAISIN-AFG-001-SRN · Premium Dry Fruits · Spices and Pickles
+          - generic [ref=e536]: ACTIVE
+          - button [ref=e774] [cursor=pointer]: Available
+          - button [ref=e775] [cursor=pointer]: Edit
+          - button [ref=e776] [cursor=pointer]: Delete
+        - generic [ref=e744]:
+          - generic [ref=e745]:
+            - paragraph [ref=e746]: Andhra Lemon Pickle
+            - paragraph [ref=e747]: PKL-LEMON-250-001-SRN · Traditional Pickles · Spices and Pickles
+          - generic [ref=e748]: ACTIVE
+          - button [ref=e777] [cursor=pointer]: Available
+          - button [ref=e778] [cursor=pointer]: Edit
+          - button [ref=e779] [cursor=pointer]: Delete
+  - dialog [ref=e782]:
+    - heading "Create Store Product" [level=2] [ref=e783]
+    - generic [ref=e784]:
+      - generic [ref=e785]:
+        - generic [ref=e786]: Category
+        - generic [ref=e787]:
+          - combobox "Category" [ref=e788] [cursor=pointer]: Traditional Pickles
+          - textbox [aria-hidden]: 0c13c8a0-6d42-496c-9370-7f8e850371b0
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=e789]:
+        - generic [ref=e875]: Product name
+        - generic [ref=e790]:
+          - textbox "Product name" [ref=e791]: Andhra Mango Avakaya Pickle
+          - group [aria-hidden]:
+            - generic: Product name
+      - generic [ref=e792]:
+        - generic [ref=e876]: SKU
+        - generic [ref=e793]:
+          - textbox "SKU" [ref=e794]: PKL-ANDHRA-AVAKAYA-500-001-SRN
+          - group [aria-hidden]:
+            - generic: SKU
+      - generic [ref=e795]:
+        - generic [ref=e877]: Brand
+        - generic [ref=e796]:
+          - textbox "Brand" [ref=e797]: Spices and Pickles
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=e798]:
+        - generic [ref=e878]: URL slug (optional)
+        - generic [ref=e799]:
+          - textbox "URL slug (optional)" [ref=e800]: andhra-mango-avakaya-pickle-srn
+          - group [aria-hidden]:
+            - generic: URL slug (optional)
+      - generic [ref=e801]:
+        - generic [ref=e802]: Subcategory
+        - generic [ref=e803]:
+          - textbox "Subcategory" [ref=e804]: Mango Pickles
+          - group [aria-hidden]:
+            - generic: Subcategory
+      - generic [ref=e805]:
+        - generic [ref=e879]: Pack
+        - generic [ref=e806]:
+          - textbox "Pack" [ref=e807]: 500 g
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=e808]:
+        - generic [ref=e880]: Product type
+        - generic [ref=e809]:
+          - textbox "Product type" [ref=e810]: Mango Pickle
+          - group [aria-hidden]:
+            - generic: Product type
+      - generic [ref=e811]:
+        - generic [ref=e881]: Shelf life
+        - generic [ref=e812]:
+          - textbox "Shelf life" [ref=e813]: 6 months
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=e814]:
+        - generic [ref=e815]: Status
+        - generic [ref=e816]:
+          - combobox "Status" [ref=e817] [cursor=pointer]: Active
+          - textbox [aria-hidden]: ACTIVE
+          - group [aria-hidden]:
+            - generic: Status
+      - generic [ref=e818]:
+        - generic [ref=e882]: Description
+        - generic [ref=e819]:
+          - textbox "Description" [ref=e820]: Traditional Andhra-style mango avakaya pickle made with raw mango, cold-pressed oil and a bold spice blend.
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=e821]:
+        - generic [ref=e883]: Ingredients
+        - generic [ref=e822]:
+          - textbox "Ingredients" [ref=e823]: Raw mango, sesame oil, red chilli, mustard, fenugreek, salt
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=e824]:
+        - generic [ref=e884]: Specifications
+        - generic [ref=e825]:
+          - textbox "Specifications" [ref=e826]: Vegetarian; small-batch prepared; store in a cool, dry place.
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=e827]:
+        - generic [ref=e885]: Highlights
+        - generic [ref=e828]:
+          - textbox "Highlights" [ref=e829]: Authentic Andhra flavour; bold and tangy; ready to serve
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=e830]:
+        - generic [ref=e886]: Tags
+        - generic [ref=e831]:
+          - textbox "Tags" [ref=e832]: andhra, avakaya, mango, pickle
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=e833]:
+        - generic [ref=e834]:
+          - paragraph [ref=e835]: Variants and prices
+          - button "Add Variant" [ref=e836] [cursor=pointer]
+        - generic [ref=e837]:
+          - generic [ref=e838]:
+            - generic [ref=e887]: Variant SKU
+            - generic [ref=e839]:
+              - textbox "Variant SKU" [ref=e840]: PKL-ANDHRA-AVAKAYA-1KG-V1-SRN
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e841]:
+            - generic [ref=e888]: Variant / pack name
+            - generic [ref=e842]:
+              - textbox "Variant / pack name" [ref=e843]: 1 kg
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e844]:
+            - generic [ref=e889]: Price
+            - generic [ref=e845]:
+              - spinbutton "Price" [ref=e846]: "419"
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e847]:
+            - generic [ref=e890]: Compare-at price
+            - generic [ref=e848]:
+              - spinbutton "Compare-at price" [ref=e849]: "419"
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e850]:
+            - generic [ref=e851] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e853]
+              - generic [ref=e856]: Active
+            - button "Remove" [ref=e857] [cursor=pointer]
+          - generic [ref=e858]:
+            - generic [ref=e891]: Variant attributes (JSON or text)
+            - generic [ref=e859]:
+              - textbox "Variant attributes (JSON or text)" [ref=e860]: "{\"label\":\"1 kg\"}"
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e892]:
+          - generic [ref=e893]:
+            - generic [ref=e916]: Variant SKU
+            - generic [ref=e894]:
+              - textbox "Variant SKU" [ref=e895]: PKL-ANDHRA-AVAKAYA-500-V1-SRN
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e896]:
+            - generic [ref=e917]: Variant / pack name
+            - generic [ref=e897]:
+              - textbox "Variant / pack name" [ref=e898]: 500 g
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e899]:
+            - generic [ref=e918]: Price
+            - generic [ref=e900]:
+              - spinbutton "Price" [ref=e901]: "229"
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e902]:
+            - generic [ref=e919]: Compare-at price
+            - generic [ref=e903]:
+              - spinbutton "Compare-at price" [ref=e904]: "229"
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e905]:
+            - generic [ref=e906] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e908]
+              - generic [ref=e911]: Active
+            - button "Remove" [ref=e912] [cursor=pointer]
+          - generic [ref=e913]:
+            - generic [ref=e920]: Variant attributes (JSON or text)
+            - generic [ref=e914]:
+              - textbox "Variant attributes (JSON or text)" [ref=e915]: "{\"label\":\"500 g\"}"
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e861]: Active products need at least one active, priced variant.
+      - generic [ref=e862]:
+        - generic [ref=e863]:
+          - paragraph [ref=e864]: Product images
+          - button "Add Image" [active] [ref=e865] [cursor=pointer]
+        - generic [ref=e921]:
+          - generic [ref=e922]:
+            - generic: Image URL
+            - generic [ref=e923]:
+              - textbox "Image URL" [ref=e924]:
+                - /placeholder: https://…
+              - group [aria-hidden]:
+                - generic: Image URL
+          - generic [ref=e925]:
+            - generic: Alt text
+            - generic [ref=e926]:
+              - textbox "Alt text" [ref=e927]
+              - group [aria-hidden]:
+                - generic: Alt text
+          - button "Remove" [ref=e928] [cursor=pointer]
+      - generic [ref=e866] [cursor=pointer]:
+        - checkbox "Available in my store" [checked] [ref=e868]
+        - generic [ref=e871]: Available in my store
+    - generic [ref=e872]:
+      - button "Cancel" [ref=e873] [cursor=pointer]
+      - button "Save Product" [ref=e874] [cursor=pointer]

@@ -7,6 +7,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,17 +32,40 @@ public class UserController {
   }
 
   @GetMapping
-  @PreAuthorize("hasRole('SUPER_ADMIN')")
+  @PreAuthorize("hasAnyRole('SUPER_ADMIN','LOCATION_ADMIN')")
   public java.util.List<IdentityService.StaffSummary> list(Authentication authentication) {
+    if (authentication.getAuthorities().stream().anyMatch(authority -> "ROLE_LOCATION_ADMIN".equals(authority.getAuthority())))
+      return identities.listStaffForLocation(authentication);
     return identities.listStaff(authentication.getName());
   }
 
   @PutMapping("/{id}")
-  @PreAuthorize("hasRole('SUPER_ADMIN')")
+  @PreAuthorize("hasAnyRole('SUPER_ADMIN','LOCATION_ADMIN')")
   public UserSummary update(@PathVariable Long id, @Valid @RequestBody UserUpdateRequest request,
       Authentication authentication) {
-    UserAccount user = identities.updateStaff(id, request, authentication.getName());
+    UserAccount user = authentication.getAuthorities().stream().anyMatch(authority -> "ROLE_LOCATION_ADMIN".equals(authority.getAuthority()))
+        ? identities.updateLocationStaff(id, request, authentication)
+        : identities.updateStaff(id, request, authentication.getName());
     return new UserSummary(user.getId(), user.getUsername(), user.getEmail());
+  }
+
+  @PutMapping("/{id}/password")
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  @PreAuthorize("hasAnyRole('SUPER_ADMIN','LOCATION_ADMIN')")
+  public void resetStaffPassword(@PathVariable Long id, @Valid @RequestBody StaffPasswordResetRequest request,
+      Authentication authentication) {
+    if (authentication.getAuthorities().stream().anyMatch(authority -> "ROLE_LOCATION_ADMIN".equals(authority.getAuthority())))
+      identities.resetLocationStaffPassword(id, request.newPassword(), authentication);
+    else identities.resetStaffPassword(id, request.newPassword(), authentication.getName());
+  }
+
+  @DeleteMapping("/{id}")
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  @PreAuthorize("hasAnyRole('SUPER_ADMIN','LOCATION_ADMIN')")
+  public void delete(@PathVariable Long id, Authentication authentication) {
+    if (authentication.getAuthorities().stream().anyMatch(authority -> "ROLE_LOCATION_ADMIN".equals(authority.getAuthority())))
+      identities.deleteLocationStaff(id, authentication);
+    else identities.deleteStaff(id, authentication.getName());
   }
 
   @PutMapping("/me/password")

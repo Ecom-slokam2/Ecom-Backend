@@ -42,7 +42,8 @@ class StoreDeliveryLocationTest {
     assertThatThrownBy(()->service.getZoneLocation(18L)).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("conflict");
   }
   @Test void missingOrConflictingRegionMappingsCannotInventAssignments(){
-    store();var legacy=zone(18,null);when(zones.findById(18L)).thenReturn(Optional.of(legacy));
+    store();var store=stores.findById("main").orElseThrow();store.setLocation("Unmapped Region");
+    var legacy=zone(18,null);when(zones.findById(18L)).thenReturn(Optional.of(legacy));
     assertThatThrownBy(()->service.getZoneLocation(18L)).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("mapping");
     when(zones.findMappedLocationIdsForStoreRegion("Hyderabad")).thenReturn(List.of("hyderabad","another-location"));
     assertThatThrownBy(()->service.getZoneLocation(18L)).isInstanceOf(IllegalArgumentException.class).hasMessageContaining("ambiguous");

@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.mockito.ArgumentMatchers.any;
@@ -134,6 +135,25 @@ class UserControllerTest {
   }
 
   @Test
+  @WithMockUser(username = "root-admin", authorities = {"ROLE_SUPER_ADMIN"})
+  void superAdminCanCreateGlobalAdminWithoutLocationAssignment() throws Exception {
+    UserAccount created = new UserAccount();
+    created.setUsername("global-admin");
+    created.setEmail("global-admin@example.com");
+    when(identities.create(any(UserCreateRequest.class), eq("root-admin"))).thenReturn(created);
+
+    mockMvc.perform(post("/api/users").with(csrf()).contentType(MediaType.APPLICATION_JSON)
+        .content("""
+          {"username":"global-admin","email":"global-admin@example.com","password":"ValidPass123",
+           "role":"GLOBAL_ADMIN","organizationId":"metaarch-commerce"}
+          """))
+        .andExpect(status().isCreated())
+        .andExpect(jsonPath("$.username").value("global-admin"));
+
+    verify(identities).create(any(UserCreateRequest.class), eq("root-admin"));
+  }
+
+  @Test
   @WithMockUser(username = "global-admin", authorities = {"ROLE_GLOBAL_ADMIN", "PERM_USER_WRITE"})
   void globalAdminCannotProvisionStaffThroughSuperAdminEndpoint() throws Exception {
     mockMvc.perform(post("/api/users").with(csrf()).contentType(MediaType.APPLICATION_JSON)
@@ -143,6 +163,18 @@ class UserControllerTest {
           """))
         .andExpect(status().isForbidden());
 
+    verify(identities, never()).create(any(UserCreateRequest.class), any());
+  }
+
+  @Test
+  @WithMockUser(username = "location-admin", authorities = {"ROLE_LOCATION_ADMIN"})
+  void locationAdminCannotProvisionAnotherAdministrator() throws Exception {
+    mockMvc.perform(post("/api/users").with(csrf()).contentType(MediaType.APPLICATION_JSON)
+        .content("""
+          {"username":"other-location-admin","email":"other@example.com","password":"ValidPass123",
+           "role":"LOCATION_ADMIN","organizationId":"metaarch-commerce","location":"chennai"}
+          """))
+        .andExpect(status().isForbidden());
     verify(identities, never()).create(any(UserCreateRequest.class), any());
   }
 
@@ -212,6 +244,18 @@ class UserControllerTest {
   }
 
   @Test
+  @WithMockUser(username = "global", authorities = {"ROLE_GLOBAL_ADMIN", "PERM_USER_WRITE"})
+  void globalAdminCannotEditLocationAdminAssignment() throws Exception {
+    mockMvc.perform(put("/api/users/13").with(csrf()).contentType(MediaType.APPLICATION_JSON)
+        .content("""
+          {"name":"Location","email":"location@example.com","role":"LOCATION_ADMIN",
+           "status":"Active","location":"chennai"}
+          """))
+        .andExpect(status().isForbidden());
+    verify(identities, never()).updateStaff(any(), any(), any());
+  }
+
+  @Test
   @WithMockUser(username = "location", authorities = {"ROLE_LOCATION_ADMIN"})
   void locationAdminCannotUseStaffUpdateEndpoint() throws Exception {
     mockMvc.perform(put("/api/users/42").with(csrf()).contentType(MediaType.APPLICATION_JSON)
@@ -251,9 +295,34 @@ class UserControllerTest {
   }
 
   @Test
+  @WithMockUser(username = "root-admin", authorities = {"ROLE_SUPER_ADMIN"})
+  void superAdminCanDeleteManagedStaffAccount() throws Exception {
+    mockMvc.perform(delete("/api/users/42").with(csrf()))
+        .andExpect(status().isNoContent());
+    verify(identities).deleteStaff(42L, "root-admin");
+  }
+
+  @Test
+  @WithMockUser(username = "global-admin", authorities = {"ROLE_GLOBAL_ADMIN"})
+  void globalAdminCannotDeleteStaffAccount() throws Exception {
+    mockMvc.perform(delete("/api/users/42").with(csrf()))
+        .andExpect(status().isForbidden());
+    verify(identities, never()).deleteStaff(any(), any());
+  }
+
+  @Test
   @WithMockUser(username = "global-admin", authorities = {"ROLE_GLOBAL_ADMIN"})
   void globalAdminCannotListStaff() throws Exception {
     mockMvc.perform(get("/api/users")).andExpect(status().isForbidden());
     verify(identities, never()).listStaff(any());
+  }
+
+  @Test
+  @WithMockUser(username = "location-admin", authorities = {"ROLE_LOCATION_ADMIN"})
+  void locationAdminCannotListOrDeleteStaff() throws Exception {
+    mockMvc.perform(get("/api/users")).andExpect(status().isForbidden());
+    mockMvc.perform(delete("/api/users/42").with(csrf())).andExpect(status().isForbidden());
+    verify(identities, never()).listStaff(any());
+    verify(identities, never()).deleteStaff(any(), any());
   }
 }

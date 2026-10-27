@@ -1,0 +1,187 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e8]:
+    - navigation [ref=f1e9]:
+      - generic [ref=f1e10]:
+        - generic [ref=f1e12]:
+          - heading [level=6] [ref=f1e176]: Store Manager Portal
+          - text: SR Nagar Store
+        - button [ref=f1e177] [cursor=pointer]
+      - generic [ref=f1e17]:
+        - button [ref=f1e178] [cursor=pointer]:
+          - generic [ref=f1e22]: Dashboard
+        - button [ref=f1e179] [cursor=pointer]:
+          - generic [ref=f1e28]: Products
+        - button [ref=f1e180] [cursor=pointer]:
+          - generic [ref=f1e33]: Banners
+        - button [ref=f1e181] [cursor=pointer]:
+          - generic [ref=f1e39]: Coupons
+        - button [ref=f1e182] [cursor=pointer]:
+          - generic [ref=f1e45]: Inventory
+        - button [ref=f1e183] [cursor=pointer]:
+          - generic [ref=f1e50]: Orders
+        - button [ref=f1e184] [cursor=pointer]:
+          - generic [ref=f1e55]: Delivery Partners
+        - button [ref=f1e185] [cursor=pointer]:
+          - generic [ref=f1e60]: Delivery Radius
+        - button [ref=f1e186] [cursor=pointer]:
+          - generic [ref=f1e65]: Delivery Settings
+        - button [ref=f1e187] [cursor=pointer]:
+          - generic [ref=f1e70]: Change Password
+        - button [ref=f1e188] [cursor=pointer]:
+          - generic [ref=f1e75]: Profile
+        - button [ref=f1e189] [cursor=pointer]:
+          - generic [ref=f1e80]: Logout
+      - button [ref=f1e190] [cursor=pointer]: View Customer App
+    - main [ref=f1e82]:
+      - generic [ref=f1e83]:
+        - generic [ref=f1e84]:
+          - button [ref=f1e85] [cursor=pointer]
+          - generic [ref=f1e88]:
+            - text: Store Manager /
+            - strong [ref=f1e89]: Inventory
+        - generic [ref=f1e90]:
+          - textbox [ref=f1e191]:
+            - /placeholder: Search portal
+          - button [ref=f1e192] [cursor=pointer]
+          - button [ref=f1e193] [cursor=pointer]:
+            - generic [ref=f1e100]: V
+            - generic [ref=f1e101]: Vikram SR Nagar
+      - generic [ref=f1e102]:
+        - generic [ref=f1e103]:
+          - heading [level=4] [ref=f1e194]: Inventory
+          - paragraph [ref=f1e105]: Manage inventory within your assigned scope.
+        - button [ref=f1e195] [cursor=pointer]: View Customer App
+      - generic [ref=f1e107]:
+        - generic [ref=f1e108]:
+          - generic [ref=f1e109]:
+            - generic: Search
+            - generic [ref=f1e110]:
+              - textbox [ref=f1e196]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f1e112]:
+            - combobox [ref=f1e113] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f1e114]:
+            - combobox [ref=f1e115] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f1e197] [cursor=pointer]: Create
+          - button [ref=f1e198] [cursor=pointer]: Export
+        - generic [ref=f1e118]:
+          - generic [ref=f1e119]:
+            - paragraph [ref=f1e120]: Whole Walnut Kernels
+            - paragraph [ref=f1e121]: META-DRY-WALNUT-500-V1-SRN
+          - generic [ref=f1e122]:
+            - button [ref=f1e199] [cursor=pointer]: View
+            - button [ref=f1e200] [cursor=pointer]: Stock +10
+            - button [ref=f1e201] [cursor=pointer]: Stock -1
+            - button [ref=f1e202] [cursor=pointer]: Adjust
+        - generic [ref=f1e127]:
+          - generic [ref=f1e128]:
+            - paragraph [ref=f1e129]: Whole Walnut Kernels
+            - paragraph [ref=f1e130]: META-DRY-WALNUT-250-V1-SRN
+          - generic [ref=f1e131]:
+            - button [ref=f1e203] [cursor=pointer]: View
+            - button [ref=f1e204] [cursor=pointer]: Stock +10
+            - button [ref=f1e205] [cursor=pointer]: Stock -1
+            - button [ref=f1e206] [cursor=pointer]: Adjust
+        - generic [ref=f1e136]:
+          - generic [ref=f1e137]:
+            - paragraph [ref=f1e138]: Premium Roasted Pistachios
+            - paragraph [ref=f1e139]: DRY-PISTA-500-V1-SRN
+          - generic [ref=f1e140]:
+            - button [ref=f1e207] [cursor=pointer]: View
+            - button [ref=f1e208] [cursor=pointer]: Stock +10
+            - button [ref=f1e209] [cursor=pointer]: Stock -1
+            - button [ref=f1e210] [cursor=pointer]: Adjust
+        - generic [ref=f1e145]:
+          - generic [ref=f1e146]:
+            - paragraph [ref=f1e147]: Premium Roasted Pistachios
+            - paragraph [ref=f1e148]: DRY-PISTA-200-V1-SRN
+          - generic [ref=f1e149]:
+            - button [ref=f1e211] [cursor=pointer]: View
+            - button [ref=f1e212] [cursor=pointer]: Stock +10
+            - button [ref=f1e213] [cursor=pointer]: Stock -1
+            - button [ref=f1e214] [cursor=pointer]: Adjust
+        - generic [ref=f1e154]:
+          - generic [ref=f1e155]:
+            - paragraph [ref=f1e156]: Guntur Chilli Powder
+            - paragraph [ref=f1e157]: SPC-GUNTUR-500-V1-SRN
+          - generic [ref=f1e158]:
+            - button [ref=f1e215] [cursor=pointer]: View
+            - button [ref=f1e216] [cursor=pointer]: Stock +10
+            - button [ref=f1e217] [cursor=pointer]: Stock -1
+            - button [ref=f1e218] [cursor=pointer]: Adjust
+        - generic [ref=f1e163]:
+          - generic [ref=f1e164]:
+            - paragraph [ref=f1e165]: Guntur Chilli Powder
+            - paragraph [ref=f1e166]: SPC-GUNTUR-200-V1-SRN
+          - generic [ref=f1e167]:
+            - button [ref=f1e219] [cursor=pointer]: View
+            - button [ref=f1e220] [cursor=pointer]: Stock +10
+            - button [ref=f1e221] [cursor=pointer]: Stock -1
+            - button [ref=f1e222] [cursor=pointer]: Adjust
+        - generic [ref=f1e172]:
+          - button [disabled]: Previous
+          - paragraph [ref=f1e173]: Page 1 of 4
+          - button [ref=f1e223] [cursor=pointer]: Next
+  - dialog [active] [ref=f1e226]:
+    - heading "Details Inventory" [level=2] [ref=f1e227]
+    - generic [ref=f1e228]:
+      - generic [ref=f1e229]:
+        - text: productId
+        - paragraph [ref=f1e230]: c38d641c-69fe-4ae5-bcb7-fcdbe076e45f
+      - generic [ref=f1e231]:
+        - text: variantId
+        - paragraph [ref=f1e232]: 71bae737-81ae-49df-8f74-c253bb1f652d
+      - generic [ref=f1e233]:
+        - text: storeId
+        - paragraph [ref=f1e234]: store-sr-nagar-store
+      - generic [ref=f1e235]:
+        - text: availableQuantity
+        - paragraph [ref=f1e236]: "50"
+      - generic [ref=f1e237]:
+        - text: reservedQuantity
+        - paragraph [ref=f1e238]: "0"
+      - generic [ref=f1e239]:
+        - text: reorderLevel
+        - paragraph [ref=f1e240]: "10"
+      - generic [ref=f1e241]:
+        - text: status
+        - paragraph [ref=f1e242]: ACTIVE
+      - generic [ref=f1e243]:
+        - text: createdAt
+        - paragraph [ref=f1e244]: 2026-10-27T09:43:49.558913Z
+      - generic [ref=f1e245]:
+        - text: updatedAt
+        - paragraph [ref=f1e246]: 2026-10-27T09:43:49.558913Z
+      - generic [ref=f1e247]:
+        - text: version
+        - paragraph [ref=f1e248]: "0"
+      - generic [ref=f1e249]:
+        - text: name
+        - paragraph [ref=f1e250]: Whole Walnut Kernels
+      - generic [ref=f1e251]:
+        - text: sku
+        - paragraph [ref=f1e252]: META-DRY-WALNUT-500-V1-SRN
+      - generic [ref=f1e253]:
+        - text: store
+        - paragraph [ref=f1e254]: SR Nagar Store
+      - generic [ref=f1e255]:
+        - text: location
+        - paragraph [ref=f1e256]: hyderabad
+      - generic [ref=f1e257]:
+        - text: stock
+        - paragraph [ref=f1e258]: "50"
+      - generic [ref=f1e259]:
+        - text: reserved
+        - paragraph [ref=f1e260]: "0"
+      - generic [ref=f1e261]:
+        - text: lowStockAt
+        - paragraph [ref=f1e262]: "10"
+      - generic [ref=f1e263]:
+        - text: available
+        - paragraph [ref=f1e264]: Available
+    - button "Cancel" [ref=f1e267] [cursor=pointer]

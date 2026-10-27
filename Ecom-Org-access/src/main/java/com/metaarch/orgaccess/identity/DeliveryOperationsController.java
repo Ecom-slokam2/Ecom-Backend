@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 import java.security.SecureRandom;
 import java.time.Instant;
 import java.util.*;
+import com.metaarch.orgaccess.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -36,6 +37,7 @@ public class DeliveryOperationsController {
   private final StaffProfileController profiles;
   private final JdbcTemplate jdbc;
   private final PasswordEncoder passwords;
+  private final JwtTokenProvider tokens;
   private final RestClient orders,shipments,notifications;
   @Value("${services.orders.orders-path:/api/v1/orders}")
   private String ordersPath;
@@ -48,10 +50,11 @@ public class DeliveryOperationsController {
   @Value("${services.notifications.notification-path:/api/v1/notifications}")
   private String notificationPath;
   public DeliveryOperationsController(StaffProfileController profiles, JdbcTemplate jdbc, PasswordEncoder passwords,
+      JwtTokenProvider tokens,
       @Value("${services.orders-url:http://localhost:3311}") String orderUrl,
       @Value("${services.fulfillment-url:http://localhost:3315}") String fulfillmentUrl,
       @Value("${services.notifications-url:http://localhost:3317}") String notificationUrl) {
-    this.profiles=profiles;this.jdbc=jdbc;this.passwords=passwords;
+    this.profiles=profiles;this.jdbc=jdbc;this.passwords=passwords;this.tokens=tokens;
     orders=client(orderUrl);shipments=client(fulfillmentUrl);notifications=client(notificationUrl);
   }
   private static RestClient client(String baseUrl) {
@@ -62,7 +65,10 @@ public class DeliveryOperationsController {
       var attributes=org.springframework.web.context.request.RequestContextHolder.getRequestAttributes();
       if (attributes instanceof org.springframework.web.context.request.ServletRequestAttributes servlet) {
         String bearer=servlet.getRequest().getHeader("Authorization");
-        if (bearer!=null && bearer.startsWith("Bearer ")) request.getHeaders().set("Authorization",bearer);
+        // Preserve a purpose-bound token explicitly set by delivery actions;
+        // only forward the browser token for ordinary internal reads.
+        if (request.getHeaders().getFirst(org.springframework.http.HttpHeaders.AUTHORIZATION)==null
+            && bearer!=null && bearer.startsWith("Bearer ")) request.getHeaders().set("Authorization",bearer);
       }
       return execution.execute(request,body);
     }).build();
@@ -80,11 +86,42 @@ public class DeliveryOperationsController {
   private String displayStatus(String state) {
     return switch(state) { case "IN_TRANSIT" -> "Picked Up"; case OUT_FOR_DELIVERY -> "Out for Delivery"; default -> state; };
   }
-  private void addDeliveryAcceptedAt(Map<String,Object> row, Object shipmentId) {
+  private Instant instant(Object value) {
+    if (value == null) return null;
+    try { return Instant.parse(value.toString()); } catch (RuntimeException ignored) { return null; }
+  }
+  private List<Map<String,Object>> trackingEvents(Object shipmentId) {
     try {
       List<Map<String,Object>> tracking=shipments.get().uri(shipmentsPath+shipmentId+TRACKING_EVENTS_PATH).retrieve().body(List.class);
-      row.put(DELIVERY_ACCEPTED_AT,tracking == null ? null : tracking.stream().filter(t -> ASSIGNMENT_ACCEPTED.equals(t.get(DESCRIPTION))).map(t -> t.get(EVENT_TIME)).findFirst().orElse(null));
-    } catch(Exception ex) { row.put(DELIVERY_ACCEPTED_AT,null); }
+      return tracking == null ? List.of() : tracking;
+    } catch(Exception ex) { return List.of(); }
+  }
+  private Map<String,Object> acceptedEvent(List<Map<String,Object>> tracking, Map<String,Object> shipment) {
+    Instant assignedAt=instant(shipment.get("deliveryAssignedAt"));
+    final Instant acceptedAfter=assignedAt == null?Instant.EPOCH:assignedAt;
+    return tracking.stream()
+      .filter(t -> ASSIGNMENT_ACCEPTED.equals(t.get(DESCRIPTION)))
+      .filter(t -> { Instant eventAt=instant(t.get(EVENT_TIME)); return eventAt!=null && !eventAt.isBefore(acceptedAfter); })
+      .findFirst().orElse(null);
+  }
+  private void addDeliveryAcceptedAt(Map<String,Object> row, List<Map<String,Object>> tracking, Map<String,Object> shipment) {
+    Map<String,Object> accepted=acceptedEvent(tracking,shipment);
+    row.put(DELIVERY_ACCEPTED_AT,accepted==null?null:accepted.get(EVENT_TIME));
+  }
+  private String deliveryActionToken(Authentication auth, UUID orderId) {
+    return tokens.generateDeliveryActionToken(String.valueOf(profiles.me(auth).get("id")),orderId.toString());
+  }
+  private void changeShipmentStatus(Map<String,Object> shipment, UUID orderId, String status, Authentication auth) {
+    shipments.patch().uri(shipmentsPath+shipment.get("id")+"/status")
+      .headers(headers -> headers.setBearerAuth(deliveryActionToken(auth,orderId)))
+      .body(Map.of(STATUS,status)).retrieve().toBodilessEntity();
+  }
+  private void recordTracking(Map<String,Object> shipment, UUID orderId, Authentication auth,
+      String status, String location, String description) {
+    shipments.post().uri(shipmentsPath+shipment.get("id")+TRACKING_EVENTS_PATH)
+      .headers(headers -> headers.setBearerAuth(deliveryActionToken(auth,orderId)))
+      .body(Map.of(STATUS,status,"location",location,DESCRIPTION,description,EVENT_TIME,Instant.now().toString()))
+      .retrieve().toBodilessEntity();
   }
   @GetMapping("/me/orders")
   @PreAuthorize("hasRole('DELIVERY_PARTNER')")
@@ -103,16 +140,45 @@ public class DeliveryOperationsController {
       row.put("deliveredAt",shipment.get("deliveredAt"));row.put("total",order.get("totalAmount"));
       String state=String.valueOf(shipment.get(STATUS));
       row.put(STATUS,displayStatus(state));
-      addDeliveryAcceptedAt(row,shipment.get("id"));
+      List<Map<String,Object>> tracking=trackingEvents(shipment.get("id"));
+      row.put("trackingEvents",tracking);
+      addDeliveryAcceptedAt(row,tracking,shipment);
       try {
         Map<String,Object> customer=jdbc.queryForMap(
-          "SELECT c.full_name AS name, u.mobile AS phone, u.email AS email FROM customers c JOIN users u ON u.id=c.user_id WHERE c.id=UNHEX(REPLACE(?,'-',''))",
+          "SELECT c.full_name AS name, u.mobile AS phone FROM customers c JOIN users u ON u.id=c.user_id WHERE c.id=UNHEX(REPLACE(?,'-',''))",
           String.valueOf(order.get(CUSTOMER_ID)));
         row.put("customer",customer);
       } catch(Exception ex) { /* customer not resolvable — the UI falls back to "not provided". */ }
       result.add(row);
     }
     return result;
+  }
+  @GetMapping("/orders/{orderId}/live-location")
+  @PreAuthorize("hasRole('CUSTOMER')")
+  public Map<String,Object> customerLiveLocation(@PathVariable UUID orderId) {
+    // The Order service enforces ownership from the customer's signed token forwarded by RestClient.
+    get(orders,orderPath+orderId);
+    Map<String,Object> shipment;
+    try { shipment=get(shipments,shipmentsOrderPath+orderId); }
+    catch(org.springframework.web.client.RestClientResponseException missing) {
+      if(missing.getStatusCode().value()==404) return Map.of("available",false);
+      throw missing;
+    }
+    String state=String.valueOf(shipment.get(STATUS));
+    if(!Set.of("IN_TRANSIT",OUT_FOR_DELIVERY).contains(state)) return Map.of("available",false);
+    Object partnerId=shipment.get(DELIVERY_PARTNER_ID);
+    if(partnerId==null) return Map.of("available",false);
+    List<Map<String,Object>> locations=jdbc.queryForList("""
+      SELECT u.delivery_latitude AS latitude,u.delivery_longitude AS longitude,
+        ROUND(UNIX_TIMESTAMP(u.delivery_location_updated_at) * 1000) AS updatedAt
+      FROM users u
+      WHERE CAST(u.id AS CHAR)=? AND u.delivery_latitude IS NOT NULL AND u.delivery_longitude IS NOT NULL
+      LIMIT 1
+      """,String.valueOf(partnerId));
+    if(locations.isEmpty()) return Map.of("available",false);
+    Map<String,Object> location=new LinkedHashMap<>(locations.getFirst());
+    location.put("available",true);
+    return location;
   }
   @PutMapping("/orders/{orderId}/partner/{partnerId}")
   @PreAuthorize("hasAnyRole('STORE_MANAGER','LOCATION_ADMIN','GLOBAL_ADMIN','SUPER_ADMIN')")
@@ -153,11 +219,13 @@ public class DeliveryOperationsController {
     Map<String,Object> shipment=assigned(orderId,auth);
     String id=String.valueOf(shipment.get("id"));
     if ("START".equals(request.action())) {
-      shipments.post().uri(shipmentsPath+id+"/start-delivery").retrieve().toBodilessEntity();
+      shipments.post().uri(shipmentsPath+id+"/start-delivery")
+        .headers(headers -> headers.setBearerAuth(deliveryActionToken(auth,orderId))).retrieve().toBodilessEntity();
       return;
     }
     if ("ACCEPT".equals(request.action())) {
-      shipments.post().uri(shipmentsPath+id+"/accept-assignment").retrieve().toBodilessEntity();
+      shipments.post().uri(shipmentsPath+id+"/accept-assignment")
+        .headers(headers -> headers.setBearerAuth(deliveryActionToken(auth,orderId))).retrieve().toBodilessEntity();
       return;
     }
     String state=String.valueOf(shipment.get(STATUS));
@@ -166,7 +234,11 @@ public class DeliveryOperationsController {
     String description;
     switch(request.action()) {
       case "ACCEPT" -> description=ASSIGNMENT_ACCEPTED;
-      case "PICKUP" -> {next="IN_TRANSIT";description="Order picked up by delivery partner.";}
+      case "PICKUP" -> {
+        if (acceptedEvent(trackingEvents(shipment.get("id")),shipment)==null) throw invalid("Accept the assignment before picking up the order.");
+        if (!"CREATED".equals(state)) throw invalid("This shipment cannot be picked up in its current state.");
+        next="IN_TRANSIT";description="Order picked up by delivery partner.";
+      }
       case "START" -> {next=OUT_FOR_DELIVERY;description="Order is out for delivery.";}
       case "CANCEL" -> {if(request.reason()==null||request.reason().isBlank()){throw invalid("A cancellation reason is required.");}next=state.equals(OUT_FOR_DELIVERY)?FAILED:"CANCELLED";description="Delivery cancelled by partner: "+request.reason();}
       case "VERIFY" -> {
@@ -179,8 +251,8 @@ public class DeliveryOperationsController {
       }
       default -> throw invalid("Unknown delivery action.");
     }
-    if(!next.equals(state)) shipments.patch().uri(shipmentsPath+id+"/status").body(Map.of(STATUS,next)).retrieve().toBodilessEntity();
-    shipments.post().uri(shipmentsPath+id+TRACKING_EVENTS_PATH).body(Map.of(STATUS,next,"location",String.valueOf(profiles.me(auth).get("store")),DESCRIPTION,description,EVENT_TIME,Instant.now().toString())).retrieve().toBodilessEntity();
+    if(!next.equals(state)) changeShipmentStatus(shipment,orderId,next,auth);
+    recordTracking(shipment,orderId,auth,next,String.valueOf(profiles.me(auth).get("store")),description);
     if(request.action().equals("VERIFY"))jdbc.update("UPDATE delivery_verifications SET consumed=1 WHERE order_id=?",orderId.toString());
   }
   @PostMapping("/me/orders/{orderId}/otp")

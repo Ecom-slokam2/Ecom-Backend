@@ -71,7 +71,7 @@ class GlobalStoreAssignmentTest {
   }
 
   @Test void assignmentAuthorizationAcceptsOnlySuperAndGlobalAdmin() {
-    var access = new OrderAccess(orders);
+    var access = new OrderAccess(orders, org.mockito.Mockito.mock(com.metaarch.sync.CatalogLocationClient.class));
     assertThat(authorization(access, "ROLE_SUPER_ADMIN")).isTrue();
     assertThat(authorization(access, "ROLE_GLOBAL_ADMIN")).isTrue();
     assertThat(authorization(access, "ROLE_STORE_MANAGER")).isFalse();

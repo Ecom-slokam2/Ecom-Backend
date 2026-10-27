@@ -1,0 +1,44 @@
+- generic [ref=e515]:
+  - button [ref=e517] [cursor=pointer]
+  - generic [ref=e520]:
+    - generic [ref=e521]:
+      - img "Premium Roasted Pistachios view 1" [ref=e522]
+      - paragraph [ref=e523]: No product images are available.
+      - button "View image 1" [ref=e525]
+    - generic [ref=e526]:
+      - paragraph [ref=e527]: Premium Roasted Pistachios
+      - paragraph [ref=e528]: Metaarch Select · Premium Dry Fruits
+      - 'button "Weight: 200 g" [ref=e532] [cursor=pointer]'
+      - paragraph [ref=e533]: Carefully selected roasted pistachios with a crisp bite for snacks and desserts.
+      - paragraph [ref=e535]: Unavailable
+      - generic [ref=e536]:
+        - paragraph [ref=e537]: Ingredients
+        - paragraph [ref=e538]: Pistachios, salt
+      - generic [ref=e539]:
+        - paragraph [ref=e540]: Specifications
+        - paragraph [ref=e541]: Not specified
+      - generic [ref=e542]:
+        - paragraph [ref=e543]: Tags
+        - generic [ref=e544]:
+          - generic [ref=e545]: dry-fruits
+          - generic [ref=e547]: pistachios
+          - generic [ref=e549]: roasted
+      - button "0 Stars No approved reviews yet" [ref=e551] [cursor=pointer]:
+        - img "0 Stars"
+        - text: No approved reviews yet
+      - generic [ref=e552]:
+        - paragraph [ref=e553]: "Highlights:"
+        - list [ref=e554]:
+          - listitem [ref=e555]: Carefully selected ingredients|Sealed for freshness|Ready to enjoy
+      - generic [ref=e556]:
+        - paragraph [ref=e557]: About the Source
+        - paragraph [ref=e558]: Sourced from trusted regional producers and quality packed.
+      - generic [ref=e559]:
+        - paragraph [ref=e560]: Bestsellers in Premium Dry Fruits
+        - paragraph [ref=e562]: No products in this category are marked as bestsellers yet.
+  - generic [ref=e563]:
+    - generic [ref=e564]:
+      - paragraph [ref=e565]: ₹499.00
+      - paragraph [ref=e566]: ₹549.00
+      - paragraph [ref=e567]: (incl. of all taxes)
+    - button "UNAVAILABLE" [disabled]

@@ -1,0 +1,51 @@
+- generic [ref=f5e5]:
+  - complementary [ref=f5e6]:
+    - generic [ref=f5e7]:
+      - img "Spices and Pickles" [ref=f5e162]
+      - generic [ref=f5e9]:
+        - heading "Store Manager" [level=6] [ref=f5e163]
+        - paragraph [ref=f5e11]: SR Nagar Store
+    - navigation [ref=f5e12]:
+      - button "Dashboard" [ref=f5e164] [cursor=pointer]
+      - button "Products" [ref=f5e165] [cursor=pointer]
+      - button "Banners" [ref=f5e166] [cursor=pointer]
+      - button "Coupons" [ref=f5e167] [cursor=pointer]
+      - button "Inventory" [ref=f5e168] [cursor=pointer]
+      - button "Orders" [ref=f5e169] [cursor=pointer]
+      - button "Delivery Partners" [ref=f5e170] [cursor=pointer]
+      - button "Delivery Radius" [ref=f5e171] [cursor=pointer]
+      - button "Delivery Settings" [ref=f5e172] [cursor=pointer]
+      - button "Change Password" [ref=f5e173] [cursor=pointer]
+      - button "Profile" [ref=f5e174] [cursor=pointer]
+      - button "Logout" [ref=f5e175] [cursor=pointer]
+    - button "View Customer App" [ref=f5e176] [cursor=pointer]
+  - main [ref=f5e77]:
+    - generic [ref=f5e78]:
+      - button [ref=f5e177] [cursor=pointer]
+      - button "V Vikram SR Nagar" [ref=f5e178] [cursor=pointer]:
+        - generic [ref=f5e84]: V
+        - generic [ref=f5e85]: Vikram SR Nagar
+      - button "Sign out" [ref=f5e179] [cursor=pointer]
+    - generic [ref=f5e87]:
+      - heading "Delivery Partners" [level=4] [ref=f5e180]
+      - generic [ref=f5e89]:
+        - generic [ref=f5e90]: 1/1 active
+        - button "Create Delivery Partner" [active] [ref=f5e181] [cursor=pointer]
+    - generic [ref=f5e182]:
+      - generic [ref=f5e183]:
+        - paragraph [ref=f5e184]: Demo Delivery Partner SR Nagar
+        - paragraph [ref=f5e185]: "9000000010"
+        - paragraph [ref=f5e186]: delivery.srnagar.demo01@example.test
+        - paragraph [ref=f5e187]: "Username: demo.srnagar.delivery01"
+        - paragraph [ref=f5e188]: Demo record - SR Nagar Store, Hyderabad
+      - generic [ref=f5e189]:
+        - paragraph [ref=f5e190]: Bike
+        - paragraph [ref=f5e191]: "Bike / vehicle: TS09DEMO0001"
+        - paragraph [ref=f5e192]: "Licence: DEMO-LIC-TS-0001"
+        - paragraph [ref=f5e193]: "Store location: Hyderabad"
+        - paragraph [ref=f5e194]: "Service region: Hyderabad"
+      - generic [ref=f5e195]:
+        - button "View full details" [ref=f5e196] [cursor=pointer]
+        - generic [ref=f5e197] [cursor=pointer]:
+          - switch "Active" [checked] [ref=f5e200]
+          - generic [ref=f5e203]: Active

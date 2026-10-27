@@ -24,6 +24,78 @@ public class StoreDeliveryService {
     return zones.findByStoreIdOrderByMinRadiusKmAsc(storeId).stream().map(zone -> StoreDeliveryZoneResponse.from(zone, methods.findByZoneIdOrderByDeliveryTypeAsc(zone.getId()))).toList();
   }
 
+  @Transactional
+  public void ensureDefaultZone(Store store) {
+    if (store == null || !store.isActive() || !ACTIVE_STATUS.equalsIgnoreCase(store.getStatus())
+        || !store.isDeliveryEnabled() || store.getDeliveryRadiusKm() == null
+        || store.getDeliveryRadiusKm().signum() <= 0
+        || !zones.findByStoreIdOrderByMinRadiusKmAsc(store.getId()).isEmpty()) return;
+
+    Integer eta = store.getDeliveryEtaMinutes() == null ? 35 : store.getDeliveryEtaMinutes();
+    StoreDeliveryZone zone = new StoreDeliveryZone();
+    zone.setStoreId(store.getId());
+    zone.setLocationId(resolveZoneLocation(zone));
+    zone.setMinRadiusKm(BigDecimal.ZERO);
+    zone.setMaxRadiusKm(store.getDeliveryRadiusKm());
+    zone.setEstimatedDeliveryMin(Math.max(5, eta - 5));
+    zone.setEstimatedDeliveryMax(Math.max(eta, eta + 10));
+    zone.setDeliveryCharge(store.getDeliveryCharge() == null ? BigDecimal.ZERO : store.getDeliveryCharge());
+    zone.setFreeDeliveryAbove(store.getFreeDeliveryAbove());
+    zone.setMinimumOrder(BigDecimal.ZERO);
+    zone.setStatus(ACTIVE_STATUS);
+    StoreDeliveryZone saved = zones.save(zone);
+
+    java.util.LinkedHashSet<String> configured = new java.util.LinkedHashSet<>();
+    if (store.getDeliveryModes() != null) {
+      for (String mode : store.getDeliveryModes().split(",")) {
+        String normalized = normalizeConfiguredMethod(mode);
+        if (normalized != null && (!isPickup(normalized) || store.isPickupEnabled())) configured.add(normalized);
+      }
+    }
+    configured.add("Standard Delivery");
+    if (store.isPickupEnabled()) configured.add("Store Pickup");
+    for (String type : configured) {
+      StoreDeliveryMethod method = new StoreDeliveryMethod();
+      method.setStoreId(store.getId());
+      method.setZone(saved);
+      method.setDeliveryType(type);
+      method.setEnabled(true);
+      method.setDeliveryCharge(methodCharge(type, saved.getDeliveryCharge()));
+      method.setEstimatedTime(estimatedTime(type, saved));
+      method.setSettingsConfiguration(isPickup(type) ? "{\"pickupInstructions\":\"Collect from billing counter\"}" : "{}");
+      methods.save(method);
+    }
+  }
+
+  private String normalizeConfiguredMethod(String method) {
+    if (method == null || method.isBlank()) return null;
+    return switch (method.trim().toLowerCase(java.util.Locale.ROOT)) {
+      case "standard", "standard delivery" -> "Standard Delivery";
+      case "instant", "instant delivery" -> "Instant Delivery";
+      case "same-day", "same day", "same-day delivery", "same day delivery" -> "Same-Day Delivery";
+      case "express", "express delivery" -> "Express Delivery";
+      case "scheduled", "scheduled delivery" -> "Scheduled Delivery";
+      case "pickup", "store-pickup", "store pickup" -> "Store Pickup";
+      default -> null;
+    };
+  }
+
+  private BigDecimal methodCharge(String method, BigDecimal baseCharge) {
+    BigDecimal base = baseCharge == null ? BigDecimal.ZERO : baseCharge;
+    if (isPickup(method)) return BigDecimal.ZERO;
+    if (sameMethod(method, "Instant Delivery")) return base.add(new BigDecimal("25.00"));
+    if (sameMethod(method, "Express Delivery")) return base.add(new BigDecimal("15.00"));
+    if (sameMethod(method, "Same-Day Delivery")) return base.add(new BigDecimal("10.00"));
+    return base;
+  }
+
+  private String estimatedTime(String method, StoreDeliveryZone zone) {
+    if (isPickup(method)) return "Ready in 30 min";
+    if (sameMethod(method, "Scheduled Delivery")) return "Customer selected slot";
+    if (sameMethod(method, "Instant Delivery")) return zone.getEstimatedDeliveryMin() + " min";
+    return zone.getEstimatedDeliveryMin() + "-" + zone.getEstimatedDeliveryMax() + " min";
+  }
+
   @Transactional(readOnly = true)
   public DeliveryZoneLocationResponse getZoneLocation(Long deliveryZoneId) {
     StoreDeliveryZone zone = zones.findById(deliveryZoneId).orElseThrow(() -> new ResourceNotFoundException("Delivery zone not found: " + deliveryZoneId));
@@ -57,6 +129,7 @@ public class StoreDeliveryService {
   public void deleteZone(String storeId, Long id) {
     requireStore(storeId);
     StoreDeliveryZone zone = zones.findById(id).filter(item -> item.getStoreId().equals(storeId)).orElseThrow(() -> new ResourceNotFoundException("Delivery zone not found: " + id));
+    methods.deleteByZoneId(zone.getId());
     zones.delete(zone);
   }
 
@@ -115,7 +188,22 @@ public class StoreDeliveryService {
         : zones.findMappedLocationIdsForStoreRegion(store.getLocation().trim()).stream()
             .filter(java.util.Objects::nonNull).map(String::trim).filter(value -> !value.isBlank()).distinct().toList();
     if (region.size() == 1) return region.getFirst();
+    if (region.size() > 1) throw new IllegalArgumentException("Store delivery location mappings conflict. Contact the store administrator.");
+    String city = store.getCity() == null || store.getCity().isBlank() ? store.getLocation() : store.getCity();
+    String canonicalLocation = canonicalLocationId(city);
+    if (canonicalLocation != null) return canonicalLocation;
     throw new IllegalArgumentException("Store delivery location mapping is missing or ambiguous. Configure the store's location before saving delivery radius rules.");
+  }
+
+  private String canonicalLocationId(String city) {
+    if (city == null || city.isBlank()) return null;
+    return switch (city.trim().toLowerCase(java.util.Locale.ROOT)) {
+      case "hyderabad", "secunderabad", "sangareddy" -> "hyderabad";
+      case "chennai" -> "chennai";
+      case "bengaluru", "bangalore" -> "bengaluru";
+      case "vijayawada" -> "vijayawada";
+      default -> null;
+    };
   }
 
   private Store requireStore(String id) {

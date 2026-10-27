@@ -1,0 +1,60 @@
+- generic [ref=e20]:
+  - complementary [ref=e21]:
+    - generic [ref=e22]:
+      - img "Spices and Pickles" [ref=e23]
+      - generic [ref=e24]:
+        - heading "Demo Delivery Partner SR Nagar" [level=6] [ref=e25]
+        - generic [ref=e26]: TS09DEMO0001 - Delivery Partner
+    - navigation [ref=e27]:
+      - button "Dashboard" [ref=e28] [cursor=pointer]
+      - button "Orders" [ref=e33] [cursor=pointer]
+      - button "History" [ref=e38] [cursor=pointer]
+    - generic [ref=e43]:
+      - generic [ref=e44] [cursor=pointer]:
+        - switch "Active" [checked] [ref=e47]
+        - generic [ref=e50]: Active
+      - generic [ref=e51]:
+        - generic [ref=e52]: Your delivery area
+        - generic [ref=e53]: "Assigned store: SR Nagar Store"
+        - generic [ref=e54]: "Store base: Hyderabad"
+        - generic [ref=e55]: "Service region: Hyderabad"
+        - generic [ref=e56]: Your shared GPS location
+        - generic [ref=e57]: Not shared yet. Use Share GPS to update.
+      - button "Share GPS" [ref=e58] [cursor=pointer]
+      - button "Profile" [ref=e63] [cursor=pointer]
+      - button "Sign out" [ref=e65] [cursor=pointer]
+  - main [ref=e67]:
+    - heading "Dashboard" [level=5] [ref=e69]
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - heading "Delivery Performance" [level=6] [ref=e73]
+          - paragraph [ref=e74]: Charts and delivery outcomes for the selected period.
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - combobox [ref=e77] [cursor=pointer]: 30 days
+            - textbox [aria-hidden]: "30"
+            - group [aria-hidden]
+          - button "View historical delivery details" [ref=e78] [cursor=pointer]
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - heading "0" [level=5] [ref=e81]
+          - text: Assigned
+        - generic [ref=e82]:
+          - heading "0" [level=5] [ref=e83]
+          - text: Active
+        - generic [ref=e84]:
+          - heading "0" [level=5] [ref=e85]
+          - text: Delivered today
+        - generic [ref=e86]:
+          - heading "0" [level=5] [ref=e87]
+          - text: Delivered
+        - generic [ref=e88]:
+          - heading "0%" [level=5] [ref=e89]
+          - text: Success rate
+        - generic [ref=e90]:
+          - heading "Rs 0" [level=5] [ref=e91]
+          - text: Value handled
+      - generic [ref=e92]:
+        - paragraph [ref=e93]: No completed deliveries in this period.
+        - button "Open delivery history" [ref=e94] [cursor=pointer]

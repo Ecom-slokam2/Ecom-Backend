@@ -1,0 +1,230 @@
+- generic [ref=f38e1]:
+  - generic [ref=f38e8]:
+    - navigation [ref=f38e9]:
+      - generic [ref=f38e10]:
+        - generic [ref=f38e12]:
+          - heading [level=6] [ref=f38e151]: Global Admin Portal
+          - text: All locations
+        - button [ref=f38e152] [cursor=pointer]
+      - generic [ref=f38e17]:
+        - generic [ref=f38e18]:
+          - paragraph [ref=f38e19]: Main
+          - button [ref=f38e153] [cursor=pointer]:
+            - generic [ref=f38e24]: Dashboard
+        - generic [ref=f38e25]:
+          - paragraph [ref=f38e26]: Management
+          - button [ref=f38e154] [cursor=pointer]:
+            - generic [ref=f38e31]: Stores
+          - button [ref=f38e155] [cursor=pointer]:
+            - generic [ref=f38e37]: Products
+          - button [ref=f38e156] [cursor=pointer]:
+            - generic [ref=f38e42]: Categories
+          - button [ref=f38e157] [cursor=pointer]:
+            - generic [ref=f38e47]: Banners
+          - button [ref=f38e158] [cursor=pointer]:
+            - generic [ref=f38e53]: Inventory
+        - generic [ref=f38e54]:
+          - paragraph [ref=f38e55]: Orders & Payments
+          - button [ref=f38e159] [cursor=pointer]:
+            - generic [ref=f38e60]: Orders
+          - button [ref=f38e160] [cursor=pointer]:
+            - generic [ref=f38e66]: Payments
+          - button [ref=f38e161] [cursor=pointer]:
+            - generic [ref=f38e71]: Delivery
+        - generic [ref=f38e72]:
+          - paragraph [ref=f38e73]: Customer
+          - button [ref=f38e162] [cursor=pointer]:
+            - generic [ref=f38e78]: Customers
+          - button [ref=f38e163] [cursor=pointer]:
+            - generic [ref=f38e83]: Reviews
+          - button [ref=f38e164] [cursor=pointer]:
+            - generic [ref=f38e89]: Coupons
+          - button [ref=f38e165] [cursor=pointer]:
+            - generic [ref=f38e94]: Notifications
+        - generic [ref=f38e95]:
+          - paragraph [ref=f38e96]: Analytics
+          - button [ref=f38e166] [cursor=pointer]:
+            - generic [ref=f38e101]: Reports
+        - generic [ref=f38e102]:
+          - paragraph [ref=f38e103]: System
+          - button [ref=f38e167] [cursor=pointer]:
+            - generic [ref=f38e108]: Audit Logs
+      - button [ref=f38e168] [cursor=pointer]: View Customer App
+    - main [ref=f38e110]:
+      - generic [ref=f38e111]:
+        - generic [ref=f38e112]:
+          - button [ref=f38e113] [cursor=pointer]
+          - generic [ref=f38e116]:
+            - text: Global Admin /
+            - strong [ref=f38e117]: Products
+        - generic [ref=f38e118]:
+          - textbox [ref=f38e169]:
+            - /placeholder: Search portal
+          - button [ref=f38e170] [cursor=pointer]
+          - button [ref=f38e171] [cursor=pointer]:
+            - generic [ref=f38e128]: G
+            - generic [ref=f38e129]: Global Administrator
+      - generic [ref=f38e130]:
+        - generic [ref=f38e131]:
+          - heading [level=4] [ref=f38e172]: Products
+          - paragraph [ref=f38e133]: Manage products within your assigned scope.
+        - button [ref=f38e173] [cursor=pointer]: View Customer App
+      - generic [ref=f38e135]:
+        - generic [ref=f38e136]:
+          - generic [ref=f38e137]:
+            - generic: Search
+            - generic [ref=f38e138]:
+              - textbox [ref=f38e174]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f38e140]:
+            - combobox [ref=f38e141] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f38e142]:
+            - combobox [ref=f38e143] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f38e175] [cursor=pointer]: Create
+          - button [ref=f38e176] [cursor=pointer]: Export
+        - paragraph [ref=f38e147]: No matching records. Use Create to add the first record.
+        - generic [ref=f38e148]:
+          - button [disabled]: Previous
+          - paragraph [ref=f38e149]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f38e328]:
+    - heading "Create Products" [level=2] [ref=f38e329]
+    - generic [ref=f38e181]:
+      - generic [ref=f38e183]:
+        - generic [ref=f38e283]:
+          - text: Product name
+          - generic [aria-hidden] [ref=f38e284]: "*"
+        - generic [ref=f38e184]:
+          - textbox "Product name" [ref=f38e330]: Andhra Mango Avakaya Pickle 500 g
+          - group [aria-hidden]:
+            - generic: Product name *
+      - generic [ref=f38e187]:
+        - generic [ref=f38e286]:
+          - text: Master SKU
+          - generic [aria-hidden] [ref=f38e287]: "*"
+        - generic [ref=f38e188]:
+          - textbox "Master SKU" [ref=f38e331]: PKL-ANDHRA-AVAKAYA-500-001
+          - group [aria-hidden]:
+            - generic: Master SKU *
+      - generic [ref=f38e192]:
+        - generic [ref=f38e271]: Category
+        - generic [ref=f38e193]:
+          - combobox "Category" [ref=f38e332]: Traditional Pickles
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=f38e197]:
+        - generic [ref=f38e290]: Sub-category
+        - generic [ref=f38e198]:
+          - textbox "Sub-category" [ref=f38e333]: Mango Pickles
+          - group [aria-hidden]:
+            - generic: Sub-category
+      - generic [ref=f38e201]:
+        - generic [ref=f38e292]:
+          - text: Description
+          - generic [aria-hidden] [ref=f38e293]: "*"
+        - generic [ref=f38e202]:
+          - textbox "Description" [ref=f38e334]: Traditional Andhra raw mango pickle with a bold mustard bite and sesame oil finish.
+          - group [aria-hidden]:
+            - generic: Description *
+      - generic [ref=f38e205]:
+        - generic [ref=f38e295]: Brand
+        - generic [ref=f38e206]:
+          - textbox "Brand" [ref=f38e335]: Metaarch Fresh
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=f38e209]:
+        - generic [ref=f38e297]: Ingredients
+        - generic [ref=f38e210]:
+          - textbox "Ingredients" [ref=f38e336]: Raw mango, mustard, red chilli, sesame oil, salt, fenugreek.
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=f38e213]:
+        - generic [ref=f38e299]: Specifications
+        - generic [ref=f38e214]:
+          - textbox "Specifications" [ref=f38e337]: Vegetarian. Store in a cool, dry place; use a dry spoon.
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=f38e217]:
+        - generic [ref=f38e301]: Pack
+        - generic [ref=f38e218]:
+          - textbox "Pack" [ref=f38e338]: 500 g
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=f38e221]:
+        - generic [ref=f38e303]: Type
+        - generic [ref=f38e222]:
+          - textbox "Type" [ref=f38e339]: Vegetarian
+          - group [aria-hidden]:
+            - generic: Type
+      - generic [ref=f38e225]:
+        - generic [ref=f38e305]: Shelf life
+        - generic [ref=f38e226]:
+          - textbox "Shelf life" [ref=f38e340]: 6 months
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=f38e229]:
+        - generic [ref=f38e307]: Tags
+        - generic [ref=f38e230]:
+          - textbox "Tags" [ref=f38e341]: pickle,avakaya,andhra,mango
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=f38e233]:
+        - generic [ref=f38e309]: Highlights
+        - generic [ref=f38e234]:
+          - textbox "Highlights" [ref=f38e342]: Traditional Andhra preparation; mustard forward; small batch cured.
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=f38e237]:
+        - generic [ref=f38e311]: About the Source
+        - generic [ref=f38e238]:
+          - textbox "About the Source" [ref=f38e343]: Prepared in small batches from firm raw mangoes sourced in season.
+          - group [aria-hidden]:
+            - generic: About the Source
+      - generic [ref=f38e241]:
+        - generic [ref=f38e313]: "Variants (one per line: Label | SKU | Price)"
+        - generic [ref=f38e242]:
+          - 'textbox "Variants (one per line: Label | SKU | Price)" [ref=f38e344]': 500 g | PKL-ANDHRA-AVAKAYA-500-001 | 229
+          - group [aria-hidden]:
+            - generic: "Variants (one per line: Label | SKU | Price)"
+      - generic [ref=f38e245]:
+        - generic [ref=f38e315]:
+          - text: Default price
+          - generic [aria-hidden] [ref=f38e316]: "*"
+        - generic [ref=f38e246]:
+          - spinbutton "Default price" [ref=f38e345]: "229"
+          - group [aria-hidden]:
+            - generic: Default price *
+      - generic [ref=f38e249]:
+        - generic [ref=f38e318]: Main image URL
+        - generic [ref=f38e250]:
+          - textbox "Main image URL" [ref=f38e346]: https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80
+          - group [aria-hidden]:
+            - generic: Main image URL
+      - generic [ref=f38e253]:
+        - combobox [ref=f38e254] [cursor=pointer]: Featured product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f38e256]:
+        - combobox [ref=f38e257] [cursor=pointer]: Special product
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f38e259]:
+        - combobox [ref=f38e260] [cursor=pointer]: New arrival
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f38e262]:
+        - combobox [ref=f38e263] [cursor=pointer]: Best seller
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f38e265]:
+        - combobox [active] [ref=f38e266] [cursor=pointer]: Active
+        - textbox [aria-hidden]: Active
+        - group [aria-hidden]
+    - generic [ref=f38e268]:
+      - button "Cancel" [ref=f38e347] [cursor=pointer]
+      - button "Save" [ref=f38e348] [cursor=pointer]

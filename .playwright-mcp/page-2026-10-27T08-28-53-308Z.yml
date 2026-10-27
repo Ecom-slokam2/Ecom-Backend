@@ -1,0 +1,110 @@
+- generic [ref=f63e5]:
+  - generic [ref=f63e6]:
+    - generic [ref=f63e7]:
+      - img "Pickles & Spices" [ref=f63e8] [cursor=pointer]
+      - generic [ref=f63e9]:
+        - paragraph [ref=f63e10]: Hi, Customer
+        - button [ref=f63e11] [cursor=pointer]:
+          - paragraph [ref=f63e12]: "Deliver to: Select delivery location"
+    - generic [ref=f63e16]:
+      - textbox "Search for" [ref=f63e18]:
+        - /placeholder: "Search for "
+      - img [aria-hidden] [ref=f63e19] [cursor=pointer]
+    - generic [ref=f63e21]:
+      - 'generic "Current time in Asia/Calcutta: 01:58:53 pm" [ref=f63e22]':
+        - generic [ref=f63e23]: 01:58:53 pm
+        - generic [ref=f63e24]: Asia/Calcutta
+      - generic "Language, currency and time zone" [ref=f63e25] [cursor=pointer]:
+        - paragraph [ref=f63e28]: English
+      - button "Wishlist" [ref=f63e29] [cursor=pointer]:
+        - paragraph [ref=f63e32]: Wishlist
+      - paragraph [ref=f63e37] [cursor=pointer]: Saved
+      - paragraph [ref=f63e42] [cursor=pointer]: Cart
+  - paragraph [ref=f63e48] [cursor=pointer]: All
+  - generic [ref=f63e50]:
+    - paragraph [ref=f63e52]: Loading catalog…
+    - generic [ref=f63e53]:
+      - paragraph [ref=f63e56]: Shop By Categories
+      - status [ref=f63e59]: Loading catalog...
+    - generic [ref=f63e60]:
+      - generic [ref=f63e61]:
+        - paragraph [ref=f63e63]: Featured Products
+        - button "View All" [ref=f63e64] [cursor=pointer]
+      - status [ref=f63e67]: Loading catalog...
+    - generic [ref=f63e68]:
+      - generic [ref=f63e69]:
+        - paragraph [ref=f63e71]: Special Products
+        - button "View All" [ref=f63e72] [cursor=pointer]
+      - status [ref=f63e75]: Loading catalog...
+    - generic [ref=f63e76]:
+      - generic [ref=f63e77]:
+        - paragraph [ref=f63e79]: New Arrivals
+        - button "View All" [ref=f63e80] [cursor=pointer]
+      - status [ref=f63e83]: Loading catalog...
+    - generic [ref=f63e84]:
+      - generic [ref=f63e85]:
+        - paragraph [ref=f63e87]: Recommended for You
+        - button "View All" [ref=f63e88] [cursor=pointer]
+      - status [ref=f63e91]: Loading catalog...
+    - generic [ref=f63e92]:
+      - generic [ref=f63e93]:
+        - paragraph [ref=f63e95]: Available Near You
+        - button "View All" [ref=f63e96] [cursor=pointer]
+      - status [ref=f63e99]: Loading catalog...
+    - generic [ref=f63e100]:
+      - generic [ref=f63e101]:
+        - paragraph [ref=f63e102]: Shops near you
+        - button "View All" [ref=f63e103] [cursor=pointer]
+      - generic [ref=f63e104]:
+        - button "All" [ref=f63e105] [cursor=pointer]
+        - button "Offers" [ref=f63e107] [cursor=pointer]
+        - button "Under 30 mins" [ref=f63e109] [cursor=pointer]
+        - button "Above 30 mins" [ref=f63e111] [cursor=pointer]
+        - button "New" [ref=f63e113] [cursor=pointer]
+      - paragraph [ref=f63e116]: No stores match the selected New filter.
+    - generic [ref=f63e117]:
+      - generic [ref=f63e119]:
+        - generic [ref=f63e120]:
+          - generic [ref=f63e121]:
+            - paragraph [ref=f63e122]: Our Best Sellers
+            - paragraph [ref=f63e123]: Here's what everyone's loving!
+          - button "View All" [ref=f63e124] [cursor=pointer]
+        - status [ref=f63e127]: Loading catalog...
+      - generic [ref=f63e129]:
+        - generic [ref=f63e130]: Welcome Offer
+        - paragraph [ref=f63e134]:
+          - text: Get
+          - generic [ref=f63e135]: 20% OFF
+        - generic [ref=f63e136]: ON FIRST 3 ORDERS
+    - generic [ref=f63e137]:
+      - generic [ref=f63e138]:
+        - paragraph [ref=f63e140]: Traditional Pickles
+        - button "View All" [ref=f63e141] [cursor=pointer]
+      - status [ref=f63e144]: Loading catalog...
+    - generic [ref=f63e145]:
+      - generic [ref=f63e146]:
+        - paragraph [ref=f63e148]: Premium Dry Fruits
+        - button "View All" [ref=f63e149] [cursor=pointer]
+      - status [ref=f63e152]: Loading catalog...
+    - generic [ref=f63e153]:
+      - paragraph [ref=f63e154]: Why Us
+      - generic [ref=f63e155]:
+        - generic [ref=f63e156]:
+          - paragraph [ref=f63e160]: 100% Homemade
+          - paragraph [ref=f63e161]: No preservatives
+        - generic [ref=f63e162]:
+          - paragraph [ref=f63e166]: Authentic Taste
+          - paragraph [ref=f63e167]: Traditional recipes
+        - generic [ref=f63e168]:
+          - paragraph [ref=f63e172]: Premium Quality
+          - paragraph [ref=f63e173]: Finest ingredients
+        - generic [ref=f63e174]:
+          - paragraph [ref=f63e178]: Hygienically Packed
+          - paragraph [ref=f63e179]: Safe & pure
+  - button "Open help center" [ref=f63e180] [cursor=pointer]:
+    - generic [ref=f63e182]: Help
+  - generic [ref=f63e183]:
+    - button [ref=f63e184] [cursor=pointer]:
+      - paragraph [ref=f63e187]: Home
+    - paragraph [ref=f63e191] [cursor=pointer]: Categories
+    - paragraph [ref=f63e195] [cursor=pointer]: Profile

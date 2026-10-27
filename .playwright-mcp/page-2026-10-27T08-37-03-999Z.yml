@@ -1,0 +1,78 @@
+- generic [ref=f81e5]:
+  - navigation [ref=f81e6]:
+    - generic [ref=f81e7]:
+      - img "Spices and Pickles" [ref=f81e233]
+      - generic [ref=f81e9]:
+        - heading "Global Admin Portal" [level=6] [ref=f81e234]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f81e235] [cursor=pointer]
+    - generic [ref=f81e14]:
+      - generic [ref=f81e15]:
+        - paragraph [ref=f81e16]: Main
+        - button "Dashboard" [ref=f81e236] [cursor=pointer]
+      - generic [ref=f81e22]:
+        - paragraph [ref=f81e23]: Management
+        - button "Stores" [ref=f81e237] [cursor=pointer]
+        - button "Products" [ref=f81e238] [cursor=pointer]
+        - button "Categories" [ref=f81e239] [cursor=pointer]
+        - button "Banners" [ref=f81e240] [cursor=pointer]
+        - button "Inventory" [ref=f81e241] [cursor=pointer]
+      - generic [ref=f81e51]:
+        - paragraph [ref=f81e52]: Orders & Payments
+        - button "Orders" [ref=f81e242] [cursor=pointer]
+        - button "Payments" [ref=f81e243] [cursor=pointer]
+        - button "Delivery" [ref=f81e244] [cursor=pointer]
+      - generic [ref=f81e69]:
+        - paragraph [ref=f81e70]: Customer
+        - button "Customers" [ref=f81e245] [cursor=pointer]
+        - button "Reviews" [ref=f81e246] [cursor=pointer]
+        - button "Coupons" [ref=f81e247] [cursor=pointer]
+        - button "Notifications" [ref=f81e248] [cursor=pointer]
+      - generic [ref=f81e92]:
+        - paragraph [ref=f81e93]: Analytics
+        - button "Reports" [ref=f81e249] [cursor=pointer]
+      - generic [ref=f81e99]:
+        - paragraph [ref=f81e100]: System
+        - button "Audit Logs" [ref=f81e250] [cursor=pointer]
+    - button "View Customer App" [ref=f81e251] [cursor=pointer]
+  - main [ref=f81e107]:
+    - generic [ref=f81e108]:
+      - generic [ref=f81e109]:
+        - button [ref=f81e110] [cursor=pointer]
+        - generic [ref=f81e113]:
+          - text: Global Admin /
+          - strong [ref=f81e114]: Inventory
+      - generic [ref=f81e115]:
+        - textbox "Search portal" [ref=f81e252]
+        - button "Notifications" [ref=f81e253] [cursor=pointer]
+        - button "G Global Administrator" [ref=f81e254] [cursor=pointer]:
+          - generic [ref=f81e125]: G
+          - generic [ref=f81e126]: Global Administrator
+    - generic [ref=f81e127]:
+      - generic [ref=f81e128]:
+        - heading "Inventory" [level=4] [ref=f81e255]
+        - paragraph [ref=f81e130]: Manage inventory within your assigned scope.
+      - button "View Customer App" [ref=f81e256] [cursor=pointer]
+    - generic [ref=f81e132]:
+      - generic [ref=f81e133]:
+        - generic [ref=f81e134]:
+          - generic: Search
+          - generic [ref=f81e135]:
+            - textbox "Search" [ref=f81e257]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f81e137]:
+          - combobox [ref=f81e138] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f81e139]:
+          - combobox [ref=f81e140] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [active] [ref=f81e258] [cursor=pointer]
+        - button "Export" [ref=f81e259] [cursor=pointer]
+      - paragraph [ref=f81e143]: No matching records. Use Create to add the first record.
+      - generic [ref=f81e144]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f81e145]: Page 1 of 1
+        - button "Next" [disabled]

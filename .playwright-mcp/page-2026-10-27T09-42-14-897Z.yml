@@ -1,0 +1,124 @@
+- generic [ref=e1]:
+  - generic [ref=e1639]:
+    - navigation [ref=e1640]:
+      - generic [ref=e1641]:
+        - generic [ref=e1643]:
+          - heading [level=6] [ref=e1753]: Store Manager Portal
+          - text: SR Nagar Store
+        - button [ref=e1754] [cursor=pointer]
+      - generic [ref=e1648]:
+        - button [ref=e1755] [cursor=pointer]:
+          - generic [ref=e1653]: Dashboard
+        - button [ref=e1756] [cursor=pointer]:
+          - generic [ref=e1659]: Products
+        - button [ref=e1757] [cursor=pointer]:
+          - generic [ref=e1664]: Banners
+        - button [ref=e1758] [cursor=pointer]:
+          - generic [ref=e1670]: Coupons
+        - button [ref=e1759] [cursor=pointer]:
+          - generic [ref=e1676]: Inventory
+        - button [ref=e1760] [cursor=pointer]:
+          - generic [ref=e1681]: Orders
+        - button [ref=e1761] [cursor=pointer]:
+          - generic [ref=e1686]: Delivery Partners
+        - button [ref=e1762] [cursor=pointer]:
+          - generic [ref=e1691]: Delivery Radius
+        - button [ref=e1763] [cursor=pointer]:
+          - generic [ref=e1696]: Delivery Settings
+        - button [ref=e1764] [cursor=pointer]:
+          - generic [ref=e1701]: Change Password
+        - button [ref=e1765] [cursor=pointer]:
+          - generic [ref=e1706]: Profile
+        - button [ref=e1766] [cursor=pointer]:
+          - generic [ref=e1711]: Logout
+      - button [ref=e1767] [cursor=pointer]: View Customer App
+    - main [ref=e1713]:
+      - generic [ref=e1714]:
+        - generic [ref=e1715]:
+          - button [ref=e1716] [cursor=pointer]
+          - generic [ref=e1719]:
+            - text: Store Manager /
+            - strong [ref=e1720]: Inventory
+        - generic [ref=e1721]:
+          - textbox [ref=e1768]:
+            - /placeholder: Search portal
+          - button [ref=e1769] [cursor=pointer]
+          - button [ref=e1770] [cursor=pointer]:
+            - generic [ref=e1731]: V
+            - generic [ref=e1732]: Vikram SR Nagar
+      - generic [ref=e1733]:
+        - generic [ref=e1734]:
+          - heading [level=4] [ref=e1771]: Inventory
+          - paragraph [ref=e1736]: Manage inventory within your assigned scope.
+        - button [ref=e1772] [cursor=pointer]: View Customer App
+      - generic [ref=e1738]:
+        - generic [ref=e1739]:
+          - generic [ref=e1740]:
+            - generic: Search
+            - generic [ref=e1741]:
+              - textbox [ref=e1773]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=e1743]:
+            - combobox [ref=e1744] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=e1745]:
+            - combobox [ref=e1746] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=e1774] [cursor=pointer]: Create
+          - button [ref=e1775] [cursor=pointer]: Export
+        - paragraph [ref=e1749]: No matching records. Use Create to add the first record.
+        - generic [ref=e1750]:
+          - button [disabled]: Previous
+          - paragraph [ref=e1751]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [active] [ref=e1778]:
+    - heading "Create Inventory" [level=2] [ref=e1779]
+    - generic [ref=e1780]:
+      - generic [ref=e1783]:
+        - generic:
+          - text: Product
+          - generic [aria-hidden]: "*"
+        - generic [ref=e1784]:
+          - combobox "Product" [ref=e1785]
+          - button "Open" [ref=e1787] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Product *
+        - paragraph [ref=e1790]: Product ID fills from the selected catalog product.
+      - generic [ref=e1792]:
+        - combobox [disabled] [ref=e1793]: Select product first
+        - textbox [disabled] [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=e1796]:
+        - combobox [disabled] [ref=e1797]: Select product first
+        - textbox [disabled] [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=e1799]:
+        - generic:
+          - text: Current stock
+          - generic [aria-hidden]: "*"
+        - generic [ref=e1800]:
+          - spinbutton "Current stock" [ref=e1801]
+          - group [aria-hidden]:
+            - generic: Current stock *
+      - generic [ref=e1803]:
+        - generic: Reserved stock
+        - generic [ref=e1804]:
+          - spinbutton "Reserved stock" [ref=e1805]
+          - group [aria-hidden]:
+            - generic: Reserved stock
+      - generic [ref=e1807]:
+        - generic: Low-stock threshold
+        - generic [ref=e1808]:
+          - spinbutton "Low-stock threshold" [ref=e1809]
+          - group [aria-hidden]:
+            - generic: Low-stock threshold
+      - generic [ref=e1811]:
+        - combobox [ref=e1812] [cursor=pointer]: ACTIVE
+        - textbox [aria-hidden]: ACTIVE
+        - group [aria-hidden]
+    - generic [ref=e1814]:
+      - button "Cancel" [ref=e1815] [cursor=pointer]
+      - button "Save" [ref=e1816] [cursor=pointer]

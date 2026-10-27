@@ -22,7 +22,10 @@ public class StaffProfileController {
       SELECT CAST(u.id AS CHAR) AS id,u.username,CASE WHEN r.name='CUSTOMER' THEN c.full_name ELSE COALESCE(NULLIF(u.display_name,''),c.full_name) END AS name,u.email,u.mobile,u.mobile AS phone,
       u.status,(u.status='Active' AND u.enabled AND NOT u.locked) AS active,u.vehicle_type AS vehicleType,
       u.vehicle_number AS vehicleNumber,u.licence_number AS licenceNumber,u.licence_number AS licenseNumber,
-      u.address,u.emergency_contact AS emergencyContact,m.store_id AS storeId,m.store_name AS store,
+      u.address,u.emergency_contact AS emergencyContact,
+      u.delivery_latitude AS deliveryLatitude,u.delivery_longitude AS deliveryLongitude,
+      ROUND(UNIX_TIMESTAMP(u.delivery_location_updated_at) * 1000) AS deliveryLocationUpdatedAt,
+      m.store_id AS storeId,m.store_name AS store,m.store_location AS storeLocation,m.store_address AS storeAddress,
       m.location_id AS location,LOWER(REPLACE(r.name,'_','-')) AS role
       FROM users u LEFT JOIN customers c ON c.user_id=u.id LEFT JOIN memberships m ON m.user_id=u.id
       LEFT JOIN user_roles ur ON ur.user_id=u.id LEFT JOIN roles r ON r.id=COALESCE(m.role_id,ur.role_id)

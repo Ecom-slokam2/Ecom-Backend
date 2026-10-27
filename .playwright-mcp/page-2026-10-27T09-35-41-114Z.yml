@@ -1,0 +1,250 @@
+- generic [ref=e1]:
+  - generic [ref=e163]:
+    - complementary [ref=e164]:
+      - generic [ref=e167]:
+        - heading [level=6] [ref=e257]: Store Manager
+        - paragraph [ref=e169]: SR Nagar Store
+      - navigation [ref=e170]:
+        - button [ref=e258] [cursor=pointer]:
+          - generic [ref=e175]: Dashboard
+        - button [ref=e259] [cursor=pointer]:
+          - generic [ref=e181]: Products
+        - button [ref=e260] [cursor=pointer]:
+          - generic [ref=e186]: Banners
+        - button [ref=e261] [cursor=pointer]:
+          - generic [ref=e192]: Coupons
+        - button [ref=e262] [cursor=pointer]:
+          - generic [ref=e198]: Inventory
+        - button [ref=e263] [cursor=pointer]:
+          - generic [ref=e203]: Orders
+        - button [ref=e264] [cursor=pointer]:
+          - generic [ref=e208]: Delivery Partners
+        - button [ref=e265] [cursor=pointer]:
+          - generic [ref=e213]: Delivery Radius
+        - button [ref=e266] [cursor=pointer]:
+          - generic [ref=e218]: Delivery Settings
+        - button [ref=e267] [cursor=pointer]:
+          - generic [ref=e223]: Change Password
+        - button [ref=e268] [cursor=pointer]:
+          - generic [ref=e228]: Profile
+        - button [ref=e269] [cursor=pointer]:
+          - generic [ref=e233]: Logout
+      - button [ref=e270] [cursor=pointer]: View Customer App
+    - main [ref=e235]:
+      - generic [ref=e236]:
+        - button [ref=e271] [cursor=pointer]: Store Manager
+        - button [ref=e272] [cursor=pointer]:
+          - generic [ref=e242]: V
+          - generic [ref=e243]: Vikram SR Nagar
+        - button [ref=e273] [cursor=pointer]: Sign out
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - heading [level=4] [ref=e274]: Store Products
+          - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+        - button [ref=e275] [cursor=pointer]: Create Product
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic: Search your products
+          - generic [ref=e252]:
+            - textbox [ref=e276]
+            - group [aria-hidden]:
+              - generic: Search your products
+        - paragraph [ref=e254]: 0 products
+      - paragraph [ref=e255]: No products yet. Select Create Product to add one to this store.
+  - dialog [ref=e408]:
+    - heading "Create Store Product" [level=2] [ref=e409]
+    - generic [ref=e281]:
+      - generic [ref=e282]:
+        - generic [ref=e283]: Category
+        - generic [ref=e284]:
+          - combobox "Category" [ref=e410] [cursor=pointer]: Premium Dry Fruits
+          - textbox [aria-hidden]: 648cd07b-2dd6-4a9b-87af-607ec4d77cbe
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=e286]:
+        - generic [ref=e437]: Product name
+        - generic [ref=e287]:
+          - textbox "Product name" [ref=e411]: Afghan Black Raisins
+          - group [aria-hidden]:
+            - generic: Product name
+      - generic [ref=e289]:
+        - generic [ref=e438]: SKU
+        - generic [ref=e290]:
+          - textbox "SKU" [ref=e412]: DRY-RAISIN-AFG-001-SRN
+          - group [aria-hidden]:
+            - generic: SKU
+      - generic [ref=e292]:
+        - generic [ref=e439]: Brand
+        - generic [ref=e293]:
+          - textbox "Brand" [ref=e413]: Spices and Pickles
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=e295]:
+        - generic: URL slug (optional)
+        - generic [ref=e296]:
+          - textbox "URL slug (optional)" [ref=e414]
+          - group [aria-hidden]:
+            - generic: URL slug (optional)
+      - generic [ref=e298]:
+        - generic [ref=e299]: Subcategory
+        - generic [ref=e300]:
+          - textbox "Subcategory" [ref=e415]: Raisins
+          - group [aria-hidden]:
+            - generic: Subcategory
+      - generic [ref=e302]:
+        - generic [ref=e440]: Pack
+        - generic [ref=e303]:
+          - textbox "Pack" [ref=e416]: 250 g
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=e305]:
+        - generic [ref=e441]: Product type
+        - generic [ref=e306]:
+          - textbox "Product type" [ref=e417]: Dried fruit
+          - group [aria-hidden]:
+            - generic: Product type
+      - generic [ref=e308]:
+        - generic [ref=e442]: Shelf life
+        - generic [ref=e309]:
+          - textbox "Shelf life" [ref=e418]: 9 months
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=e311]:
+        - generic [ref=e312]: Status
+        - generic [ref=e313]:
+          - combobox "Status" [ref=e419] [cursor=pointer]: Active
+          - textbox [aria-hidden]: ACTIVE
+          - group [aria-hidden]:
+            - generic: Status
+      - generic [ref=e315]:
+        - generic [ref=e443]: Description
+        - generic [ref=e316]:
+          - textbox "Description" [ref=e420]: Naturally sweet Afghan black raisins, ideal for snacking and traditional recipes.
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=e318]:
+        - generic [ref=e444]: Ingredients
+        - generic [ref=e319]:
+          - textbox "Ingredients" [ref=e421]: Afghan black raisins
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=e321]:
+        - generic [ref=e445]: Specifications
+        - generic [ref=e322]:
+          - textbox "Specifications" [ref=e422]: Vegetarian; packed for freshness; store in a cool, dry place.
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=e324]:
+        - generic [ref=e446]: Highlights
+        - generic [ref=e325]:
+          - textbox "Highlights" [ref=e423]: Naturally sweet; no preparation needed
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=e327]:
+        - generic [ref=e447]: Tags
+        - generic [ref=e328]:
+          - textbox "Tags" [ref=e424]: black raisins, kishmish, dry fruits
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - paragraph [ref=e332]: Variants and prices
+          - button "Add Variant" [ref=e425] [cursor=pointer]
+        - generic [ref=e334]:
+          - generic [ref=e335]:
+            - generic [ref=e448]: Variant SKU
+            - generic [ref=e336]:
+              - textbox "Variant SKU" [ref=e426]: DRY-RAISIN-AFG-500-V1-SRN
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e338]:
+            - generic [ref=e449]: Variant / pack name
+            - generic [ref=e339]:
+              - textbox "Variant / pack name" [ref=e427]: 500 g
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e341]:
+            - generic [ref=e450]: Price
+            - generic [ref=e342]:
+              - spinbutton "Price" [ref=e428]: "369"
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e344]:
+            - generic [ref=e451]: Compare-at price
+            - generic [ref=e345]:
+              - spinbutton "Compare-at price" [ref=e429]: "369"
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e347]:
+            - generic [ref=e348] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e430]
+              - generic [ref=e353]: Active
+            - button "Remove" [ref=e431] [cursor=pointer]
+          - generic [ref=e355]:
+            - generic [ref=e452]: Variant attributes (JSON or text)
+            - generic [ref=e356]:
+              - textbox "Variant attributes (JSON or text)" [ref=e432]: 500 g
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e453]:
+          - generic [ref=e454]:
+            - generic [ref=e477]: Variant SKU
+            - generic [ref=e455]:
+              - textbox "Variant SKU" [ref=e456]: DRY-RAISIN-AFG-250-V1-SRN
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e457]:
+            - generic [ref=e478]: Variant / pack name
+            - generic [ref=e458]:
+              - textbox "Variant / pack name" [ref=e459]: 250 g
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e460]:
+            - generic [ref=e479]: Price
+            - generic [ref=e461]:
+              - spinbutton "Price" [ref=e462]: "199"
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e463]:
+            - generic [ref=e480]: Compare-at price
+            - generic [ref=e464]:
+              - spinbutton "Compare-at price" [ref=e465]: "199"
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e466]:
+            - generic [ref=e467] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e469]
+              - generic [ref=e472]: Active
+            - button "Remove" [ref=e473] [cursor=pointer]
+          - generic [ref=e474]:
+            - generic [ref=e481]: Variant attributes (JSON or text)
+            - generic [ref=e475]:
+              - textbox "Variant attributes (JSON or text)" [ref=e476]: 250 g
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e358]: Active products need at least one active, priced variant.
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - paragraph [ref=e361]: Product images
+          - button "Add Image" [active] [ref=e433] [cursor=pointer]
+        - generic [ref=e482]:
+          - generic [ref=e483]:
+            - generic: Image URL
+            - generic [ref=e484]:
+              - textbox "Image URL" [ref=e485]:
+                - /placeholder: https://…
+              - group [aria-hidden]:
+                - generic: Image URL
+          - generic [ref=e486]:
+            - generic: Alt text
+            - generic [ref=e487]:
+              - textbox "Alt text" [ref=e488]
+              - group [aria-hidden]:
+                - generic: Alt text
+          - button "Remove" [ref=e489] [cursor=pointer]
+      - generic [ref=e363] [cursor=pointer]:
+        - checkbox "Available in my store" [checked] [ref=e434]
+        - generic [ref=e368]: Available in my store
+    - generic [ref=e369]:
+      - button "Cancel" [ref=e435] [cursor=pointer]
+      - button "Save Product" [ref=e436] [cursor=pointer]

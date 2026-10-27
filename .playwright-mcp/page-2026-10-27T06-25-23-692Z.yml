@@ -1,0 +1,356 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e5]:
+    - generic [ref=f1e6]:
+      - generic [ref=f1e7]:
+        - img [ref=f1e478] [cursor=pointer]
+        - generic [ref=f1e9]:
+          - paragraph [ref=f1e10]: Delivery location
+          - button [ref=f1e479] [cursor=pointer]:
+            - paragraph [ref=f1e12]: "Deliver to: Select delivery location"
+      - generic [ref=f1e16]:
+        - textbox [ref=f1e480]:
+          - /placeholder: "Search for "
+        - img [aria-hidden] [ref=f1e19] [cursor=pointer]
+      - generic [ref=f1e21]:
+        - generic [ref=f1e481]:
+          - generic [ref=f1e23]: 11:55:23 am
+          - generic [ref=f1e24]: Asia/Calcutta
+        - paragraph [ref=f1e28] [cursor=pointer]: English
+        - button [ref=f1e483] [cursor=pointer]:
+          - paragraph [ref=f1e32]: Wishlist
+        - paragraph [ref=f1e36] [cursor=pointer]: Login
+        - paragraph [ref=f1e41] [cursor=pointer]: Cart
+    - generic [ref=f1e42]:
+      - paragraph [ref=f1e47] [cursor=pointer]: All
+      - paragraph [ref=f1e53] [cursor=pointer]: Traditional Pickles
+      - paragraph [ref=f1e58] [cursor=pointer]: Premium Dry Fruits
+      - paragraph [ref=f1e63] [cursor=pointer]: Fresh Vegetables
+      - paragraph [ref=f1e68] [cursor=pointer]: Fresh Non-Veg
+    - generic [ref=f1e69]:
+      - generic [ref=f1e70]:
+        - paragraph [ref=f1e73]: Shop By Categories
+        - generic [ref=f1e75]:
+          - paragraph [ref=f1e79] [cursor=pointer]: Traditional Pickles
+          - paragraph [ref=f1e83] [cursor=pointer]: Premium Dry Fruits
+          - paragraph [ref=f1e87] [cursor=pointer]: Fresh Vegetables
+          - paragraph [ref=f1e91] [cursor=pointer]: Fresh Non-Veg
+      - generic [ref=f1e92]:
+        - generic [ref=f1e93]:
+          - paragraph [ref=f1e95]: Featured Products
+          - button [ref=f1e488] [cursor=pointer]: View All
+        - status [ref=f1e99]: No products available in this section.
+      - generic [ref=f1e100]:
+        - generic [ref=f1e101]:
+          - paragraph [ref=f1e103]: Special Products
+          - button [ref=f1e489] [cursor=pointer]: View All
+        - status [ref=f1e107]: No products available in this section.
+      - generic [ref=f1e108]:
+        - generic [ref=f1e109]:
+          - paragraph [ref=f1e111]: New Arrivals
+          - button [ref=f1e490] [cursor=pointer]: View All
+        - generic [ref=f1e114]:
+          - generic [ref=f1e115] [cursor=pointer]:
+            - button [ref=f1e492]
+            - generic [ref=f1e121]:
+              - paragraph [ref=f1e122]: Premium Roasted Pistachios
+              - paragraph [ref=f1e123]: India-wide Global Store
+              - paragraph [ref=f1e124]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e125]:
+                - generic [ref=f1e126]:
+                  - paragraph [ref=f1e127]: 200 g
+                  - paragraph [ref=f1e128]: ₹499.00
+                - button [disabled]: Unavailable
+          - generic [ref=f1e129] [cursor=pointer]:
+            - button [ref=f1e494]
+            - generic [ref=f1e135]:
+              - paragraph [ref=f1e136]: Whole Walnut Kernels
+              - paragraph [ref=f1e137]: India-wide Global Store
+              - paragraph [ref=f1e138]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e139]:
+                - generic [ref=f1e140]:
+                  - paragraph [ref=f1e141]: 200 g
+                  - paragraph [ref=f1e142]: ₹449.00
+                - button [disabled]: Unavailable
+          - generic [ref=f1e143] [cursor=pointer]:
+            - button [ref=f1e496]
+            - generic [ref=f1e149]:
+              - paragraph [ref=f1e150]: California Almonds 500 g
+              - paragraph [ref=f1e151]: India-wide Global Store
+              - paragraph [ref=f1e152]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e153]:
+                - generic [ref=f1e154]:
+                  - paragraph [ref=f1e155]: 500 g
+                  - paragraph [ref=f1e156]: ₹699.00
+                - button [disabled]: Unavailable
+          - generic [ref=f1e157] [cursor=pointer]:
+            - button [ref=f1e498]
+            - generic [ref=f1e163]:
+              - paragraph [ref=f1e164]: Afghan Black Raisins
+              - paragraph [ref=f1e165]: India-wide Global Store
+              - paragraph [ref=f1e166]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e167]:
+                - generic [ref=f1e168]:
+                  - paragraph [ref=f1e169]: 250 g
+                  - paragraph [ref=f1e170]: ₹239.00
+                - button [disabled]: Unavailable
+          - generic [ref=f1e171] [cursor=pointer]:
+            - button [ref=f1e500]
+            - generic [ref=f1e177]:
+              - paragraph [ref=f1e178]: Andhra Avakaya Mango Pickle
+              - paragraph [ref=f1e179]: India-wide Global Store
+              - paragraph [ref=f1e180]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e181]:
+                - generic [ref=f1e182]:
+                  - paragraph [ref=f1e183]: 500 g
+                  - paragraph [ref=f1e184]: ₹299.00
+                - button [disabled]: Unavailable
+          - generic [ref=f1e185] [cursor=pointer]:
+            - button [ref=f1e502]
+            - generic [ref=f1e191]:
+              - paragraph [ref=f1e192]: Gongura Leaf Pickle
+              - paragraph [ref=f1e193]: India-wide Global Store
+              - paragraph [ref=f1e194]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e195]:
+                - generic [ref=f1e196]:
+                  - paragraph [ref=f1e197]: 300 g
+                  - paragraph [ref=f1e198]: ₹229.00
+                - button [disabled]: Unavailable
+      - generic [ref=f1e199]:
+        - generic [ref=f1e200]:
+          - paragraph [ref=f1e202]: Recommended for You
+          - button [ref=f1e503] [cursor=pointer]: View All
+        - generic [ref=f1e205]:
+          - generic [ref=f1e206] [cursor=pointer]:
+            - button [ref=f1e505]
+            - generic [ref=f1e212]:
+              - paragraph [ref=f1e213]: Premium Roasted Pistachios
+              - paragraph [ref=f1e214]: India-wide Global Store
+              - paragraph [ref=f1e215]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e216]:
+                - generic [ref=f1e217]:
+                  - paragraph [ref=f1e218]: 200 g
+                  - paragraph [ref=f1e219]: ₹499.00
+                - button [disabled]: ADD
+          - generic [ref=f1e220] [cursor=pointer]:
+            - button [ref=f1e507]
+            - generic [ref=f1e226]:
+              - paragraph [ref=f1e227]: Whole Walnut Kernels
+              - paragraph [ref=f1e228]: India-wide Global Store
+              - paragraph [ref=f1e229]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e230]:
+                - generic [ref=f1e231]:
+                  - paragraph [ref=f1e232]: 200 g
+                  - paragraph [ref=f1e233]: ₹449.00
+                - button [disabled]: ADD
+          - generic [ref=f1e234] [cursor=pointer]:
+            - button [ref=f1e509]
+            - generic [ref=f1e240]:
+              - paragraph [ref=f1e241]: California Almonds 500 g
+              - paragraph [ref=f1e242]: India-wide Global Store
+              - paragraph [ref=f1e243]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e244]:
+                - generic [ref=f1e245]:
+                  - paragraph [ref=f1e246]: 500 g
+                  - paragraph [ref=f1e247]: ₹699.00
+                - button [disabled]: ADD
+          - generic [ref=f1e248] [cursor=pointer]:
+            - button [ref=f1e511]
+            - generic [ref=f1e254]:
+              - paragraph [ref=f1e255]: Afghan Black Raisins
+              - paragraph [ref=f1e256]: India-wide Global Store
+              - paragraph [ref=f1e257]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e258]:
+                - generic [ref=f1e259]:
+                  - paragraph [ref=f1e260]: 250 g
+                  - paragraph [ref=f1e261]: ₹239.00
+                - button [disabled]: ADD
+          - generic [ref=f1e262] [cursor=pointer]:
+            - button [ref=f1e513]
+            - generic [ref=f1e268]:
+              - paragraph [ref=f1e269]: Andhra Avakaya Mango Pickle
+              - paragraph [ref=f1e270]: India-wide Global Store
+              - paragraph [ref=f1e271]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e272]:
+                - generic [ref=f1e273]:
+                  - paragraph [ref=f1e274]: 500 g
+                  - paragraph [ref=f1e275]: ₹299.00
+                - button [disabled]: ADD
+          - generic [ref=f1e276] [cursor=pointer]:
+            - button [ref=f1e515]
+            - generic [ref=f1e282]:
+              - paragraph [ref=f1e283]: Gongura Leaf Pickle
+              - paragraph [ref=f1e284]: India-wide Global Store
+              - paragraph [ref=f1e285]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e286]:
+                - generic [ref=f1e287]:
+                  - paragraph [ref=f1e288]: 300 g
+                  - paragraph [ref=f1e289]: ₹229.00
+                - button [disabled]: ADD
+      - generic [ref=f1e290]:
+        - generic [ref=f1e291]:
+          - paragraph [ref=f1e293]: Available Near You
+          - button [ref=f1e516] [cursor=pointer]: View All
+        - status [ref=f1e297]: No products available in this section.
+      - generic [ref=f1e298]:
+        - generic [ref=f1e299]:
+          - paragraph [ref=f1e300]: Shops near you
+          - button [ref=f1e517] [cursor=pointer]: View All
+        - generic [ref=f1e302]:
+          - button [ref=f1e518] [cursor=pointer]:
+            - generic [ref=f1e304]: All
+          - button [ref=f1e519] [cursor=pointer]:
+            - generic [ref=f1e306]: Offers
+          - button [ref=f1e520] [cursor=pointer]:
+            - generic [ref=f1e308]: Under 30 mins
+          - button [ref=f1e521] [cursor=pointer]:
+            - generic [ref=f1e310]: Above 30 mins
+          - button [ref=f1e522] [cursor=pointer]:
+            - generic [ref=f1e312]: New
+        - button [ref=f1e523] [cursor=pointer]:
+          - paragraph [ref=f1e318]: India-wide Global Store
+          - paragraph [ref=f1e319]: Offer
+          - paragraph [ref=f1e320]: Delivery ETA not set
+      - generic [ref=f1e321]:
+        - generic [ref=f1e323]:
+          - generic [ref=f1e324]:
+            - generic [ref=f1e325]:
+              - paragraph [ref=f1e326]: Our Best Sellers
+              - paragraph [ref=f1e327]: Here's what everyone's loving!
+            - button [ref=f1e524] [cursor=pointer]: View All
+          - status [ref=f1e331]: No products available in this section.
+        - generic [ref=f1e333]:
+          - generic [ref=f1e334]: Welcome Offer
+          - paragraph [ref=f1e338]:
+            - text: Get
+            - generic [ref=f1e339]: 20% OFF
+          - generic [ref=f1e340]: ON FIRST 3 ORDERS
+      - generic [ref=f1e341]:
+        - generic [ref=f1e342]:
+          - paragraph [ref=f1e344]: Traditional Pickles
+          - button [ref=f1e525] [cursor=pointer]: View All
+        - generic [ref=f1e347]:
+          - generic [ref=f1e348] [cursor=pointer]:
+            - button [ref=f1e527]
+            - generic [ref=f1e354]:
+              - paragraph [ref=f1e355]: Andhra Avakaya Mango Pickle
+              - paragraph [ref=f1e356]: India-wide Global Store
+              - paragraph [ref=f1e357]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e358]:
+                - generic [ref=f1e359]:
+                  - paragraph [ref=f1e360]: 500 g
+                  - paragraph [ref=f1e361]: ₹299.00
+                - button [disabled]: ADD
+          - generic [ref=f1e362] [cursor=pointer]:
+            - button [ref=f1e529]
+            - generic [ref=f1e368]:
+              - paragraph [ref=f1e369]: Gongura Leaf Pickle
+              - paragraph [ref=f1e370]: India-wide Global Store
+              - paragraph [ref=f1e371]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e372]:
+                - generic [ref=f1e373]:
+                  - paragraph [ref=f1e374]: 300 g
+                  - paragraph [ref=f1e375]: ₹229.00
+                - button [disabled]: ADD
+      - generic [ref=f1e376]:
+        - generic [ref=f1e377]:
+          - paragraph [ref=f1e379]: Premium Dry Fruits
+          - button [ref=f1e530] [cursor=pointer]: View All
+        - generic [ref=f1e382]:
+          - generic [ref=f1e383] [cursor=pointer]:
+            - button [ref=f1e532]
+            - generic [ref=f1e389]:
+              - paragraph [ref=f1e390]: Premium Roasted Pistachios
+              - paragraph [ref=f1e391]: India-wide Global Store
+              - paragraph [ref=f1e392]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e393]:
+                - generic [ref=f1e394]:
+                  - paragraph [ref=f1e395]: 200 g
+                  - paragraph [ref=f1e396]: ₹499.00
+                - button [disabled]: ADD
+          - generic [ref=f1e397] [cursor=pointer]:
+            - button [ref=f1e534]
+            - generic [ref=f1e403]:
+              - paragraph [ref=f1e404]: Whole Walnut Kernels
+              - paragraph [ref=f1e405]: India-wide Global Store
+              - paragraph [ref=f1e406]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e407]:
+                - generic [ref=f1e408]:
+                  - paragraph [ref=f1e409]: 200 g
+                  - paragraph [ref=f1e410]: ₹449.00
+                - button [disabled]: ADD
+          - generic [ref=f1e411] [cursor=pointer]:
+            - button [ref=f1e536]
+            - generic [ref=f1e417]:
+              - paragraph [ref=f1e418]: California Almonds 500 g
+              - paragraph [ref=f1e419]: India-wide Global Store
+              - paragraph [ref=f1e420]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e421]:
+                - generic [ref=f1e422]:
+                  - paragraph [ref=f1e423]: 500 g
+                  - paragraph [ref=f1e424]: ₹699.00
+                - button [disabled]: ADD
+          - generic [ref=f1e425] [cursor=pointer]:
+            - button [ref=f1e538]
+            - generic [ref=f1e431]:
+              - paragraph [ref=f1e432]: Afghan Black Raisins
+              - paragraph [ref=f1e433]: India-wide Global Store
+              - paragraph [ref=f1e434]: 7–10 days delivery | No delivery charge
+              - generic [ref=f1e435]:
+                - generic [ref=f1e436]:
+                  - paragraph [ref=f1e437]: 250 g
+                  - paragraph [ref=f1e438]: ₹239.00
+                - button [disabled]: ADD
+      - generic [ref=f1e439]:
+        - paragraph [ref=f1e440]: Why Us
+        - generic [ref=f1e441]:
+          - generic [ref=f1e442]:
+            - paragraph [ref=f1e446]: 100% Homemade
+            - paragraph [ref=f1e447]: No preservatives
+          - generic [ref=f1e448]:
+            - paragraph [ref=f1e452]: Authentic Taste
+            - paragraph [ref=f1e453]: Traditional recipes
+          - generic [ref=f1e454]:
+            - paragraph [ref=f1e458]: Premium Quality
+            - paragraph [ref=f1e459]: Finest ingredients
+          - generic [ref=f1e460]:
+            - paragraph [ref=f1e464]: Hygienically Packed
+            - paragraph [ref=f1e465]: Safe & pure
+    - button [ref=f1e539] [cursor=pointer]:
+      - generic [ref=f1e468]: Help
+    - generic [ref=f1e469]:
+      - button [ref=f1e540] [cursor=pointer]:
+        - paragraph [ref=f1e473]: Home
+      - paragraph [ref=f1e477] [cursor=pointer]: Categories
+  - dialog [ref=f1e543]:
+    - generic [ref=f1e544]:
+      - button "Close location popup" [ref=f1e545] [cursor=pointer]
+      - heading "Select delivery location" [level=2] [ref=f1e552]
+      - paragraph [ref=f1e553]: Search, use GPS, or move the map pin to choose your delivery address.
+      - generic [ref=f1e554]:
+        - generic "Search delivery location" [ref=f1e555]
+        - generic [ref=f1e557]:
+          - generic "Google Map delivery location selector" [ref=f1e558]:
+            - generic [ref=f1e559]:
+              - generic:
+                - button "Keyboard shortcuts"
+              - region "Map" [ref=f1e560]
+              - generic [ref=f1e561]:
+                - img "Delivery location" [ref=f1e598]:
+                  - generic:
+                    - generic "Delivery location"
+                - iframe [aria-hidden] [ref=f1e599]
+                - button "Map camera controls" [ref=f1e601] [cursor=pointer]
+                - link "Open this area in Google Maps (opens a new window)" [ref=f1e603] [cursor=pointer]:
+                  - /url: https://maps.google.com/maps?ll=17.385,78.4867&z=12&t=m&hl=en-US&gl=US&mapclient=apiv3
+                  - img "Google" [ref=f1e605]
+                - generic [ref=f1e606]:
+                  - button "Keyboard shortcuts" [ref=f1e612] [cursor=pointer]
+                  - generic [ref=f1e613]: Map data ©2026 Google
+                  - link "Terms (opens in new tab)" [ref=f1e622] [cursor=pointer]:
+                    - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                    - text: Terms
+                  - link "Report a map error (opens in new tab)" [ref=f1e627] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/@17.385,78.4867,12z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                    - text: Report a map error
+          - button [ref=f1e628] [cursor=pointer]
+        - button "Confirm Location" [disabled]

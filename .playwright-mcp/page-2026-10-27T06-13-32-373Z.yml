@@ -1,0 +1,377 @@
+- generic [ref=f8e1]:
+  - generic [ref=f8e8]:
+    - navigation [ref=f8e9]:
+      - generic [ref=f8e10]:
+        - generic [ref=f8e12]:
+          - heading [level=6] [ref=f8e725]: Super Admin Portal
+          - text: All locations
+        - button [ref=f8e726] [cursor=pointer]
+      - generic [ref=f8e17]:
+        - generic [ref=f8e18]:
+          - paragraph [ref=f8e19]: Main
+          - button [ref=f8e727] [cursor=pointer]:
+            - generic [ref=f8e24]: Dashboard
+        - generic [ref=f8e25]:
+          - paragraph [ref=f8e26]: Management
+          - button [ref=f8e728] [cursor=pointer]:
+            - generic [ref=f8e32]: Locations
+          - button [ref=f8e729] [cursor=pointer]:
+            - generic [ref=f8e37]: Users
+          - button [ref=f8e730] [cursor=pointer]:
+            - generic [ref=f8e42]: Stores
+          - button [ref=f8e731] [cursor=pointer]:
+            - generic [ref=f8e48]: Products
+          - button [ref=f8e732] [cursor=pointer]:
+            - generic [ref=f8e53]: Categories
+          - button [ref=f8e733] [cursor=pointer]:
+            - generic [ref=f8e58]: Banners
+          - button [ref=f8e734] [cursor=pointer]:
+            - generic [ref=f8e64]: Inventory
+        - generic [ref=f8e65]:
+          - paragraph [ref=f8e66]: Orders & Payments
+          - button [ref=f8e735] [cursor=pointer]:
+            - generic [ref=f8e71]: Orders
+          - button [ref=f8e736] [cursor=pointer]:
+            - generic [ref=f8e77]: Payments
+          - button [ref=f8e737] [cursor=pointer]:
+            - generic [ref=f8e82]: Delivery
+        - generic [ref=f8e83]:
+          - paragraph [ref=f8e84]: Customer
+          - button [ref=f8e738] [cursor=pointer]:
+            - generic [ref=f8e89]: Customers
+          - button [ref=f8e739] [cursor=pointer]:
+            - generic [ref=f8e94]: Reviews
+          - button [ref=f8e740] [cursor=pointer]:
+            - generic [ref=f8e100]: Coupons
+          - button [ref=f8e741] [cursor=pointer]:
+            - generic [ref=f8e105]: Notifications
+        - generic [ref=f8e106]:
+          - paragraph [ref=f8e107]: Analytics
+          - button [ref=f8e742] [cursor=pointer]:
+            - generic [ref=f8e112]: Reports
+        - generic [ref=f8e113]:
+          - paragraph [ref=f8e114]: System
+          - button [ref=f8e743] [cursor=pointer]:
+            - generic [ref=f8e119]: Security
+          - button [ref=f8e744] [cursor=pointer]:
+            - generic [ref=f8e124]: Audit Logs
+      - button [ref=f8e745] [cursor=pointer]: View Customer App
+    - main [ref=f8e126]:
+      - generic [ref=f8e127]:
+        - generic [ref=f8e128]:
+          - button [ref=f8e129] [cursor=pointer]
+          - generic [ref=f8e132]:
+            - text: Super Admin /
+            - strong [ref=f8e133]: Stores
+        - generic [ref=f8e134]:
+          - textbox [ref=f8e746]:
+            - /placeholder: Search portal
+          - button [ref=f8e747] [cursor=pointer]
+          - button [ref=f8e748] [cursor=pointer]:
+            - generic [ref=f8e144]: A
+            - generic [ref=f8e145]: Admin
+      - generic [ref=f8e146]:
+        - generic [ref=f8e147]:
+          - heading [level=4] [ref=f8e749]: Stores
+          - paragraph [ref=f8e149]: Manage stores within your assigned scope.
+        - button [ref=f8e750] [cursor=pointer]: View Customer App
+      - generic [ref=f8e151]:
+        - generic [ref=f8e152]:
+          - generic [ref=f8e153]:
+            - generic: Search
+            - generic [ref=f8e154]:
+              - textbox [ref=f8e751]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f8e156]:
+            - combobox [ref=f8e157] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f8e158]:
+            - combobox [ref=f8e159] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f8e752] [cursor=pointer]: Create
+          - button [ref=f8e753] [cursor=pointer]: Export
+        - generic [ref=f8e694]:
+          - generic [ref=f8e695]:
+            - paragraph [ref=f8e696]: Demo Kukatpally Basket
+            - paragraph [ref=f8e697]: demo.kukatpally@example.test
+          - generic [ref=f8e698]:
+            - button [ref=f8e754] [cursor=pointer]: View
+            - button [ref=f8e755] [cursor=pointer]: Edit
+            - button [ref=f8e756] [cursor=pointer]: Deactivate
+            - button [ref=f8e757] [cursor=pointer]: Delete
+        - generic [ref=f8e162]:
+          - generic [ref=f8e163]:
+            - paragraph [ref=f8e164]: India-wide Global Store
+            - paragraph [ref=f8e165]: +91 91000 29999
+          - generic [ref=f8e166]:
+            - button [ref=f8e758] [cursor=pointer]: View
+            - button [ref=f8e759] [cursor=pointer]: Edit
+            - button [ref=f8e760] [cursor=pointer]: Deactivate
+            - button [ref=f8e761] [cursor=pointer]: Delete
+        - generic [ref=f8e171]:
+          - generic [ref=f8e172]:
+            - paragraph [ref=f8e173]: Gachibowli Fresh Hub
+            - paragraph [ref=f8e174]: +91 91000 20001
+          - generic [ref=f8e175]:
+            - button [ref=f8e762] [cursor=pointer]: View
+            - button [ref=f8e763] [cursor=pointer]: Edit
+            - button [ref=f8e764] [cursor=pointer]: Deactivate
+            - button [ref=f8e765] [cursor=pointer]: Delete
+        - generic [ref=f8e180]:
+          - generic [ref=f8e181]:
+            - paragraph [ref=f8e182]: Kondapur Market Hub
+            - paragraph [ref=f8e183]: +91 9100020011
+          - generic [ref=f8e184]:
+            - button [ref=f8e766] [cursor=pointer]: View
+            - button [ref=f8e767] [cursor=pointer]: Edit
+            - button [ref=f8e768] [cursor=pointer]: Deactivate
+            - button [ref=f8e769] [cursor=pointer]: Delete
+        - generic [ref=f8e189]:
+          - generic [ref=f8e190]:
+            - paragraph [ref=f8e191]: Banjara Hills Fresh Hub
+            - paragraph [ref=f8e192]: +91 9100020010
+          - generic [ref=f8e193]:
+            - button [ref=f8e770] [cursor=pointer]: View
+            - button [ref=f8e771] [cursor=pointer]: Edit
+            - button [ref=f8e772] [cursor=pointer]: Deactivate
+            - button [ref=f8e773] [cursor=pointer]: Delete
+        - generic [ref=f8e198]:
+          - generic [ref=f8e199]:
+            - paragraph [ref=f8e200]: Sangareddy Fresh Hub
+            - paragraph [ref=f8e201]: +91 91000 20004
+          - generic [ref=f8e202]:
+            - button [ref=f8e774] [cursor=pointer]: View
+            - button [ref=f8e775] [cursor=pointer]: Edit
+            - button [ref=f8e776] [cursor=pointer]: Deactivate
+            - button [ref=f8e777] [cursor=pointer]: Delete
+        - generic [ref=f8e216]:
+          - button [disabled]: Previous
+          - paragraph [ref=f8e217]: Page 1 of 2
+          - button [ref=f8e778] [cursor=pointer]: Next
+  - dialog [ref=f8e1059]:
+    - heading "Create Stores" [level=2] [ref=f8e1060]
+    - generic [ref=f8e783]:
+      - generic [ref=f8e785]:
+        - generic [ref=f8e915]:
+          - text: Store name
+          - generic [aria-hidden] [ref=f8e916]: "*"
+        - generic [ref=f8e786]:
+          - textbox "Store name" [ref=f8e1061]: Demo Secunderabad Market
+          - group [aria-hidden]:
+            - generic: Store name *
+      - generic [ref=f8e789]:
+        - generic [ref=f8e917]: Store code
+        - generic [ref=f8e790]:
+          - textbox "Store code" [ref=f8e1062]: DEMO-HYD-SEC-02
+          - group [aria-hidden]:
+            - generic: Store code
+      - generic [ref=f8e793]:
+        - generic [ref=f8e918]: Store description
+        - generic [ref=f8e794]:
+          - textbox "Store description" [ref=f8e1063]: "Demo only: Hyderabad neighborhood store for delivery, pickup, radius and stock workflow testing."
+          - group [aria-hidden]:
+            - generic: Store description
+      - generic [ref=f8e797]:
+        - generic [ref=f8e919]: Store manager name
+        - generic [ref=f8e798]:
+          - textbox "Store manager name" [ref=f8e1064]: Demo Store Manager
+          - group [aria-hidden]:
+            - generic: Store manager name
+      - generic [ref=f8e801]:
+        - paragraph [ref=f8e802]: Store map location
+        - generic [ref=f8e803]:
+          - generic [ref=f8e804]:
+            - generic [ref=f8e805]: Search store location
+            - generic [ref=f8e806]:
+              - textbox "Search store location" [ref=f8e1065]: Secunderabad Railway Station, Telangana, India
+              - group [aria-hidden]:
+                - generic: Search store location
+            - paragraph [ref=f8e808]: Search with area, city, landmark or full address.
+          - button "Search" [ref=f8e1066] [cursor=pointer]
+          - button "Use current map point" [ref=f8e1067] [cursor=pointer]
+          - button "Open map" [ref=f8e1068] [cursor=pointer]
+        - generic [ref=f8e921]:
+          - iframe [ref=f8e922]:
+            - generic [ref=f10e2]:
+              - generic:
+                - region "Map" [ref=f10e3]
+                - button "Map marker" [ref=f10e4]
+              - generic:
+                - generic [ref=f10e8]:
+                  - button "Zoom In" [ref=f10e9] [cursor=pointer]
+                  - button "Zoom Out" [ref=f10e11] [cursor=pointer]
+                - group [ref=f10e13]:
+                  - generic [ref=f10e14]:
+                    - link "Report a problem" [ref=f10e15] [cursor=pointer]:
+                      - /url: /fixthemap?lat=17.43386&lon=78.50205&zoom=13
+                    - text: "| ©"
+                    - link "OpenStreetMap contributors" [ref=f10e16] [cursor=pointer]:
+                      - /url: /copyright
+                    - text: ♥️
+                    - link "Make a Donation" [ref=f10e17] [cursor=pointer]:
+                      - /url: https://supporting.openstreetmap.org
+                    - text: .
+                    - link "Website and API terms" [ref=f10e18] [cursor=pointer]:
+                      - /url: https://wiki.osmfoundation.org/wiki/Terms_of_Use
+          - generic: 10 km
+        - generic [ref=f8e811]:
+          - generic [ref=f8e812]:
+            - generic [ref=f8e923]: Latitude
+            - generic [ref=f8e813]:
+              - spinbutton "Latitude" [ref=f8e1069]: "17.4338591"
+              - group [aria-hidden]:
+                - generic: Latitude
+          - generic [ref=f8e815]:
+            - generic [ref=f8e924]: Longitude
+            - generic [ref=f8e816]:
+              - spinbutton "Longitude" [ref=f8e1070]: "78.502051"
+              - group [aria-hidden]:
+                - generic: Longitude
+      - generic [ref=f8e819]:
+        - generic [ref=f8e925]: Address
+        - generic [ref=f8e820]:
+          - textbox "Address" [ref=f8e1071]: Secunderabad Junction, Regimental Bazar Main Road, Marredpally mandal, Secunderabad, Hyderabad, Telangana, 500003, India
+          - group [aria-hidden]:
+            - generic: Address
+      - generic [ref=f8e823]:
+        - generic [ref=f8e926]: Door number
+        - generic [ref=f8e824]:
+          - textbox "Door number" [ref=f8e1072]: DEMO-02
+          - group [aria-hidden]:
+            - generic: Door number
+      - generic [ref=f8e827]:
+        - generic [ref=f8e927]: Street / road name
+        - generic [ref=f8e828]:
+          - textbox "Street / road name" [ref=f8e1073]: Secunderabad Main Road
+          - group [aria-hidden]:
+            - generic: Street / road name
+      - generic [ref=f8e831]:
+        - generic [ref=f8e928]: Area
+        - generic [ref=f8e832]:
+          - textbox "Area" [ref=f8e1074]: Secunderabad
+          - group [aria-hidden]:
+            - generic: Area
+      - generic [ref=f8e835]:
+        - generic [ref=f8e929]: Landmark
+        - generic [ref=f8e836]:
+          - textbox "Landmark" [ref=f8e1075]: Demo pickup point, Secunderabad
+          - group [aria-hidden]:
+            - generic: Landmark
+      - generic [ref=f8e839]:
+        - generic [ref=f8e930]: City
+        - generic [ref=f8e840]:
+          - textbox "City" [ref=f8e1076]: Hyderabad
+          - group [aria-hidden]:
+            - generic: City
+      - generic [ref=f8e843]:
+        - generic [ref=f8e931]: District
+        - generic [ref=f8e844]:
+          - textbox "District" [ref=f8e1077]: Hyderabad
+          - group [aria-hidden]:
+            - generic: District
+      - generic [ref=f8e847]:
+        - generic [ref=f8e932]: State
+        - generic [ref=f8e848]:
+          - textbox "State" [ref=f8e1078]: Telangana
+          - group [aria-hidden]:
+            - generic: State
+      - generic [ref=f8e851]:
+        - generic [ref=f8e933]: Pincode
+        - generic [ref=f8e852]:
+          - textbox "Pincode" [ref=f8e1079]: "500003"
+          - group [aria-hidden]:
+            - generic: Pincode
+      - generic [ref=f8e855]:
+        - generic: Store mobile number
+        - generic [ref=f8e856]:
+          - textbox "Store mobile number" [ref=f8e1080]
+          - group [aria-hidden]:
+            - generic: Store mobile number
+      - generic [ref=f8e859]:
+        - generic: Alternate mobile number
+        - generic [ref=f8e860]:
+          - textbox "Alternate mobile number" [ref=f8e1081]
+          - group [aria-hidden]:
+            - generic: Alternate mobile number
+      - generic [ref=f8e863]:
+        - generic [ref=f8e934]: Store email
+        - generic [ref=f8e864]:
+          - textbox "Store email" [ref=f8e1082]: demo.secunderabad@example.test
+          - group [aria-hidden]:
+            - generic: Store email
+      - generic [ref=f8e867]:
+        - generic: GST number
+        - generic [ref=f8e868]:
+          - textbox "GST number" [ref=f8e1083]
+          - group [aria-hidden]:
+            - generic: GST number
+      - generic [ref=f8e871]:
+        - generic: Store rating
+        - generic [ref=f8e872]:
+          - spinbutton "Store rating" [ref=f8e1084]
+          - group [aria-hidden]:
+            - generic: Store rating
+      - generic [ref=f8e875]:
+        - generic: Store logo/image URL
+        - generic [ref=f8e876]:
+          - textbox "Store logo/image URL" [ref=f8e1085]
+          - group [aria-hidden]:
+            - generic: Store logo/image URL
+      - generic [ref=f8e879]:
+        - combobox [ref=f8e880] [cursor=pointer]: "Yes"
+        - textbox [aria-hidden]: "Yes"
+        - group [aria-hidden]
+      - generic [ref=f8e882]:
+        - combobox [active] [ref=f8e883] [cursor=pointer]: "Yes"
+        - textbox [aria-hidden]: "Yes"
+        - group [aria-hidden]
+      - generic [ref=f8e885]:
+        - combobox [ref=f8e886] [cursor=pointer]: Store status
+        - textbox [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f8e888]:
+        - generic [ref=f8e965]:
+          - text: Order radius in KM
+          - generic [aria-hidden] [ref=f8e966]: "*"
+        - generic [ref=f8e889]:
+          - spinbutton "Order radius in KM" [ref=f8e1086]: "10"
+          - group [aria-hidden]:
+            - generic: Order radius in KM *
+      - generic [ref=f8e892]:
+        - generic [ref=f8e968]:
+          - text: Delivery ETA minutes
+          - generic [aria-hidden] [ref=f8e969]: "*"
+        - generic [ref=f8e893]:
+          - spinbutton "Delivery ETA minutes" [ref=f8e1087]: "40"
+          - group [aria-hidden]:
+            - generic: Delivery ETA minutes *
+      - generic [ref=f8e896]:
+        - generic [ref=f8e971]: Delivery charge
+        - generic [ref=f8e897]:
+          - spinbutton "Delivery charge" [ref=f8e1088]: "20"
+          - group [aria-hidden]:
+            - generic: Delivery charge
+      - generic [ref=f8e900]:
+        - generic [ref=f8e973]: Free delivery above order value
+        - generic [ref=f8e901]:
+          - spinbutton "Free delivery above order value" [ref=f8e1089]: "699"
+          - group [aria-hidden]:
+            - generic: Free delivery above order value
+      - generic [ref=f8e904]:
+        - generic [ref=f8e935]: Delivery modes (comma separated)
+        - generic [ref=f8e905]:
+          - textbox "Delivery modes (comma separated)" [ref=f8e1090]: Standard Delivery, Express Delivery, Scheduled Delivery, Store Pickup
+          - group [aria-hidden]:
+            - generic: Delivery modes (comma separated)
+      - generic [ref=f8e908]:
+        - generic [ref=f8e936]: Delivery notes
+        - generic [ref=f8e909]:
+          - textbox "Delivery notes" [ref=f8e1091]: Demo only. Confirm service radius and replace test contacts before launch.
+          - group [aria-hidden]:
+            - generic: Delivery notes
+    - generic [ref=f8e912]:
+      - button "Cancel" [ref=f8e1092] [cursor=pointer]
+      - button "Save" [ref=f8e1093] [cursor=pointer]

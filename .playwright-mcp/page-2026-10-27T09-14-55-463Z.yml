@@ -1,0 +1,124 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e476]:
+    - navigation [ref=f1e477]:
+      - generic [ref=f1e478]:
+        - generic [ref=f1e480]:
+          - heading [level=6] [ref=f1e2212]: Location Admin Portal
+          - text: hyderabad
+        - button [ref=f1e2213] [cursor=pointer]
+      - generic [ref=f1e485]:
+        - generic [ref=f1e486]:
+          - paragraph [ref=f1e487]: Main
+          - button [ref=f1e2214] [cursor=pointer]:
+            - generic [ref=f1e492]: Dashboard
+        - generic [ref=f1e493]:
+          - paragraph [ref=f1e494]: Management
+          - button [ref=f1e2215] [cursor=pointer]:
+            - generic [ref=f1e499]: Stores
+          - button [ref=f1e2216] [cursor=pointer]:
+            - generic [ref=f1e505]: Products
+          - button [ref=f1e2217] [cursor=pointer]:
+            - generic [ref=f1e510]: Banners
+          - button [ref=f1e2218] [cursor=pointer]:
+            - generic [ref=f1e516]: Inventory
+        - generic [ref=f1e517]:
+          - paragraph [ref=f1e518]: Orders & Payments
+          - button [ref=f1e2219] [cursor=pointer]:
+            - generic [ref=f1e523]: Orders
+          - button [ref=f1e2220] [cursor=pointer]:
+            - generic [ref=f1e529]: Payments
+          - button [ref=f1e2221] [cursor=pointer]:
+            - generic [ref=f1e534]: Delivery
+        - generic [ref=f1e535]:
+          - paragraph [ref=f1e536]: Customer
+          - button [ref=f1e2222] [cursor=pointer]:
+            - generic [ref=f1e542]: Coupons
+        - generic [ref=f1e543]:
+          - paragraph [ref=f1e544]: Analytics
+          - button [ref=f1e2223] [cursor=pointer]:
+            - generic [ref=f1e549]: Reports
+      - button [ref=f1e2224] [cursor=pointer]: View Customer App
+    - main [ref=f1e551]:
+      - generic [ref=f1e552]:
+        - generic [ref=f1e553]:
+          - button [ref=f1e554] [cursor=pointer]
+          - generic [ref=f1e557]:
+            - text: Location Admin /
+            - strong [ref=f1e558]: Products
+        - generic [ref=f1e559]:
+          - textbox [ref=f1e2225]:
+            - /placeholder: Search portal
+          - button [ref=f1e2226] [cursor=pointer]
+          - button [ref=f1e2227] [cursor=pointer]:
+            - generic [ref=f1e569]: H
+            - generic [ref=f1e570]: Hyderabad Location Administrator
+      - generic [ref=f1e571]:
+        - generic [ref=f1e572]:
+          - heading [level=4] [ref=f1e2228]: Products
+          - paragraph [ref=f1e574]: Manage products within your assigned scope.
+        - button [ref=f1e2229] [cursor=pointer]: View Customer App
+      - generic [ref=f1e710]:
+        - generic [ref=f1e711]:
+          - generic [ref=f1e712]:
+            - generic: Search
+            - generic [ref=f1e713]:
+              - textbox [ref=f1e2230]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f1e715]:
+            - combobox [ref=f1e716] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f1e717]:
+            - combobox [ref=f1e718] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f1e2231] [cursor=pointer]: Create Product
+          - button [ref=f1e2232] [cursor=pointer]: Map Product
+          - button [ref=f1e2233] [cursor=pointer]: Export
+        - generic [ref=f1e2204]:
+          - generic [ref=f1e2205]:
+            - paragraph [ref=f1e2206]: California Almonds
+            - paragraph [ref=f1e2207]: DRY-ALMOND-CAL-001
+          - generic [ref=f1e2208]:
+            - button [ref=f1e2234] [cursor=pointer]: View
+            - button [ref=f1e2235] [cursor=pointer]: Manage stores
+        - generic [ref=f1e722]:
+          - button [disabled]: Previous
+          - paragraph [ref=f1e723]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [ref=f1e2238]:
+    - heading "Manage store mappings California Almonds" [level=2] [ref=f1e2239]
+    - generic [ref=f1e2241]:
+      - paragraph [ref=f1e2242]: Store availability in your assigned location
+      - generic [ref=f1e2244]:
+        - generic [ref=f1e2245]: Mapped stores
+        - generic [ref=f1e2246]:
+          - button "Hyderabad Main Store (store-hyderabad-main-store)" [ref=f1e2247]:
+            - img [aria-hidden] [ref=f1e2249] [cursor=pointer]
+          - button "SR Nagar Store (store-sr-nagar-store)" [ref=f1e2277]:
+            - img [aria-hidden] [ref=f1e2279] [cursor=pointer]
+          - button "Gachibowli Fresh Hub (store-gachibowli-fresh-hub)" [ref=f1e2289]:
+            - img [aria-hidden] [ref=f1e2291] [cursor=pointer]
+          - combobox "Mapped stores" [active] [ref=f1e2251]
+          - generic [ref=f1e2252]:
+            - button "Clear" [ref=f1e2268] [cursor=pointer]
+            - button "Open" [ref=f1e2293] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Mapped stores
+        - paragraph [ref=f1e2256]: Only stores in your assigned location are available.
+      - generic [ref=f1e2257]:
+        - paragraph [ref=f1e2258]: Hyderabad Main Store
+        - button "Available" [ref=f1e2259] [cursor=pointer]
+        - generic [ref=f1e2260]:
+          - generic: Price override
+          - generic [ref=f1e2261]:
+            - spinbutton "Price override" [ref=f1e2262]
+            - group [aria-hidden]:
+              - generic: Price override
+          - paragraph [ref=f1e2263]: Leave blank for product price.
+      - paragraph [ref=f1e2282]: "SR Nagar Store: will be assigned when saved."
+      - paragraph [ref=f1e2294]: "Gachibowli Fresh Hub: will be assigned when saved."
+    - generic [ref=f1e2265]:
+      - button "Cancel" [ref=f1e2266] [cursor=pointer]
+      - button "Save" [ref=f1e2267] [cursor=pointer]

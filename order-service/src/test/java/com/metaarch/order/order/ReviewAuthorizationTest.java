@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 
 class ReviewAuthorizationTest {
-  private final OrderAccess access = new OrderAccess(org.mockito.Mockito.mock(OrderRepository.class));
+  private final OrderAccess access = new OrderAccess(org.mockito.Mockito.mock(OrderRepository.class), org.mockito.Mockito.mock(com.metaarch.sync.CatalogLocationClient.class));
 
   @AfterEach void clearAuthentication() { SecurityContextHolder.clearContext(); }
 

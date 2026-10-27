@@ -11,7 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class StoreService {
   private final StoreRepository stores;
-  public StoreService(StoreRepository stores) { this.stores = stores; }
+  private final StoreDeliveryService delivery;
+  public StoreService(StoreRepository stores, StoreDeliveryService delivery) { this.stores = stores; this.delivery = delivery; }
 
   @Transactional
   public StoreResponse create(StoreRequest request) {
@@ -20,13 +21,23 @@ public class StoreService {
     if (stores.existsByNameIgnoreCase(clean(request.name()))) throw new ConflictException("Store name already exists");
     Store store = new Store(id);
     apply(store, request);
-    return StoreResponse.from(stores.save(store));
+    Store saved = stores.save(store);
+    delivery.ensureDefaultZone(saved);
+    return StoreResponse.from(saved);
   }
 
   @Transactional(readOnly = true)
   public List<StoreResponse> list(Boolean active) {
-    List<Store> result = active == null ? stores.findAll() : stores.findByActive(active);
+    List<Store> result = (active == null ? stores.findAll() : stores.findByActive(active)).stream()
+        .filter(store -> !store.getId().startsWith("location-")).toList();
     return result.stream().map(StoreResponse::from).toList();
+  }
+
+  @Transactional(readOnly = true)
+  public List<StoreResponse> listLocations(Boolean active) {
+    return (active == null ? stores.findAll() : stores.findByActive(active)).stream()
+        .filter(store -> store.getId().startsWith("location-"))
+        .map(StoreResponse::from).toList();
   }
 
   @Transactional(readOnly = true)
@@ -38,6 +49,7 @@ public class StoreService {
     String name = clean(request.name());
     if (stores.existsByNameIgnoreCaseAndIdNot(name, id)) throw new ConflictException("Store name already exists");
     apply(store, request);
+    delivery.ensureDefaultZone(store);
     return StoreResponse.from(store);
   }
 

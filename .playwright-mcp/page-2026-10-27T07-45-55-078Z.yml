@@ -1,0 +1,108 @@
+- generic [ref=f37e8]:
+  - navigation [ref=f37e9]:
+    - generic [ref=f37e10]:
+      - img "Spices and Pickles" [ref=f37e464]
+      - generic [ref=f37e12]:
+        - heading "Global Admin Portal" [level=6] [ref=f37e465]
+        - text: All locations
+      - button "Collapse sidebar" [ref=f37e466] [cursor=pointer]
+    - generic [ref=f37e17]:
+      - generic [ref=f37e18]:
+        - paragraph [ref=f37e19]: Main
+        - button "Dashboard" [ref=f37e467] [cursor=pointer]
+      - generic [ref=f37e25]:
+        - paragraph [ref=f37e26]: Management
+        - button "Stores" [ref=f37e468] [cursor=pointer]
+        - button "Products" [active] [ref=f37e469] [cursor=pointer]
+        - button "Categories" [ref=f37e470] [cursor=pointer]
+        - button "Banners" [ref=f37e471] [cursor=pointer]
+        - button "Inventory" [ref=f37e472] [cursor=pointer]
+      - generic [ref=f37e54]:
+        - paragraph [ref=f37e55]: Orders & Payments
+        - button "Orders" [ref=f37e473] [cursor=pointer]
+        - button "Payments" [ref=f37e474] [cursor=pointer]
+        - button "Delivery" [ref=f37e475] [cursor=pointer]
+      - generic [ref=f37e72]:
+        - paragraph [ref=f37e73]: Customer
+        - button "Customers" [ref=f37e476] [cursor=pointer]
+        - button "Reviews" [ref=f37e477] [cursor=pointer]
+        - button "Coupons" [ref=f37e478] [cursor=pointer]
+        - button "Notifications" [ref=f37e479] [cursor=pointer]
+      - generic [ref=f37e95]:
+        - paragraph [ref=f37e96]: Analytics
+        - button "Reports" [ref=f37e480] [cursor=pointer]
+      - generic [ref=f37e102]:
+        - paragraph [ref=f37e103]: System
+        - button "Audit Logs" [ref=f37e481] [cursor=pointer]
+    - button "View Customer App" [ref=f37e482] [cursor=pointer]
+  - main [ref=f37e110]:
+    - generic [ref=f37e111]:
+      - generic [ref=f37e112]:
+        - button [ref=f37e113] [cursor=pointer]
+        - generic [ref=f37e116]:
+          - text: Global Admin /
+          - strong [ref=f37e117]: Products
+      - generic [ref=f37e118]:
+        - textbox "Search portal" [ref=f37e483]
+        - button "Notifications" [ref=f37e484] [cursor=pointer]
+        - button "G Global Administrator" [ref=f37e485] [cursor=pointer]:
+          - generic [ref=f37e128]: G
+          - generic [ref=f37e129]: Global Administrator
+    - generic [ref=f37e130]:
+      - generic [ref=f37e131]:
+        - heading "Products" [level=4] [ref=f37e509]
+        - paragraph [ref=f37e133]: Manage products within your assigned scope.
+      - button "View Customer App" [ref=f37e487] [cursor=pointer]
+    - generic [ref=f37e135]:
+      - generic [ref=f37e136]:
+        - generic [ref=f37e137]:
+          - generic: Search
+          - generic [ref=f37e138]:
+            - textbox "Search" [ref=f37e488]
+            - group [aria-hidden]:
+              - generic: Search
+        - generic [ref=f37e140]:
+          - combobox [ref=f37e141] [cursor=pointer]: All
+          - textbox [aria-hidden]: All
+          - group [aria-hidden]
+        - generic [ref=f37e142]:
+          - combobox [ref=f37e143] [cursor=pointer]: Newest
+          - textbox [aria-hidden]: newest
+          - group [aria-hidden]
+        - button "Create" [ref=f37e489] [cursor=pointer]
+        - button "Export" [ref=f37e490] [cursor=pointer]
+      - status [ref=f37e510]: This account does not have permission for this action. Please sign in again.
+      - generic [ref=f37e492]:
+        - generic [ref=f37e493]:
+          - paragraph [ref=f37e494]: Spice Powders
+          - paragraph [ref=f37e495]: Active
+        - generic [ref=f37e496]:
+          - button "View" [ref=f37e497] [cursor=pointer]
+          - button "Edit" [ref=f37e498] [cursor=pointer]
+          - button "Duplicate" [ref=f37e511] [cursor=pointer]
+          - button "Deactivate" [ref=f37e499] [cursor=pointer]
+          - button "Delete" [ref=f37e500] [cursor=pointer]
+      - generic [ref=f37e368]:
+        - generic [ref=f37e369]:
+          - paragraph [ref=f37e370]: Premium Dry Fruits
+          - paragraph [ref=f37e371]: Active
+        - generic [ref=f37e372]:
+          - button "View" [ref=f37e501] [cursor=pointer]
+          - button "Edit" [ref=f37e502] [cursor=pointer]
+          - button "Duplicate" [ref=f37e512] [cursor=pointer]
+          - button "Deactivate" [ref=f37e503] [cursor=pointer]
+          - button "Delete" [ref=f37e504] [cursor=pointer]
+      - generic [ref=f37e252]:
+        - generic [ref=f37e253]:
+          - paragraph [ref=f37e254]: Traditional Pickles
+          - paragraph [ref=f37e255]: Active
+        - generic [ref=f37e256]:
+          - button "View" [ref=f37e505] [cursor=pointer]
+          - button "Edit" [ref=f37e506] [cursor=pointer]
+          - button "Duplicate" [ref=f37e513] [cursor=pointer]
+          - button "Deactivate" [ref=f37e507] [cursor=pointer]
+          - button "Delete" [ref=f37e508] [cursor=pointer]
+      - generic [ref=f37e147]:
+        - button "Previous" [disabled]
+        - paragraph [ref=f37e148]: Page 1 of 1
+        - button "Next" [disabled]

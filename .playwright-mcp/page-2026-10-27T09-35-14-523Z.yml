@@ -1,0 +1,198 @@
+- generic [ref=e1]:
+  - generic [ref=e163]:
+    - complementary [ref=e164]:
+      - generic [ref=e167]:
+        - heading [level=6] [ref=e257]: Store Manager
+        - paragraph [ref=e169]: SR Nagar Store
+      - navigation [ref=e170]:
+        - button [ref=e258] [cursor=pointer]:
+          - generic [ref=e175]: Dashboard
+        - button [ref=e259] [cursor=pointer]:
+          - generic [ref=e181]: Products
+        - button [ref=e260] [cursor=pointer]:
+          - generic [ref=e186]: Banners
+        - button [ref=e261] [cursor=pointer]:
+          - generic [ref=e192]: Coupons
+        - button [ref=e262] [cursor=pointer]:
+          - generic [ref=e198]: Inventory
+        - button [ref=e263] [cursor=pointer]:
+          - generic [ref=e203]: Orders
+        - button [ref=e264] [cursor=pointer]:
+          - generic [ref=e208]: Delivery Partners
+        - button [ref=e265] [cursor=pointer]:
+          - generic [ref=e213]: Delivery Radius
+        - button [ref=e266] [cursor=pointer]:
+          - generic [ref=e218]: Delivery Settings
+        - button [ref=e267] [cursor=pointer]:
+          - generic [ref=e223]: Change Password
+        - button [ref=e268] [cursor=pointer]:
+          - generic [ref=e228]: Profile
+        - button [ref=e269] [cursor=pointer]:
+          - generic [ref=e233]: Logout
+      - button [ref=e270] [cursor=pointer]: View Customer App
+    - main [ref=e235]:
+      - generic [ref=e236]:
+        - button [ref=e271] [cursor=pointer]: Store Manager
+        - button [ref=e272] [cursor=pointer]:
+          - generic [ref=e242]: V
+          - generic [ref=e243]: Vikram SR Nagar
+        - button [ref=e273] [cursor=pointer]: Sign out
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - heading [level=4] [ref=e274]: Store Products
+          - paragraph [ref=e248]: Manage products assigned only to SR Nagar Store.
+        - button [ref=e275] [cursor=pointer]: Create Product
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic: Search your products
+          - generic [ref=e252]:
+            - textbox [ref=e276]
+            - group [aria-hidden]:
+              - generic: Search your products
+        - paragraph [ref=e254]: 0 products
+      - paragraph [ref=e255]: No products yet. Select Create Product to add one to this store.
+  - dialog [ref=e408]:
+    - heading "Create Store Product" [level=2] [ref=e409]
+    - generic [ref=e281]:
+      - generic [ref=e282]:
+        - generic [ref=e283]: Category
+        - generic [ref=e284]:
+          - combobox "Category" [active] [ref=e410] [cursor=pointer]: Premium Dry Fruits
+          - textbox [aria-hidden]: 648cd07b-2dd6-4a9b-87af-607ec4d77cbe
+          - group [aria-hidden]:
+            - generic: Category
+      - generic [ref=e286]:
+        - generic: Product name
+        - generic [ref=e287]:
+          - textbox "Product name" [ref=e411]
+          - group [aria-hidden]:
+            - generic: Product name
+      - generic [ref=e289]:
+        - generic: SKU
+        - generic [ref=e290]:
+          - textbox "SKU" [ref=e412]
+          - group [aria-hidden]:
+            - generic: SKU
+      - generic [ref=e292]:
+        - generic: Brand
+        - generic [ref=e293]:
+          - textbox "Brand" [ref=e413]
+          - group [aria-hidden]:
+            - generic: Brand
+      - generic [ref=e295]:
+        - generic: URL slug (optional)
+        - generic [ref=e296]:
+          - textbox "URL slug (optional)" [ref=e414]
+          - group [aria-hidden]:
+            - generic: URL slug (optional)
+      - generic [ref=e298]:
+        - generic [ref=e299]: Subcategory
+        - generic [ref=e300]:
+          - textbox "Subcategory" [ref=e415]: Other
+          - group [aria-hidden]:
+            - generic: Subcategory
+      - generic [ref=e302]:
+        - generic: Pack
+        - generic [ref=e303]:
+          - textbox "Pack" [ref=e416]
+          - group [aria-hidden]:
+            - generic: Pack
+      - generic [ref=e305]:
+        - generic: Product type
+        - generic [ref=e306]:
+          - textbox "Product type" [ref=e417]
+          - group [aria-hidden]:
+            - generic: Product type
+      - generic [ref=e308]:
+        - generic: Shelf life
+        - generic [ref=e309]:
+          - textbox "Shelf life" [ref=e418]
+          - group [aria-hidden]:
+            - generic: Shelf life
+      - generic [ref=e311]:
+        - generic [ref=e312]: Status
+        - generic [ref=e313]:
+          - combobox "Status" [ref=e419] [cursor=pointer]: Active
+          - textbox [aria-hidden]: ACTIVE
+          - group [aria-hidden]:
+            - generic: Status
+      - generic [ref=e315]:
+        - generic: Description
+        - generic [ref=e316]:
+          - textbox "Description" [ref=e420]
+          - group [aria-hidden]:
+            - generic: Description
+      - generic [ref=e318]:
+        - generic: Ingredients
+        - generic [ref=e319]:
+          - textbox "Ingredients" [ref=e421]
+          - group [aria-hidden]:
+            - generic: Ingredients
+      - generic [ref=e321]:
+        - generic: Specifications
+        - generic [ref=e322]:
+          - textbox "Specifications" [ref=e422]
+          - group [aria-hidden]:
+            - generic: Specifications
+      - generic [ref=e324]:
+        - generic: Highlights
+        - generic [ref=e325]:
+          - textbox "Highlights" [ref=e423]
+          - group [aria-hidden]:
+            - generic: Highlights
+      - generic [ref=e327]:
+        - generic: Tags
+        - generic [ref=e328]:
+          - textbox "Tags" [ref=e424]
+          - group [aria-hidden]:
+            - generic: Tags
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - paragraph [ref=e332]: Variants and prices
+          - button "Add Variant" [ref=e425] [cursor=pointer]
+        - generic [ref=e334]:
+          - generic [ref=e335]:
+            - generic: Variant SKU
+            - generic [ref=e336]:
+              - textbox "Variant SKU" [ref=e426]
+              - group [aria-hidden]:
+                - generic: Variant SKU
+          - generic [ref=e338]:
+            - generic: Variant / pack name
+            - generic [ref=e339]:
+              - textbox "Variant / pack name" [ref=e427]
+              - group [aria-hidden]:
+                - generic: Variant / pack name
+          - generic [ref=e341]:
+            - generic: Price
+            - generic [ref=e342]:
+              - spinbutton "Price" [ref=e428]
+              - group [aria-hidden]:
+                - generic: Price
+          - generic [ref=e344]:
+            - generic: Compare-at price
+            - generic [ref=e345]:
+              - spinbutton "Compare-at price" [ref=e429]
+              - group [aria-hidden]:
+                - generic: Compare-at price
+          - generic [ref=e347]:
+            - generic [ref=e348] [cursor=pointer]:
+              - checkbox "Active" [checked] [ref=e430]
+              - generic [ref=e353]: Active
+            - button "Remove" [ref=e431] [cursor=pointer]
+          - generic [ref=e355]:
+            - generic: Variant attributes (JSON or text)
+            - generic [ref=e356]:
+              - textbox "Variant attributes (JSON or text)" [ref=e432]
+              - group [aria-hidden]:
+                - generic: Variant attributes (JSON or text)
+        - generic [ref=e358]: Active products need at least one active, priced variant.
+      - generic [ref=e360]:
+        - paragraph [ref=e361]: Product images
+        - button "Add Image" [ref=e433] [cursor=pointer]
+      - generic [ref=e363] [cursor=pointer]:
+        - checkbox "Available in my store" [checked] [ref=e434]
+        - generic [ref=e368]: Available in my store
+    - generic [ref=e369]:
+      - button "Cancel" [ref=e435] [cursor=pointer]
+      - button "Save Product" [ref=e436] [cursor=pointer]

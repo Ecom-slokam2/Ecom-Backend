@@ -1,0 +1,173 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e27]:
+    - navigation [ref=f1e28]:
+      - generic [ref=f1e29]:
+        - generic [ref=f1e31]:
+          - heading [level=6] [ref=f1e307]: Super Admin Portal
+          - text: All locations
+        - button [ref=f1e308] [cursor=pointer]
+      - generic [ref=f1e36]:
+        - generic [ref=f1e37]:
+          - paragraph [ref=f1e38]: Main
+          - button [ref=f1e309] [cursor=pointer]:
+            - generic [ref=f1e43]: Dashboard
+        - generic [ref=f1e44]:
+          - paragraph [ref=f1e45]: Management
+          - button [ref=f1e310] [cursor=pointer]:
+            - generic [ref=f1e51]: Locations
+          - button [ref=f1e311] [cursor=pointer]:
+            - generic [ref=f1e56]: Users
+          - button [ref=f1e312] [cursor=pointer]:
+            - generic [ref=f1e61]: Stores
+          - button [ref=f1e313] [cursor=pointer]:
+            - generic [ref=f1e67]: Products
+          - button [ref=f1e314] [cursor=pointer]:
+            - generic [ref=f1e72]: Categories
+          - button [ref=f1e315] [cursor=pointer]:
+            - generic [ref=f1e77]: Banners
+          - button [ref=f1e316] [cursor=pointer]:
+            - generic [ref=f1e83]: Inventory
+        - generic [ref=f1e84]:
+          - paragraph [ref=f1e85]: Orders & Payments
+          - button [ref=f1e317] [cursor=pointer]:
+            - generic [ref=f1e90]: Orders
+          - button [ref=f1e318] [cursor=pointer]:
+            - generic [ref=f1e96]: Payments
+          - button [ref=f1e319] [cursor=pointer]:
+            - generic [ref=f1e101]: Delivery
+        - generic [ref=f1e102]:
+          - paragraph [ref=f1e103]: Customer
+          - button [ref=f1e320] [cursor=pointer]:
+            - generic [ref=f1e108]: Customers
+          - button [ref=f1e321] [cursor=pointer]:
+            - generic [ref=f1e113]: Reviews
+          - button [ref=f1e322] [cursor=pointer]:
+            - generic [ref=f1e119]: Coupons
+          - button [ref=f1e323] [cursor=pointer]:
+            - generic [ref=f1e124]: Notifications
+        - generic [ref=f1e125]:
+          - paragraph [ref=f1e126]: Analytics
+          - button [ref=f1e324] [cursor=pointer]:
+            - generic [ref=f1e131]: Reports
+        - generic [ref=f1e132]:
+          - paragraph [ref=f1e133]: System
+          - button [ref=f1e325] [cursor=pointer]:
+            - generic [ref=f1e138]: Security
+          - button [ref=f1e326] [cursor=pointer]:
+            - generic [ref=f1e143]: Audit Logs
+      - button [ref=f1e327] [cursor=pointer]: View Customer App
+    - main [ref=f1e145]:
+      - generic [ref=f1e146]:
+        - generic [ref=f1e147]:
+          - button [ref=f1e148] [cursor=pointer]
+          - generic [ref=f1e151]:
+            - text: Super Admin /
+            - strong [ref=f1e152]: Users
+        - generic [ref=f1e153]:
+          - textbox [ref=f1e328]:
+            - /placeholder: Search portal
+          - button [ref=f1e329] [cursor=pointer]
+          - button [ref=f1e330] [cursor=pointer]:
+            - generic [ref=f1e163]: A
+            - generic [ref=f1e164]: Admin
+      - generic [ref=f1e165]:
+        - generic [ref=f1e166]:
+          - heading [level=4] [ref=f1e331]: Users
+          - paragraph [ref=f1e168]: Manage users within your assigned scope.
+        - button [ref=f1e332] [cursor=pointer]: View Customer App
+      - generic [ref=f1e275]:
+        - generic [ref=f1e276]:
+          - generic [ref=f1e277]:
+            - generic: Search
+            - generic [ref=f1e278]:
+              - textbox [ref=f1e333]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f1e280]:
+            - combobox [ref=f1e281] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f1e282]:
+            - combobox [ref=f1e283] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f1e334] [cursor=pointer]: Create
+          - button [ref=f1e335] [cursor=pointer]: Export
+        - generic [ref=f1e286]:
+          - generic [ref=f1e287]:
+            - paragraph [ref=f1e288]: Hyderabad Location Administrator
+            - paragraph [ref=f1e289]: locationadminhyd@metaarch.local
+          - generic [ref=f1e290]:
+            - button [ref=f1e336] [cursor=pointer]: View
+            - button [ref=f1e337] [cursor=pointer]: Edit
+            - button [ref=f1e338] [cursor=pointer]: Deactivate
+            - button [ref=f1e339] [cursor=pointer]: Delete
+        - generic [ref=f1e295]:
+          - generic [ref=f1e296]:
+            - paragraph [ref=f1e297]: Global Administrator
+            - paragraph [ref=f1e298]: globaladmin@metaarch.local
+          - generic [ref=f1e299]:
+            - button [ref=f1e340] [cursor=pointer]: View
+            - button [ref=f1e341] [cursor=pointer]: Edit
+            - button [ref=f1e342] [cursor=pointer]: Deactivate
+            - button [ref=f1e343] [cursor=pointer]: Delete
+        - generic [ref=f1e304]:
+          - button [disabled]: Previous
+          - paragraph [ref=f1e305]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [active] [ref=f1e346]:
+    - heading "Edit Users" [level=2] [ref=f1e347]
+    - generic [ref=f1e348]:
+      - generic [ref=f1e350]:
+        - generic [ref=f1e351]:
+          - text: Name
+          - generic [aria-hidden] [ref=f1e352]: "*"
+        - generic [ref=f1e353]:
+          - textbox "Name" [ref=f1e354]: Hyderabad Location Administrator
+          - group [aria-hidden]:
+            - generic: Name *
+      - generic [ref=f1e356]:
+        - generic [ref=f1e357]: Login username
+        - generic [ref=f1e358]:
+          - textbox "Login username" [ref=f1e359]: locationadminhyd
+          - group [aria-hidden]:
+            - generic: Login username
+      - generic [ref=f1e361]:
+        - generic [ref=f1e362]:
+          - text: Email
+          - generic [aria-hidden] [ref=f1e363]: "*"
+        - generic [ref=f1e364]:
+          - textbox "Email" [ref=f1e365]: locationadminhyd@metaarch.local
+          - group [aria-hidden]:
+            - generic: Email *
+      - generic [ref=f1e367]:
+        - generic [ref=f1e368]:
+          - text: Mobile
+          - generic [aria-hidden] [ref=f1e369]: "*"
+        - generic [ref=f1e370]:
+          - textbox "Mobile" [ref=f1e371]: "9000031002"
+          - group [aria-hidden]:
+            - generic: Mobile *
+      - generic [ref=f1e373]:
+        - combobox [ref=f1e374] [cursor=pointer]: location-admin
+        - textbox [aria-hidden]: location-admin
+        - group [aria-hidden]
+      - generic [ref=f1e377]:
+        - generic [ref=f1e378]: Location
+        - generic [ref=f1e379]:
+          - combobox "Location" [ref=f1e380]: hyderabad
+          - group [aria-hidden]:
+            - generic: Location
+      - generic [ref=f1e384]:
+        - generic: Store
+        - generic [ref=f1e385]:
+          - combobox "Store" [ref=f1e386]
+          - group [aria-hidden]:
+            - generic: Store
+      - generic [ref=f1e389]:
+        - combobox [ref=f1e390] [cursor=pointer]: Active
+        - textbox [aria-hidden]: Active
+        - group [aria-hidden]
+    - generic [ref=f1e392]:
+      - button "Cancel" [ref=f1e393] [cursor=pointer]
+      - button "Save" [ref=f1e394] [cursor=pointer]

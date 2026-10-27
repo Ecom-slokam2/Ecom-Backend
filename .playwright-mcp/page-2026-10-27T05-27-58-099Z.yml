@@ -1,0 +1,20 @@
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - img "Spices and Pickles" [ref=e8]
+    - generic [ref=e9]:
+      - heading "Team Portal" [level=5] [ref=e10]
+      - paragraph [ref=e11]: Spices & Pickles
+  - generic [ref=e12]:
+    - generic: Username
+    - generic [ref=e13]:
+      - textbox "Username" [ref=e14]
+      - group [aria-hidden]:
+        - generic: Username
+  - generic [ref=e15]:
+    - generic: Password
+    - generic [ref=e16]:
+      - textbox "Password" [ref=e17]
+      - group [aria-hidden]:
+        - generic: Password
+  - button "Sign in securely" [ref=e18] [cursor=pointer]
+  - button "Back to customer app" [ref=e19] [cursor=pointer]

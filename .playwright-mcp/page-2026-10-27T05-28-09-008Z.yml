@@ -1,0 +1,132 @@
+- generic [ref=e20]:
+  - navigation [ref=e21]:
+    - generic [ref=e22]:
+      - img "Spices and Pickles" [ref=e23]
+      - generic [ref=e24]:
+        - heading "Super Admin Portal" [level=6] [ref=e25]
+        - text: All locations
+      - button "Collapse sidebar" [ref=e26] [cursor=pointer]
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - paragraph [ref=e31]: Main
+        - button "Dashboard" [ref=e32] [cursor=pointer]
+      - generic [ref=e37]:
+        - paragraph [ref=e38]: Management
+        - button "Locations" [ref=e39] [cursor=pointer]
+        - button "Users" [ref=e45] [cursor=pointer]
+        - button "Stores" [ref=e50] [cursor=pointer]
+        - button "Products" [ref=e55] [cursor=pointer]
+        - button "Categories" [ref=e61] [cursor=pointer]
+        - button "Banners" [ref=e66] [cursor=pointer]
+        - button "Inventory" [ref=e71] [cursor=pointer]
+      - generic [ref=e77]:
+        - paragraph [ref=e78]: Orders & Payments
+        - button "Orders" [ref=e79] [cursor=pointer]
+        - button "Payments" [ref=e84] [cursor=pointer]
+        - button "Delivery" [ref=e90] [cursor=pointer]
+      - generic [ref=e95]:
+        - paragraph [ref=e96]: Customer
+        - button "Customers" [ref=e97] [cursor=pointer]
+        - button "Reviews" [ref=e102] [cursor=pointer]
+        - button "Coupons" [ref=e107] [cursor=pointer]
+        - button "Notifications" [ref=e113] [cursor=pointer]
+      - generic [ref=e118]:
+        - paragraph [ref=e119]: Analytics
+        - button "Reports" [ref=e120] [cursor=pointer]
+      - generic [ref=e125]:
+        - paragraph [ref=e126]: System
+        - button "Security" [ref=e127] [cursor=pointer]
+        - button "Audit Logs" [ref=e132] [cursor=pointer]
+    - button "View Customer App" [ref=e137] [cursor=pointer]
+  - main [ref=e138]:
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - button [ref=e141] [cursor=pointer]
+        - generic [ref=e144]:
+          - text: Super Admin /
+          - strong [ref=e145]: Dashboard
+      - generic [ref=e146]:
+        - textbox "Search portal" [ref=e151]
+        - button "Notifications" [ref=e152] [cursor=pointer]
+        - button "A Admin" [ref=e155] [cursor=pointer]:
+          - generic [ref=e156]: A
+          - generic [ref=e157]: Admin
+    - generic [ref=e158]:
+      - generic [ref=e159]:
+        - heading "Welcome back, Admin" [level=4] [ref=e160]
+        - paragraph [ref=e161]: Live operational data for the full business.
+      - button "View Customer App" [ref=e162] [cursor=pointer]
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - paragraph [ref=e168]: Total Orders
+        - heading "0" [level=5] [ref=e169]
+        - text: Backend data
+      - generic [ref=e170]:
+        - paragraph [ref=e174]: Created Orders
+        - heading "0" [level=5] [ref=e175]
+        - text: Backend data
+      - generic [ref=e176]:
+        - paragraph [ref=e180]: Completed Orders
+        - heading "0" [level=5] [ref=e181]
+        - text: Backend data
+      - generic [ref=e182]:
+        - paragraph [ref=e186]: Cancelled Orders
+        - heading "0" [level=5] [ref=e187]
+        - text: Backend data
+      - generic [ref=e188]:
+        - paragraph [ref=e192]: Customers
+        - heading "1" [level=5] [ref=e193]
+        - text: Backend data
+      - generic [ref=e194]:
+        - paragraph [ref=e199]: Products
+        - heading "3" [level=5] [ref=e200]
+        - text: Backend data
+      - generic [ref=e201]:
+        - paragraph [ref=e206]: Low Stock
+        - heading "0" [level=5] [ref=e207]
+        - text: Backend data
+      - generic [ref=e208]:
+        - paragraph [ref=e212]: Revenue
+        - heading "â‚¹0" [level=5] [ref=e213]
+        - text: Backend data
+    - generic [ref=e214]:
+      - generic [ref=e216]:
+        - heading "Revenue Overview" [level=6] [ref=e217]
+        - generic [ref=e218]: Order totals
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - heading "Order Status" [level=6] [ref=e222]
+          - generic [ref=e223]: Live distribution
+        - generic [ref=e225]:
+          - text: CREATED
+          - strong [ref=e226]: "0"
+        - generic [ref=e229]:
+          - text: CONFIRMED
+          - strong [ref=e230]: "0"
+        - generic [ref=e233]:
+          - text: PROCESSING
+          - strong [ref=e234]: "0"
+        - generic [ref=e237]:
+          - text: SHIPPED
+          - strong [ref=e238]: "0"
+        - generic [ref=e241]:
+          - text: DELIVERED
+          - strong [ref=e242]: "0"
+        - generic [ref=e245]:
+          - text: CANCELLED
+          - strong [ref=e246]: "0"
+    - generic [ref=e248]:
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - heading "Recent Orders" [level=6] [ref=e251]
+          - button "View All" [ref=e252] [cursor=pointer]
+        - generic [ref=e253]:
+          - paragraph [ref=e256]: No orders yet
+          - generic [ref=e257]: Customer orders will appear here.
+      - generic [ref=e258]:
+        - generic [ref=e259]:
+          - heading "Low Stock Products" [level=6] [ref=e260]
+          - button "View Inventory" [ref=e261] [cursor=pointer]
+        - generic [ref=e262]:
+          - paragraph [ref=e265]: Inventory looks healthy
+          - generic [ref=e266]: All products are sufficiently stocked.

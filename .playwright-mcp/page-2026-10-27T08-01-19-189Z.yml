@@ -1,0 +1,169 @@
+- generic [ref=f41e1]:
+  - generic [ref=f41e8]:
+    - navigation [ref=f41e9]:
+      - generic [ref=f41e10]:
+        - generic [ref=f41e12]:
+          - heading [level=6] [ref=f41e211]: Global Admin Portal
+          - text: All locations
+        - button [ref=f41e212] [cursor=pointer]
+      - generic [ref=f41e17]:
+        - generic [ref=f41e18]:
+          - paragraph [ref=f41e19]: Main
+          - button [ref=f41e213] [cursor=pointer]:
+            - generic [ref=f41e24]: Dashboard
+        - generic [ref=f41e25]:
+          - paragraph [ref=f41e26]: Management
+          - button [ref=f41e214] [cursor=pointer]:
+            - generic [ref=f41e31]: Stores
+          - button [ref=f41e215] [cursor=pointer]:
+            - generic [ref=f41e37]: Products
+          - button [ref=f41e216] [cursor=pointer]:
+            - generic [ref=f41e42]: Categories
+          - button [ref=f41e217] [cursor=pointer]:
+            - generic [ref=f41e47]: Banners
+          - button [ref=f41e218] [cursor=pointer]:
+            - generic [ref=f41e53]: Inventory
+        - generic [ref=f41e54]:
+          - paragraph [ref=f41e55]: Orders & Payments
+          - button [ref=f41e219] [cursor=pointer]:
+            - generic [ref=f41e60]: Orders
+          - button [ref=f41e220] [cursor=pointer]:
+            - generic [ref=f41e66]: Payments
+          - button [ref=f41e221] [cursor=pointer]:
+            - generic [ref=f41e71]: Delivery
+        - generic [ref=f41e72]:
+          - paragraph [ref=f41e73]: Customer
+          - button [ref=f41e222] [cursor=pointer]:
+            - generic [ref=f41e78]: Customers
+          - button [ref=f41e223] [cursor=pointer]:
+            - generic [ref=f41e83]: Reviews
+          - button [ref=f41e224] [cursor=pointer]:
+            - generic [ref=f41e89]: Coupons
+          - button [ref=f41e225] [cursor=pointer]:
+            - generic [ref=f41e94]: Notifications
+        - generic [ref=f41e95]:
+          - paragraph [ref=f41e96]: Analytics
+          - button [ref=f41e226] [cursor=pointer]:
+            - generic [ref=f41e101]: Reports
+        - generic [ref=f41e102]:
+          - paragraph [ref=f41e103]: System
+          - button [ref=f41e227] [cursor=pointer]:
+            - generic [ref=f41e108]: Audit Logs
+      - button [ref=f41e228] [cursor=pointer]: View Customer App
+    - main [ref=f41e110]:
+      - generic [ref=f41e111]:
+        - generic [ref=f41e112]:
+          - button [ref=f41e113] [cursor=pointer]
+          - generic [ref=f41e116]:
+            - text: Global Admin /
+            - strong [ref=f41e117]: Products
+        - generic [ref=f41e118]:
+          - textbox [ref=f41e229]:
+            - /placeholder: Search portal
+          - button [ref=f41e230] [cursor=pointer]
+          - button [ref=f41e231] [cursor=pointer]:
+            - generic [ref=f41e128]: G
+            - generic [ref=f41e129]: Global Administrator
+      - generic [ref=f41e130]:
+        - generic [ref=f41e131]:
+          - heading [level=4] [ref=f41e232]: Products
+          - paragraph [ref=f41e133]: Manage products within your assigned scope.
+        - button [ref=f41e233] [cursor=pointer]: View Customer App
+      - generic [ref=f41e135]:
+        - generic [ref=f41e136]:
+          - generic [ref=f41e137]:
+            - generic: Search
+            - generic [ref=f41e138]:
+              - textbox [ref=f41e234]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f41e140]:
+            - combobox [ref=f41e141] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f41e142]:
+            - combobox [ref=f41e143] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f41e235] [cursor=pointer]: Create Product
+          - button [ref=f41e236] [cursor=pointer]: Map Product
+          - button [ref=f41e237] [cursor=pointer]: Export
+        - generic [ref=f41e147]:
+          - generic [ref=f41e148]:
+            - paragraph [ref=f41e149]: Aromatic Coriander Powder
+            - paragraph [ref=f41e150]: SPC-CORIANDER-AROM-001
+          - generic [ref=f41e151]:
+            - button [ref=f41e238] [cursor=pointer]: View
+            - button [ref=f41e239] [cursor=pointer]: Edit
+            - button [ref=f41e240] [cursor=pointer]: Duplicate
+            - button [ref=f41e241] [cursor=pointer]: Deactivate
+            - button [ref=f41e242] [cursor=pointer]: Delete
+        - generic [ref=f41e157]:
+          - generic [ref=f41e158]:
+            - paragraph [ref=f41e159]: Guntur Chilli Powder
+            - paragraph [ref=f41e160]: SPC-GUNTUR-CHILLI-001
+          - generic [ref=f41e161]:
+            - button [ref=f41e243] [cursor=pointer]: View
+            - button [ref=f41e244] [cursor=pointer]: Edit
+            - button [ref=f41e245] [cursor=pointer]: Duplicate
+            - button [ref=f41e246] [cursor=pointer]: Deactivate
+            - button [ref=f41e247] [cursor=pointer]: Delete
+        - generic [ref=f41e167]:
+          - generic [ref=f41e168]:
+            - paragraph [ref=f41e169]: Golden Turmeric Powder
+            - paragraph [ref=f41e170]: SPC-TURMERIC-GOLD-001
+          - generic [ref=f41e171]:
+            - button [ref=f41e248] [cursor=pointer]: View
+            - button [ref=f41e249] [cursor=pointer]: Edit
+            - button [ref=f41e250] [cursor=pointer]: Duplicate
+            - button [ref=f41e251] [cursor=pointer]: Deactivate
+            - button [ref=f41e252] [cursor=pointer]: Delete
+        - generic [ref=f41e177]:
+          - generic [ref=f41e178]:
+            - paragraph [ref=f41e179]: Premium Roasted Pistachios
+            - paragraph [ref=f41e180]: DRY-PISTA-ROAST-001
+          - generic [ref=f41e181]:
+            - button [ref=f41e253] [cursor=pointer]: View
+            - button [ref=f41e254] [cursor=pointer]: Edit
+            - button [ref=f41e255] [cursor=pointer]: Duplicate
+            - button [ref=f41e256] [cursor=pointer]: Deactivate
+            - button [ref=f41e257] [cursor=pointer]: Delete
+        - generic [ref=f41e187]:
+          - generic [ref=f41e188]:
+            - paragraph [ref=f41e189]: Afghan Black Raisins
+            - paragraph [ref=f41e190]: DRY-RAISIN-AFG-001
+          - generic [ref=f41e191]:
+            - button [ref=f41e258] [cursor=pointer]: View
+            - button [ref=f41e259] [cursor=pointer]: Edit
+            - button [ref=f41e260] [cursor=pointer]: Duplicate
+            - button [ref=f41e261] [cursor=pointer]: Deactivate
+            - button [ref=f41e262] [cursor=pointer]: Delete
+        - generic [ref=f41e197]:
+          - generic [ref=f41e198]:
+            - paragraph [ref=f41e199]: Whole Walnut Kernels
+            - paragraph [ref=f41e200]: DRY-WALNUT-KERNEL-001
+          - generic [ref=f41e201]:
+            - button [ref=f41e263] [cursor=pointer]: View
+            - button [ref=f41e264] [cursor=pointer]: Edit
+            - button [ref=f41e265] [cursor=pointer]: Duplicate
+            - button [ref=f41e266] [cursor=pointer]: Deactivate
+            - button [ref=f41e267] [cursor=pointer]: Delete
+        - generic [ref=f41e207]:
+          - button [disabled]: Previous
+          - paragraph [ref=f41e208]: Page 1 of 2
+          - button [ref=f41e268] [cursor=pointer]: Next
+  - dialog [ref=f41e296]:
+    - heading "Manage store mappings Aromatic Coriander Powder" [level=2] [ref=f41e297]
+    - generic [ref=f41e298]:
+      - paragraph [ref=f41e299]: Store availability and pricing
+      - generic [ref=f41e301]:
+        - generic: Mapped stores
+        - generic [ref=f41e302]:
+          - combobox "Mapped stores" [ref=f41e303]
+          - button "Open" [ref=f41e305] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Mapped stores
+        - paragraph [ref=f41e308]: Select stores to assign; remove a selection to unassign.
+    - generic [ref=f41e284]:
+      - button "Cancel" [ref=f41e285] [cursor=pointer]
+      - button "Save" [ref=f41e309] [cursor=pointer]

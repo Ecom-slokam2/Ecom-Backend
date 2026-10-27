@@ -1,0 +1,142 @@
+- generic [ref=f81e1]:
+  - generic [ref=f81e5]:
+    - navigation [ref=f81e6]:
+      - generic [ref=f81e7]:
+        - generic [ref=f81e9]:
+          - heading [level=6] [ref=f81e147]: Global Admin Portal
+          - text: All locations
+        - button [ref=f81e148] [cursor=pointer]
+      - generic [ref=f81e14]:
+        - generic [ref=f81e15]:
+          - paragraph [ref=f81e16]: Main
+          - button [ref=f81e149] [cursor=pointer]:
+            - generic [ref=f81e21]: Dashboard
+        - generic [ref=f81e22]:
+          - paragraph [ref=f81e23]: Management
+          - button [ref=f81e150] [cursor=pointer]:
+            - generic [ref=f81e28]: Stores
+          - button [ref=f81e151] [cursor=pointer]:
+            - generic [ref=f81e34]: Products
+          - button [ref=f81e152] [cursor=pointer]:
+            - generic [ref=f81e39]: Categories
+          - button [ref=f81e153] [cursor=pointer]:
+            - generic [ref=f81e44]: Banners
+          - button [ref=f81e154] [cursor=pointer]:
+            - generic [ref=f81e50]: Inventory
+        - generic [ref=f81e51]:
+          - paragraph [ref=f81e52]: Orders & Payments
+          - button [ref=f81e155] [cursor=pointer]:
+            - generic [ref=f81e57]: Orders
+          - button [ref=f81e156] [cursor=pointer]:
+            - generic [ref=f81e63]: Payments
+          - button [ref=f81e157] [cursor=pointer]:
+            - generic [ref=f81e68]: Delivery
+        - generic [ref=f81e69]:
+          - paragraph [ref=f81e70]: Customer
+          - button [ref=f81e158] [cursor=pointer]:
+            - generic [ref=f81e75]: Customers
+          - button [ref=f81e159] [cursor=pointer]:
+            - generic [ref=f81e80]: Reviews
+          - button [ref=f81e160] [cursor=pointer]:
+            - generic [ref=f81e86]: Coupons
+          - button [ref=f81e161] [cursor=pointer]:
+            - generic [ref=f81e91]: Notifications
+        - generic [ref=f81e92]:
+          - paragraph [ref=f81e93]: Analytics
+          - button [ref=f81e162] [cursor=pointer]:
+            - generic [ref=f81e98]: Reports
+        - generic [ref=f81e99]:
+          - paragraph [ref=f81e100]: System
+          - button [ref=f81e163] [cursor=pointer]:
+            - generic [ref=f81e105]: Audit Logs
+      - button [ref=f81e164] [cursor=pointer]: View Customer App
+    - main [ref=f81e107]:
+      - generic [ref=f81e108]:
+        - generic [ref=f81e109]:
+          - button [ref=f81e110] [cursor=pointer]
+          - generic [ref=f81e113]:
+            - text: Global Admin /
+            - strong [ref=f81e114]: Inventory
+        - generic [ref=f81e115]:
+          - textbox [ref=f81e165]:
+            - /placeholder: Search portal
+          - button [ref=f81e166] [cursor=pointer]
+          - button [ref=f81e167] [cursor=pointer]:
+            - generic [ref=f81e125]: G
+            - generic [ref=f81e126]: Global Administrator
+      - generic [ref=f81e127]:
+        - generic [ref=f81e128]:
+          - heading [level=4] [ref=f81e168]: Inventory
+          - paragraph [ref=f81e130]: Manage inventory within your assigned scope.
+        - button [ref=f81e169] [cursor=pointer]: View Customer App
+      - generic [ref=f81e132]:
+        - generic [ref=f81e133]:
+          - generic [ref=f81e134]:
+            - generic: Search
+            - generic [ref=f81e135]:
+              - textbox [ref=f81e170]
+              - group [aria-hidden]:
+                - generic: Search
+          - generic [ref=f81e137]:
+            - combobox [ref=f81e138] [cursor=pointer]: All
+            - textbox [aria-hidden]: All
+            - group [aria-hidden]
+          - generic [ref=f81e139]:
+            - combobox [ref=f81e140] [cursor=pointer]: Newest
+            - textbox [aria-hidden]: newest
+            - group [aria-hidden]
+          - button [ref=f81e171] [cursor=pointer]: Create
+          - button [ref=f81e172] [cursor=pointer]: Export
+        - paragraph [ref=f81e143]: No matching records. Use Create to add the first record.
+        - generic [ref=f81e144]:
+          - button [disabled]: Previous
+          - paragraph [ref=f81e145]: Page 1 of 1
+          - button [disabled]: Next
+  - dialog [active] [ref=f81e175]:
+    - heading "Create Inventory" [level=2] [ref=f81e176]
+    - generic [ref=f81e177]:
+      - generic [ref=f81e180]:
+        - generic:
+          - text: Product
+          - generic [aria-hidden]: "*"
+        - generic [ref=f81e181]:
+          - combobox "Product" [ref=f81e182]
+          - button "Open" [ref=f81e184] [cursor=pointer]
+          - group [aria-hidden]:
+            - generic: Product *
+        - paragraph [ref=f81e187]: Product ID fills from the selected catalog product.
+      - generic [ref=f81e189]:
+        - combobox [disabled] [ref=f81e190]: Select product first
+        - textbox [disabled] [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f81e193]:
+        - combobox [disabled] [ref=f81e194]: Select product first
+        - textbox [disabled] [aria-hidden]
+        - group [aria-hidden]
+      - generic [ref=f81e196]:
+        - generic:
+          - text: Current stock
+          - generic [aria-hidden]: "*"
+        - generic [ref=f81e197]:
+          - spinbutton "Current stock" [ref=f81e198]
+          - group [aria-hidden]:
+            - generic: Current stock *
+      - generic [ref=f81e200]:
+        - generic: Reserved stock
+        - generic [ref=f81e201]:
+          - spinbutton "Reserved stock" [ref=f81e202]
+          - group [aria-hidden]:
+            - generic: Reserved stock
+      - generic [ref=f81e204]:
+        - generic: Low-stock threshold
+        - generic [ref=f81e205]:
+          - spinbutton "Low-stock threshold" [ref=f81e206]
+          - group [aria-hidden]:
+            - generic: Low-stock threshold
+      - generic [ref=f81e208]:
+        - combobox [ref=f81e209] [cursor=pointer]: ACTIVE
+        - textbox [aria-hidden]: ACTIVE
+        - group [aria-hidden]
+    - generic [ref=f81e211]:
+      - button "Cancel" [ref=f81e212] [cursor=pointer]
+      - button "Save" [ref=f81e213] [cursor=pointer]

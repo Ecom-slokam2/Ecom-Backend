@@ -6,11 +6,20 @@ import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 
 @Component("orderAccess")
-@Import(PublicApiSecurity.class)
+@Import({PublicApiSecurity.class, com.metaarch.sync.CatalogLocationClient.class})
 public class OrderAccess {
   private final OrderRepository orders;
-  public OrderAccess(OrderRepository orders) { this.orders = orders; }
+  private final com.metaarch.sync.CatalogLocationClient catalog;
+  public OrderAccess(OrderRepository orders, com.metaarch.sync.CatalogLocationClient catalog) { this.orders = orders; this.catalog = catalog; }
   public boolean admin() { return PublicApiSecurity.administrator(); }
+  public boolean globalAdmin() {
+    var authentication = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+    return authentication != null && authentication.getAuthorities().stream().anyMatch(authority -> authority.getAuthority().equals("ROLE_GLOBAL_ADMIN"));
+  }
+  private boolean platformAdmin() {
+    var authentication = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+    return authentication != null && authentication.getAuthorities().stream().anyMatch(authority -> java.util.Set.of("ROLE_ADMIN", "ROLE_SUPER_ADMIN").contains(authority.getAuthority()));
+  }
   public boolean globalAssignment() {
     var authentication = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
     return authentication instanceof org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken token
@@ -60,8 +69,28 @@ public class OrderAccess {
     } catch (org.springframework.web.client.RestClientException error) { return false; }
   }
   public boolean read(UUID id) { return owner(id) || assignedPartner(id); }
-  public boolean owner(UUID id) { return admin() || orders.findById(id).map(o -> PublicApiSecurity.owns(o.getCustomerId()) || PublicApiSecurity.managesStore(o.getStoreId())).orElse(false); }
-  public boolean store(String storeId) { return admin() || PublicApiSecurity.managesStore(storeId); }
-  public boolean manage(UUID id) { return admin() || orders.findById(id).map(o -> PublicApiSecurity.managesStore(o.getStoreId())).orElse(false); }
+  public boolean owner(UUID id) { return platformAdmin() || orders.findById(id).map(o -> PublicApiSecurity.owns(o.getCustomerId()) || manages(o.getStoreId())).orElse(false); }
+  public boolean store(String storeId) { return platformAdmin() || globalAdmin() && (storeId == null || storeId.isBlank() || "global-store".equalsIgnoreCase(storeId.trim())) || manages(storeId); }
+  public boolean manage(UUID id) { return platformAdmin() || orders.findById(id).map(o -> manages(o.getStoreId())).orElse(false); }
+
+  public java.util.List<String> locationStores() {
+    var auth = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+    if (auth == null || !auth.isAuthenticated() || !auth.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_LOCATION_ADMIN"))) return java.util.List.of();
+    String location = auth.getAuthorities().stream().map(a -> a.getAuthority()).filter(a -> a.startsWith("SCOPE_LOCATION:"))
+        .map(a -> a.substring("SCOPE_LOCATION:".length())).findFirst().orElse(null);
+    return catalog.storesInLocation(location);
+  }
+
+  private boolean manages(String storeId) {
+    if (globalAdmin()) return "global-store".equalsIgnoreCase(storeId == null ? "" : storeId.trim());
+    if (PublicApiSecurity.managesStore(storeId)) return true;
+    var auth = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication();
+    if (!(auth instanceof org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken token)
+        || "customer".equals(token.getToken().getClaimAsString("accountType"))
+        || token.getAuthorities().stream().noneMatch(a -> a.getAuthority().equals("ROLE_LOCATION_ADMIN"))) return false;
+    String location = token.getAuthorities().stream().map(a -> a.getAuthority()).filter(a -> a.startsWith("SCOPE_LOCATION:"))
+        .map(a -> a.substring("SCOPE_LOCATION:".length())).findFirst().orElse(null);
+    return location != null && catalog.locationOf(storeId).map(location::equalsIgnoreCase).orElse(false);
+  }
   public boolean create(UUID id) { return PublicApiSecurity.owns(id); }
 }
