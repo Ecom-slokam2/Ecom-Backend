@@ -88,7 +88,7 @@ services:
     image: axllent/mailpit:v1.27
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${DOCKER_MAIL_UI_PORT:-8025}:8025"
+      - "127.0.0.1:${DOCKER_MAIL_UI_PORT:-18093}:8025"
 
   kafka:
     image: apache/kafka:3.9.1
@@ -129,7 +129,7 @@ services:
       SPRING_APPLICATION_JSON: >-
         {"spring.profiles.active":"prod","spring.config.import":"","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
     ports:
-      - "127.0.0.1:${DOCKER_EUREKA_PORT:-8761}:8761"
+      - "127.0.0.1:${DOCKER_EUREKA_PORT:-18081}:8761"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -147,7 +147,7 @@ services:
       SPRING_APPLICATION_JSON: >-
         {"spring.profiles.active":"prod","spring.config.import":"","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
     ports:
-      - "127.0.0.1:${DOCKER_CONFIG_SERVER_PORT:-8888}:8888"
+      - "127.0.0.1:${DOCKER_CONFIG_SERVER_PORT:-18082}:8888"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -168,7 +168,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_ORG_ACCESS_PORT:-3310}:3310"
+      - "127.0.0.1:${DOCKER_ORG_ACCESS_PORT:-18083}:3310"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -197,7 +197,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_CUSTOMER_PROFILE_SERVICE_PORT:-8088}:8088"
+      - "127.0.0.1:${DOCKER_CUSTOMER_PROFILE_SERVICE_PORT:-18084}:8088"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -226,7 +226,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_CATALOG_SERVICE_PORT:-8089}:8089"
+      - "127.0.0.1:${DOCKER_CATALOG_SERVICE_PORT:-18085}:8089"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -255,7 +255,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_INVENTORY_SERVICE_PORT:-8095}:8095"
+      - "127.0.0.1:${DOCKER_INVENTORY_SERVICE_PORT:-18086}:8095"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -284,7 +284,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_CART_SERVICE_PORT:-8091}:8091"
+      - "127.0.0.1:${DOCKER_CART_SERVICE_PORT:-18087}:8091"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -313,7 +313,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_ORDER_SERVICE_PORT:-3311}:3311"
+      - "127.0.0.1:${DOCKER_ORDER_SERVICE_PORT:-18088}:3311"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -342,7 +342,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_PAYMENT_SERVICE_PORT:-3314}:3314"
+      - "127.0.0.1:${DOCKER_PAYMENT_SERVICE_PORT:-18089}:3314"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -371,7 +371,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_FULFILLMENT_SERVICE_PORT:-3315}:3315"
+      - "127.0.0.1:${DOCKER_FULFILLMENT_SERVICE_PORT:-18090}:3315"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -400,7 +400,7 @@ services:
       SPRING_DATASOURCE_USERNAME: ecom
       SPRING_DATASOURCE_PASSWORD: ${DOCKER_MYSQL_PASSWORD:-ecom-local-password}
     ports:
-      - "127.0.0.1:${DOCKER_NOTIFICATION_SERVICE_PORT:-3317}:3317"
+      - "127.0.0.1:${DOCKER_NOTIFICATION_SERVICE_PORT:-18091}:3317"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -426,7 +426,7 @@ services:
       <<: *environment
       SERVER_PORT: "8082"
     ports:
-      - "127.0.0.1:${DOCKER_API_GATEWAY_PORT:-8082}:8082"
+      - "127.0.0.1:${DOCKER_API_GATEWAY_PORT:-18080}:8082"
     depends_on:
       tls-init:
         condition: service_completed_successfully
@@ -468,7 +468,7 @@ services:
       <<: *environment
       SERVER_PORT: "8087"
     ports:
-      - "127.0.0.1:${DOCKER_ALERTS_SERVICE_PORT:-8087}:8087"
+      - "127.0.0.1:${DOCKER_ALERTS_SERVICE_PORT:-18092}:8087"
     depends_on:
       tls-init:
         condition: service_completed_successfully

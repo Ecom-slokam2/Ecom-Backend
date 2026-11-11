@@ -14,20 +14,20 @@ Subsequent starts can use `docker compose up -d`. The stack contains all 13 back
 
 | Component | Local address |
 |---|---|
-| API Gateway | http://localhost:8082 |
-| Eureka | http://localhost:8761 |
-| Config Server | http://localhost:8888 |
-| Local email inbox (including OTP messages) | http://localhost:8025 |
-| Org Access | http://localhost:3310 |
-| Customer Profile | http://localhost:8088 |
-| Catalog | http://localhost:8089 |
-| Inventory | http://localhost:8095 |
-| Cart | http://localhost:8091 |
-| Order | http://localhost:3311 |
-| Payment | http://localhost:3314 |
-| Fulfillment | http://localhost:3315 |
-| Notification | http://localhost:3317 |
-| Alerts | http://localhost:8087 |
+| API Gateway | http://localhost:18080 |
+| Eureka | http://localhost:18081 |
+| Config Server | http://localhost:18082 |
+| Local email inbox (including OTP messages) | http://localhost:18093 |
+| Org Access | http://localhost:18083 |
+| Customer Profile | http://localhost:18084 |
+| Catalog | http://localhost:18085 |
+| Inventory | http://localhost:18086 |
+| Cart | http://localhost:18087 |
+| Order | http://localhost:18088 |
+| Payment | http://localhost:18089 |
+| Fulfillment | http://localhost:18090 |
+| Notification | http://localhost:18091 |
+| Alerts | http://localhost:18092 |
 
 Published ports bind to localhost. MySQL, Kafka and the sync proxy are reachable only on the Compose network. All database services use `mysql:3306`, with separate schemas and the `ecom` database user. Inspect MySQL with `docker compose exec mysql mysql -uecom -p` (default local password: `ecom-local-password`).
 
@@ -44,10 +44,10 @@ Use the same `--env-file` on subsequent commands. Existing root `.env` contents 
 If ports are already occupied, override the corresponding host port. For example:
 
 ```bash
-DOCKER_EUREKA_PORT=18761 DOCKER_CONFIG_SERVER_PORT=18888 docker compose up -d --build
+DOCKER_EUREKA_PORT=28081 DOCKER_CONFIG_SERVER_PORT=28082 docker compose up -d
 ```
 
-The same `DOCKER_<SERVICE_NAME>_PORT` pattern applies to the other services (uppercase, with hyphens replaced by underscores). Internal container ports and addresses remain unchanged. Stop conflicting native backend processes before using their default host ports.
+The same `DOCKER_<SERVICE_NAME>_PORT` pattern applies to the other services (uppercase, with hyphens replaced by underscores). The default host ports are 18080–18093. Internal container ports and addresses remain unchanged. Existing DOCKER_*_PORT values in your shell or environment file override these defaults. Update frontend API URLs, reverse proxy upstreams and SSH tunnels to use the new host ports (gateway: 18080).
 
 ## Database initialization and persistence
 

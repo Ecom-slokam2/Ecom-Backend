@@ -83,3 +83,12 @@ MySQL	3306
 Kafka	9092
 SMTP mail server	587
 Frontend development server	5173
+
+Docker Compose (including SSH server deployments)
+------------------------------------------------
+Docker uses separate host ports 18080-18093. Native launcher ports above
+are unchanged. See DOCKER.md for the complete Docker port mapping.
+API Gateway: http://127.0.0.1:18080
+Eureka: http://127.0.0.1:18081
+Start/update: docker compose up -d --build --wait --wait-timeout 600
+Verify: sh ./docker/verify.sh
