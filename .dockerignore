@@ -1,0 +1,11 @@
+**/target
+**/.git
+**/.env
+**/.env.*
+.git
+.playwright-mcp
+Ecom_DB
+*.zip
+.vscode
+**/*.log
+**/.DS_Store

@@ -60,3 +60,26 @@ password : admin123
 
 sudo chown -R "$(id -un):$(id -gn)" http-sync/target
 sh ./run-all-services.sh
+
+ervice	Port
+Config Server	8888
+Eureka Server	8761
+API Gateway	8082
+Org Access / Authentication	3310
+Customer Profile	8088
+Catalog	8089
+Cart	8091
+Inventory	8095
+Order	3311
+Payment	3314
+Fulfillment	3315
+Notification	3317
+Alerts	8087
+
+
+Supporting services:
+Dependency	Port
+MySQL	3306
+Kafka	9092
+SMTP mail server	587
+Frontend development server	5173
