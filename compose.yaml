@@ -13,7 +13,7 @@ x-app: &app
     start_period: 90s
 
 x-environment: &environment
-  JAVA_TOOL_OPTIONS: '-Xms64m -Xmx256m -Djavax.net.ssl.trustStore=/tls/truststore.p12 -Djavax.net.ssl.trustStorePassword=changeit'
+  JAVA_TOOL_OPTIONS: '-Xms${DOCKER_JAVA_XMS:-32m} -Xmx${DOCKER_JAVA_XMX:-192m} -Djavax.net.ssl.trustStore=/tls/truststore.p12 -Djavax.net.ssl.trustStorePassword=changeit'
   JWT_SECRET: ${DOCKER_JWT_SECRET:-docker-local-jwt-secret-change-before-sharing-1234567890}
   ORDER_SYNC_KEY: ${DOCKER_ORDER_SYNC_KEY:-docker-local-order-sync-key-1234567890123456}
   PAYMENT_SYNC_KEY: ${DOCKER_PAYMENT_SYNC_KEY:-docker-local-payment-sync-key-12345678901234}
@@ -40,7 +40,7 @@ x-environment: &environment
   SMTP_FROM: ecom@localhost.test
   MAIL_FROM: ecom@localhost.test
   SPRING_APPLICATION_JSON: >-
-    {"spring.profiles.active":"prod","spring.config.import":"optional:configserver:http://config-server:8888","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
+    {"spring.profiles.active":"prod","spring.config.import":"optional:configserver:http://config-server:8888","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.datasource.hikari.maximum-pool-size":${DOCKER_DB_POOL_MAX:-5},"spring.datasource.hikari.minimum-idle":${DOCKER_DB_POOL_MIN_IDLE:-1},"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
 
 services:
   mysql:
@@ -127,7 +127,7 @@ services:
       <<: *environment
       SERVER_PORT: "8761"
       SPRING_APPLICATION_JSON: >-
-        {"spring.profiles.active":"prod","spring.config.import":"","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
+        {"spring.profiles.active":"prod","spring.config.import":"","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.datasource.hikari.maximum-pool-size":${DOCKER_DB_POOL_MAX:-5},"spring.datasource.hikari.minimum-idle":${DOCKER_DB_POOL_MIN_IDLE:-1},"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
     ports:
       - "127.0.0.1:${DOCKER_EUREKA_PORT:-18081}:8761"
     depends_on:
@@ -145,7 +145,7 @@ services:
       <<: *environment
       SERVER_PORT: "8888"
       SPRING_APPLICATION_JSON: >-
-        {"spring.profiles.active":"prod","spring.config.import":"","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
+        {"spring.profiles.active":"prod","spring.config.import":"","eureka.client.service-url.defaultZone":"http://eureka:8761/eureka","eureka.instance.prefer-ip-address":true,"spring.datasource.hikari.maximum-pool-size":${DOCKER_DB_POOL_MAX:-5},"spring.datasource.hikari.minimum-idle":${DOCKER_DB_POOL_MIN_IDLE:-1},"spring.flyway.enabled":false,"spring.jpa.hibernate.ddl-auto":"validate","spring.sql.init.mode":"never","spring.mail.host":"mailpit","spring.mail.port":1025,"spring.mail.username":"","spring.mail.password":"","spring.mail.properties.mail.smtp.auth":false,"spring.mail.properties.mail.smtp.starttls.enable":false,"spring.mail.properties.mail.smtp.starttls.required":false,"management.health.mail.enabled":false,"sync.targets":{"order-service":"https://sync-proxy:3311","payment-service":"https://sync-proxy:3314","fulfillment-service":"https://sync-proxy:3315","notification-service":"https://sync-proxy:3317","inventory-service":"https://sync-proxy:8095"}}
     ports:
       - "127.0.0.1:${DOCKER_CONFIG_SERVER_PORT:-18082}:8888"
     depends_on:

@@ -49,6 +49,22 @@ DOCKER_EUREKA_PORT=28081 DOCKER_CONFIG_SERVER_PORT=28082 docker compose up -d
 
 The same `DOCKER_<SERVICE_NAME>_PORT` pattern applies to the other services (uppercase, with hyphens replaced by underscores). The default host ports are 18080–18093. Internal container ports and addresses remain unchanged. Existing DOCKER_*_PORT values in your shell or environment file override these defaults. Update frontend API URLs, reverse proxy upstreams and SSH tunnels to use the new host ports (gateway: 18080).
 
+## Memory usage
+
+Java backend applications default to a 32 MiB initial heap and a 192 MiB maximum heap. Each Hikari database pool allows up to five connections and keeps one idle connection. These settings reduce baseline memory and database connection usage; total Java process memory also includes threads, loaded classes and other native allocations. No hard container memory limit is imposed.
+
+Override `DOCKER_JAVA_XMS`, `DOCKER_JAVA_XMX`, `DOCKER_DB_POOL_MAX`, and `DOCKER_DB_POOL_MIN_IDLE` in your Compose environment file when needed. Keep the minimum idle count at or below the maximum pool size. Kafka retains its existing 128–256 MiB heap; MySQL settings are unchanged.
+
+Apply configuration changes without rebuilding images:
+
+```bash
+docker compose up -d --wait --wait-timeout 1200
+sh ./docker/verify.sh
+docker stats --no-stream
+```
+
+Use the same `--env-file` option if you normally use one. Compose recreates affected application containers. Verify health and memory under representative traffic; if a service reports Java heap exhaustion, raise `DOCKER_JAVA_XMX` (for example to `256m`). Smaller pools can increase database wait times under load. This tuning does not guarantee that both projects fit on an 8 GiB host; CPU contention and other applications still need monitoring.
+
 ## Database initialization and persistence
 
 `docker/mysql/01-schema.sql` provisions a fresh, isolated database volume. It contains schema definitions extracted from the checked-in `Ecom_DB` snapshot, newer schema changes required by current services, the `app_users` view, and required synchronization/checkout lock rows. It intentionally excludes customer data, accounts, password hashes, catalog/demo records, old events, and Flyway history. A fresh stack therefore has empty business data and no pre-created login accounts. Provision application roles/accounts/catalog records through the application's supported workflows or reviewed SQL as needed.
